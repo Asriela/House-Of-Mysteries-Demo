@@ -1,0 +1,6 @@
+🔼
+if idle event
+300 
+=
+target nearest room doorway
+goto 20

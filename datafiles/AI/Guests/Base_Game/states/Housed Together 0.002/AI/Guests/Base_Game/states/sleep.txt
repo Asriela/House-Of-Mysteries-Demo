@@ -1,0 +1,7 @@
+🔼
+if sleep event
+900 
+=
+target nearest room bed
+goto 50
+animate( sleep 9999 ) 

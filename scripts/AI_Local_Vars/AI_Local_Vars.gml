@@ -1,0 +1,158 @@
+// Script assets have changed for v2.3.0 see
+// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+action_map=ds_map_create()
+jumped_tile=0
+our_animation_name=""
+the_expressed_emotion=""
+player_twitch_id=""
+express_alpha=0
+	avoid=oPhysical
+	acting_towards=noone
+last_target_x=0
+last_move_tile=-1
+any_list=ds_list_create()
+last_target_y=0
+custom_location=0
+running_animation=0
+animation_ended=0
+move_to_prev_action=false
+namething="c"
+character_name="Sandy"
+character_type="Character"
+my_tile=noone
+animation_type="Walk"
+wait_time=100
+next_tile_tx=0
+next_tile_ty=0
+			last_tile_tx=next_tile_tx
+			last_tile_ty=next_tile_ty
+			head_level=17
+			head_index=0
+			talk_index=0
+			talk_emotion=""
+			my_partner=noone
+			just_started_action=false
+move_speed=0
+y_speed=0
+x_speed=0
+enum states
+{
+	fire,
+	kiss,
+	cry,
+	sleep,
+	wander,
+	sit,
+	talk
+}
+state=states.wander
+
+
+target_tile=noone
+image_speed=0.8
+dont_repeat_state=""
+in_view=0
+target_x=0
+target_y=0
+head=random(7)
+path=path_add()
+move_to_tile=noone
+end_tile=noone
+action_state="Stand"
+move_speed=0.1
+draw_x=0
+draw_y=0
+can_talks=1
+stop_walking=0
+col=c_white
+show=""
+face_towards=-1
+move_to_next_action=true
+perform_actions=true
+override_dir=0
+amount_being_carried=0
+my_talk_partner=noone
+current_line=0
+last_state=""
+current_state=""
+action_map=ds_map_create()
+ alarm[3]=3
+ start_thinking=0
+ end_state=0
+ word_array=array_create(1,0)
+ character_type="Tribal"
+ prev_current_line_text=""
+ stop_walking=0
+ controling_char=-1
+ player_twitch_id=""
+ override_movement=0
+ express_emotion=""
+character_name=""
+primary_emotion="sad"
+x_point_on_tile=0
+y_point_on_tile=0
+selected=0
+dont_repeat_state=0
+enum function_word
+{
+	target,
+	goto,
+	sit,
+	sleep,
+	eat,
+	collect,
+	assemble,
+	create,
+	temp,//temporary variable [temp variable_name value] variables are reset when we change states
+	wait,//do nothing cannot move further from this -put at end of states- can only move to next state if another state scores higher
+	make,
+	use,
+	ask,
+	talk,
+	stand,
+	animate,
+	face,
+	dontrepeatstate,
+	getclose,
+	change_towards_value,
+	express,
+	change_value,
+	deactivate,
+	talk_with_player,
+	give,
+	eatmana,
+	quest
+}
+lifetime=0
+enum proximity_word
+{
+	nearest,
+	any,
+	up,
+	down,
+	left,
+	right
+}
+
+enum ask
+{
+	none,
+	relationship_with_idea,
+	main_cause_of_emotion
+}
+state_towards_variables_map=ds_map_create()
+state_variables_map=ds_map_create()
+real_dis=0
+state_target=noone
+is_visible=true
+show_state_gui=true
+state_other=-1
+my_current_state_score=0
+is_player=false
+dir=0
+total_time_left=0
+Hold_State=false
+current_line_text=""
+concious=true
+time_left=0
+controlled_by=noone

@@ -1,0 +1,13 @@
+🔼
+if idle event
+if has person_to_meet
+600 
+=
+target person_to_meet 
+goto 60
+ask "wanna hug?"
+?
+900
+?
+quest
+stand for 30

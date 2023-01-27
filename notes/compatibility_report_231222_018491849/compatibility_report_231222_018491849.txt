@@ -1,0 +1,44 @@
+Converting GML script: ${project_dir}\scripts\scr_max_range\scr_max_range.gml
+Converted description /// @description scr_max_range(sprite, xscale, yscale, flickering)/// @param sprite
+/// @param  xscale
+/// @param  yscale
+/// @param  flickering
+
+Converting GML script: ${project_dir}\scripts\scr_is_on_view\scr_is_on_view.gml
+Converted builtin - line 8: view_xview[c_view] -> __view_get( e__VW.XView, c_view )
+Converted builtin - line 8: view_xview[c_view] -> __view_get( e__VW.XView, c_view )
+Converted builtin - line 8: view_yview[c_view] -> __view_get( e__VW.YView, c_view )
+Converted builtin - line 8: view_yview[c_view] -> __view_get( e__VW.YView, c_view )
+Converted builtin - line 8: view_wview[c_view] -> __view_get( e__VW.WView, c_view )
+Converted builtin - line 8: view_hview[c_view] -> __view_get( e__VW.HView, c_view )
+Converted description /// @description scr_is_on_view(view, max_range)/// @param view
+/// @param  max_range
+
+Converting GML script: ${project_dir}\objects\obj_light\Create_0.gml
+Converted builtin - line 2: view_wview[0] -> __view_get( e__VW.WView, 0 )
+Converted builtin - line 2: view_hview[0] -> __view_get( e__VW.HView, 0 )
+
+Converting GML script: ${project_dir}\objects\obj_light\Step_0.gml
+Converted builtin - line 31: view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin - line 32: view_yview[0] -> __view_get( e__VW.YView, 0 )
+
+Converting GML script: ${project_dir}\objects\obj_light\Draw_73.gml
+Converted builtin - line 11: view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin - line 11: view_yview[0] -> __view_get( e__VW.YView, 0 )
+Converted string - line 11: ':' -> ":"
+
+Converting GML script: ${project_dir}\objects\obj_light\Draw_0.gml
+Converted builtin - line 11: view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin - line 11: view_yview[0] -> __view_get( e__VW.YView, 0 )
+Converted builtin - line 15: view_wview[0] -> __view_get( e__VW.WView, 0 )
+Converted builtin - line 15: view_hview[0] -> __view_get( e__VW.HView, 0 )
+
+Added compatibility script 'draw/draw_set_blend_mode.gml'
+Added compatibility script 'instance/instance_create.gml'
+Added compatibility script 'object/object_get_depth.gml'
+Added compatibility script 'tile/tile_add.gml'
+Added compatibility script 'tile/tile_layer_delete.gml'
+Added compatibility script 'view/__view_get.gml'
+Added compatibility script 'view/__init_view.gml'
+Added compatibility script '__init_global.gml'
+Added compatibility script '__global_object_depths.gml'
