@@ -1,4 +1,5 @@
 🔼
+if is_tourist = 0
 30
 =
 stand for 10

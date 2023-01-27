@@ -15,6 +15,7 @@ obj.object_class=Furniture_Map[? type][? furn.class]
 
 if obj.object_class=obj_class.tourist_spawn
 {
+
 	Tourist_Spawn_X=xx
 		Tourist_Spawn_Y=yy
 }

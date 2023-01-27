@@ -1,4 +1,4 @@
-function Find_Instance(proximity,type,in_room)
+function Find_Instance(proximity,type,in_room,in_shop)
 {
 
 			chosen_instance=noone;
@@ -12,9 +12,12 @@ any_list=ds_list_create()
 //determine if tile
 
 //IN ROOM IS DIFFERENT
-if in_room{
+if in_room>0{
 	//look at all 
+	if in_room=1
 	var my_event_room=my_current_event[? my_event.room];
+	if in_room=2
+	var my_event_room=Shop_Room;
 //CHECK IF OBJECT IS A PERSON
 //
 

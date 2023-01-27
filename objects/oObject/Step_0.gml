@@ -55,7 +55,8 @@ depth=-y-700
 if object_class=obj_class.dining_table
 depth=-y-700
 
-if object_class=obj_class.shelf_decor || object_class=obj_class.cash_register
+if object_class=obj_class.shelf_decor || object_class=obj_class.cash_register || 
+object_class=obj_class.merch
 depth=-y-720
 if object_class=obj_class.storage
 depth=-y-700

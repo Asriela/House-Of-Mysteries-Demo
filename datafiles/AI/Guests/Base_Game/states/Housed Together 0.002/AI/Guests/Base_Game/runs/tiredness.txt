@@ -1,6 +1,0 @@
-start 20
-max 100
-min 0
-change 0.002
-active true
-effect health -0.01 when < 1

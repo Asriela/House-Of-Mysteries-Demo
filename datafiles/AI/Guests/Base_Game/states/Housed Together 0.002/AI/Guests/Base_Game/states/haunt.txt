@@ -1,6 +1,0 @@
-🔼
-if haunting = 1
-1000 
-=
-target any Bed 
-goto 5

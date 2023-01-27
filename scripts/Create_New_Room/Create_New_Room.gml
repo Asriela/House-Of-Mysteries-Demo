@@ -12,6 +12,8 @@ function Create_New_Room(type_of_room,preset){
 
 Rooms_Map[? Selected_Room]=ds_map_create();
 
+if type_of_room=room_type.gift_shop
+Shop_Room=Selected_Room
 if type_of_room=room_type.bedroom
 Bedroom_Count++
 if type_of_room=room_type.dining

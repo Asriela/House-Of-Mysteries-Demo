@@ -1,9 +1,0 @@
-🔼
-if idle event
-if has no room
-500 
-=
-target nearest room doorway
-goto 20
-make room
-dont_repeat

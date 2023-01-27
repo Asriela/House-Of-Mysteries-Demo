@@ -1,4 +1,5 @@
 🔼
+if is_tourist = 0
 if eat event
 600 
 =

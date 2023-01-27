@@ -1,5 +1,0 @@
-start 100
-max 100
-min 0
-change 0
-active true

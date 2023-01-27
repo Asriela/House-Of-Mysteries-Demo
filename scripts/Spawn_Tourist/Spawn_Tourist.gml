@@ -12,11 +12,12 @@ character.is_player=0;
 character.is_tourist=1
 	character.tourist_mask=instance_create_depth(x,y,1,oTourist)
 	character.tourist_mask.owner=character
-
+Set_Variable_Of(character,"is_tourist",1)
 character.my_House=id;
 character.character_type="Tourist_Adult_Man";
 		character.guest_id=char.tourist
 		character.hours_left_in_tour=5
+		character.filename="Tourists"
 ds_list_add(Tourists_Present_List,character)
-sm("")
+
 }

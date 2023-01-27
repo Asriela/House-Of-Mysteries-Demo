@@ -8,11 +8,13 @@ character.grid_y=yy;
 character.x=x_position;
 character.y=y_position;
 character.is_player=player;
+Set_Variable_Of(character,"is_tourist",0)
 if player=0{
 	character.npc_mask=instance_create_depth(x,y,1,oNpc)
 	character.npc_mask.owner=character
 }
-character.my_House=id;
+character.my_House=id
+		character.filename="Guests"
 character.character_type=sprite;
 character.my_height=Guest_Map[? the_id][? guest_detail.body_height]
 character.noise_resistance=Guest_Map[? the_id][? guest_detail.noise_resistance]

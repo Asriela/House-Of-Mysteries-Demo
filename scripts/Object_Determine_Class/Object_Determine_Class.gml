@@ -9,6 +9,7 @@ function Object_Determine_Class(type){
 		{
 			case "Chair": ret = obj_class.chair break;
 			case "Bed": ret = obj_class.bed break;
+			case "Merch": ret = obj_class.merch break;
 		}
 	}
 	

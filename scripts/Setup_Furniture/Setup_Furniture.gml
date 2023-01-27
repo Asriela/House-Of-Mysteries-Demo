@@ -14,7 +14,7 @@ style1=merch_type.bottled
 		item="Merch_Ectoplasm_Salve"
 	name="Ectoplasm salve"
 	desc="bring back your youth with the goop of the dead"
-	class=obj_class.shelf_decor
+	class=obj_class.merch
 	price=10
 	points=0
 		start_x=0
@@ -24,7 +24,7 @@ style1=merch_type.bottled
 	Set_Furniture_Item(item,name,desc,class,price,race,style1,style1_level,style2,style2_level,points,start_x,start_y,size_x,size_y,is_merch)
 
 style1=merch_type.stations
-		item="GiftShop_Cash_Register"
+	item="GiftShop_Cash_Register"
 	name="cash register"
 	desc="ring up tourists here"
 	class=obj_class.cash_register

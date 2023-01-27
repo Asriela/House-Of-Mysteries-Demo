@@ -1,0 +1,9 @@
+🔼
+if is_tourist = 1
+if finnished_shopping = 0 
+1000 
+=
+target any bed
+goto 5
+stand for 10
+finnished_shopping = random( 0 , 10 )

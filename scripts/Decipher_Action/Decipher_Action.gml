@@ -1,5 +1,18 @@
 function Decipher_Proximity(){
 				//target nearest FREE  object_type
+				if Get_Action_Word(3)="shop"{
+				action_map[? "in_room"]=2
+							if Get_Action_Word(4)="free"{
+				action_map[? "free"]=true
+
+				action_map[? "object_type"]=Get_Action_Word(5)
+
+				}
+							else
+									action_map[? "object_type"]=Get_Action_Word(4)
+				}
+				else				
+				
 				if Get_Action_Word(3)="room"{
 				action_map[? "in_room"]=true
 							if Get_Action_Word(4)="free"{

@@ -18,6 +18,7 @@ function Game_Enums(){
 		bed,
 		tourist_spawn,
 		cash_register,
+		merch,
 		storage,
 		doorway,
 		food_prep,

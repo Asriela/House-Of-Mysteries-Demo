@@ -1,4 +1,5 @@
 🔼
+if is_tourist = 0
 if sleep event
 if wakeup = 0
 900 

@@ -9,7 +9,9 @@
 									return ret;
 								}
 function Get_State_Score(idd,state_name,our_own_score_evaluation,start_line,end_line,who_cast_evaluation)
-{with(idd){
+{
+
+	with(idd){
 
 	score_value=0
 	failed_evaluation=false
@@ -212,7 +214,8 @@ function Get_State_Score(idd,state_name,our_own_score_evaluation,start_line,end_
 									
 									if !Evaluate(Get_Variable(word[2]),word[3],value){
 									failed_evaluation=true
-									//sm(word[2]+" "+word[3]+" "+st(value)+" => "+st(Get_Variable(word[2])))
+									
+								//	sm(word[2]+" "+word[3]+" "+st(value)+" => "+st(Get_Variable(word[2])))
 									}
 								}
 								else
