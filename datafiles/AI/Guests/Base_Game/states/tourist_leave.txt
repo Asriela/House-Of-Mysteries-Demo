@@ -5,4 +5,4 @@ if paid = 1
 =
 target nearest shop_entrance_sign
 goto 5
-leave = 1
+leave + 1

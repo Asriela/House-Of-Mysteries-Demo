@@ -18,6 +18,7 @@ character.character_type="Tourist_Adult_Man";
 		character.guest_id=char.tourist
 		character.hours_left_in_tour=5
 		character.filename="Tourists"
+		character.my_height=60
 ds_list_add(Tourists_Present_List,character)
 
 }

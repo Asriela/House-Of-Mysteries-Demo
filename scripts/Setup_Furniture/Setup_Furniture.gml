@@ -72,7 +72,7 @@ style1=furn_style.lodge
 	
 	item="GiftShop_Medium_Table"
 	desc="medium gift shop table"
-	class=obj_class.dining_table
+	class=obj_class.table
 	price=10
 	points=0
 	start_x=4
@@ -83,7 +83,7 @@ style1=furn_style.lodge
 	
 	item="GiftShop_Short_Table"
 	desc="short gift shop table"
-	class=obj_class.dining_table
+	class=obj_class.table
 	price=10
 	points=0
 	start_x=3
@@ -167,7 +167,7 @@ style1=furn_style.lodge
 	
 	item="Bedside_Table_1"
 	desc="bedside table"
-	class=obj_class.shelf_decor
+	class=obj_class.table
 	price=10
 	points=0
 	start_x=1
@@ -217,9 +217,9 @@ style1=furn_style.lodge
 	Furniture_Map[? item][? furn.light_instablility]=0.9		
 	
 	
-	item="Eating_Matt_0"
+	item="Dining_Table"
 	desc="dining table"
-	class=obj_class.dining_table
+	class=obj_class.table
 	price=10
 	points=0
 	start_x=5
@@ -298,8 +298,8 @@ style1=furn_style.arcane
 	Set_Furniture_Item(item,name,desc,class,price,race,style1,style1_level,style2,style2_level,points,start_x,start_y,size_x,size_y,is_merch)
 	
 		item="Ghost_Bedside_Table"
-	desc="ghost bed"
-	class=obj_class.bed
+	desc="ghost bedside table"
+	class=obj_class.table
 	price=10
 	points=0
 	start_x=1
@@ -496,7 +496,7 @@ style1=furn_style.wild
 	
 	item="Table_Gnome_1"
 	desc="tree stump table"
-	class=obj_class.dining_table
+	class=obj_class.table
 	price=10
 	points=0
 	start_x=3

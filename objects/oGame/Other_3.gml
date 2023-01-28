@@ -71,6 +71,7 @@ ini_close()
 
 
 ini_open("save.ini")
+ini_write_string("rooms","floors",ds_grid_write(Floor_Grid));
 ini_write_string("rooms","buildable_area_grid",ds_grid_write(Buildable_Grid));
 ini_write_string("rooms","rooms_grid",ds_grid_write(Rooms_Grid));
 ini_write_string("rooms","rooms_type_map",ds_map_write(Room_Type_Map));

@@ -1,0 +1,9 @@
+🔼
+if is_tourist = 1
+if finnished_shopping = 1
+if paid = 0
+1000 
+=
+target nearest shop cash_register
+goto 5
+stand 40

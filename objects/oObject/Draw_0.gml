@@ -3,7 +3,17 @@
 if object_type="DoorPoint" exit;
 draw_x=x
 draw_y=y
+try
+{
 sprite_index=asset_get_index("sObj_"+object_type)
+}
+catch( _exception)
+{
+instance_destroy(id)
+exit;
+
+}
+
 if Held_Furniture=id
 image_alpha=0.7
 else
@@ -25,16 +35,22 @@ if animation_type=ani_type.reverse
 	if animate_forward=0 && image_index>0//<image_number-1
 	image_index-=val1
 }
+
+if override_image_index>-1
+{
+	image_index=override_image_index
+}
 //if choose(0,0,0,0,0,0,0,0,0,0,0,1)
 //image_index=random(image_number)
 draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_white,image_alpha)
 //draw_text(x,y,st(grid_x)+"_"+st(grid_y))
-
+draw_x=x
+draw_y=y
 var _col = c_white
-var _scl = 1
+var _scl = 1.1
 if outline{
 
-outline_draw_sprite_ext(sprite_index, 0, x, y, _scl, _scl, 0, -1, 1, 1, c_white, 1, 0.9, 1, 0.8, true)
+outline_draw_sprite_ext(sprite_index, image_index, x, y, _scl, _scl, 0, -1, 1, 2, c_white, 1, 0.9, 2, 0.8, false)
 
 }
 

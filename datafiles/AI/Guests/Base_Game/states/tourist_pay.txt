@@ -5,5 +5,6 @@ if paid = 0
 1000 
 =
 target nearest shop cash_register
-goto 5
+goto 30
 stand 40
+paid + 1

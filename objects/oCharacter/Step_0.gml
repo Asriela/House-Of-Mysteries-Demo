@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-//Get_Gui_X_Y()
+Get_Gui_X_Y()
 if is_player && Chosen_Tutorial=tu.social{
 	tu_count++
 		
@@ -11,9 +11,34 @@ World_Hour=20
 	}
 
 }
-
-
 show_tip=""
+
+if is_player=0 && is_tourist{
+	if Get_Variable("leave")=1
+	instance_destroy()
+}
+
+
+if is_player && near_cash_register && near_tourist && Get_Variable_From(near_tourist,"finnished_shopping"){
+
+show_tip="press space to ring up customer"
+if keyboard_check_pressed(vk_space)
+{
+	var object=Get_Variable_From(near_tourist,"item_to_buy")
+	var price=Furniture_Map[? object][? furn.price]
+	Cash+=price
+	Set_Variable_Of(near_tourist,"paid",1)
+
+	Set_Variable_Of(near_tourist,"finnished_shopping",0)		
+	var cash=instance_create_depth(x,y,-7000,oCashWord)
+	cash.cash_amount=price
+	cash.xx=gui_x
+	cash.yy=gui_y
+}
+
+}
+near_tourist=-1
+
 selected=0
 	if point_in_rectangle(mouse_x,mouse_y,x-10,y-50,x+10,y){
 		selected=1
@@ -70,6 +95,7 @@ Player_Object=id
 	 if !(Edit_Mode=edit.room || Edit_Mode=edit.object) 
 	Character_Move_Player()
 
+if instance_exists(oIngredient){
 var the_ingredient= instance_nearest(x,y,oIngredient)
 if point_distance(x,y,the_ingredient.x,the_ingredient.y)<20
 {
@@ -94,7 +120,7 @@ if point_distance(x,y,the_ingredient.x,the_ingredient.y)<20
 		instance_destroy(the_ingredient)
 
 	}
-}
+}}
 //CARRY BOWL
 if Get_Variable(state_var.carrying_item )!=noone{
 

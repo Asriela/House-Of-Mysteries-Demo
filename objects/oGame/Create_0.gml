@@ -281,6 +281,6 @@ var h= View_Height;
 	surface_resize(application_surface, w, h);
 */
 }
-window_set_fullscreen(1)
+window_set_fullscreen(0)
 View_Width = window_get_width() 
 View_Height = window_get_height() 

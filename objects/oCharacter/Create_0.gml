@@ -2,6 +2,9 @@
 // You can write your code in this editor
 last_y=0
 is_tourist=0
+last_x=x
+near_cash_register=0
+near_tourist=0
 noise_resistance=1
 nearest_bag=noone
 word_timer=0

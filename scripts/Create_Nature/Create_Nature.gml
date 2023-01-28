@@ -15,7 +15,7 @@ repeat(160*multiply)
 	instance_create_depth(rr(0,room_width),rr(0,room_height),0,oTree)
 }
 
-
+/*
 repeat(50*multiply)
 {
 Create_Nature_Ingredient(ingredient.carrot)
@@ -56,6 +56,7 @@ repeat(100*multiply)
 Create_Nature_Ingredient(ingredient.worm)
 
 }
+*/
 
 
 }

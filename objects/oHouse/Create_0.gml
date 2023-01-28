@@ -51,6 +51,8 @@ Spawn_Y=room_height/2;
  player.character_type="Milda"
  player.x=room_width/2
  player.y=room_height/2+70
+ player.mask=instance_create(x,y,mPlayer)
+ player.mask.owner=player
 
 //display_mouse_set(player.x,player.y)
 Spawn_X=player.x

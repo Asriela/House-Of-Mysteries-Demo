@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 
-if object_class=obj_class.dining_table{
+if object_class=obj_class.table{
 my_mask=instance_create_depth(x,y,0,oMask)
 my_mask.sprite_index=sprite_index
 my_mask.owner=id

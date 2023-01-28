@@ -16,7 +16,7 @@ if World_Hour>=12
 darkness=1.2-(24-World_Hour)/12
 
 if World_Hour>11 && World_Hour<17
-Gift_Shop_Open=0
+Gift_Shop_Open=1
 else
 Gift_Shop_Open=0
 

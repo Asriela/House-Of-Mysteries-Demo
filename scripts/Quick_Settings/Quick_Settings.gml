@@ -9,11 +9,13 @@ Game_Mode=game_mode.dev
 //Game_Mode=game_mode.no_loading
 Visualize[? vis.path]=0
 Visualize[? vis.grid]=0
-Visualize[? vis.grid_numbers]=1
-Visualize[? vis.console]=1
-Visualize[? vis.states]=1
-Visualize[? vis.needs]=1
+Visualize[? vis.grid_numbers]=0
+Visualize[? vis.console]=0
+Visualize[? vis.states]=0
+Visualize[? vis.needs]=0
 Visualize[? vis.doorways]=0
+Visualize[? vis.move_to_point]=0
+Visualize[? vis.show_tutorial]=0
 
 Console_Mode=con.state_data
 
@@ -52,6 +54,12 @@ Floor_Map[?  sTile_Wood_Yellow][? floor_detail.style]=furn_style.lodge
 Floor_Map[?  sTile_Wood_Yellow][? floor_detail.style_level]=2
 Floor_Map[?  sTile_Wood_Yellow][? floor_detail.desc]="yellow wood"
 
+Floor_Count_Map[? sTile_Carpet_Red]=99
+Floor_Map[?  sTile_Carpet_Red]=ds_map_create()
+Floor_Map[?  sTile_Carpet_Red][? floor_detail.style]=furn_style.lodge
+Floor_Map[?  sTile_Carpet_Red][? floor_detail.style_level]=2
+Floor_Map[?  sTile_Carpet_Red][? floor_detail.desc]="red carpet"
+
 Floor_Count_Map[? sTile_Wood_Red]=99
 Floor_Map[?  sTile_Wood_Red]=ds_map_create()
 Floor_Map[?  sTile_Wood_Red][? floor_detail.style]=furn_style.lodge
@@ -64,6 +72,11 @@ Floor_Map[?  sTile_Alien][? floor_detail.style]=furn_style.sci_fi
 Floor_Map[?  sTile_Alien][? floor_detail.style_level]=1
 Floor_Map[?  sTile_Alien][? floor_detail.desc]="alien plating"
 
+Floor_Count_Map[? sTile_DarkStone]=99
+Floor_Map[?  sTile_DarkStone]=ds_map_create()
+Floor_Map[?  sTile_DarkStone][? floor_detail.style]=furn_style.arcane
+Floor_Map[?  sTile_DarkStone][? floor_detail.style_level]=1
+Floor_Map[?  sTile_DarkStone][? floor_detail.desc]="dark stone"
 
 Setup_Furniture()
 
@@ -82,7 +95,7 @@ Furniture_Count_Map[? "Candle"]=3
 Furniture_Count_Map[? "Candle_Red"]=3
 Furniture_Count_Map[? "Candle_Aqua"]=3
 Furniture_Count_Map[? "Bedside_Table_1"]=1
-Furniture_Count_Map[? "Eating_Matt_0"]=1
+Furniture_Count_Map[? "Dining_Table"]=1
 Furniture_Count_Map[? "Kitchen_Pot_0"]=1
 Furniture_Count_Map[? "Dining_Chair_0"]=4
 Furniture_Count_Map[? "Fireplace"]=1

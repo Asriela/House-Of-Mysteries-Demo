@@ -1460,7 +1460,7 @@ item=ds_map_find_next(Furniture_Count_Map,item)
 	
 	for(var f=0;f<ds_map_size(Floor_Count_Map);f++)
 	{
-		if item=sTile_Wood_Red || item= sTile_Alien || item= sTile_Wood_Yellow
+		if item=sTile_Wood_Red || item= sTile_Alien || item= sTile_Wood_Yellow || item= sTile_DarkStone || item= sTile_Carpet_Red
 		{
 
 		if Object_Category =Floor_Map[? item][? floor_detail.style]{
@@ -1613,7 +1613,7 @@ if (Last_Sub_Menu == "Ingredient" && Sub_Menu != "Ingredient")
 
 
 
-if Chosen_Tutorial!=-1{
+if Chosen_Tutorial!=-1 && Visualize[? vis.show_tutorial]=1{
 	draw_set_font(fTutorial)
 var text=Tutorial_Map[? Chosen_Tutorial];
 var length=string_width_ext(text,25,1200)/2+10

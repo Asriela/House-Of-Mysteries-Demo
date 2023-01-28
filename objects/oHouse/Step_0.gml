@@ -51,7 +51,7 @@ if Chosen_Tutorial=tu.trade2
 if Chosen_Tutorial!=tu.take_bags
 if Chosen_Tutorial=tu.add_furniture
 if alarm[5]=-1
-if Placed_Map[? obj_class.bed]>1 && Placed_Map[? obj_class.chair]>1 && Placed_Map[? obj_class.dining_table] && Placed_Map[? obj_class.food_prep] 
+if Placed_Map[? obj_class.bed]>1 && Placed_Map[? obj_class.chair]>1 && Placed_Map[? obj_class.table] && Placed_Map[? obj_class.food_prep] 
 if Edit_Mode=edit.none
 {
 

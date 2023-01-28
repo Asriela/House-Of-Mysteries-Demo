@@ -62,10 +62,20 @@ function Perform_Action(idd)
 						case function_word.change_value:
 
 	Change_Variable(action_map[? "the variable"],action_map[? "value to add"])
+	Log_Main("new value: "+st(Get_Variable(action_map[? "the variable"])))
 
 	move_to_next_action=1
 	break;
 		///TARGET KEYWORD
+		case function_word.try_purchase:
+
+			Set_Variable("finnished_shopping",1)
+			Set_Variable("item_to_buy",state_target.object_type)
+state_target.alarm[5]=2
+		
+		
+		
+		break;
 				case function_word.change_towards_value:
 				who_am_i=action_map[? "who am i"]
 
@@ -466,6 +476,7 @@ if end_state=0{
 				{
 
 					//if i like doing the thing ur proposing more than the thing im doing atm
+					//sm("question")
 					check_score=Get_State_Score(state_target,current_state,false,current_line+1,other_end_evaluation_line,id)
 					if check_score>state_target.my_current_state_score
 					{
@@ -588,10 +599,12 @@ with(lead){path_speed=other.char_speed*World_Speed-0.1}
 						chances++
 						dis+=0
 					//	angle+=choose(20,-20)
-						if angle>90 && angle<270
+					if is_tourist=0{
+					if angle>90 && angle<270
 						angle=180
 						else
 						angle=0
+					}
 						target_x=state_target.x+lengthdir_x(dis,angle)
 						target_y=state_target.y+lengthdir_y(dis,angle)
 					}

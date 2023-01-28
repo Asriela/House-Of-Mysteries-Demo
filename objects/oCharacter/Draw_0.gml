@@ -21,5 +21,10 @@ if Visualize[? vis.states]=1{
 draw_text(x,y,Event_Enum_To_String(my_current_event[? my_event.event]))
 }
 
+if Visualize[? vis.move_to_point]=1{
+	draw_set_color(c_red)
+	draw_circle(target_x,target_y,2,1)
+
+}
 
 

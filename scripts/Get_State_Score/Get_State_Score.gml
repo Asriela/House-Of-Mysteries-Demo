@@ -22,7 +22,8 @@ function Get_State_Score(idd,state_name,our_own_score_evaluation,start_line,end_
 	start_line=0
 	end_line=States_Action_Line_Map[? state_name][? "first"]-1 
 	}
-
+//	if state_name="tourist_browse"
+//sm(state_name+st(end_line))
 	for(l=start_line;l<end_line && failed_evaluation=false;l++)
 	{
 
@@ -215,8 +216,9 @@ function Get_State_Score(idd,state_name,our_own_score_evaluation,start_line,end_
 									if !Evaluate(Get_Variable(word[2]),word[3],value){
 									failed_evaluation=true
 									
-								//	sm(word[2]+" "+word[3]+" "+st(value)+" => "+st(Get_Variable(word[2])))
+						
 									}
+											//sm(state_name+"\n"+word[2]+" "+word[3]+" "+st(value)+" : "+st(Get_Variable(word[2])))
 								}
 								else
 								switch(word[3])
@@ -269,7 +271,8 @@ function Get_State_Score(idd,state_name,our_own_score_evaluation,start_line,end_
 			
 		
 				default: //raw number or value 
-				
+				if word[1]="=" exit;
+				//sm(st(word[1])+" "+st(word[2])+" "+st(word[3]))
 				//ONLY NUMBER
 				if is_number(string(word[1]))
 				{
@@ -279,6 +282,7 @@ function Get_State_Score(idd,state_name,our_own_score_evaluation,start_line,end_
 				}
 				else
 				{
+					
 					//tiredness x 2
 					word[1]=Get_Variable(string(word[1]))
 

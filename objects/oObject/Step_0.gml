@@ -6,6 +6,20 @@ switch(object_class)
 
 	object_group="Bed"
 	break;
+	case obj_class.cash_register:
+
+	if point_distance(x,y,mPlayer.x,mPlayer.y)<60 && y+20>mPlayer.y
+	{
+outline=1
+		mPlayer.owner.near_cash_register=1
+		override_image_index=1
+	}
+	else{
+			mPlayer.owner.near_cash_register=0
+			override_image_index=0
+	}
+	
+	break;
 }
 
 //get closest table
@@ -26,7 +40,7 @@ var ret=noone;
 if object_class=obj_class.chair{
 	with(oObject)
 	{
-		if id!=other && object_class=obj_class.dining_table{// && Get_Variable(variable)=value{
+		if id!=other && object_class=obj_class.table{// && Get_Variable(variable)=value{
 			//ss()
 			var dis= point_distance(other.x,other.y,x,y)
 		if dis<closest{
@@ -52,7 +66,7 @@ depth=-y-610
 else
 depth=-y-700
 
-if object_class=obj_class.dining_table
+if object_class=obj_class.table
 depth=-y-700
 
 if object_class=obj_class.shelf_decor || object_class=obj_class.cash_register || 

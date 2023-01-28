@@ -1,5 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+draw_set_color(c_lime)
+if Visualize[? vis.move_to_point] && exists(state_target)
+draw_circle(state_target.x,state_target.y,2,0)
+	
 if is_player || is_tourist exit
 
 if ds_list_size(conversation_list)>0{
@@ -159,3 +164,5 @@ if show_character_dev_menu=char_dev_menu.emotions{
 		draw_sprite_ext(temp_emotions_list[| e],0,t_x,t_y,0.3,0.3,0,c_aqua,0.9)
 	}
 }
+
+

@@ -23,7 +23,7 @@ function Game_Enums(){
 		doorway,
 		food_prep,
 		chair,
-		dining_table,
+		table,
 		floor_decor,
 		standing_decor,
 		hanging_decor,
@@ -89,7 +89,9 @@ function Game_Enums(){
 		grid_numbers,
 		states,
 		needs,
-		doorways
+		doorways,
+		move_to_point,
+		show_tutorial
 	}
 	enum gui{
 		console,

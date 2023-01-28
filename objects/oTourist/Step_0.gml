@@ -4,6 +4,13 @@ if exists(owner){
 x=owner.x
 y=owner.y
 
+
+
+	if point_distance(x,y,mPlayer.x,mPlayer.y)<60 
+	{
+		mPlayer.owner.near_tourist=owner
+	//	ss()
+	}
 dis=90000
 /*
 with(oCharacter)

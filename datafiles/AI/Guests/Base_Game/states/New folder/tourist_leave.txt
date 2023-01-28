@@ -1,0 +1,8 @@
+🔼
+if is_tourist = 1
+if paid = 1
+1000 
+=
+target nearest shop_entrance_sign
+goto 5
+leave = 1

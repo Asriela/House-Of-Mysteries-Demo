@@ -121,7 +121,8 @@ enum function_word
 	talk_with_player,
 	give,
 	eatmana,
-	quest
+	quest,
+	try_purchase
 }
 lifetime=0
 enum proximity_word

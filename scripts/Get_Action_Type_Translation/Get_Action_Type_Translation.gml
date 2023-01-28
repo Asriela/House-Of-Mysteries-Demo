@@ -9,6 +9,7 @@ function Get_Action_Type_Translation(action_type)
 									case "temp": ret=function_word.temp; break;
 			case "give": ret=function_word.give; break;
 			case "get_close": ret=function_word.getclose; break;
+			case "try_purchase": ret=function_word.try_purchase; break;
 			case "target": ret= function_word.target; break;
 			case "goto": ret= function_word.goto; break;
 					case "goto(": ret= function_word.goto; break;

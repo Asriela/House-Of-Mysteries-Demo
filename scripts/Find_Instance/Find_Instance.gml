@@ -34,6 +34,13 @@ else
 {
 if is_undefined(list)sm("r"+st(my_event_room)+" t"+type+" c" +st(Object_Determine_Class(type)))
 else
+if proximity=proximity_word.any{
+var chosen=random(ds_list_size(list));
+
+	chosen_instance=list[| chosen];
+//	sm("item"+st(chosen_instance)+" no"+st(chosen))
+}
+else
 for( var f=0; f<ds_list_size(list);f++)
 {
 	var instance=list[| f];
