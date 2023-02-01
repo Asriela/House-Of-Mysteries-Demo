@@ -71,8 +71,11 @@ current_room=Rooms_Grid[# xx,yy]
 			// Item_Being_Placed=_room_type
 			 checked=1
 		 }
-
+if sprite_exists(sprite)
 		draw_sprite_ext(sprite,Floor_Index[# xx,yy],x_position,y_position,1,1,0,c_white,1);
+	else
+	Floor_Grid[# xx,yy]=-1
+	
 		center_tile=0
  if _room_type!=room_type.hallway{
 
@@ -90,8 +93,8 @@ the_alpha=0.4
 					else
 					{
 						draw_sprite_ext(sTile_Blank,frame,x_position,y_position,1,1,0,color,the_alpha);
-									 if !(Wall_Grid[# xx-1,yy]<=0 && Wall_Grid[# xx+1,yy]<=0 && Wall_Grid[# xx,yy+1]<=0 && Wall_Grid[# xx,yy-1] <=0 &&	
-				Wall_Grid[# xx-1,yy-1]<=0 && Wall_Grid[# xx+1,yy+1]<=0 && Wall_Grid[# xx-1,yy+1]<=0 && Wall_Grid[# xx+1,yy-1] <=0)		
+						 if !(Wall_Grid[# xx-1,yy]<=0 && Wall_Grid[# xx+1,yy]<=0 && Wall_Grid[# xx,yy+1]<=0 && Wall_Grid[# xx,yy-1] <=0 &&	
+						Wall_Grid[# xx-1,yy-1]<=0 && Wall_Grid[# xx+1,yy+1]<=0 && Wall_Grid[# xx-1,yy+1]<=0 && Wall_Grid[# xx+1,yy-1] <=0)		
 						draw_sprite_ext(sTile_Blank,frame,x_position,y_position,1,1,0,c_aqua,the_alpha);
 					}
 

@@ -29,7 +29,7 @@ Dev_Help[? dev_help.unlock_all_furniture]=1
 
 Edit_Mode=edit.none //edit.trade
 Can_Save=1
-Chosen_Tutorial=tu.add_beds
+Chosen_Tutorial=tu.none
 //Chosen_Tutorial=tu.social 
 World_Speed=1
 Cash=900

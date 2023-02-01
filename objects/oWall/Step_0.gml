@@ -4,7 +4,7 @@
 
 
 Wall_Grid[# xx,yy]=id
-depth=-y+4-710
+depth=-y+4-700
 
 count=0
 if my_house.tile_room_grid[# xx-1,yy]!=my_room

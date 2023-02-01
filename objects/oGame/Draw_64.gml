@@ -1818,7 +1818,7 @@ if (Last_Sub_Menu == "Ingredient" && Sub_Menu != "Ingredient")
 
 
 
-if Chosen_Tutorial!=-1 && Visualize[? vis.show_tutorial]=1{
+if Chosen_Tutorial!=-1 && Visualize[? vis.show_tutorial]=1 && Chosen_Tutorial!=tu.none{
 	draw_sprite(sGui_Tutorial_Bar,0,View_Width/2,150)
 	draw_set_font(fTutorial)
 var text=Tutorial_Map[? Chosen_Tutorial];
