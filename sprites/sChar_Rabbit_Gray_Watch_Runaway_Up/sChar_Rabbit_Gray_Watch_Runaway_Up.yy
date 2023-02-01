@@ -70,7 +70,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "CHARACTER",
-    "path": "folders/SPRITES/CHARACTER.yy",
+    "name": "old",
+    "path": "folders/SPRITES/CHARACTER/GUESTS/BODIES/old.yy",
   },
 }

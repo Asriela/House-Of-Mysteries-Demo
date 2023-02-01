@@ -99,10 +99,12 @@ enum function_word
 	goto,
 	sit,
 	sleep,
+	dish_up,
 	eat,
 	collect,
 	assemble,
 	create,
+	take,
 	temp,//temporary variable [temp variable_name value] variables are reset when we change states
 	wait,//do nothing cannot move further from this -put at end of states- can only move to next state if another state scores higher
 	make,

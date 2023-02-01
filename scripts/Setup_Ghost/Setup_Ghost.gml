@@ -16,13 +16,19 @@ Guest_Map[? me][? guest_detail.cash]=10
 Guest_Map[? me][? guest_detail.sprite]="Ghost"
 Guest_Map[? me][? guest_detail.type]=char.gnomes
 Guest_Map[? me][? guest_detail.bag]="Backpack"
-Guest_Map[? me][? guest_detail.element]=furn_style.arcane
+Guest_Map[? me][? guest_detail.element]=style.arcane
 Guest_Map[? me][? guest_detail.portrait]=sPort_Ghost
 Guest_Map[? me][? guest_detail.up_to]="'"
 Guest_Map[? me][? guest_detail.body_height]=59
 Guest_Map[? me][? guest_detail.noise_resistance]=10
 Guest_Map[? me][? guest_detail.resistance_to_open]=2
 Guest_Map[? me][? guest_detail.openness]=3
+
+Guest_Map[? me][? guest_detail.styles_list]=ds_list_create()
+var list_of_styles=Guest_Map[? me][? guest_detail.styles_list];
+ds_list_add(list_of_styles,style.arcane)
+
+
 Guest_Map[? me][? guest_detail.impression_of_player]=0
 Guest_Map[? me][? guest_detail.stay_length_days]=10
 Guest_Map[? me][? guest_detail.stay_length]=24*Guest_Map[? me][? guest_detail.stay_length_days]
@@ -34,6 +40,9 @@ Guest_Map[? me][? guest_detail.has_leave_panel]=1
 Guest_Map[? me][? guest_detail.speak_on_arrival]=0
 Guest_Map[? me][? guest_detail.starting_emotion]=sE_InLove
 Guest_Map[? me][? guest_detail.starting_mood]=70
+Guest_Map[? me][? guest_detail.mess_type]="sMess_Ectoplasm"
+Guest_Map[? me][? guest_detail.mess_rate]=120
+
 Guest_Add_Need(me,guest_need.rest,-3)
 Guest_Add_Need(me,guest_need.food,-3)
 Guest_Add_Need(me,guest_need.social,-3)

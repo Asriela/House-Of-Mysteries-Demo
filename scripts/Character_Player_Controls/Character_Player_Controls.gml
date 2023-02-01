@@ -9,6 +9,7 @@ function Character_Player_Controls(){
 				break;
 	}
 	did_move=0
+	
 if up_key
 Player_View_Direction=90
 
@@ -17,6 +18,7 @@ Player_View_Direction=270
 
 if left_key
 Player_View_Direction=180
+
 if right_key
 Player_View_Direction=0
 

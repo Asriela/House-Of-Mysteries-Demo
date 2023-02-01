@@ -22,7 +22,17 @@ switch(Edit_Mode)
 	case edit.object: chosen =2; break;
 	case edit.recipies: chosen =3; break;
 }
+
+
+
 draw_sprite_ext(sGui_Pie_Menu,chosen,edit_mode_menu_x+30,edit_mode_menu_y,1,1,0,c_white,1)
+if Tutorial_Highlight_Alpha>0.5
+Tutorial_Highlight_Alpha-=0.01
+else
+Tutorial_Highlight_Alpha=1
+if Tutorial_Highlight_Button!=noone
+draw_sprite_ext(sGui_Pie_Menu_Tu,Tutorial_Highlight_Button,edit_mode_menu_x+30,edit_mode_menu_y,1,1,0,c_white,Tutorial_Highlight_Alpha)
+
 Edit_Mode = Button_Pressed(edit_mode_menu_x - 10, edit_mode_menu_y - 44, 80, 76, 0, "", -1, -1, Edit_Mode, edit.room, 0, default_input, 0, shape.square, 0);
 
 Edit_Mode = Button_Pressed(edit_mode_menu_x - 10+80, edit_mode_menu_y - 44, 80, 76, 0, "", -1, -1, Edit_Mode, edit.object, 0, default_input, 0, shape.square, 0);
@@ -68,6 +78,165 @@ var edit_mode_menu_y = 50
 ;
 switch (Edit_Mode)
 {
+	case edit.work_bench:
+	        
+				draw_sprite(sGUI_Speak_SideBar,0,edit_mode_menu_x+160,edit_mode_menu_y+360-09)
+			draw_set_font(f_OptionsMedium)
+			draw_set_color(c_old)
+						draw_text(edit_mode_menu_x+160,edit_mode_menu_y+20,"WORK BENCH")
+
+            // sm("")
+			draw_set_font(f_Speak_Large)
+			edit_mode_menu_y+=270
+			edit_mode_menu_x-=110
+			
+			
+edit_mode_menu_y-=0
+			Over_Button_Id=-1
+        
+                var temp_materials_we_have_map = ds_map_create();
+				var materials_we_have_map=Materials_Count_Map
+			 var text = ds_map_write(Materials_Count_Map);		
+		        var recipe = ds_map_find_first(Recipies_Map);
+				var recipe_requirements_map=ds_map_create()
+				chosen_recipe=noone
+											var box_size=45
+							var sep=105
+				//Selected_Recipe=noone
+				draw_set_halign(fa_left)
+var line_count=0;
+			//FOR EVERY RECIPE
+			        for (r = 0; r < ds_map_size(Recipies_Map); r++)
+			        {
+						
+						if line_count>3{
+						line_count=0
+						edit_mode_menu_y+=90
+						}
+						
+						line_count++
+						  // SEE IF THIS RECIPE CAN BE MADE
+			                var has_all_ingredients = 1;
+			                col2=c_white
+							recipe_requirements_map[? recipe]=ds_map_create()
+								//get a copy of our inventory
+		
+			                ds_map_read(temp_materials_we_have_map, text);
+							//CHECK EVERY REQUIRED ING
+					//	sm(ds_list_size(Recipies_Map[? recipe]))
+					req_count=0
+					has_count=0
+					draw_set_font(f_small)
+					
+					        var t_material = ds_map_find_first(Recipies_Map[? recipe]);
+			                for (i = 0; i < ds_map_size(Recipies_Map[? recipe]); i++)
+			                {
+			
+
+			                //    var item_text = Ingredient_Enum_To_Text(Recipies_Map[? recipe][| j]);
+								//					sm(st(j)+" "+item_text)
+		
+
+										recipe_requirements_map[? recipe][? t_material]=Recipies_Map[? recipe][? t_material]
+
+//sm(Ingredient_Enum_To_Text( temp_ingredient))
+					req_count=Recipies_Map[? recipe][? t_material]
+					has_count=Materials_Count_Map[? t_material]
+					if is_undefined(has_count)
+					has_count=0
+					if has_count<req_count
+					col2=c_my_bar_red
+					else
+					col2=c_white
+					draw_set_color(col2)
+					
+				draw_text(edit_mode_menu_x - 15+line_count*sep+i*40+18, edit_mode_menu_y+60,st(req_count)) 
+				//sm(temp_ingredient)
+				draw_sprite_ext(asset_get_index(t_material),0,edit_mode_menu_x - 15+line_count*sep+i*40, edit_mode_menu_y+60,2,2,0,c_white,1)
+
+
+				
+				
+	
+									//remove item from our theoretical inventory
+									if is_undefined(temp_materials_we_have_map[? t_material] )
+									temp_materials_we_have_map[? t_material]=0;
+									
+									temp_materials_we_have_map[? t_material] -=Recipies_Map[? recipe][? t_material]
+									
+			                        if (temp_materials_we_have_map[? t_material] >=0){
+			                            has_all_ingredients=1
+						
+									}
+			                        else
+			                        {//else we dont have enough 
+			                            has_all_ingredients = 0;
+										col2=c_my_bar_red
+           
+     
+			                        }
+									t_material=ds_map_find_next(Recipies_Map[? recipe],t_material)
+			                    
+			                }
+							//sm(ds_map_size(recipe_requirements_map[? 0]))
+							//SHOW ALL RECIPIES WE CAN MAKE
+
+							if col2=c_my_bar_red{
+							draw_set_color(col2)
+								}
+								else
+								draw_set_color(c_light_brown)
+								
+								var selected=1
+								if Last_Selected=recipe
+								selected=0
+							
+							draw_rectangle(edit_mode_menu_x+15-box_size+line_count*sep,edit_mode_menu_y-box_size,edit_mode_menu_x+15+box_size+line_count*sep,edit_mode_menu_y+box_size,selected)
+						
+			            Selected_Recipe = Button_Pressed(edit_mode_menu_x+15-box_size/2+20+line_count*sep, edit_mode_menu_y-box_size/2+20, box_size*2, box_size*2, asset_get_index("sObj_"+recipe), "", c_white, c_white, Selected_Recipe, recipe, 1, default_input, recipe, shape.square, 4);
+			          draw_set_color(c_white)
+draw_text(+15-box_size/2+20+line_count*sep-39, edit_mode_menu_y-box_size/2+20-30,Furniture_Count_Map[? recipe])
+
+
+
+
+
+					  if Button_Was_Pressed && has_all_ingredients=1{ 
+						  chosen_recipe=recipe Furniture_Count_Map[? recipe]++
+						  t_material=ds_map_find_first(Recipies_Map[?recipe])
+						  for(m=0;m<ds_map_size(Recipies_Map[?recipe]);m++){
+						 Materials_Count_Map[?t_material]-= Recipies_Map[? recipe][? t_material]
+						 t_material=ds_map_find_next(Recipies_Map[?recipe],t_material)
+						  }
+						  }
+					   
+			            recipe = ds_map_find_next(Recipies_Map, recipe);
+					}
+		
+			//SHOW INGREDIENTS REQUIRED FOR REC
+
+			//Over_Button_Id this is the recipe we must display req ing
+			//for every ing req for this rec
+		draw_set_color(c_white)
+Last_Selected=Over_Button_Id
+			if Over_Button_Id!=-1{
+						draw_set_halign(fa_left)
+draw_set_font(fOutdoors)
+draw_set_halign(fa_center)
+	draw_text(260,170,Furniture_Map[? Over_Button_Id][? furn.named])
+	draw_set_font(fOutdoors_small)
+			draw_text(260,170+30,Furniture_Map[? Over_Button_Id][? furn.desc])				
+
+
+
+
+				
+
+
+}
+			
+	break;
+	
 			case edit.trade:
 			draw_set_color(c_black)
 			draw_set_alpha(0.7)
@@ -91,7 +260,7 @@ switch (Edit_Mode)
 					 starting_x-=390
 					 var image_alpha_var=0
 down_value+=70
-								var style1=furn_style.lodge 
+								var style1=style.lodge 
 								draw_set_color(Get_Class_Color(style1))
 													var amount = Style_Progression_Map[? style1]
 										draw_text(starting_x , down_value, "Neutral " + st(amount));
@@ -99,7 +268,7 @@ down_value+=70
             draw_sprite_ext(sGui_Speak_Relationship_Bar_2, amount + 3, starting_x , down_value-20, 1, 1, 0, c_white, image_alpha_var);
 starting_x+=200
 
-								var style1=furn_style.wild draw_set_color(Get_Class_Color(style1))
+								var style1=style.wild draw_set_color(Get_Class_Color(style1))
 													var amount = Style_Progression_Map[? style1]
 										draw_text(starting_x , down_value, "Wild " + st(amount));
 
@@ -107,14 +276,14 @@ starting_x+=200
 			starting_x+=200
 
 
-								var style1=furn_style.arcane draw_set_color(Get_Class_Color(style1))
+								var style1=style.arcane draw_set_color(Get_Class_Color(style1))
 													var amount = Style_Progression_Map[? style1]
 										draw_text(starting_x , down_value, "Spirit " + st(amount));
 
             draw_sprite_ext(sGui_Speak_Relationship_Bar_2, amount + 3, starting_x , down_value-20, 1, 1, 0, c_white, image_alpha_var);
 			
 starting_x+=200
-								var style1=furn_style.sci_fi draw_set_color(Get_Class_Color(style1))
+								var style1=style.sci_fi draw_set_color(Get_Class_Color(style1))
 													var amount = Style_Progression_Map[? style1]
 										draw_text(starting_x , down_value, "Scholarly " + st(amount));
 
@@ -124,7 +293,7 @@ starting_x+=200
 			
 starting_x+=200
 
-								var style1=furn_style.regal draw_set_color(Get_Class_Color(style1))
+								var style1=style.regal draw_set_color(Get_Class_Color(style1))
 								var amount = Style_Progression_Map[? style1]
 										draw_text(starting_x , down_value, "Regal "  + st(amount));
 					
@@ -362,13 +531,16 @@ draw_set_font(f_StoryMedium)
 										if Do_Review{
 											Chosen_Tutorial=tu.review
 										}
+										if Do_Review
+										ds_map_clear(materials_gained_map)
 				for(var g=0;g<ds_list_size(Current_Housed_Guests_List);g++)
 				{
 				
 					var guest=Current_Housed_Guests_List[| g]
 					var guests_id=guest.guest_id
 
-					
+					var mat_1=noone
+					var mat_2=noone
 						
 														if guest.was_reviewed_today=0
 										{
@@ -379,10 +551,13 @@ draw_set_font(f_StoryMedium)
 											guest.my_mood-=15
 												if guest.need_satisfied[? need.social]=0
 											guest.my_mood-=15
+											
+											materials_gained_map[? guests_id]=ds_map_create()
+											Gain_Material_From_Guest(guests_id,(guest.my_mood/10)-5)
 										}
 				
 							var mood_index=(guest.my_mood/100)*6								
-					       draw_sprite_ext(Guest_Map[? guests_id][? guest_detail.portrait], 0, starting_x-140-80, starting_y+g*100, 1, 1, 0, c_white, 1);
+					       draw_sprite_ext(Guest_Map[? guests_id][? guest_detail.portrait], 0, starting_x-140-80-30, starting_y+g*100, 1, 1, 0, c_white, 1);
 					draw_sprite_ext(sGui_Speak_Relationship_Bar,mood_index,starting_x+50+90, starting_y-10+g*100,2,2,0,c_white,0.5)	
 					
 					
@@ -403,11 +578,42 @@ draw_set_font(f_StoryMedium)
 					draw_set_color(col)
 					draw_set_valign(fa_center)
 						draw_set_font(f_Story_Small)				
-					draw_roundrect(starting_x-100-50-40,starting_y+25+g*100,starting_x-100-50-40+45,starting_y+g*100-25,1)
-					var money_given=Guest_Map[? guests_id][? guest_detail.cash]*guest.my_mood/100
-					draw_text(starting_x-75-50-40,starting_y+0+g*100+3,st(int64(money_given))+"$")
-					total_money+=money_given
-					draw_roundrect(starting_x-105+20-40+7,starting_y+25+g*100,starting_x-100+60+20+40+7,starting_y+g*100-25,1)
+					draw_roundrect(starting_x-100-50-40-30,starting_y+25+g*100,starting_x-100-50-40-30+80,starting_y+g*100-25,1)
+				//	var money_given=Guest_Map[? guests_id][? guest_detail.cash]*guest.my_mood/100
+			//		draw_text(starting_x-75-50-40,starting_y+0+g*100+3,st(int64(money_given))+"$")
+				//	total_money+=money_given
+				
+			
+				draw_roundrect(starting_x-105+20-40+7,starting_y+25+g*100,starting_x-100+60+20+40+7,starting_y+g*100-25,1)
+		var mat_2_amount=0
+		var mat_1_amount=0
+if ds_map_size(materials_gained_map[?guests_id ])>0{				
+				var mat_1=ds_map_find_first(materials_gained_map[? guests_id] )//sMat_Ceramic
+
+				var mat_1_amount=materials_gained_map[? guests_id][? mat_1]
+}
+else
+{
+	
+	var mat_1=noone
+}
+if ds_map_size(materials_gained_map[?guests_id ])>1{
+				var mat_2=ds_map_find_next(materials_gained_map[?guests_id],mat_1 )//sMat_Ceramic
+				var mat_2_amount=materials_gained_map[? guests_id][? mat_2]
+}else
+{
+	var mat_2=noone
+}
+				if mat_1!=noone{
+				draw_text(starting_x-90-15+15,starting_y+0+g*100+3,mat_1_amount)
+				draw_sprite_ext(asset_get_index(mat_1),0,starting_x-90+4+15,starting_y+0+g*100+3,2,2,0,c_white,1)
+				}
+				if mat_2!=noone
+				{
+					draw_text(starting_x-90-15+50,starting_y+0+g*100+3,mat_2_amount)
+				draw_sprite_ext(asset_get_index(mat_2),0,starting_x-90+4+50,starting_y+0+g*100+3,2,2,0,c_white,1)
+				}
+				
 					var element_change=mood_index-3
 										var element=Guest_Map[? guests_id][? guest_detail.element];
 					if Do_Review=1{
@@ -420,22 +626,32 @@ Style_Progression_Map[? element]+=element_change
 
 					col=Get_Class_Color(element)
 					draw_set_color(col)
+					
 					var sign_text="+"
 					if element_change<0
 					sign_text=""
-					draw_text(starting_x-60+4+25,starting_y+0+g*100+3,sign_text+st(int64(element_change))+"")
+					draw_text(starting_x-60+4+25-130,starting_y+0+g*100+3,sign_text+st(int64(element_change))+"")
 					var element_index=0
-					if element=furn_style.wild
+					if element=style.wild
 					element_index=2
-								if element=furn_style.arcane
+								if element=style.arcane
 					element_index=1	
-					draw_sprite_ext(sGUI_Elements,element_index,starting_x-90+4+25,starting_y+0+g*100+3,1,1,0,col,1)
+					draw_sprite_ext(sGUI_Elements,element_index,starting_x-90+4+25-130,starting_y+0+g*100+3,1,1,0,col,1)
 
 										
 				}
 				if Do_Review=1{
-				Cash+=total_money
-				
+				if mat_1!=noone{
+					if is_undefined(Materials_Count_Map[? mat_1])
+								Materials_Count_Map[? mat_1]=mat_1_amount
+								else
+				Materials_Count_Map[? mat_1]+=mat_1_amount
+				}
+				if mat_2!=noone
+									if is_undefined(Materials_Count_Map[? mat_2])
+								Materials_Count_Map[? mat_2]=mat_2_amount
+								else
+				Materials_Count_Map[? mat_2]+=mat_2_amount
 				}
 				Do_Review=0
 				draw_set_font(fStoryLarge)	
@@ -1003,149 +1219,135 @@ Edit_Mode=edit.none
         break;
     case edit.food_prep:
 
-
-        
-        edit_mode_menu_y += 50;
-Over_Button_Id=-1
-        
-                var temp_player_inventory_map = ds_map_create();
-				var display_map_have=Player_Object.backpack_map
-                var text = ds_map_write(display_map_have);		
-		        var recipe = ds_map_find_first(Recipies_Map);
-				var display_map_required=ds_map_create()
-				chosen_recipe=noone
-				//Selected_Recipe=noone
-				draw_set_halign(fa_left)
-																draw_text(edit_mode_menu_x+30,edit_mode_menu_y-60,"CHOOSE A RECIPE TO MAKE")
-																draw_set_halign(fa_center)
-//FOR EVERY RECIPE
-        for (i = 0; i < ds_map_size(Recipies_Map); i++)
-        {
-			  // SEE IF THIS RECIPE CAN BE MADE
-                var has_all_ingredients = 1;
-                col2=c_white
-display_map_required[? i]=ds_map_create()
-					//get a copy of our inventory
-                ds_map_read(temp_player_inventory_map, text);
-				//CHECK EVERY REQUIRED ING
-		//	sm(ds_list_size(Recipies_Map[? recipe]))
-                for (j = 0; j < ds_list_size(Recipies_Map[? recipe]); j++)
-                {
-					var item = Recipies_Map[? recipe][| j]
+				draw_sprite(sGUI_Speak_SideBar,0,edit_mode_menu_x+160,edit_mode_menu_y+360-09)
+			draw_set_font(f_OptionsMedium)
+			draw_set_color(c_old)
 			
-                    var item_text = Ingredient_Enum_To_Text(Recipies_Map[? recipe][| j]);
-					//					sm(st(j)+" "+item_text)
-                    if (item != noone)
-                    {
+			draw_text(edit_mode_menu_x+160,edit_mode_menu_y+20,"COOKING")
+            // sm("")
+			draw_set_font(f_Speak_Large)
+			
 		
-						if is_undefined(display_map_required[? i][? item]){
+			edit_mode_menu_y+=240+20
+			edit_mode_menu_x+=50+60
+						var gap=70
+			var width=40
+			var length=140
+					var left=75
 
-							display_map_required[? i][? item]=1
+        start_value = Item_Being_Placed;
+		var count=0;
+		length=45
+		var left=75
+		width=length
+			 if Object_Menu_Mode=object_menu.furniture || Object_Menu_Mode=object_menu.floors{
+		var t_class=style.lodge;
+		  Object_Category = Button_Pressed(edit_mode_menu_x+left -100, edit_mode_menu_y-70, length, width, sGUI_Elements, "", Get_Class_Color(t_class), c_gray, Object_Category,t_class , 0, controls.left_click, 0,t_class, 1);
+		var t_class=style.wild;
+		  Object_Category = Button_Pressed(edit_mode_menu_x +left-50, edit_mode_menu_y-70, length, width, sGUI_Elements, "", Get_Class_Color(t_class), c_gray, Object_Category,t_class , 0, controls.left_click, 0,t_class, 1);
+		var t_class=style.arcane;
+		  Object_Category = Button_Pressed(edit_mode_menu_x +left, edit_mode_menu_y-70, length, width, sGUI_Elements, "", Get_Class_Color(t_class), c_gray, Object_Category,t_class , 0, controls.left_click, 0,t_class, 1);
+		  		var t_class=style.sci_fi;
+		  Object_Category = Button_Pressed(edit_mode_menu_x+left+ 50, edit_mode_menu_y-70, length, width, sGUI_Elements, "", Get_Class_Color(t_class), c_gray, Object_Category,t_class , 0, controls.left_click, 0,t_class, 1);
+			 }
+
+Object_Menu_Mode=object_menu.floors
+			 
+	 if Object_Menu_Mode=object_menu.furniture
+	 if Move_Furniture_Mode && Item_Being_Placed!=noone{ 
+		 Item_Being_Placed=noone
+		 Held_Furniture=noone
+	 }
+	 draw_set_alpha(0.6)
+draw_set_font(f_Speak_Small)
+draw_set_color(c_old)
+	if Object_Menu_Mode=object_menu.floors{
+		length=30
+		width=length
+			edit_mode_menu_y+=40
+			  Tile_Bush_Size = Button_Pressed(edit_mode_menu_x+left- 50, edit_mode_menu_y-70, length, width,sGUI_Brush_Size, "", c_old, c_dkgray, Tile_Bush_Size,1 , 0, controls.left_click, 0,0, 1);
+	 Tile_Bush_Size = Button_Pressed(edit_mode_menu_x+left, edit_mode_menu_y-70, length, width,sGUI_Brush_Size, "", c_old, c_dkgray, Tile_Bush_Size,2 , 0, controls.left_click, 1,1, 1);
+
+	}
+	
+	 	 draw_text(edit_mode_menu_x+50,edit_mode_menu_y-30,Selected_Name)
+		 Selected_Name=""
+
+	 edit_mode_menu_y += 50;
+	 edit_mode_menu_x-=105
+	 line_count=0
+var first=1
+	 var start_x=edit_mode_menu_x
+	 
+	 if Object_Menu_Mode=object_menu.floors
+	 {
+	var item=ds_map_find_first(Dishes_Map)
+	
+	for(var f=0;f<ds_map_size(Dishes_Map);f++)
+	{
+		if is_string(item)
+		{
+		if Dishes_Map[? item][? dish.style_map][? Object_Category]>0{
+		
+		
+			if line_count>=3 || (first && line_count>2)
+			{line_count=0
+				edit_mode_menu_y += 115
+				edit_mode_menu_x=start_x
+				first=0
+			}
+				line_count++
+		if Furniture_Button(item,edit_mode_menu_x+20,edit_mode_menu_y,4)  !=noone && Has_Pressed_Button_This_Step
+		{	
+			if Cash>= Dishes_Map[? item][? dish.cost]{
+
+
+					Cash-=Dishes_Map[? item][? dish.cost]
+
+																//sm(ds_map_size(recipe_requirements_map[? Over_Button_Id]))
+			// && col2!=c_my_bar_red{			
+					if Chosen_Tutorial=tu.prep_food 
+					Chosen_Tutorial=tu.give_food
 					
-						}
-						else
-						display_map_required[? i][? item]++
-						//remove item from our theoretical inventory
-                        if (temp_player_inventory_map[? item] > 0){
-                            temp_player_inventory_map[? item]--;
+				var	plate=instance_create_depth(Player_Object.x,Player_Object.y,0,oPlate)
+				plate.sprite_index=asset_get_index("sDish_"+item)
+				plate.holder=Player_Object
+				plate.dish_type=item;
+				plate.servings=Dishes_Map[?item][? dish.portion_size]
+		//		sm(plate.servings)
+				Set_Variable_Of(Player_Object,state_var.carrying_item,plate)
 
-						}
-                        else
-                        {//else we dont have enough 
-                            has_all_ingredients = 0;
-							col2=c_my_bar_red
-           
-     
-                        }
-                    }
-                }
-				//sm(ds_map_size(display_map_required[? 0]))
-				//SHOW ALL RECIPIES WE CAN MAKE
-            Selected_Recipe = Button_Pressed(edit_mode_menu_x + 15, edit_mode_menu_y, 120, 20, 0, recipe, col2, c_black, Selected_Recipe, recipe, 1, default_input, i, shape.square, 0);
-           if Button_Was_Pressed && has_all_ingredients=1{ chosen_recipe=recipe }
-		   edit_mode_menu_y += 30;
-            recipe = ds_map_find_next(Recipies_Map, recipe);
+			}
 		}
 		
-//SHOW INGREDIENTS REQUIRED FOR REC
-
-//Over_Button_Id this is the recipe we must display req ing
-//for every ing req for this rec
-		draw_set_color(c_white)
-
-if Over_Button_Id!=-1{
-						draw_set_halign(fa_left)
-									var req_count=0;
-									var has_count=0;
-									var temp_change_map=ds_map_create()
-												var temp_ingredient=ds_map_find_first(display_map_required[? Over_Button_Id])
-
-for(var i=0;i<ds_map_size(display_map_required[? Over_Button_Id]);i++)
-{
-
-//sm(Ingredient_Enum_To_Text( temp_ingredient))
-					req_count=display_map_required[? Over_Button_Id][? temp_ingredient]
-					has_count=Player_Object.backpack_map[? temp_ingredient]
-					if is_undefined(has_count)
-					has_count=0
-					if has_count<req_count
-					col2=c_my_bar_red
-					else
-					col2=c_white
-					draw_set_color(col2)
-				draw_text(edit_mode_menu_x+110,edit_mode_menu_y-20,st(has_count)+" / "+st(req_count)+ "   "+Ingredient_Enum_To_Text( temp_ingredient)) edit_mode_menu_y += 25;
-				temp_ingredient=ds_map_find_next(display_map_required[? Over_Button_Id],temp_ingredient)
+		edit_mode_menu_x+=115;
+		
+		
+		
+	}}
+item=ds_map_find_next(Dishes_Map,item)
+	}
 }
 
-
-												//sm(ds_map_size(display_map_required[? Over_Button_Id]))
-				if chosen_recipe!=noone{// && col2!=c_my_bar_red{			
-					if Chosen_Tutorial=tu.prep_food Chosen_Tutorial=tu.give_food
-				var	plate=instance_create_depth(Player_Object.x,Player_Object.y,0,oPlate)
-
-				Set_Variable_Of(Player_Object,state_var.carrying_item,plate)
-			//	sm(Over_Button_Id)
-			if !is_undefined(display_map_required[? Over_Button_Id]) {
-				var list=ds_list_write(display_map_required[? Over_Button_Id]);
-		plate.ingredients_list=ds_list_read(list)
-			}
-		plate.sprite_index=sCarry_Bowl
-plate.holder=Player_Object
-
-
-
-
-				}
-				
-				ds_map_destroy(temp_change_map)
-
-}
-             /* 
-				
-				      if (Button_Was_Pressed)
-            {
-                
-                recipe_we_are_making = recipe;
-            
-        }
-		var map=Player_Object.backpack_map
-			var count=0;
-			var temp_ingredient=ds_map_find_first(map)
-			draw_set_halign(fa_left)
-			for(var i=0;i<ds_map_size(map);i++){
-				count=map[? temp_ingredient]
-				draw_text(edit_mode_menu_x-60,edit_mode_menu_y,st(count)+" "+temp_ingredient) edit_mode_menu_y += 25;
-			temp_ingredient=ds_map_find_next(map,temp_ingredient)
-			}
-			draw_set_halign(fa_center)*/
+		///////////////
+		//////////////
+		//////////////////
+        
         break;
     case edit.recipies: //	Draw_Food_Prep_Gui() 
+	
+				draw_sprite(sGUI_Speak_SideBar2,0,edit_mode_menu_x+100,edit_mode_menu_y+360)
+			draw_set_font(f_OptionsMedium)
+			draw_set_color(c_old)
+			draw_text(edit_mode_menu_x+100,edit_mode_menu_y+100,"COOKING")
+			
+			
         if (Sub_Menu != "Recipies" && Sub_Menu != "Ingredient")
             Sub_Menu = "Recipies";
 
        draw_set_color(c_my_orange)
-        if Sub_Menu="Recipies"
-		draw_text(edit_mode_menu_x,edit_mode_menu_y,"CHOOSE A RECIPE")
+      //  if Sub_Menu="Recipies"
+		//draw_text(edit_mode_menu_x,edit_mode_menu_y,"CHOOSE A RECIPE")
 		     draw_set_color(c_white)
        // Button_Pressed(edit_mode_menu_x , edit_mode_menu_y, 150, 20, 0, "Choose a recipe", c_white, c_black, Sub_Menu,0, 0, default_input, 0, shape.square, 0);
      if Sub_Menu="Ingredient"{
@@ -1335,6 +1537,7 @@ plate.holder=Player_Object
 				draw_sprite(sGUI_Speak_SideBar,0,edit_mode_menu_x+160,edit_mode_menu_y+360-09)
 			draw_set_font(f_OptionsMedium)
 			draw_set_color(c_old)
+			
 			draw_text(edit_mode_menu_x+160,edit_mode_menu_y+20,"INVENTORY")
             // sm("")
 			draw_set_font(f_Speak_Large)
@@ -1361,13 +1564,13 @@ Object_Menu_Mode = Button_Pressed(edit_mode_menu_x+left +100-30, edit_mode_menu_
 		var left=75
 		width=length
 			 if Object_Menu_Mode=object_menu.furniture || Object_Menu_Mode=object_menu.floors{
-		var t_class=furn_style.lodge;
+		var t_class=style.lodge;
 		  Object_Category = Button_Pressed(edit_mode_menu_x+left -100, edit_mode_menu_y-70, length, width, sGUI_Elements, "", Get_Class_Color(t_class), c_gray, Object_Category,t_class , 0, controls.left_click, 0,t_class, 1);
-		var t_class=furn_style.wild;
+		var t_class=style.wild;
 		  Object_Category = Button_Pressed(edit_mode_menu_x +left-50, edit_mode_menu_y-70, length, width, sGUI_Elements, "", Get_Class_Color(t_class), c_gray, Object_Category,t_class , 0, controls.left_click, 0,t_class, 1);
-		var t_class=furn_style.arcane;
+		var t_class=style.arcane;
 		  Object_Category = Button_Pressed(edit_mode_menu_x +left, edit_mode_menu_y-70, length, width, sGUI_Elements, "", Get_Class_Color(t_class), c_gray, Object_Category,t_class , 0, controls.left_click, 0,t_class, 1);
-		  		var t_class=furn_style.sci_fi;
+		  		var t_class=style.sci_fi;
 		  Object_Category = Button_Pressed(edit_mode_menu_x+left+ 50, edit_mode_menu_y-70, length, width, sGUI_Elements, "", Get_Class_Color(t_class), c_gray, Object_Category,t_class , 0, controls.left_click, 0,t_class, 1);
 			 }
 			 else
@@ -1460,7 +1663,7 @@ item=ds_map_find_next(Furniture_Count_Map,item)
 	
 	for(var f=0;f<ds_map_size(Floor_Count_Map);f++)
 	{
-		if item=sTile_Wood_Red || item= sTile_Alien || item= sTile_Wood_Yellow || item= sTile_DarkStone || item= sTile_Carpet_Red
+		if is_string(item)
 		{
 
 		if Object_Category =Floor_Map[? item][? floor_detail.style]{
@@ -1556,7 +1759,7 @@ if Object_Menu_Mode=1
 			var gap=70
 			var width=40
 			var length=190
-            if Chosen_Tutorial=tu.start Chosen_Tutorial=tu.add_new_room
+        //    if Chosen_Tutorial=tu.start Chosen_Tutorial=tu.add_new_room
             if Selected_Room!=-4
             draw_text(edit_mode_menu_x + 50, edit_mode_menu_y - 25, "ROOM " + st(Selected_Room));
             edit_mode_menu_y+=40
@@ -1573,6 +1776,8 @@ if Object_Menu_Mode=1
             Item_Being_Placed = Button_Pressed(edit_mode_menu_x + 50, edit_mode_menu_y, length, width, 0, "dining room", c_old, c_black, Item_Being_Placed, room_type.dining, 0, default_input, 0, shape.square, 0);
             edit_mode_menu_y += gap;    
 		            Item_Being_Placed = Button_Pressed(edit_mode_menu_x + 50, edit_mode_menu_y, length, width, 0, "gift shop", c_old, c_black, Item_Being_Placed, room_type.gift_shop, 0, default_input, 0, shape.square, 0);
+            edit_mode_menu_y += gap;    
+		            Item_Being_Placed = Button_Pressed(edit_mode_menu_x + 50, edit_mode_menu_y, length, width, 0, "bathroom", c_old, c_black, Item_Being_Placed, room_type.bathroom, 0, default_input, 0, shape.square, 0);
             edit_mode_menu_y += gap;    
             // Item_Being_Placed=
 
@@ -1614,19 +1819,20 @@ if (Last_Sub_Menu == "Ingredient" && Sub_Menu != "Ingredient")
 
 
 if Chosen_Tutorial!=-1 && Visualize[? vis.show_tutorial]=1{
+	draw_sprite(sGui_Tutorial_Bar,0,View_Width/2,150)
 	draw_set_font(fTutorial)
 var text=Tutorial_Map[? Chosen_Tutorial];
 var length=string_width_ext(text,25,1200)/2+10
 var width=string_height_ext(text,25,1200)/2+10
 draw_set_color(c_old)
 var sx=View_Width/2//gui_x
-var sy=View_Height-100//gui_y
-draw_rectangle(sx-length-2,sy-width-2,sx+length+2,sy+width+2,1)
-draw_rectangle(sx-length-1,sy-width-1,sx+length+1,sy+width+1,1)
+var sy=165//View_Height-100//gui_y
+//draw_rectangle(sx-length-2,sy-width-2,sx+length+2,sy+width+2,1)
+//draw_rectangle(sx-length-1,sy-width-1,sx+length+1,sy+width+1,1)
 draw_set_color(c_dark_brown)
-draw_rectangle(sx-length,sy-width,sx+length,sy+width,0)
-draw_set_alpha(0.7)
-draw_set_color(c_old)
+//draw_rectangle(sx-length,sy-width,sx+length,sy+width,0)
+draw_set_alpha(0.6)
+draw_set_color(c_white)
 draw_set_halign(fa_center)
 draw_text_ext(sx,sy,text,25,1200)
 draw_set_alpha(1)

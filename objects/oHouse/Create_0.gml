@@ -49,8 +49,11 @@ Spawn_X=room_width/2;
 Spawn_Y=room_height/2;
  player=House_Add_Person(char.player,100,100,1,"",char.player)
  player.character_type="Milda"
+
+
  player.x=room_width/2
  player.y=room_height/2+70
+ 
  player.mask=instance_create(x,y,mPlayer)
  player.mask.owner=player
 

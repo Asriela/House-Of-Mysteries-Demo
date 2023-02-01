@@ -29,18 +29,26 @@ return ret;
 
 }
 
-
+//asset_get_index(item)
    function Furniture_Button(item,edit_mode_menu_x,edit_mode_menu_y,Object_Menu_Mode)
    {
 	    var col2=c_black
 		if Object_Menu_Mode=1 || Object_Menu_Mode=3
 		var count=Get_Furniture_Count(item)
+				else
+		if Object_Menu_Mode=obj_menu_mode.dish
+		var count=0
 		else
 				var count=Floor_Count_Map[? item]
+				
+				
 		if count>0
 		col2=c_old
 		if Object_Menu_Mode=1 || Object_Menu_Mode=3
 var item_name=Furniture_Map[? item][? furn.desc]
+				else
+		if Object_Menu_Mode=obj_menu_mode.dish
+		var item_name=Dishes_Map[? item][? dish.named]
 else
 var item_name=Floor_Map[? item][? floor_detail.desc]
 
@@ -53,7 +61,11 @@ var added_down=0
 		if Object_Menu_Mode=1 || Object_Menu_Mode=3
 		var sprite=asset_get_index("sObj_"+item);
 		else
-		var sprite=item
+		if Object_Menu_Mode=obj_menu_mode.dish
+		var sprite=asset_get_index("sDish_"+item);
+		else
+		var sprite=asset_get_index(item)
+		
 
 	//	draw_set_color(c_light_brown)
 	//	draw_rectangle(edit_mode_menu_x+20-size/2,edit_mode_menu_y-size/2,edit_mode_menu_x+20+size/2,edit_mode_menu_y+size/2,0)
@@ -91,17 +103,21 @@ draw_set_font(f_Speak_Small2)
 		if Object_Menu_Mode=1 || Object_Menu_Mode=3
 		var class=Furniture_Map[? item][? furn.style1];
 		else
+		if Object_Menu_Mode=obj_menu_mode.dish
+		var class=0
+		else
 		var class=Floor_Map[? item][? floor_detail.style];
-		if Object_Menu_Mode!=3
+		if Object_Menu_Mode!=3 && Object_Menu_Mode!=4
 		var col=Get_Class_Color(class);
 		else
 		var col=c_style_dk_orange
 				draw_set_color(col)
-				
+		
+		if Object_Menu_Mode!=obj_menu_mode.dish
 		draw_text(edit_mode_menu_x+53*the_scale,edit_mode_menu_y-33*the_scale,count)		
 				
 		Over_Button_Id=-1
-		if Object_Menu_Mode!=3{
+		if Object_Menu_Mode!=3 && Object_Menu_Mode!=obj_menu_mode.dish{
 draw_sprite_ext(sGUI_Elements_Small_Back,0,edit_mode_menu_x-13*the_scale,
 edit_mode_menu_y-32*the_scale,the_scale,the_scale,0,c_white,1)
 
@@ -111,12 +127,16 @@ edit_mode_menu_y-32*the_scale,the_scale,the_scale,0,c_white,1)
 		draw_sprite_ext(sGUI_Back_Box_Frame,0,edit_mode_menu_x+20 , edit_mode_menu_y,the_scale,the_scale,0,col,0.4)		
 		if Object_Menu_Mode=1 || Object_Menu_Mode=3
 var style_level=Furniture_Map[? item][? furn.style1_level]
-else
+		else
+		if Object_Menu_Mode=obj_menu_mode.dish
+		var style_level=0
+		else
 var style_level=Floor_Map[? item][? floor_detail.style_level]
-
+if Object_Menu_Mode!=obj_menu_mode.dish
 		draw_text(edit_mode_menu_x+3*the_scale,edit_mode_menu_y-33*the_scale,style_level)
 return temp_item_placed
    }
+
 
 function Get_Furniture_Count(item)
 {

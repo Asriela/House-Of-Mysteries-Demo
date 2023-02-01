@@ -13,6 +13,28 @@ function Perform_Action(idd)
 //if state_target!=-4 && current_state="talk" sm(st(action_name)+" "+st(state_target))
 	switch(action_map[? "action_type"])
 	{
+				case function_word.dish_up:
+				
+				plate=instance_create_depth(x,y,0,oPlate)
+				Set_Variable(state_var.carrying_item,plate)
+				plate.holder=id
+				plate.sprite_index=asset_get_index("sPlate_"+state_target.dish_type)
+				plate.held_by_object=0
+
+				state_target.servings--
+					state_target.holder.held_item=noone
+				if state_target.servings<1{
+				
+				instance_destroy(state_target)
+				}
+				
+					move_to_next_action=true
+			break;
+			case function_word.take:
+				Set_Variable(state_var.carrying_item,state_target)
+				state_target.holder=id
+				state_target.held_by_object=0
+			break;
 		case function_word.wait:
 //do nothing cannot move further from this -put at end of states- can only move to next state if another state scores higher
 		break;
@@ -514,6 +536,7 @@ else//WE HAVE AN OBJECT TYPE
 {
 //sm(action_map[? "object_type"])
 				state_target=Find_Instance(action_map[? "proximity"],action_map[? "object_type"],action_map[? "in_room"]  ) 
+				Log_Main("FOUND TARGET: " +st(state_target))
 			//	sm(state_target)
 
 }

@@ -3,9 +3,9 @@
 
 Chosen_Tutorial=tu.trade2
 
-Style_Progression_Map[? furn_style.wild]=1
+Style_Progression_Map[? style.wild]=1
 
-Style_Progression_Map[? furn_style.lodge]=2
+Style_Progression_Map[? style.lodge]=2
 
 //Edit_Mode=edit.trade
 Cash+=200

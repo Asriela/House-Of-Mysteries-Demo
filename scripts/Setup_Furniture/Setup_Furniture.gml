@@ -22,6 +22,19 @@ style1=merch_type.bottled
 	size_x=1
 	size_y=1
 	Set_Furniture_Item(item,name,desc,class,price,race,style1,style1_level,style2,style2_level,points,start_x,start_y,size_x,size_y,is_merch)
+	//LEVEL 0:
+	style1_level=0
+		item="Merch_Gnome"
+	name="wooden gnome statue"
+	desc="brings good luck and beards to your garden"
+	class=obj_class.merch
+	price=10
+	points=0
+		start_x=0
+	start_y=0
+	size_x=1
+	size_y=1
+	Set_Furniture_Item(item,name,desc,class,price,race,style1,style1_level,style2,style2_level,points,start_x,start_y,size_x,size_y,is_merch)
 
 style1=merch_type.stations
 	item="GiftShop_Cash_Register"
@@ -35,7 +48,20 @@ style1=merch_type.stations
 	size_x=2
 	size_y=2
 	Set_Furniture_Item(item,name,desc,class,price,race,style1,style1_level,style2,style2_level,points,start_x,start_y,size_x,size_y,is_merch)	
-		
+
+style1=merch_type.stations
+	item="Workbench"
+	name="work bench"
+	desc="craft merch here"
+	class=obj_class.work_bench
+	price=10
+	points=0
+	start_x=1
+	start_y=1
+	size_x=2
+	size_y=2
+	Set_Furniture_Item(item,name,desc,class,price,race,style1,style1_level,style2,style2_level,points,start_x,start_y,size_x,size_y,is_merch)	
+				
 	style1=merch_type.stations
 		item="GiftShop_Entrace_Sign"
 	name="entrance sign"
@@ -49,13 +75,123 @@ style1=merch_type.stations
 	size_y=2
 	Set_Furniture_Item(item,name,desc,class,price,race,style1,style1_level,style2,style2_level,points,start_x,start_y,size_x,size_y,is_merch)		
 		
-		
+style1=merch_type.stations
+		item="GiftShop_Entrace_Monster"
+	name="monster entrance sign"
+	desc="monsters arrive from here "
+	class=obj_class.monster_spawn
+	price=10
+	points=0
+	start_x=1
+	start_y=1
+	size_x=2
+	size_y=2
+	Set_Furniture_Item(item,name,desc,class,price,race,style1,style1_level,style2,style2_level,points,start_x,start_y,size_x,size_y,is_merch)		
+				
 	is_merch=0
 	name=""
+	
+//RACE : BATHROOM
+//=====================
+race=char.none
+style1=style.lodge
+	
+	//LEVEL 0:
+	style1_level=0
+		item="80s_BathShower"
+	desc="Bath/Shower"
+	class=obj_class.shower
+	price=10
+	points=0
+		start_x=2
+	start_y=1
+	size_x=5
+	size_y=2
+	Set_Furniture_Item(item,name,desc,class,price,race,style1,style1_level,style2,style2_level,points,start_x,start_y,size_x,size_y,is_merch)
+	//LEVEL 0:
+	style1_level=0
+		item="80s_Toilet"
+	desc="Toilet"
+	class=obj_class.toilet
+	price=10
+	points=0
+		start_x=2
+	start_y=1
+	size_x=5
+	size_y=2
+	Set_Furniture_Item(item,name,desc,class,price,race,style1,style1_level,style2,style2_level,points,start_x,start_y,size_x,size_y,is_merch)
+	//LEVEL 0:
+	style1_level=0
+		item="80s_Sink"
+	desc="Sink"
+	class=obj_class.sink
+	price=10
+	points=0
+		start_x=2
+	start_y=1
+	size_x=5
+	size_y=2
+	Set_Furniture_Item(item,name,desc,class,price,race,style1,style1_level,style2,style2_level,points,start_x,start_y,size_x,size_y,is_merch)
+
+//RACE : KITCHEN
+//=====================
+race=char.none
+style1=style.lodge
+	
+	//LEVEL 0:
+	style1_level=0
+		item="Kitchen_Counter"
+	desc="Kitchen Counter"
+	class=obj_class.food_prep
+	price=10
+	points=0
+		start_x=2
+	start_y=1
+	size_x=5
+	size_y=2
+	Set_Furniture_Item(item,name,desc,class,price,race,style1,style1_level,style2,style2_level,points,start_x,start_y,size_x,size_y,is_merch)
+		//LEVEL 0:
+	style1_level=0
+		item="Kitchen_Sink"
+	desc="Kitchen Sink"
+	class=obj_class.food_prep
+	price=10
+	points=0
+		start_x=2
+	start_y=1
+	size_x=5
+	size_y=2
+	Set_Furniture_Item(item,name,desc,class,price,race,style1,style1_level,style2,style2_level,points,start_x,start_y,size_x,size_y,is_merch)
+	
+		//LEVEL 0:
+	style1_level=0
+		item="Kitchen_Fridge"
+	desc="Kitchen Fridge"
+	class=obj_class.food_prep
+	price=10
+	points=0
+		start_x=1
+	start_y=2
+	size_x=4
+	size_y=2
+	Set_Furniture_Item(item,name,desc,class,price,race,style1,style1_level,style2,style2_level,points,start_x,start_y,size_x,size_y,is_merch)
+		//LEVEL 0:
+	style1_level=0
+		item="Tray"
+	desc="Food Tray"
+	class=obj_class.tray
+	price=10
+	points=0
+		start_x=0
+	start_y=1
+	size_x=2
+	size_y=2
+	Set_Furniture_Item(item,name,desc,class,price,race,style1,style1_level,style2,style2_level,points,start_x,start_y,size_x,size_y,is_merch)
+		
 //RACE : GIFT SHOP
 //=====================
 race=char.none
-style1=furn_style.lodge
+style1=style.lodge
 	
 	//LEVEL 0:
 	style1_level=0
@@ -127,7 +263,7 @@ style1=furn_style.lodge
 //RACE : START
 //=====================
 race=char.none
-style1=furn_style.lodge
+style1=style.lodge
 	
 	//LEVEL 0:
 	style1_level=0
@@ -227,6 +363,16 @@ style1=furn_style.lodge
 	size_x=11
 	size_y=5
 	Set_Furniture_Item(item,name,desc,class,price,race,style1,style1_level,style2,style2_level,points,start_x,start_y,size_x,size_y,is_merch)
+		item="Dishup_Table"
+	desc="dishup table"
+	class=obj_class.table
+	price=10
+	points=0
+	start_x=2
+	start_y=4
+	size_x=3
+	size_y=9
+	Set_Furniture_Item(item,name,desc,class,price,race,style1,style1_level,style2,style2_level,points,start_x,start_y,size_x,size_y,is_merch)
 	
 	item="Kitchen_Pot_0"
 	desc="pot"
@@ -241,7 +387,7 @@ style1=furn_style.lodge
 	//RACE : NORMAL
 //=====================
 race=char.aliens
-style1=furn_style.sci_fi
+style1=style.sci_fi
 	
 	//LEVEL 0:
 	style1_level=1
@@ -281,7 +427,7 @@ Furniture_Map[? item][? furn.light_brightness]=400
 //RACE : NORMAL
 //=====================
 race=char.ghosts
-style1=furn_style.arcane
+style1=style.arcane
 	
 	//LEVEL 0:
 	style1_level=1
@@ -388,7 +534,7 @@ Furniture_Map[? item][? furn.light_brightness]=400
 //RACE : NORMAL
 //=====================
 race=char.toads
-style1=furn_style.wild
+style1=style.wild
 	
 	//LEVEL 0:
 	style1_level=1
@@ -466,8 +612,8 @@ style1=furn_style.wild
 //RACE : NORMAL
 //=====================
 race=char.gnomes
-style1=furn_style.wild
-	style2=furn_style.wild
+style1=style.wild
+	style2=style.wild
 	//LEVEL 0:
 	style1_level=1
 	style2_level=1

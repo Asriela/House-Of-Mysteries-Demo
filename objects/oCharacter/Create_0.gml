@@ -2,6 +2,9 @@
 // You can write your code in this editor
 last_y=0
 is_tourist=0
+mess_type=""
+mess_rate=0
+mess_timer=0
 last_x=x
 near_cash_register=0
 near_tourist=0

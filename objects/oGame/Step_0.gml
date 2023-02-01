@@ -97,12 +97,17 @@ if World_Seconds>60
 	World_Seconds-=60
 	World_Minutes+=1
 	Tourist_Spawn_Timer-=1
+	
+	
 
 	Manage_Timed_Variables()
 
 }
-if keyboard_check_pressed(ord("E"))
-Add_Minutes=61/*
+if keyboard_check_pressed(ord("E")){
+//Add_Minutes=61
+World_Minutes=61
+}
+/*
 if World_Hour>10 && World_Hour<12
 	global.ambientShadowIntensity =(12-World_Hour)/2+0.1
 	else
@@ -132,7 +137,7 @@ if World_Hour>10 && World_Hour<12
 
 					if  Edit_Mode!=edit.guest_arrive{
 						person_spawn_count++
-									var spawned_guest=House_Add_Person(guest_arriving,40+person_spawn_count*5,90,0,Guest_Map[? guest_arriving][? guest_detail.sprite],guest_arriving)
+									var spawned_guest=House_Add_Person(guest_arriving,Monster_Entrance_X+person_spawn_count*5,Monster_Entrance_Y,0,Guest_Map[? guest_arriving][? guest_detail.sprite],guest_arriving)
 		Arrived_Guest=spawned_guest//Get_Guest_Object(char.hare_runaway_watch)
 		
 		if Game_Mode!=game_mode.quick
@@ -219,17 +224,10 @@ with(oGame)
 		}
 }
 }
-if Chosen_Tutorial=tu.talk_about
-if Edit_Mode!=edit.speak
-		 Chosen_Tutorial=tu.take_bags
+
 		 
 
-if Chosen_Tutorial=tu.give_news_or_leave
-if Edit_Mode!=edit.speak{
-		 Chosen_Tutorial=tu.gnome
-		 Guest_Arrival_By_Hour_List[| World_Hour+1]=char.gnome_standard
-		 World_Minutes=59
-}
+
 		  
 		 
 /*

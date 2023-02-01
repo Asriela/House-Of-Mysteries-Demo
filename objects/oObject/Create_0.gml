@@ -3,6 +3,8 @@
 interactable=noone
 my_mask=noone
 can_drop=0
+held_item=noone
+is_player=0
 //object_type=
 grid_x=0;
 grid_y=0;
@@ -17,6 +19,7 @@ mark=0
 is_furniture=1
 facing_direction="Up"
 alarm[0]=1
+alarm[6]=1
 flag=0
 no_sprite=1
 animate_forward=1

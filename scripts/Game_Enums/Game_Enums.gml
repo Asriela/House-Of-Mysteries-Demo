@@ -16,10 +16,17 @@ function Game_Enums(){
 	enum obj_class{
 		none, 
 		bed,
+		shower,
+		toilet,
+		sink,
 		tourist_spawn,
+		monster_spawn,
 		cash_register,
+		available_food,
+		work_bench,
 		merch,
 		storage,
+		tray,
 		doorway,
 		food_prep,
 		chair,
@@ -76,7 +83,8 @@ function Game_Enums(){
 		immediate_quest,
 		access_object_room_data,
 		auto_accept_guests,
-		trigger_emotions
+		trigger_emotions,
+		unlock_all_furniture
 	
 	}
 	enum carry_item_type{
@@ -263,6 +271,7 @@ enum guest_detail{
 	pronoun2,
 	element,
 	type,
+	styles_list,
 	sprite,
 	body_height,
 	noise_resistance,
@@ -316,11 +325,23 @@ enum guest_detail{
 	veg_meat_love_low,
 	starting_emotion,
 	starting_mood,
-	our_needs
+	our_needs, 
+	mess_rate,
+	mess_type
 }
 enum class_pref{
 	pos,
 	neg
+}
+enum dish{
+	named,
+	desc,
+	style_map,
+	difficulty_to_make,
+	portion_size,
+	cost
+	
+	
 }
 enum floor_detail{
 	style,
@@ -333,7 +354,11 @@ enum object_menu{
 	floors,
 	merchanise
 }
-enum furn_style{
+enum tu_highlight_button
+{
+	furniture
+}
+enum style{
 	none,
 	lodge,
 	arcane,
@@ -345,6 +370,13 @@ enum ani_type{
 	random,
 	reverse,
 	loop
+}
+enum obj_menu_mode{
+	none,
+	furniture,
+	floors,
+	merch,
+	dish
 }
 enum furn{
 	named,
@@ -403,7 +435,7 @@ block_out,
 
 enum room_type
 {
-none,
+	none,
 	bedroom,
 	hallway,
 	dining,
@@ -411,7 +443,8 @@ none,
 	kitchen,
 	reading,
 	door,
-	gift_shop
+	gift_shop,
+	bathroom
 	
 }
 enum building{
@@ -422,6 +455,7 @@ enum edit
 {
 	blah,
 	guest_arrive,
+	work_bench,
 	guest_leave,
 	none,
 	speak,

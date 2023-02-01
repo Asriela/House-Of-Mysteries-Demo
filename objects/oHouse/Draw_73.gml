@@ -44,10 +44,13 @@ if Item_Being_Placed=room_type.door
 		var image=sDoor_Icon_1
 	draw_sprite(image,0,House_Start_X+mouse_small_grid_x*Tile_Width,House_Start_Y+mouse_small_grid_y*Tile_Width)
 }
-else
+else{
+	draw_set_alpha(0.6)
 draw_rectangle(House_Start_X+mouse_grid_x*Tile_Width-Bigger_Tile_Width/2,House_Start_Y+mouse_grid_y*Tile_Height-Bigger_Tile_Height/2,
-House_Start_X+mouse_grid_x*Tile_Width+Bigger_Tile_Width/2,House_Start_Y+mouse_grid_y*Tile_Height+Bigger_Tile_Height/2,1
+House_Start_X+mouse_grid_x*Tile_Width+Bigger_Tile_Width/2-1,House_Start_Y+mouse_grid_y*Tile_Height+Bigger_Tile_Height/2-1,0
 )
+draw_set_alpha(1)
+}
 
 if Item_Being_Placed=room_type.door
 {

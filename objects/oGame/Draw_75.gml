@@ -2,6 +2,7 @@
 // You can write your code in this editor
 //Draw_NightDay_Bar()
 depth=-9000
+draw_text(80,20,st(fps_real)+"\n"+st(Placed_Map[? obj_class.bed]))
 //draw_text(View_Width-80,20,st(mouse_x)+" "+st(mouse_y))
 draw_text(View_Width-80,20,instance_number(oDoor))
 
@@ -96,9 +97,9 @@ else
 console_text=string_copy(Main_Log,string_length(Main_Log)-900,900)
 
 
-var start_x=View_Width-10;
+var start_x=View_Width-50;
 var start_y=View_Height-10;
-debug_panel_width=290
+debug_panel_width=290+40
 draw_set_color(c_my_orange)
 draw_set_alpha(0.3)
 draw_rectangle(start_x,start_y,start_x-debug_panel_width,10,0)
@@ -138,22 +139,22 @@ draw_text(View_Width/2+10-80,33,st(int64(Cash))+"$")
 draw_text(View_Width/2+70,33,st(int64(ds_list_size(Current_Housed_Guests_List)))+"")
 
 
-var element= furn_style.lodge
+var element= style.lodge
 col=Get_Class_Color(element)
 		draw_set_color(col)
 		draw_sprite_ext(sGUI_Elements_Small,element,View_Width/2-130-2-2,30,1,1,0,col,1)
 		draw_text(View_Width/2-148-2-2,30,st(int64(Style_Progression_Map[? element]))+"")
-var element= furn_style.arcane
+var element= style.arcane
 col=Get_Class_Color(element)
 		draw_set_color(col)
 		draw_sprite_ext(sGUI_Elements_Small,element,View_Width/2+150+6,30,1,1,0,col,1)
 		draw_text(View_Width/2+150-13,30,st(int64(Style_Progression_Map[? element]))+"")
-var element= furn_style.wild
+var element= style.wild
 col=Get_Class_Color(element)
 		draw_set_color(col)
 		draw_sprite_ext(sGUI_Elements_Small,element,View_Width/2+150+40+8+6,30,1,1,0,col,1)
 		draw_text(View_Width/2+150+40-13+6,30,st(int64(Style_Progression_Map[? element]))+"")
-var element= furn_style.sci_fi
+var element= style.sci_fi
 col=Get_Class_Color(element)
 		draw_set_color(col)
 		draw_sprite_ext(sGUI_Elements_Small,element,View_Width/2-150-28-3,30,1,1,0,col,1)

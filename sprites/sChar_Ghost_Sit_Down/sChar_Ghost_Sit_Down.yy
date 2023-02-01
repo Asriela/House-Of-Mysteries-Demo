@@ -78,7 +78,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "CHARACTER",
-    "path": "folders/SPRITES/CHARACTER.yy",
+    "name": "ghost",
+    "path": "folders/SPRITES/CHARACTER/GUESTS/BODIES/ghost.yy",
   },
 }

@@ -52,12 +52,17 @@ var actual_selected=0
 	}
 			}
 			if sprite{
-				var spr_scale=1
+				var default_scale=1
+				if on_off=4
+				var default_scale=3
+				
+				var spr_scale=default_scale
 				var col=back_color
 				if selected || on_variable=check_for{
-				var spr_scale=1.2
+				var spr_scale=default_scale*1.2
 				var col=front_color
 				}
+				
 			draw_sprite_ext(sprite,button_shape,center_x,center_y,spr_scale,spr_scale,0,col,1)
 			}
 	if selected=1

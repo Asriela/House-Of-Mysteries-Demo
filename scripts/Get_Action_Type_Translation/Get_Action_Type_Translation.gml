@@ -6,6 +6,8 @@ function Get_Action_Type_Translation(action_type)
 		{
 			case "quest": ret= function_word.quest;break;
 					case "wait": ret=function_word.wait; break;
+									case "take": ret=function_word.take; break;
+									case "dish_up": ret=function_word.dish_up; break;
 									case "temp": ret=function_word.temp; break;
 			case "give": ret=function_word.give; break;
 			case "get_close": ret=function_word.getclose; break;

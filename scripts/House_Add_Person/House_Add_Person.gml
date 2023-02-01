@@ -28,6 +28,14 @@ character.hours_left_in_stay=Guest_Map[? the_id][? guest_detail.stay_length]
 		character.guest_id=the_id
 		character.satisfaction_map=ds_map_create()
 		ds_map_read(character.satisfaction_map,ds_map_write(Guest_Map[? the_id][?guest_detail.satisfaction_map]))
+		
+		
+character.mess_type=Guest_Map[? the_id][? guest_detail.mess_type]	
+if character.mess_type!=""
+{
+	character.mess_rate=Guest_Map[? the_id][? guest_detail.mess_rate]	
+}
+		
 		if sprite="Ghost"{
 		character.my_mood=70
 		character.my_emotion=sE_InLove

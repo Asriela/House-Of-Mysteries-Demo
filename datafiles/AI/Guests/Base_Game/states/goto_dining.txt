@@ -3,6 +3,9 @@ if is_tourist = 0
 if eat event
 600 
 =
+target nearest room food
+goto 20
+dish_up
 target nearest room chair
 goto 20
 use

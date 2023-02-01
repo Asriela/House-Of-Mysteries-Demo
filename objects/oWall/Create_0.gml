@@ -1,9 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+alarm_count=0
 count=0
 flag=0
-alarm[1]=2
+alarm[3]=2
 
 my_color=c_white
 room_color=ds_list_create()

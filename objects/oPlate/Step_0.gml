@@ -5,7 +5,7 @@ depth=-y-800
 if !exists(holder) instance_destroy()
 if holder!=noone && exists(holder){
 	//if we are sitting food is lower
-	if holder.using_object!=noone && holder.using_object.object_class=obj_class.chair
+	if held_by_object || (holder.using_object!=noone && holder.using_object.object_class=obj_class.chair)
 	{
 			x=holder.x
 		y=holder.y

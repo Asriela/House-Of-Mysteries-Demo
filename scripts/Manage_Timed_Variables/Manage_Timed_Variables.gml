@@ -15,5 +15,7 @@ with(oCharacter)
 			}
 		
 		}
+		if mess_rate!=0
+		mess_timer--
 }
 }

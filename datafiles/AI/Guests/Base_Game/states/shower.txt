@@ -1,0 +1,10 @@
+🔼
+if needs_shower > 70
+900 
+=
+target nearest bathroom shower
+goto 10
+occupy
+stand 10
+needs_shower = 0
+unoccupy

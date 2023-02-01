@@ -28,7 +28,41 @@ if in_room>0{
 chosen_instance=-1
 
 var list=Rooms_Objects_Map[? my_event_room][? Object_Determine_Class(type)];
+if type="Food"
+{
 
+	var best_dish=noone
+	var highest_level=0
+	var dish_level=0
+	for( var f=0; f<ds_list_size(list);f++)
+	{
+		var check_dish=list[| f];
+		if check_dish.held_by_object=1
+		{
+			var styles_map=Dishes_Map[? check_dish.dish_type][? dish.style_map];
+			//WHICH PLEATE TO CHOOSE
+			var our_styles_list=Guest_Map[? guest_id][? guest_detail.styles_list];
+			var dish_has_one_of_our_styles=0
+			for(s=0;s<ds_list_size(our_styles_list);s++){//if dish has our style
+				if dish_level<ds_map_find_value(styles_map,our_styles_list[| s])
+			var dish_level=ds_map_find_value(styles_map,our_styles_list[| s])
+				if dish_level!=-1
+				{
+				dish_has_one_of_our_styles=1
+				}
+			}
+		
+		//IF HAS OUR STYLE - DETERMINE BEST
+		if dish_has_one_of_our_styles
+		if highest_level < dish_level
+		best_dish=check_dish
+		}
+	}
+	
+	if best_dish!=noone
+	chosen_instance=best_dish
+}
+else
 if type="Doorway" chosen_instance=list[| 0]
 else
 {
@@ -148,29 +182,46 @@ ds_list_clear(any_list)
 
 //type= Word_Is_A_Object_Category(type)
 if chosen_instance=noone{
+	var closest_distance=9999999
 	with(oObject)
 	{
 //sm(type)
+var dont_continue=0;
+var look_for_object_class=-1;
+var t_obj_class=Object_Determine_Class(type)
+
+if t_obj_class!=	obj_class.none{
+	look_for_object_class=t_obj_class
+}
 	if type="Shrine"
 	other.chosen_instance=Island_Grid[# Island_Grid_Width/2+1,Island_Grid_Height/2]
 
+	
+//Log_Main("TEXT TYPE "+st(type))
 
+
+		
 	switch(proximity)
 	{
 		case proximity_word.nearest: 
-			dist=point_distance(draw_x,draw_y,other.draw_x,other.draw_y)
+			var dist=point_distance(draw_x,draw_y,other.draw_x,other.draw_y)
 	//		sm(other.draw_x)
 			//
 		//	sm("my_tile: "+string(my_tile)+" dist: "+string(dist))
 
 
-			if id!=other && object_group=type && dist<other.closest_distance
+			if id!=other && dist<closest_distance
 			{
 
 	//	sm(string(id)+" "+string(dist))
+	
+	if (look_for_object_class!=-1 && look_for_object_class=object_class) || object_type=type {
 				other.closest_distance=dist
 				other.chosen_instance=id;
-				
+		//		if look_for_object_class=object_class
+//		if object_type!="DoorPoint"
+	//sm("looking for "+st(look_for_object_class)+ " class we have"+st(object_class)+"obj type "+object_type)
+	}
 			}
 			break;
 							case proximity_word.any:
@@ -182,7 +233,10 @@ if object_class=obj_class.bed
 				
 				break;
 	
-		}}
+		}
+	
+	////////////
+}
 		if proximity=proximity_word.any{
 			if ds_list_size(any_list)>0{
 	i= round(random(ds_list_size(any_list)))-1

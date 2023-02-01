@@ -2,7 +2,6 @@
 // You can write your code in this editor
 Player_Object.backpack_map[? ingredient.cabbage]=2
 
-
 ini_open("save.ini")
 if Game_Mode!=game_mode.no_loading{
 	

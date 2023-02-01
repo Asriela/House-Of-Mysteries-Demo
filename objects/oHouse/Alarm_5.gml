@@ -4,4 +4,3 @@
 
 
 
-Chosen_Tutorial=tu.arrival

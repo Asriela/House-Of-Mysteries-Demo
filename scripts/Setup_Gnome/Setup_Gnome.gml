@@ -16,7 +16,7 @@ Guest_Map[? me][? guest_detail.cash]=10
 Guest_Map[? me][? guest_detail.sprite]="Gnome_Standard"
 Guest_Map[? me][? guest_detail.type]=char.gnomes
 Guest_Map[? me][? guest_detail.bag]="Backpack"
-Guest_Map[? me][? guest_detail.element]=furn_style.lodge
+Guest_Map[? me][? guest_detail.element]=style.lodge
 Guest_Map[? me][? guest_detail.portrait]=sPort_Stern_Gnome
 Guest_Map[? me][? guest_detail.up_to]="'"
 Guest_Map[? me][? guest_detail.body_height]=42
@@ -27,6 +27,11 @@ Guest_Map[? me][? guest_detail.impression_of_player]=0
 Guest_Map[? me][? guest_detail.stay_length_days]=10
 Guest_Map[? me][? guest_detail.stay_length]=24*Guest_Map[? me][? guest_detail.stay_length_days]
 
+Guest_Map[? me][? guest_detail.styles_list]=ds_list_create()
+var list_of_styles=Guest_Map[? me][? guest_detail.styles_list];
+ds_list_add(list_of_styles,style.lodge)
+ds_list_add(list_of_styles,style.wild)
+
 Guest_Map[? me][? guest_detail.people_memories_map]=ds_map_create();
 Guest_Map[? me][? guest_detail.satisfaction_map]=ds_map_create();
 Guest_Map[? me][? guest_detail.has_arrive_panel]=0
@@ -34,6 +39,8 @@ Guest_Map[? me][? guest_detail.has_leave_panel]=1
 Guest_Map[? me][? guest_detail.speak_on_arrival]=0
 Guest_Map[? me][? guest_detail.starting_emotion]=sE_InLove
 Guest_Map[? me][? guest_detail.starting_mood]=70
+Guest_Map[? me][? guest_detail.mess_type]=""
+Guest_Map[? me][? guest_detail.mess_rate]=0
 Guest_Add_Need(me,guest_need.rest,-3)
 Guest_Add_Need(me,guest_need.food,-3)
 Guest_Add_Need(me,guest_need.social,-3)

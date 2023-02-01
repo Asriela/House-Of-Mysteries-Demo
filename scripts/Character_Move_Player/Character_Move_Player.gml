@@ -1,5 +1,5 @@
 function Character_Move_Player(){
-move_speed=1.6
+move_speed=7//1.6
 vspd = (down_key + -up_key) * move_speed;
 hspd = (right_key + -left_key) * move_speed;
 

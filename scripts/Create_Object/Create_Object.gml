@@ -12,12 +12,25 @@ obj.x=x_position;
 obj.y=y_position;
 if !is_undefined(Furniture_Map[? type]){
 obj.object_class=Furniture_Map[? type][? furn.class]
-
+if obj.object_class=obj_class.monster_spawn
+{
+	Monster_Entrance_X=xx
+	Monster_Entrance_Y=yy
+}
 if obj.object_class=obj_class.tourist_spawn
 {
 
-	Tourist_Spawn_X=xx
+		Tourist_Spawn_X=xx
 		Tourist_Spawn_Y=yy
+		
+		Entrance_X=x_position
+		Entrance_Y=y_position
+		Entrance_Placed=1
+	with(oHouse){
+	  player.x=Entrance_X
+ player.y=Entrance_Y
+	}
+	//	ss()
 }
 
 if is_undefined(Furniture_Map[? type][? furn.animation_type])

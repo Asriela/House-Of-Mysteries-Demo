@@ -37,28 +37,7 @@ else
 
 var ret=noone;
 	var closest=900000;
-if object_class=obj_class.chair{
-	with(oObject)
-	{
-		if id!=other && object_class=obj_class.table{// && Get_Variable(variable)=value{
-			//ss()
-			var dis= point_distance(other.x,other.y,x,y)
-		if dis<closest{
-			closest=dis
-			ret=id
 
-		}
-		}
-	}
-closest_table=ret;
-if exists(closest_table){
-var direction_to_table=point_direction(x,y,closest_table.x,closest_table.y);
-if direction_to_table>0 && direction_to_table<180
-facing_direction="Up"
-else
-facing_direction="Down"
-}
-}
 
 depth=-y-700
 if object_class=obj_class.floor_decor
@@ -66,8 +45,8 @@ depth=-y-610
 else
 depth=-y-700
 
-if object_class=obj_class.table
-depth=-y-700
+if object_class=obj_class.table || object_class=obj_class.chair
+depth=-y-680
 
 if object_class=obj_class.shelf_decor || object_class=obj_class.cash_register || 
 object_class=obj_class.merch
@@ -79,7 +58,7 @@ if object_class=obj_class.light
 depth=-y-723
 
 if first=1{
-	if object_class=obj_class.food_prep
+	if object_class=obj_class.food_prep || object_class=obj_class.work_bench ||  object_class=obj_class.tray
 	{
 		//ss()
 		interactable=instance_create_depth(x,y,0,oInteractable)

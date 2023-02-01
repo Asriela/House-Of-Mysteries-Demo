@@ -93,6 +93,6 @@
   "nineSlice": null,
   "parent": {
     "name": "gnome",
-    "path": "folders/SPRITES/CHARACTER/gnome.yy",
+    "path": "folders/SPRITES/CHARACTER/GUESTS/BODIES/gnome.yy",
   },
 }

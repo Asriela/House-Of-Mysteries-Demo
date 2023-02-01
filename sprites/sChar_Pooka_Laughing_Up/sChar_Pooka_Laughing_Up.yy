@@ -73,6 +73,6 @@
   "nineSlice": null,
   "parent": {
     "name": "pooka",
-    "path": "folders/SPRITES/CHARACTER/pooka.yy",
+    "path": "folders/SPRITES/CHARACTER/GUESTS/BODIES/old/rabbit/pooka.yy",
   },
 }

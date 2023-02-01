@@ -6,9 +6,13 @@
 ini_open("save.ini")
 if Game_Mode!=game_mode.no_loading{
 var grid_string=ini_read_string("rooms","floors",0)
-if grid_string!=0
-ds_grid_read(Floor_Grid,grid_string)
 
+if grid_string!=0{
+ds_grid_read(Floor_Grid,grid_string)
+for(ix=0;ix<ds_grid_width(Floor_Grid);ix++)
+for(iy=0;iy<ds_grid_width(Floor_Grid);iy++)
+Floor_Grid[# ix,iy]=asset_get_index(Floor_Grid[# ix,iy])
+}
 
 var grid_string=ini_read_string("rooms","buildable_area_grid",0);
 if grid_string!=0

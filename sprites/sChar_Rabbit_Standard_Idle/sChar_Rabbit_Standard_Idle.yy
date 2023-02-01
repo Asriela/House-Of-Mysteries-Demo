@@ -95,6 +95,6 @@
   "nineSlice": null,
   "parent": {
     "name": "rabbit",
-    "path": "folders/SPRITES/CHARACTER/rabbit.yy",
+    "path": "folders/SPRITES/CHARACTER/GUESTS/BODIES/old/rabbit.yy",
   },
 }

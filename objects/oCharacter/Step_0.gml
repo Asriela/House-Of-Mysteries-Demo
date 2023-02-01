@@ -122,6 +122,7 @@ if point_distance(x,y,the_ingredient.x,the_ingredient.y)<20
 	}
 }}
 //CARRY BOWL
+/*
 if Get_Variable(state_var.carrying_item )!=noone{
 
 	nearest_interaction= Get_Closest_Character_With(id,state_var.carrying_item ,noone)
@@ -160,6 +161,7 @@ else
 	
 		}
 }
+*/
 if Edit_Mode!=edit.food_prep
 interacting_with=noone
 if interacting_with!=noone
@@ -179,12 +181,23 @@ if instance_number(oInteractable)>0
 	if point_distance(x,y,nearest_interaction.x,nearest_interaction.y)>40
 	nearest_interaction=noone
 	else{
+		if nearest_interaction.owner.object_class=obj_class.food_prep
 				show_tip="Press space to prepare food"
+				
+					if nearest_interaction.owner.object_class=obj_class.work_bench
+				show_tip="Press space to craft merch"
+				
+									if nearest_interaction.owner.object_class=obj_class.tray{
+										
+									if Get_Variable(state_var.carrying_item)!=noone
+				show_tip="Press space to place dish in tray"
+									}
+				
 	if keyboard_check_pressed(vk_space){
 	interacting_with=nearest_interaction.owner
 
 //	ss()
-	Do_Object_Interaction(interacting_with)
+	Do_Object_Interaction(id,interacting_with)
 	}}
 	if interacting_with!=noone
 	if point_distance(x,y,interacting_with.x,interacting_with.y)>40
@@ -254,6 +267,7 @@ else
 		Perform_Quest()
 		Run_Emotions()
 		Run_Emotion_Actions()
+		Run_Passive_Actions()
 	
 		
 }
