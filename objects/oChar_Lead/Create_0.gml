@@ -6,3 +6,4 @@ depth=-9999
 path_start_x=0
 path_start_y=0
 
+visible =Visualize[? vis.character_lead]

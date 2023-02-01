@@ -587,9 +587,9 @@ move_to_next_action=true
 		break;
 				case function_word.goto:
 
-				if Action_Just_Started()
+				if Action_Just_Started()  
 				{
-					
+
 							Character_Recalculate_Path()
 							
 					with(lead){path_start(p_path,other.char_speed*World_Speed-0.1,0,0)}
@@ -606,40 +606,49 @@ with(lead){path_speed=other.char_speed*World_Speed-0.1}
 				}
 				
 			//	sm(lead)
-						if plotted_end_location=0{
-									mp_potential_step_object(lead.x,lead.y,char_speed*World_Speed,oMask)
-												var dis=real(action_map[? "distance"]);
-	if exists(state_target){
-				if point_distance(x,y,state_target.x,state_target.y)< dis*3
-				{
-
-					
+if plotted_end_location=0
+{
+		mp_potential_step_object(lead.x,lead.y,char_speed*World_Speed,oMask)
+		if moving_to_stairs
+			var dis=10
+			else
+			var dis=real(action_map[? "distance"]);
 		
-				
+			
+			if exists(state_target)
+			{
+				if moving_to_stairs
+				var dis_to_target=point_distance(x,y,nearest_stairs.x,nearest_stairs.y);
+				else
+				var dis_to_target=point_distance(x,y,state_target.x,state_target.y);
+				if ( moving_to_stairs=1 && dis_to_target<10) || (moving_to_stairs=0 && dis_to_target< dis*3)
+				{
+					//find position away from target so we dont stand ontop of them
 					var angle=point_direction(state_target.x,state_target.y,x,y);
 					var chances=0;
-					do{
-						chances++
-						dis+=0
-					//	angle+=choose(20,-20)
-					if is_tourist=0{
-					if angle>90 && angle<270
-						angle=180
-						else
-						angle=0
-					}
-						target_x=state_target.x+lengthdir_x(dis,angle)
-						target_y=state_target.y+lengthdir_y(dis,angle)
-					}
-					until(collision_point(target_x,target_y,oMask,0,1)=0 || chances>100)
+						do{
+							chances++
+							dis+=0
+						//	angle+=choose(20,-20)
+							if is_tourist=0
+							{
+							if angle>90 && angle<270
+								angle=180
+								else
+								angle=0
+							}
+							target_x=state_target.x+lengthdir_x(dis,angle)
+							target_y=state_target.y+lengthdir_y(dis,angle)
+						}
+						until(collision_point(target_x,target_y,oMask,0,1)=0 || chances>100)
 				
-						 plotted_end_location=1
+						plotted_end_location=1
 						with(lead){ path_end()}
 											Log_Main("found_end")
 				}
-	}
+				}
 				else
-				end_state=1
+				end_state=1//no state target
 				
 					//Log_Main("walking "+st(steps))
 				}
@@ -650,11 +659,24 @@ with(lead){path_speed=other.char_speed*World_Speed-0.1}
 
 			mp_potential_step_object(target_x,target_y,char_speed*World_Speed,oMask)
 			if point_distance(x,y,target_x,target_y)<12{
-									Log_Main("arrived")
-					Moving_Details(0.1,"Stand",true)
+
 					path_end()
+					
+										if moving_to_stairs=0{
+										Log_Main("arrived")
+										Moving_Details(0.1,"Stand",true)
 										move_to_next_action=true
-											face_towards=state_target
+										face_towards=state_target
+										}
+										else
+										{
+											//change stairs
+											foor_we_are_on=state_target.foor_we_are_on
+											//make new path
+											Character_Recalculate_Path()
+											//replot end location
+											plotted_end_location=0
+										}
 					}
 					
 				}

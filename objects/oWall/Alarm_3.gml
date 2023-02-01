@@ -3,7 +3,7 @@
 
 
 alarm_count++
-if alarm_count<10
+if alarm_count<800
 alarm[3]=1
 
 find=ds_list_find_index(Floor_List,no_to_s(xx)+"_"+no_to_s(yy))

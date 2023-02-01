@@ -1,18 +1,27 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function Character_Recalculate_Path(){
-				lead.x=x
+
+		if exists(state_target)
+		{
+			lead.x=x
 			lead.y=y
-	with(lead){
-		if exists(other){
-			path_start_x=x
-			path_start_y=y
-			if exists(other.state_target)
-    scr_createPath(x, y, other.state_target.x, other.state_target.y, Tile_Width, 8, true, oWall, 0);
-		}
-//mp_potential_path()
-//mp_linear_path()
+			lead.path_start_x=x
+			lead.path_start_y=y
+			var move_to=state_target;
+			moving_to_stairs=0
+			if state_target.foor_we_are_on!=foor_we_are_on
+			{
+					nearest_stairs=oStairs
+					move_to=nearest_stairs
+					moving_to_stairs=1
 			}
+			with(lead)
+			{scr_createPath(x, y,move_to.x, move_to.y, Tile_Width, 8, true, oWall, 0);}
+	
+	}
+
+
 
 		target_x=0//(move_to_tile.itx-45)*Tile_Width-Tile_Width/2+x_point_on_tile
 		target_y=0//(move_to_tile.ity-45)*Tile_Height-Tile_Height/2+y_point_on_tile

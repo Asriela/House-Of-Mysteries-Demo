@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+foor_we_are_on=0
 interactable=noone
 my_mask=noone
 can_drop=0

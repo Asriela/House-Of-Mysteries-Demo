@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oChar_Lead",
+  "name": "oStairs",
   "spriteId": {
     "name": "sGui_Pearls",
     "path": "sprites/sGui_Pearls/sGui_Pearls.yy",
@@ -24,14 +24,11 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "CHARACTER",
-    "path": "folders/OBJECTS/CHARACTER.yy",
+    "name": "HOUSE",
+    "path": "folders/OBJECTS/HOUSE.yy",
   },
 }

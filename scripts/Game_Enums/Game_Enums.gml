@@ -99,7 +99,8 @@ function Game_Enums(){
 		needs,
 		doorways,
 		move_to_point,
-		show_tutorial
+		show_tutorial,
+		character_lead
 	}
 	enum gui{
 		console,

@@ -7,7 +7,7 @@ World_Seconds_Speed=2
 Game_Mode=game_mode.dev
 //Game_Mode=game_mode.block_out
 //Game_Mode=game_mode.no_loading
-Visualize[? vis.path]=0
+Visualize[? vis.path]=1
 Visualize[? vis.grid]=0
 Visualize[? vis.grid_numbers]=0
 Visualize[? vis.console]=1
@@ -16,6 +16,7 @@ Visualize[? vis.needs]=0
 Visualize[? vis.doorways]=0
 Visualize[? vis.move_to_point]=0
 Visualize[? vis.show_tutorial]=1
+Visualize[?vis.character_lead]=1
 
 Console_Mode=con.state_data
 
@@ -29,7 +30,7 @@ Dev_Help[? dev_help.unlock_all_furniture]=1
 
 Edit_Mode=edit.none //edit.trade
 Can_Save=1
-Chosen_Tutorial=tu.none
+Chosen_Tutorial=tu.add_beds
 //Chosen_Tutorial=tu.social 
 World_Speed=1
 Cash=900
