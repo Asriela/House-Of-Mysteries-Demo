@@ -84,6 +84,13 @@ Floor_Map[?  name][? floor_detail.style]=style.lodge
 Floor_Map[?  name][? floor_detail.style_level]=1
 Floor_Map[?  name][? floor_detail.desc]="redwood"
 
+name="sTile_Wood_Brown";
+Floor_Count_Map[? name]=99
+Floor_Map[?  name]=ds_map_create()
+Floor_Map[?  name][? floor_detail.style]=style.lodge
+Floor_Map[?  name][? floor_detail.style_level]=1
+Floor_Map[?  name][? floor_detail.desc]="oakwood"
+
 name="sTile_Dirt_Mud";
 Floor_Count_Map[? name]=99
 Floor_Map[?  name]=ds_map_create()

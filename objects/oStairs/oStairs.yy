@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "oStairs",
   "spriteId": {
-    "name": "sGui_Pearls",
-    "path": "sprites/sGui_Pearls/sGui_Pearls.yy",
+    "name": "sStairs",
+    "path": "sprites/sStairs/sStairs.yy",
   },
   "solid": false,
   "visible": true,

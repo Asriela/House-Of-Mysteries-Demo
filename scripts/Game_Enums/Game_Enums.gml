@@ -445,6 +445,7 @@ enum room_type
 	reading,
 	door,
 	gift_shop,
+	museum,
 	bathroom
 	
 }
