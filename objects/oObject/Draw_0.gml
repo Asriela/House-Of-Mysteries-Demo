@@ -1,4 +1,5 @@
 /// @description Insert description here
+
 // You can write your code in this editor
 if object_type="DoorPoint" exit;
 draw_x=x
@@ -42,6 +43,7 @@ if override_image_index>-1
 }
 //if choose(0,0,0,0,0,0,0,0,0,0,0,1)
 //image_index=random(image_number)
+if draw_me
 draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_white,image_alpha)
 //draw_text(x,y,st(grid_x)+"_"+st(grid_y))
 draw_x=x
@@ -49,7 +51,7 @@ draw_y=y
 var _col = c_white
 var _scl = 1.1
 if outline{
-
+if draw_me
 outline_draw_sprite_ext(sprite_index, image_index, x, y, _scl, _scl, 0, -1, 1, 2, c_white, 1, 0.9, 2, 0.8, false)
 
 }
@@ -58,6 +60,7 @@ outline=0
 
 if Dev_Help[? dev_help.access_object_room_data]
 if !is_undefined(my_room)
+if draw_me
 draw_text(x,y, my_room)
 /*
 draw_set_color(c_red)

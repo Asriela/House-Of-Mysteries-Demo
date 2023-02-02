@@ -63,7 +63,7 @@ if Item_Being_Placed=room_type.door
 	{
 
 
-current_room=Rooms_Grid[# i,j]
+current_room=Rooms_Grid[| Floor][# i,j]
 		var x_position=House_Start_X+i*Tile_Width;
 		var y_position=House_Start_Y+j*Tile_Height;
 		draw_set_font(f_tiny)

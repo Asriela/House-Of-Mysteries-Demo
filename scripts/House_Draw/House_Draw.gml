@@ -23,20 +23,20 @@ if Buildable_Grid[# xx,yy]=1
 	var current_tile=0;
 
 
-for( t=0;t<ds_list_size(Floor_List);t++)
+for( t=0;t<ds_list_size(Floor_List[|Floor]);t++)
 	{
 
-		current_tile=Floor_List[| t]
-var xx=real(string_copy(current_tile,1,3))
-var yy= real(string_copy(current_tile,5,3))
+		current_tile=Floor_List[|Floor][| t]
+		var xx=real(string_copy(current_tile,1,3))
+		var yy= real(string_copy(current_tile,5,3))
 
-current_room=Rooms_Grid[# xx,yy]
+		current_room=Rooms_Grid[| Floor][# xx,yy]
 
-		var _room_type=Room_Type_Map[? current_room];
+		var _room_type=Rooms_Type_Map[? current_room];
 		
 		var color =Get_Room_Color(_room_type)// Room_Type_To_Color(_room_type)
 		
-		var sprite=Floor_Grid[# xx,yy]
+		var sprite=Floor_Grid[| Floor][# xx,yy]
 		
 
 		//if the_tiles_type=tile_type.wall{
@@ -72,9 +72,9 @@ current_room=Rooms_Grid[# xx,yy]
 			 checked=1
 		 }
 if sprite_exists(sprite)
-		draw_sprite_ext(sprite,Floor_Index[# xx,yy],x_position,y_position,1,1,0,c_white,1);
+		draw_sprite_ext(sprite,Floor_Variation_Grid[# xx,yy],x_position,y_position,1,1,0,c_white,1);
 	else
-	Floor_Grid[# xx,yy]=-1
+	Floor_Grid[| Floor][# xx,yy]=-1
 	
 		center_tile=0
  if _room_type!=room_type.hallway{
@@ -86,15 +86,15 @@ the_alpha=0.4
 				if Edit_Mode=edit.room || Edit_Mode=edit.object
 				{
 					if the_alpha!=0.6{//not selected
-			 if !(Wall_Grid[# xx-1,yy]<=0 && Wall_Grid[# xx+1,yy]<=0 && Wall_Grid[# xx,yy+1]<=0 && Wall_Grid[# xx,yy-1] <=0 &&	
-				Wall_Grid[# xx-1,yy-1]<=0 && Wall_Grid[# xx+1,yy+1]<=0 && Wall_Grid[# xx-1,yy+1]<=0 && Wall_Grid[# xx+1,yy-1] <=0)		
+			 if !(Wall_Grid[| Floor][# xx-1,yy]<=0 && Wall_Grid[| Floor][# xx+1,yy]<=0 && Wall_Grid[| Floor][# xx,yy+1]<=0 && Wall_Grid[| Floor][# xx,yy-1] <=0 &&	
+				Wall_Grid[| Floor][# xx-1,yy-1]<=0 && Wall_Grid[| Floor][# xx+1,yy+1]<=0 && Wall_Grid[| Floor][# xx-1,yy+1]<=0 && Wall_Grid[| Floor][# xx+1,yy-1] <=0)		
 						draw_sprite_ext(sTile_Blank,frame,x_position,y_position,1,1,0,color,the_alpha);
 					}
 					else
 					{
 						draw_sprite_ext(sTile_Blank,frame,x_position,y_position,1,1,0,color,the_alpha);
-						 if !(Wall_Grid[# xx-1,yy]<=0 && Wall_Grid[# xx+1,yy]<=0 && Wall_Grid[# xx,yy+1]<=0 && Wall_Grid[# xx,yy-1] <=0 &&	
-						Wall_Grid[# xx-1,yy-1]<=0 && Wall_Grid[# xx+1,yy+1]<=0 && Wall_Grid[# xx-1,yy+1]<=0 && Wall_Grid[# xx+1,yy-1] <=0)		
+						 if !(Wall_Grid[| Floor][# xx-1,yy]<=0 && Wall_Grid[| Floor][# xx+1,yy]<=0 && Wall_Grid[| Floor][# xx,yy+1]<=0 && Wall_Grid[| Floor][# xx,yy-1] <=0 &&	
+						Wall_Grid[| Floor][# xx-1,yy-1]<=0 && Wall_Grid[| Floor][# xx+1,yy+1]<=0 && Wall_Grid[| Floor][# xx-1,yy+1]<=0 && Wall_Grid[| Floor][# xx+1,yy-1] <=0)		
 						draw_sprite_ext(sTile_Blank,frame,x_position,y_position,1,1,0,c_aqua,the_alpha);
 					}
 
@@ -110,8 +110,8 @@ if Edit_Mode=edit.room || Edit_Mode=edit.object
 draw_set_color(c_white)
 draw_set_font(f_tiny)
 if Visualize[? vis.grid]
-if !is_undefined(Rooms_Grid[# xx,yy])
-	draw_text(x_position,y_position,Rooms_Grid[# xx,yy])
+if !is_undefined(Rooms_Grid[| Floor][# xx,yy])
+	draw_text(x_position,y_position,Rooms_Grid[| Floor][# xx,yy])
 		}
 		
 

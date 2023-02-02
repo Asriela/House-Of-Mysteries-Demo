@@ -5,9 +5,9 @@ if tile_room_grid[# xxx,yyy]!=Selected_Room{
 		if !is_undefined(Rooms_Map[? Selected_Room])
 	if !is_undefined(Rooms_Map[? Selected_Room][? st(xxx)+"_"+st(yyy)])
 ds_map_delete(Rooms_Map[? Selected_Room],st(xxx)+"_"+st(yyy))
-if exists(Wall_Grid[# xxx,yyy])
-Delete_Wall(Wall_Grid[# xxx,yyy])
-tile_type_grid[# xxx,yyy]=tile_type.wall
+if exists(Wall_Grid[| Floor][# xxx,yyy])
+Delete_Wall(Wall_Grid[| Floor][# xxx,yyy])
+
 Create_Wall(xxx,yyy,hori,vert)
 }
 
@@ -40,9 +40,16 @@ function Create_Wall(xx,yy,vert,hori)
 
 			var start_x=x-(grid_width/2)*Tile_Width;
 	var start_y=y-(grid_height/2)*Tile_Height
-	
-	var the_wall=instance_create_depth(start_x+xx*Tile_Width,start_y+yy*Tile_Height,-200,oWall)
-	Wall_Grid[# xx,yy]=the_wall;
+				var wall=mWall_0
+			switch(Floor)
+			{
+				case 1: wall=mWall_1 break;
+				case 2: wall=mWall_2 break;
+				case 3: wall=mWall_3 break;
+			}
+			
+	var the_wall=instance_create_depth(start_x+xx*Tile_Width,start_y+yy*Tile_Height,-200,wall)
+	Wall_Grid[| Floor][# xx,yy]=the_wall;
 	the_wall.xx=xx;
 	the_wall.yy=yy;
 	the_wall.my_house=id;
@@ -65,7 +72,7 @@ function House_Add_Tile(xx,yy,type,walls){
 	if xx>5 && xx<=95 
 	&& yy>5 && yy<=95{
 //mp_grid_clear_cell(House_Path_Grid,xx,yy)
-	tile_type_grid[# xx,yy]=type
+
 prev_room=	tile_room_grid[# xx,yy]
 	tile_room_grid[# xx,yy]=Selected_Room
 	
@@ -83,58 +90,58 @@ prev_room=	tile_room_grid[# xx,yy]
 
 
 
-if ds_list_find_index(Floor_List,no_to_s(xx)+"_"+no_to_s(yy))=-1
-ds_list_add(Floor_List,no_to_s(xx)+"_"+no_to_s(yy)) 
-Rooms_Grid[# xx,yy]=Selected_Room
+if ds_list_find_index(Floor_List[| Floor],no_to_s(xx)+"_"+no_to_s(yy))=-1
+ds_list_add(Floor_List[| Floor],no_to_s(xx)+"_"+no_to_s(yy)) 
+Rooms_Grid[| Floor][# xx,yy]=Selected_Room
 
 //sm(st(xx)+" "+st(yy))
 
-if ds_list_find_index(Floor_List,no_to_s(xx-1)+"_"+no_to_s(yy))=-1
-ds_list_add(Floor_List,no_to_s(xx-1)+"_"+no_to_s(yy)) 
-//Rooms_Grid[# xx-1,yy]=Selected_Room
+if ds_list_find_index(Floor_List[| Floor],no_to_s(xx-1)+"_"+no_to_s(yy))=-1
+ds_list_add(Floor_List[| Floor],no_to_s(xx-1)+"_"+no_to_s(yy)) 
+//Rooms_Grid[| Floor][# xx-1,yy]=Selected_Room
 
-if ds_list_find_index(Floor_List,no_to_s(xx+1)+"_"+no_to_s(yy))=-1
-ds_list_add(Floor_List,no_to_s(xx+1)+"_"+no_to_s(yy)) 
-//Rooms_Grid[# xx+1,yy]=Selected_Room
+if ds_list_find_index(Floor_List[| Floor],no_to_s(xx+1)+"_"+no_to_s(yy))=-1
+ds_list_add(Floor_List[| Floor],no_to_s(xx+1)+"_"+no_to_s(yy)) 
+//Rooms_Grid[| Floor][# xx+1,yy]=Selected_Room
 
-if ds_list_find_index(Floor_List,no_to_s(xx)+"_"+no_to_s(yy-1))=-1
-ds_list_add(Floor_List,no_to_s(xx)+"_"+no_to_s(yy-1)) 
-//Rooms_Grid[# xx,yy-1]=Selected_Room
-if ds_list_find_index(Floor_List,no_to_s(xx)+"_"+no_to_s(yy+1))=-1
-ds_list_add(Floor_List,no_to_s(xx)+"_"+no_to_s(yy+1)) 
-//Rooms_Grid[# xx,yy+1]=Selected_Room
-
-
-
-
-if ds_list_find_index(Floor_List,no_to_s(xx-1)+"_"+no_to_s(yy+1))=-1
-ds_list_add(Floor_List,no_to_s(xx-1)+"_"+no_to_s(yy+1)) 
-
-if ds_list_find_index(Floor_List,no_to_s(xx+1)+"_"+no_to_s(yy-1))=-1
-ds_list_add(Floor_List,no_to_s(xx+1)+"_"+no_to_s(yy-1)) 
-
-
-if ds_list_find_index(Floor_List,no_to_s(xx-1)+"_"+no_to_s(yy-1))=-1
-ds_list_add(Floor_List,no_to_s(xx-1)+"_"+no_to_s(yy-1)) 
-
-if ds_list_find_index(Floor_List,no_to_s(xx+1)+"_"+no_to_s(yy+1))=-1
-ds_list_add(Floor_List,no_to_s(xx+1)+"_"+no_to_s(yy+1)) 
+if ds_list_find_index(Floor_List[| Floor],no_to_s(xx)+"_"+no_to_s(yy-1))=-1
+ds_list_add(Floor_List[| Floor],no_to_s(xx)+"_"+no_to_s(yy-1)) 
+//Rooms_Grid[| Floor][# xx,yy-1]=Selected_Room
+if ds_list_find_index(Floor_List[| Floor],no_to_s(xx)+"_"+no_to_s(yy+1))=-1
+ds_list_add(Floor_List[| Floor],no_to_s(xx)+"_"+no_to_s(yy+1)) 
+//Rooms_Grid[| Floor][# xx,yy+1]=Selected_Room
 
 
 
 
-Rooms_Grid[# xx-1,yy]=Selected_Room
-Rooms_Grid[# xx+1,yy]=Selected_Room
-Rooms_Grid[# xx,yy-1]=Selected_Room
-Rooms_Grid[# xx,yy+1]=Selected_Room
+if ds_list_find_index(Floor_List[| Floor],no_to_s(xx-1)+"_"+no_to_s(yy+1))=-1
+ds_list_add(Floor_List[| Floor],no_to_s(xx-1)+"_"+no_to_s(yy+1)) 
 
-Rooms_Grid[# xx-1,yy-1]=Selected_Room
-Rooms_Grid[# xx+1,yy+1]=Selected_Room
-Rooms_Grid[# xx+1,yy-1]=Selected_Room
-Rooms_Grid[# xx-1,yy+1]=Selected_Room
+if ds_list_find_index(Floor_List[| Floor],no_to_s(xx+1)+"_"+no_to_s(yy-1))=-1
+ds_list_add(Floor_List[| Floor],no_to_s(xx+1)+"_"+no_to_s(yy-1)) 
+
+
+if ds_list_find_index(Floor_List[| Floor],no_to_s(xx-1)+"_"+no_to_s(yy-1))=-1
+ds_list_add(Floor_List[| Floor],no_to_s(xx-1)+"_"+no_to_s(yy-1)) 
+
+if ds_list_find_index(Floor_List[| Floor],no_to_s(xx+1)+"_"+no_to_s(yy+1))=-1
+ds_list_add(Floor_List[| Floor],no_to_s(xx+1)+"_"+no_to_s(yy+1)) 
+
+
+
+
+Rooms_Grid[| Floor][# xx-1,yy]=Selected_Room
+Rooms_Grid[| Floor][# xx+1,yy]=Selected_Room
+Rooms_Grid[| Floor][# xx,yy-1]=Selected_Room
+Rooms_Grid[| Floor][# xx,yy+1]=Selected_Room
+
+Rooms_Grid[| Floor][# xx-1,yy-1]=Selected_Room
+Rooms_Grid[| Floor][# xx+1,yy+1]=Selected_Room
+Rooms_Grid[| Floor][# xx+1,yy-1]=Selected_Room
+Rooms_Grid[| Floor][# xx-1,yy+1]=Selected_Room
 
 	if walls{
-with(Wall_Grid[# xx,yy])
+with(Wall_Grid[| Floor][# xx,yy])
 {
 	instance_destroy()
 }

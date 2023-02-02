@@ -3,7 +3,7 @@
 if Item_Being_Placed= room_type.door
 {
 	
-	if Wall_Grid[# xx-1,yy]!=0 && Wall_Grid[# xx+1,yy]!=0{
+	if Wall_Grid[| Floor][# xx-1,yy]!=0 && Wall_Grid[| Floor][# xx+1,yy]!=0{
 			door=instance_create_depth(x,y,0,oDoor)
 		door.angle=ang.hor	
 		door.grid_x=xx;
@@ -19,14 +19,14 @@ Remove_Wall(xx-2,yy)
 Remove_Wall(xx+2,yy)
 
 
-Delete_Wall(Wall_Grid[# xx-1,yy])
-Delete_Wall(Wall_Grid[# xx+1,yy])
+Delete_Wall(Wall_Grid[| Floor][# xx-1,yy])
+Delete_Wall(Wall_Grid[| Floor][# xx+1,yy])
 
-Delete_Wall(Wall_Grid[# xx-2,yy])
-Delete_Wall(Wall_Grid[# xx+2,yy])
+Delete_Wall(Wall_Grid[| Floor][# xx-2,yy])
+Delete_Wall(Wall_Grid[| Floor][# xx+2,yy])
 
 	}
-	if Wall_Grid[# xx,yy-1]!=0 && Wall_Grid[# xx,yy+1]!=0{
+	if Wall_Grid[| Floor][# xx,yy-1]!=0 && Wall_Grid[| Floor][# xx,yy+1]!=0{
 			door=instance_create_depth(x,y,0,oDoor)
 	door.angle=ang.ver
 		door.grid_x=xx;
@@ -34,10 +34,10 @@ Delete_Wall(Wall_Grid[# xx+2,yy])
 	
 	
 Delete_Wall(id)
-Delete_Wall(Wall_Grid[# xx,yy-1])
-Delete_Wall(Wall_Grid[# xx,yy+1])
-Delete_Wall(Wall_Grid[# xx,yy-2])
-Delete_Wall(Wall_Grid[# xx,yy+2])
+Delete_Wall(Wall_Grid[| Floor][# xx,yy-1])
+Delete_Wall(Wall_Grid[| Floor][# xx,yy+1])
+Delete_Wall(Wall_Grid[| Floor][# xx,yy-2])
+Delete_Wall(Wall_Grid[| Floor][# xx,yy+2])
 
 
 Remove_Wall(xx,yy)

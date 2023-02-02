@@ -3,11 +3,11 @@
   "resourceVersion": "1.0",
   "name": "oStairs",
   "spriteId": {
-    "name": "sStairs",
-    "path": "sprites/sStairs/sStairs.yy",
+    "name": "sObj_Stairs",
+    "path": "sprites/sObj_Stairs/sObj_Stairs.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
@@ -24,7 +24,9 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {

@@ -1,6 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+if floor_i_am_on!=Floor
+draw_me=0
+else
+draw_me=1
 
 
 

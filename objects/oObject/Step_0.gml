@@ -40,10 +40,12 @@ var ret=noone;
 
 
 depth=-y-700
+if object_class=obj_class.staircase
+depth=-y-620
+
 if object_class=obj_class.floor_decor
 depth=-y-610
-else
-depth=-y-700
+
 
 if object_class=obj_class.table || object_class=obj_class.chair
 depth=-y-680
@@ -64,7 +66,13 @@ if first=1{
 		interactable=instance_create_depth(x,y,0,oInteractable)
 		interactable.owner=id
 	}
-my_room=Rooms_Grid[# grid_x,grid_y]
+if floor_i_am_on=2	
+{
+	sm(floor_i_am_on)
+	sm(Rooms_Grid[| floor_i_am_on])
+}
+my_room=Rooms_Grid[| floor_i_am_on][# grid_x,grid_y]
+
 ds_list_add(Furn_List_X,grid_x)
 ds_list_add(Furn_List_Y,grid_y)
 ds_list_add(Furn_List_Type,object_type)

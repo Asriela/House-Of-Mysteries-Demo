@@ -1,20 +1,20 @@
 
 // You can write your code in this editor
 House_Running_Variables()
-depth=-y-340
+depth=-y-140
 //if keyboard_check(ord("W"))
 //
 has_bedroom=0
 var has_kitchen=0
-room_types=ds_map_find_first(Room_Type_Map)
-for(var i=0;i<ds_map_size(Room_Type_Map);i++)
+room_types=ds_map_find_first(Rooms_Type_Map)
+for(var i=0;i<ds_map_size(Rooms_Type_Map);i++)
 {
 	if room_types=room_type.bedroom{
 	has_bedroom++
 	}
 		if room_types=room_type.dining
 	has_kitchen++
-	room_types=ds_map_find_next(Room_Type_Map,room_types)
+	room_types=ds_map_find_next(Rooms_Type_Map,room_types)
 }
 if Chosen_Tutorial=tu.add_new_room
 if Bedroom_Count>=2 && Dining_Room_Count>0

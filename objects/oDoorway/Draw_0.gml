@@ -6,6 +6,6 @@ draw_set_color(c_lime)
 else
 draw_set_color(c_red)
 
-if Room_Type_Map[? my_room]=room_type.bedroom
+if Rooms_Type_Map[? my_room]=room_type.bedroom
 draw_circle(x,y,5,0)
 }

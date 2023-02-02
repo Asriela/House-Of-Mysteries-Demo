@@ -1,4 +1,4 @@
-globalvar Door_Orientation,Floor_Index,Buildable_Grid,House_Path_Floor,Floor_List,Game_Mode,Rooms_Objects_Map,Distinguished_Rooms,House_Grid_Width,Wall_Grid,Rooms_Map,Taken_Rooms_Map,House_Start_X,House_Start_Y,Bigger_Tile_Height,Bigger_Tile_Width,Rooms_Grid,down_key,up_key,left_key,right_key,Player_View_Direction,Player,mouse_grid_x,mouse_grid_y,House_Path_Grid,Spawn_X,Spawn_Y;
+globalvar Door_Orientation,Floor_Variation_Grid,Buildable_Grid,House_Path_Floor,Floor_List,Game_Mode,Rooms_Objects_Map,Distinguished_Rooms,House_Grid_Width,Wall_Grid,Rooms_Map,Taken_Rooms_Map,House_Start_X,House_Start_Y,Bigger_Tile_Height,Bigger_Tile_Width,Rooms_Grid,down_key,up_key,left_key,right_key,Player_View_Direction,Player,mouse_grid_x,mouse_grid_y,House_Path_Grid,Spawn_X,Spawn_Y;
 // You can write your code in this editor
 grid_width= 100;
 grid_height=100;
@@ -8,10 +8,7 @@ Buildable_Grid=ds_grid_create(grid_width,grid_height)
 Rooms_Objects_Map=ds_map_create()
 Taken_Rooms_Map=ds_map_create()
 Distinguished_Rooms=ds_map_create()
-Floor_Index=ds_grid_create(grid_width,grid_height)
-for(ix=0;ix<100;ix++)
-for(iy=0;iy<100;iy++)
-Floor_Index[# ix,iy]=random(100)
+
 	Bigger_Tile_Width=Tile_Width*6
 	Bigger_Tile_Height=Tile_Height*6	
 down_key=0
@@ -24,15 +21,48 @@ alarm[1]=10
 
 House_Grid_Width=grid_width
 checked=0
+
+//FLOOR VARIATION GRID tells us which image index a floor tile should hold to create variations in the appearance of the floor
+Floor_Variation_Grid=ds_grid_create(grid_width,grid_height)
+for(ix=0;ix<100;ix++)
+for(iy=0;iy<100;iy++)
+Floor_Variation_Grid[# ix,iy]=random(100)
+
+//FLOOR LIST holds a list of all the places we have placed a floor
 Floor_List=ds_list_create()
-Rooms_Grid=ds_grid_create(100,100)
-ds_grid_clear(Rooms_Grid,noone)
-tile_type_grid=ds_grid_create(grid_width,grid_height)
+Floor_List[| 0]=ds_list_create()
+Floor_List[| 1]=ds_list_create()
+Floor_List[| 2]=ds_list_create()
+Floor_List[| 3]=ds_list_create()
+
+//ROOMS GRID holds the unique room number identifyer in each of each tiles, so we can look at a tile on the grid
+//and know what room this tile belongs to - basically an inverse of ROOMS_MAP
+Rooms_Grid=ds_list_create()
+Rooms_Grid[| 0]=ds_grid_create(100,100)
+Rooms_Grid[| 1]=ds_grid_create(100,100)
+Rooms_Grid[| 2]=ds_grid_create(100,100)
+Rooms_Grid[| 3]=ds_grid_create(100,100)
+ds_grid_clear(Rooms_Grid[|0],noone)
+ds_grid_clear(Rooms_Grid[|1],noone)
+ds_grid_clear(Rooms_Grid[|2],noone)
+ds_grid_clear(Rooms_Grid[|3],noone)
 tile_room_grid=ds_grid_create(grid_width,grid_height)
-Wall_Grid=ds_grid_create(grid_width,grid_height)
+
+//Rooms_Type_Map is a shorthand for us to quickly know what room type a certain room is
+Rooms_Type_Map=ds_map_create()
+
+//WALL GRID all the places we have walls on the grid
+Wall_Grid=ds_list_create()
+Wall_Grid[|0]=ds_grid_create(grid_width,grid_height)
+Wall_Grid[|1]=ds_grid_create(grid_width,grid_height)
+Wall_Grid[|2]=ds_grid_create(grid_width,grid_height)
+Wall_Grid[|3]=ds_grid_create(grid_width,grid_height)
 my_hull=ds_list_create()
 my_hull_size=0;
+//ROOMS MAP holds a list of x+y co-ordinatates for every tile that belongs to this room
 Rooms_Map=ds_map_create()
+
+//
 Rooms_Map[? 0]=ds_map_create();
 x=room_width/2
 y=room_height/2-200
@@ -111,8 +141,8 @@ for(yy=0;yy<grid_height;yy++)
 	t_yy="00"+st(yy);	
 	
 
-	tile_type_grid[# xx,yy]=tile_type.floor
-//ds_map_add(Rooms_Map[? 0],t_xx+"_"+t_yy,1)
+
+
 	tile_room_grid[# xx,yy]=0
 }
 

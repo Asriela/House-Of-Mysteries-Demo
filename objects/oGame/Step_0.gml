@@ -1,5 +1,6 @@
 /// @description
 Last_World_Speed=World_Speed
+Game_Controls()
 Debug_Controls()
 Mouse_Icon_Type=0
 if Selected_Room!=noone

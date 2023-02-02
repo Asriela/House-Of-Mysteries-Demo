@@ -71,14 +71,14 @@ if leave=1
 	grid_x=floor(floor((x-(House_Start_X+Bigger_Tile_Width/2))/Bigger_Tile_Width)*6+6);
 	
 	grid_y=floor(floor((y-(House_Start_Y+Bigger_Tile_Height/2))/Bigger_Tile_Height)*6+6);
-	room_im_in=Rooms_Grid[# grid_x,grid_y]
+	room_im_in=Rooms_Grid[| floor_i_am_on][# grid_x,grid_y]
 	
 
 
 
 if !is_undefined(room_im_in) && room_im_in!=noone{
 	
-	room_type_im_in=Room_Type_Map[? room_im_in]
+	room_type_im_in=Rooms_Type_Map[? room_im_in]
 	inside=1
 }
 	else{

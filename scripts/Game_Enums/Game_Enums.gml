@@ -27,6 +27,7 @@ function Game_Enums(){
 		merch,
 		storage,
 		tray,
+		staircase,
 		doorway,
 		food_prep,
 		chair,

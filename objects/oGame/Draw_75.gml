@@ -136,7 +136,7 @@ draw_set_color(c_white)
 else
 draw_set_color(c_style_black)
 draw_text(View_Width/2+10-80,33,st(int64(Cash))+"$")
-draw_text(View_Width/2+70,33,st(int64(ds_list_size(Current_Housed_Guests_List)))+"")
+draw_text(View_Width/2+70,33,Floor)
 
 
 var element= style.lodge

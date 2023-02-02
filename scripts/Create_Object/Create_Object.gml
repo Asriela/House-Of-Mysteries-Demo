@@ -5,13 +5,18 @@ function Create_Object(xx,yy,type){
  obj.object_type=type
  obj.grid_x=xx
  obj.grid_y=yy
- 
+ obj.floor_i_am_on=Floor
  		var x_position=House_Start_X+xx*Tile_Width;
 		var y_position=House_Start_Y+yy*Tile_Height;
 obj.x=x_position;
 obj.y=y_position;
 if !is_undefined(Furniture_Map[? type]){
 obj.object_class=Furniture_Map[? type][? furn.class]
+if obj.object_class=obj_class.staircase
+{
+	obj.my_stairs_mask=instance_create(x,y,oStairs)
+	obj.my_stairs_mask.owner=obj
+}
 if obj.object_class=obj_class.monster_spawn
 {
 	Monster_Entrance_X=xx
@@ -40,6 +45,7 @@ obj.animation_type=Furniture_Map[? type][? furn.animation_type]
 }
 else
 obj.animation_type=ani_type.random//Furniture_Map[? type][? furn.animation_type]
+
 
 
 

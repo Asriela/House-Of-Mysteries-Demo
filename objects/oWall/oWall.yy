@@ -45,7 +45,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "HOUSE",
-    "path": "folders/OBJECTS/HOUSE.yy",
+    "name": "walls",
+    "path": "folders/OBJECTS/HOUSE/walls.yy",
   },
 }

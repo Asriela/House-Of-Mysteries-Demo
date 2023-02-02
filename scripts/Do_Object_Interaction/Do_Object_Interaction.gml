@@ -16,7 +16,7 @@ switch(object.object_class)
 		object.held_item=item
 			item.holder=object
 			item.held_by_object=1
-			Add_Object_To_Room(item,Rooms_Grid[# grid_x,grid_y],obj_class.available_food)
+			Add_Object_To_Room(item,Rooms_Grid[| Floor][# grid_x,grid_y],obj_class.available_food)
 		Set_Variable(state_var.carrying_item,noone)
 		}
 	}

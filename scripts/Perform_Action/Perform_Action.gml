@@ -608,7 +608,7 @@ with(lead){path_speed=other.char_speed*World_Speed-0.1}
 			//	sm(lead)
 if plotted_end_location=0
 {
-		mp_potential_step_object(lead.x,lead.y,char_speed*World_Speed,oMask)
+		mp_potential_step_object(lead.x,lead.y,char_speed*World_Speed,avoid_this_object)
 		if moving_to_stairs
 			var dis=10
 			else
@@ -640,7 +640,7 @@ if plotted_end_location=0
 							target_x=state_target.x+lengthdir_x(dis,angle)
 							target_y=state_target.y+lengthdir_y(dis,angle)
 						}
-						until(collision_point(target_x,target_y,oMask,0,1)=0 || chances>100)
+						until(collision_point(target_x,target_y,avoid_this_object,0,1)=0 || chances>100)
 				
 						plotted_end_location=1
 						with(lead){ path_end()}
@@ -657,7 +657,7 @@ if plotted_end_location=0
 							//	target_x=state_target.x
 							//	target_y=state_target.y
 
-			mp_potential_step_object(target_x,target_y,char_speed*World_Speed,oMask)
+			mp_potential_step_object(target_x,target_y,char_speed*World_Speed,avoid_this_object)
 			if point_distance(x,y,target_x,target_y)<12{
 
 					path_end()
@@ -671,7 +671,7 @@ if plotted_end_location=0
 										else
 										{
 											//change stairs
-											foor_we_are_on=state_target.foor_we_are_on
+											floor_i_am_on=state_target.floor_i_am_on
 											//make new path
 											Character_Recalculate_Path()
 											//replot end location

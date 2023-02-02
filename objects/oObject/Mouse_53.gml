@@ -12,7 +12,7 @@ if Held_Furniture=id && can_drop
 	var index=ds_list_find_index(Furn_List_Id,list_id)
 	Furn_List_X[| index]=grid_x
 	Furn_List_Y[| index]=grid_y
-	my_room=Rooms_Grid[# grid_x,grid_y]
+	my_room=Rooms_Grid[| floor_i_am_on][# grid_x,grid_y]
 
 	Add_Object_To_Room(id,my_room,object_class)
 

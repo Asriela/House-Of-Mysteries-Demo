@@ -6,7 +6,7 @@ function Auto_Add_Bag(bag){
 			with(oDoorway)
 			{
 				if placed_our_bag=0
-			if Room_Type_Map[? my_room]=room_type.bedroom && has_bag=0 
+			if Rooms_Type_Map[? my_room]=room_type.bedroom && has_bag=0 
 			{
 			//	Dev_Help[? dev_help.auto_book_in]=0
 

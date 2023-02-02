@@ -3,7 +3,14 @@
 
 
 if object_class=obj_class.table{
-my_mask=instance_create_depth(x,y,0,oMask)
+	var avoid=mAvoid_0
+	switch(floor_i_am_on)
+	{
+		case 1:  avoid=mAvoid_1 break;
+		case 2:  avoid=mAvoid_2 break;
+		case 3:  avoid=mAvoid_3 break;
+	}
+my_mask=instance_create_depth(x,y,0,avoid)
 my_mask.sprite_index=sprite_index
 my_mask.owner=id
 }

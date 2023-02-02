@@ -11,7 +11,7 @@ if grid_string!=0{
 ds_grid_read(Floor_Grid,grid_string)
 for(ix=0;ix<ds_grid_width(Floor_Grid);ix++)
 for(iy=0;iy<ds_grid_width(Floor_Grid);iy++)
-Floor_Grid[# ix,iy]=asset_get_index(Floor_Grid[# ix,iy])
+Floor_Grid[| Floor][# ix,iy]=asset_get_index(Floor_Grid[| Floor][# ix,iy])
 }
 
 var grid_string=ini_read_string("rooms","buildable_area_grid",0);
@@ -21,14 +21,14 @@ ds_grid_read(Buildable_Grid,grid_string)
 var grid_string=ini_read_string("rooms","rooms_grid",0);
 var map_string=ini_read_string("rooms","rooms_type_map",0);
 var rooms_tile_grid=ds_grid_create(House_Grid_Width,House_Grid_Width);
-var room_type_map=ds_map_create();
+var Rooms_Type_Map=ds_map_create();
 var has_been_placed_map=ds_map_create();
 					has_been_placed=0
 if grid_string!=0 && map_string!=0
 {
 	//ss()
 	ds_grid_read(rooms_tile_grid,grid_string)
-	ds_map_read(room_type_map,map_string)	
+	ds_map_read(Rooms_Type_Map,map_string)	
 	
 		for(i=0;i<ds_grid_width(rooms_tile_grid);i++)
 	for(j=0;j<ds_grid_height(rooms_tile_grid);j++)
@@ -39,7 +39,7 @@ if grid_string!=0 && map_string!=0
 
 		//room type
 			if Selected_Room!=noone{
-				Item_Being_Placed=room_type_map[? Selected_Room]
+				Item_Being_Placed=Rooms_Type_Map[? Selected_Room]
 				//we have not placed it yet so we must make a new room
 				if is_undefined(has_been_placed_map[? Selected_Room])
 				{

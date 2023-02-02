@@ -1,7 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 last_y=0
-foor_we_are_on=0
+floor_i_am_on=1
+avoid_this_object=mAvoid_0
 nearest_stairs=noone
 moving_to_stairs=0
 is_tourist=0

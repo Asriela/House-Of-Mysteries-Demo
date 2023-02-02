@@ -90,6 +90,23 @@ style1=merch_type.stations
 				
 	is_merch=0
 	name=""
+	//RACE : STAIRS
+//=====================
+race=char.none
+style1=style.lodge
+	
+	//LEVEL 0:
+	style1_level=0
+		item="Stairs"
+	desc="staircase"
+	class=obj_class.staircase
+	price=10
+	points=0
+		start_x=2
+	start_y=1
+	size_x=5
+	size_y=2
+	Set_Furniture_Item(item,name,desc,class,price,race,style1,style1_level,style2,style2_level,points,start_x,start_y,size_x,size_y,is_merch)
 	
 //RACE : BATHROOM
 //=====================

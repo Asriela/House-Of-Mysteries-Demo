@@ -73,12 +73,12 @@ ini_close()
 ini_open("save.ini")
 for(ix=0;ix<ds_grid_width(Floor_Grid);ix++)
 for(iy=0;iy<ds_grid_width(Floor_Grid);iy++)
-Floor_Grid[# ix,iy]=sprite_get_name(Floor_Grid[# ix,iy])
+Floor_Grid[| Floor][# ix,iy]=sprite_get_name(Floor_Grid[| Floor][# ix,iy])
 
 ini_write_string("rooms","floors",ds_grid_write(Floor_Grid));
 ini_write_string("rooms","buildable_area_grid",ds_grid_write(Buildable_Grid));
 ini_write_string("rooms","rooms_grid",ds_grid_write(Rooms_Grid));
-ini_write_string("rooms","rooms_type_map",ds_map_write(Room_Type_Map));
+ini_write_string("rooms","rooms_type_map",ds_map_write(Rooms_Type_Map));
 
 
 ini_close()

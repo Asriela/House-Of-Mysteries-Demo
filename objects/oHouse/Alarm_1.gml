@@ -178,7 +178,7 @@ if doors_x_map!=0 && doors_y_map!=0 && doors_flip_map!=0
 				
 if the_door_flip=ang.hor{				
 	//sm(the_door_x)
-	var first_wall=Wall_Grid[# the_door_x,the_door_y];
+	var first_wall=Wall_Grid[| Floor][# the_door_x,the_door_y];
 if instance_exists(first_wall){
 door=instance_create_depth(first_wall.x,first_wall.y,0,oDoor)
 		door.angle=ang.hor	
@@ -186,16 +186,16 @@ door=instance_create_depth(first_wall.x,first_wall.y,0,oDoor)
 		door.grid_y=the_door_y	
 		
 Delete_Wall(first_wall)
-Delete_Wall(Wall_Grid[# the_door_x-1,the_door_y])
-Delete_Wall(Wall_Grid[# the_door_x+1,the_door_y])
-Delete_Wall(Wall_Grid[# the_door_x-2,the_door_y])
-Delete_Wall(Wall_Grid[# the_door_x+2,the_door_y])
+Delete_Wall(Wall_Grid[| Floor][# the_door_x-1,the_door_y])
+Delete_Wall(Wall_Grid[| Floor][# the_door_x+1,the_door_y])
+Delete_Wall(Wall_Grid[| Floor][# the_door_x-2,the_door_y])
+Delete_Wall(Wall_Grid[| Floor][# the_door_x+2,the_door_y])
 			
 	}
 }
 
 if the_door_flip=ang.ver{				
-	var first_wall=Wall_Grid[# the_door_x,the_door_y];
+	var first_wall=Wall_Grid[| Floor][# the_door_x,the_door_y];
 if instance_exists(first_wall){
 
 		door=instance_create_depth(first_wall.x,first_wall.y,0,oDoor)
@@ -203,10 +203,10 @@ if instance_exists(first_wall){
 		door.grid_x=the_door_x
 		door.grid_y=the_door_y	
 Delete_Wall(first_wall)
-Delete_Wall(Wall_Grid[# the_door_x,the_door_y-1])
-Delete_Wall(Wall_Grid[# the_door_x,the_door_y+1])
-Delete_Wall(Wall_Grid[# the_door_x,the_door_y-2])
-Delete_Wall(Wall_Grid[# the_door_x,the_door_y+2])
+Delete_Wall(Wall_Grid[| Floor][# the_door_x,the_door_y-1])
+Delete_Wall(Wall_Grid[| Floor][# the_door_x,the_door_y+1])
+Delete_Wall(Wall_Grid[| Floor][# the_door_x,the_door_y-2])
+Delete_Wall(Wall_Grid[| Floor][# the_door_x,the_door_y+2])
 }
 }		
 						ds_map_find_next(doors_map_x,the_door)		

@@ -1,5 +1,10 @@
 	/// @description Insert description here
 // You can write your code in this editor
+if floor_i_am_on!=Floor
+visible=0
+else
+visible=1
+
 added_depth=0//-250
 if inside || collision_rectangle(House_Start_X,House_Start_Y,House_Start_X+Tile_Width*100,House_Start_Y+Tile_Height*100,id,0,0)
 added_depth=-690

@@ -3,4 +3,6 @@
 function Debug_Controls(){
 if keyboard_check_pressed(ord("T"))
 Edit_Mode=edit.review_day
+
+
 }

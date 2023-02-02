@@ -1,11 +1,11 @@
 function House_Build_Room(automatically_placed, grid_x,grid_y,room_has_been_placed,individual,preset)
 {
-if Selected_Room!=noone && room_has_been_placed && !is_undefined(Room_Type_Map[? Selected_Room] ){
+if Selected_Room!=noone && room_has_been_placed && !is_undefined(Rooms_Type_Map[? Selected_Room] ){
 if(automatically_placed || ds_map_size(Rooms_Map[? Selected_Room])=0 || (//we must have a room connected of same type
-Rooms_Grid[# grid_x-6,grid_y]=Selected_Room ||
-Rooms_Grid[# grid_x+6,grid_y]=Selected_Room ||
-Rooms_Grid[# grid_x,grid_y-6]=Selected_Room ||
-Rooms_Grid[# grid_x,grid_y+6]=Selected_Room ))
+Rooms_Grid[| Floor][# grid_x-6,grid_y]=Selected_Room ||
+Rooms_Grid[| Floor][# grid_x+6,grid_y]=Selected_Room ||
+Rooms_Grid[| Floor][# grid_x,grid_y-6]=Selected_Room ||
+Rooms_Grid[| Floor][# grid_x,grid_y+6]=Selected_Room ))
 	{
 		
 		Available_Building_Space_Grid[# grid_x,grid_y]=1
