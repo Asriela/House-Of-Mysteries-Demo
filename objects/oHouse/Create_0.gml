@@ -35,6 +35,17 @@ Floor_List[| 1]=ds_list_create()
 Floor_List[| 2]=ds_list_create()
 Floor_List[| 3]=ds_list_create()
 
+//FLOOR GRID holds the sprite of the tiles
+Floor_Grid=ds_list_create()
+Floor_Grid[| 0]=ds_grid_create(100,100)
+Floor_Grid[| 1]=ds_grid_create(100,100)
+Floor_Grid[| 2]=ds_grid_create(100,100)
+Floor_Grid[| 3]=ds_grid_create(100,100)
+ds_grid_clear(Floor_Grid[| 0],sTile_Wood_Red)
+ds_grid_clear(Floor_Grid[| 1],sTile_Wood_Red)
+ds_grid_clear(Floor_Grid[| 2],sTile_Wood_Red)
+ds_grid_clear(Floor_Grid[| 3],sTile_Wood_Red)
+
 //ROOMS GRID holds the unique room number identifyer in each of each tiles, so we can look at a tile on the grid
 //and know what room this tile belongs to - basically an inverse of ROOMS_MAP
 Rooms_Grid=ds_list_create()
@@ -46,7 +57,13 @@ ds_grid_clear(Rooms_Grid[|0],noone)
 ds_grid_clear(Rooms_Grid[|1],noone)
 ds_grid_clear(Rooms_Grid[|2],noone)
 ds_grid_clear(Rooms_Grid[|3],noone)
-tile_room_grid=ds_grid_create(grid_width,grid_height)
+
+//TILE ROOM GRID
+tile_room_grid=ds_list_create()
+tile_room_grid[| 0]=ds_grid_create(grid_width,grid_height)
+tile_room_grid[| 1]=ds_grid_create(grid_width,grid_height)
+tile_room_grid[| 2]=ds_grid_create(grid_width,grid_height)
+tile_room_grid[| 3]=ds_grid_create(grid_width,grid_height)
 
 //Rooms_Type_Map is a shorthand for us to quickly know what room type a certain room is
 Rooms_Type_Map=ds_map_create()
@@ -127,6 +144,7 @@ function House_Running_Variables(){
 }
 
 
+
 for(xx=0;xx<grid_width;xx++)
 for(yy=0;yy<grid_height;yy++)
 {
@@ -142,8 +160,11 @@ for(yy=0;yy<grid_height;yy++)
 	
 
 
-
-	tile_room_grid[# xx,yy]=0
+//ds_map_add(Rooms_Map[? 0],t_xx+"_"+t_yy,1)
+	tile_room_grid[| 0][# xx,yy]=0
+	tile_room_grid[| 1][# xx,yy]=0
+	tile_room_grid[| 2][# xx,yy]=0
+	tile_room_grid[| 3][# xx,yy]=0
 }
 
 function Place_Room(place_x,place_y,automated)

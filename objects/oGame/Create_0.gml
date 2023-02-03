@@ -31,8 +31,7 @@ Cant_Pickup=0
 DayTime=0
 Tile_Bush_Size=1
 Console_Inspected_Item_Map=ds_map_create()
-Floor_Grid=ds_grid_create(100,100)
-ds_grid_clear(Floor_Grid,sTile_Wood_Red)
+
 Mouse_Icon_Type=0
 Object_Menu_Mode=1
 Slow_Down=0

@@ -68,8 +68,8 @@ if first=1{
 	}
 if floor_i_am_on=2	
 {
-	sm(floor_i_am_on)
-	sm(Rooms_Grid[| floor_i_am_on])
+	//sm(floor_i_am_on)
+//	sm(Rooms_Grid[| floor_i_am_on])
 }
 my_room=Rooms_Grid[| floor_i_am_on][# grid_x,grid_y]
 
@@ -102,7 +102,7 @@ y=y_position;
 if  Item_Being_Placed=noone && Cant_Pickup=0{
 	
 
-if Held_Furniture=noone{
+if Held_Furniture=noone && floor_i_am_on=Floor{
 	
 
 
@@ -119,3 +119,5 @@ Chosen_To_Pick_Up=id
 }
 
 }
+
+

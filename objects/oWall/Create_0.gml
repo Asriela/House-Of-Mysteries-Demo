@@ -4,6 +4,7 @@ floor_i_am_on=1
 alarm_count=0
 count=0
 flag=0
+can_draw=1
 alarm[3]=2
 
 my_color=c_white

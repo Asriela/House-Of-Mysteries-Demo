@@ -26,3 +26,8 @@ Chosen_To_Pick_Up=noone
 }
 
 
+
+if Held_Furniture=id
+{
+	floor_i_am_on=Floor
+}

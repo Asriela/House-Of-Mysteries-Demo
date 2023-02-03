@@ -116,8 +116,9 @@ last_x=x
 		image_speed=0
 		}
 */		
+if can_draw
 draw_sprite_ext(sprite_index,image_index,x,y,x_scale*my_scale,my_scale,image_angle,c_white,1)
-if selected
+if selected && can_draw
 outline_draw_sprite_ext(sprite_index, image_index, x, y, x_scale*my_scale, my_scale, image_angle,c_white,1, 1,c_white,0.9, 0.7, 1,1, false)
 
 //draw_text(x,y,st(grid_x)+"_"+st(grid_y))
@@ -130,12 +131,14 @@ if is_player=0 && is_tourist=0{
 	else
 		var height=my_height;
 	var col=merge_color(c_my_red,c_my_green,(my_mood)/100)
+	if can_draw
 draw_sprite_ext(my_emotion,0,x+x_dif,y-height,0.5,0.5,0,col,1)
 }
 else
 if Get_Variable("finnished_shopping")=1
 {
 			var height=my_height;
+			if can_draw
 	draw_sprite_ext(sGUI_Finnished_Shopping,0,x,y-height,0.5,0.5,0,c_white,1)
 }
 

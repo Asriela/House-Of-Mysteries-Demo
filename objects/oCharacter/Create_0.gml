@@ -3,6 +3,7 @@
 last_y=0
 floor_i_am_on=1
 avoid_this_object=mAvoid_0
+can_draw=1
 nearest_stairs=noone
 moving_to_stairs=0
 is_tourist=0

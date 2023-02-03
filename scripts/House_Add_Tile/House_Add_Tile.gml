@@ -1,7 +1,7 @@
 function Build_Wall(xxx,yyy,hori,vert){
 	
 	
-if tile_room_grid[# xxx,yyy]!=Selected_Room{
+if tile_room_grid[| Floor][# xxx,yyy]!=Selected_Room{
 		if !is_undefined(Rooms_Map[? Selected_Room])
 	if !is_undefined(Rooms_Map[? Selected_Room][? st(xxx)+"_"+st(yyy)])
 ds_map_delete(Rooms_Map[? Selected_Room],st(xxx)+"_"+st(yyy))
@@ -53,6 +53,7 @@ function Create_Wall(xx,yy,vert,hori)
 	the_wall.xx=xx;
 	the_wall.yy=yy;
 	the_wall.my_house=id;
+	the_wall.floor_i_am_on=Floor
 	the_wall.my_room=Selected_Room
 	the_wall.my_color=Get_Room_Color(Item_Being_Placed)
 	if vert=-1 && hori=0
@@ -63,7 +64,7 @@ function Create_Wall(xx,yy,vert,hori)
 	the_wall.room_color[| dir.left]=the_wall.my_color
 	if hori=1 && vert=0
 	the_wall.room_color[| dir.right]=the_wall.my_color
-		tile_room_grid[# xx,yy]=Selected_Room
+		tile_room_grid[| Floor][# xx,yy]=Selected_Room
 		mp_grid_add_cell(House_Path_Grid,xx,yy)
 }
 
@@ -73,8 +74,8 @@ function House_Add_Tile(xx,yy,type,walls){
 	&& yy>5 && yy<=95{
 //mp_grid_clear_cell(House_Path_Grid,xx,yy)
 
-prev_room=	tile_room_grid[# xx,yy]
-	tile_room_grid[# xx,yy]=Selected_Room
+prev_room=	oHouse.tile_room_grid[| Floor][# xx,yy]
+	oHouse.tile_room_grid[| Floor][# xx,yy]=Selected_Room
 	
 
 		if xx<100
