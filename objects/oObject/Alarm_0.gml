@@ -18,17 +18,17 @@ my_mask.owner=id
 
 if object_class=obj_class.light{
 	var item=object_type
-	var light=instance_create_depth(x,y,depth-20,obj_light)
-	light.color_1=	Furniture_Map[? item][? furn.light_color_1]
-	light.color_2=	Furniture_Map[? item][? furn.light_color_2]
-	light.size=	Furniture_Map[? item][? furn.light_brightness]
-	light.fluctation=	Furniture_Map[? item][? furn.light_instablility]
-	light.dir=	Furniture_Map[? item][? furn.light_direction]
-	light.rad=Furniture_Map[? item][? furn.light_radius]
-	light.str=Furniture_Map[? item][? furn.light_strength]
-
+ my_light=instance_create_depth(x,y,depth-20,obj_light)
+	my_light.color_1=	Furniture_Map[? item][? furn.light_color_1]
+	my_light.color_2=	Furniture_Map[? item][? furn.light_color_2]
+	my_light.size=	Furniture_Map[? item][? furn.light_brightness]
+	my_light.fluctation=	Furniture_Map[? item][? furn.light_instablility]
+	my_light.dir=	Furniture_Map[? item][? furn.light_direction]
+	my_light.rad=Furniture_Map[? item][? furn.light_radius]
+	my_light.str=Furniture_Map[? item][? furn.light_strength]
+my_light.floor_i_am_on=floor_i_am_on
 
 	
-	light.owner=id
+	my_light.owner=id
 }
 

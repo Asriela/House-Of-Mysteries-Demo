@@ -92,7 +92,8 @@ if is_player>0
 		
 Player_Object=id
 	Character_Player_Controls()
-	 if !(Edit_Mode=edit.room || Edit_Mode=edit.object) 
+	 if !(Edit_Mode=edit.room || Edit_Mode=edit.object || Edit_Mode=edit.review_day  || Edit_Mode=edit.guest_arrive || Edit_Mode=edit.guest_leave || Edit_Mode=edit.speak
+	 || Edit_Mode=edit.trade  || Edit_Mode=edit.bookkeeping) 
 	Character_Move_Player()
 
 if instance_exists(oIngredient){

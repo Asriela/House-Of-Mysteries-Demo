@@ -2,7 +2,10 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "mWall_1",
-  "spriteId": null,
+  "spriteId": {
+    "name": "sWall_Down",
+    "path": "sprites/sWall_Down/sWall_Down.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,

@@ -463,6 +463,7 @@ enum edit
 	none,
 	speak,
 	trade,
+	bookkeeping,
 	building,
 	room,
 	house,

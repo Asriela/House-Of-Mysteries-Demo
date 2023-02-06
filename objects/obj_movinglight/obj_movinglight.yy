@@ -32,7 +32,7 @@
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"size","path":"objects/obj_light/obj_light.yy",},"objectId":{"name":"obj_light","path":"objects/obj_light/obj_light.yy",},"value":"8",},
   ],
   "parent": {
-    "name": "group1",
-    "path": "folders/OBJECTS/group1.yy",
+    "name": "LIGHT",
+    "path": "folders/OBJECTS/LIGHT.yy",
   },
 }

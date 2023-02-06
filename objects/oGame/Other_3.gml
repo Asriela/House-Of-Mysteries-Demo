@@ -53,15 +53,19 @@ ini_write_string("a","event_lane",ds_list_write(event_lane_list))
 ini_write_string("a","furn_y",ds_list_write(Furn_List_Y));
 ini_write_string("a","furn_x",ds_list_write(Furn_List_X))
 ini_write_string("a","furn_type",ds_list_write(Furn_List_Type))
+ini_write_string("a","furn_floor",ds_list_write(Furn_List_Floor))
 
 ini_write_string("a","saved_doors_x",ds_list_write(Saved_Doors_X_List));
 ini_write_string("a","saved_doors_y",ds_list_write(Saved_Doors_Y_List))
 ini_write_string("a","saved_doors_xx",ds_list_write(Saved_Doors_XX_List));
 ini_write_string("a","saved_doors_yy",ds_list_write(Saved_Doors_YY_List))
 ini_write_string("a","saved_doors_angle",ds_list_write(Saved_Doors_Angle_List))
+ini_write_string("a","saved_doors_floor",ds_list_write(Saved_Doors_Floor_List))
 
 ini_write_string("a","remove_tiles_list_x",ds_list_write(Remove_Tiles_List_X));
 ini_write_string("a","remove_tiles_list_y",ds_list_write(Remove_Tiles_List_Y))
+ini_write_string("a","remove_tiles_list_floor",ds_list_write(Remove_Tiles_List_Floor))
+
 
 //ini_write_string("save","doors_x_map",ds_map_write(doors_x_map));
 //ini_write_string("save","doors_y_map",ds_map_write(doors_y_map))
@@ -71,13 +75,24 @@ ini_close()
 
 
 ini_open("save.ini")
-for(ix=0;ix<ds_grid_width(Floor_Grid);ix++)
-for(iy=0;iy<ds_grid_width(Floor_Grid);iy++)
-Floor_Grid[| Floor][# ix,iy]=sprite_get_name(Floor_Grid[| Floor][# ix,iy])
+for(f=0;f<3;f++)
+for(ix=0;ix<100;ix++)
+for(iy=0;iy<100;iy++)
+Floor_Grid[| f][# ix,iy]=sprite_get_name(Floor_Grid[| f][# ix,iy])
 
-ini_write_string("rooms","floors",ds_grid_write(Floor_Grid));
+
+
+ini_write_string("Floor_Grid","0",ds_grid_write(Floor_Grid[| 0]));
+ini_write_string("Floor_Grid","1",ds_grid_write(Floor_Grid[| 1]));
+ini_write_string("Floor_Grid","2",ds_grid_write(Floor_Grid[| 2]));
+ini_write_string("Floor_Grid","3",ds_grid_write(Floor_Grid[| 3]));
+
+ini_write_string("Rooms_Grid","0",ds_grid_write(Rooms_Grid[| 0]));
+ini_write_string("Rooms_Grid","1",ds_grid_write(Rooms_Grid[| 1]));
+ini_write_string("Rooms_Grid","2",ds_grid_write(Rooms_Grid[| 2]));
+ini_write_string("Rooms_Grid","3",ds_grid_write(Rooms_Grid[| 3]));
+
 ini_write_string("rooms","buildable_area_grid",ds_grid_write(Buildable_Grid));
-ini_write_string("rooms","rooms_grid",ds_grid_write(Rooms_Grid));
 ini_write_string("rooms","rooms_type_map",ds_map_write(Rooms_Type_Map));
 
 

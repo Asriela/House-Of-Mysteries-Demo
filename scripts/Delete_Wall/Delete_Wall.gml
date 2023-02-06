@@ -1,7 +1,8 @@
 
-function Remove_Wall(xx,yy){
+function Remove_Wall(xx,yy,var_floor){
 ds_list_add(Remove_Tiles_List_X,xx)
 ds_list_add(Remove_Tiles_List_Y,yy)
+ds_list_add(Remove_Tiles_List_Floor,var_floor)
 
 
 }

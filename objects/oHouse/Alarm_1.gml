@@ -86,17 +86,20 @@ if list_text!=""
 			var xx_list=ini_read_string("a","saved_doors_xx",0);
 	var yy_list=ini_read_string("a","saved_doors_yy",0);
 	var angle_list=ini_read_string("a","saved_doors_angle",0);
+	var floor_list=ini_read_string("a","saved_doors_floor",0);
 	if x_list !=0 && y_list!=0{
 	var x_list_real=ds_list_create()
 	var y_list_real=ds_list_create()
 	var xx_list_real=ds_list_create()
 	var yy_list_real=ds_list_create()
 	var angle_list_real=ds_list_create()
+	var floor_list_real=ds_list_create()
 	ds_list_read(x_list_real,x_list)
 	ds_list_read(y_list_real,y_list)
 	ds_list_read(xx_list_real,xx_list)
 	ds_list_read(yy_list_real,yy_list)
 	ds_list_read(angle_list_real,angle_list)
+	ds_list_read(floor_list_real,floor_list)
 		for (l=0;l<ds_list_size(x_list_real);l++)
 		{
 		xx=x_list_real[| l]
@@ -104,11 +107,12 @@ if list_text!=""
 					grid_x=xx_list_real[| l]
 			grid_y=yy_list_real[| l]
 			angle_var=angle_list_real[| l]
+			floor_var=floor_list_real[| l]
 			door=instance_create_depth(xx,yy,0,oDoor)
 			door.grid_x=grid_x
 				door.grid_y=grid_y
 		door.angle=angle_var
-
+	door.floor_i_am_on=floor_var
 		}
 	}
 
@@ -118,23 +122,28 @@ if list_text!=""
 	
 	var x_list=ini_read_string("a","remove_tiles_list_x",0);
 	var y_list=ini_read_string("a","remove_tiles_list_y",0);
+	var floor_list=ini_read_string("a","remove_tiles_list_floor",0);
 	if x_list !=0 && y_list!=0{
 	var x_list_real=ds_list_create()
 	var y_list_real=ds_list_create()
+	var floor_list_real=ds_list_create()
 	
 	ds_list_read(x_list_real,x_list)
 	ds_list_read(y_list_real,y_list)
+	ds_list_read(floor_list_real,floor_list)
 	
 	ds_list_read(Remove_Tiles_List_X,x_list)
 	ds_list_read(Remove_Tiles_List_Y,y_list)	
+	ds_list_read(Remove_Tiles_List_Floor,floor_list)
 
 		for (l=0;l<ds_list_size(x_list_real);l++)
 		{
 			grid_x=x_list_real[| l]
 			grid_y=y_list_real[| l]
+			var_floor=floor_list_real[| l]
 			with(oWall)
 			{
-				if xx=other.grid_x && yy=other.grid_y
+				if xx=other.grid_x && yy=other.grid_y && floor_i_am_on=other.var_floor
 				Delete_Wall(id)
 			}
 		}

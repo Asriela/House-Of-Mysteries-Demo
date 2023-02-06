@@ -5,33 +5,55 @@
 
 ini_open("save.ini")
 if Game_Mode!=game_mode.no_loading{
-var grid_string=ini_read_string("rooms","floors",0)
+var grid_0=ini_read_string("Floor_Grid","0",0)
+var grid_1=ini_read_string("Floor_Grid","1",0)
+var grid_2=ini_read_string("Floor_Grid","2",0)
+var grid_3=ini_read_string("Floor_Grid","3",0)
 
-if grid_string!=0{
-ds_grid_read(Floor_Grid,grid_string)
-for(ix=0;ix<ds_grid_width(Floor_Grid);ix++)
-for(iy=0;iy<ds_grid_width(Floor_Grid);iy++)
-Floor_Grid[| Floor][# ix,iy]=asset_get_index(Floor_Grid[| Floor][# ix,iy])
+
+if grid_0!=0{
+	
+ds_grid_read(Floor_Grid[| 0],grid_0)
+ds_grid_read(Floor_Grid[| 1],grid_1)
+ds_grid_read(Floor_Grid[| 2],grid_2)
+ds_grid_read(Floor_Grid[| 3],grid_3)
+for(f=0;f<3;f++)
+{
+
+
+for(ix=0;ix<100;ix++)
+for(iy=0;iy<100;iy++)
+Floor_Grid[| f][# ix,iy]=asset_get_index(Floor_Grid[| f][# ix,iy])
+}
+
 }
 
 var grid_string=ini_read_string("rooms","buildable_area_grid",0);
 if grid_string!=0
 ds_grid_read(Buildable_Grid,grid_string)
 
-var grid_string=ini_read_string("rooms","rooms_grid",0);
+var list=ds_list_create()
+ list[| 0]=ini_read_string("Rooms_Grid","0",0);
+list[| 1]=ini_read_string("Rooms_Grid","1",0);
+list[| 2]=ini_read_string("Rooms_Grid","2",0);
+list[| 3]=ini_read_string("Rooms_Grid","3",0);
+
 var map_string=ini_read_string("rooms","rooms_type_map",0);
-var rooms_tile_grid=ds_grid_create(House_Grid_Width,House_Grid_Width);
+var rooms_tile_grid=ds_grid_create(100,100)//ds_grid_create(House_Grid_Width,House_Grid_Width);
 var Rooms_Type_Map=ds_map_create();
 var has_been_placed_map=ds_map_create();
 					has_been_placed=0
-if grid_string!=0 && map_string!=0
+if grid_0!=0 && map_string!=0
 {
-	//ss()
-	ds_grid_read(rooms_tile_grid,grid_string)
-	ds_map_read(Rooms_Type_Map,map_string)	
+
 	
-		for(i=0;i<ds_grid_width(rooms_tile_grid);i++)
-	for(j=0;j<ds_grid_height(rooms_tile_grid);j++)
+		ds_map_read(Rooms_Type_Map,map_string)	
+	for(Floor=0;Floor<3;Floor++){
+	ds_grid_read(rooms_tile_grid,list[| Floor])
+
+
+		for(i=0;i<100;i++)
+	for(j=0;j<100;j++)
 	{
 		//sm(2)
 			//the room number
@@ -66,8 +88,8 @@ if grid_string!=0 && map_string!=0
 	
 	}
 }}
-
-
+}
+Floor=1
 
 
 ini_close()

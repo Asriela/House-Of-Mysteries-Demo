@@ -16,7 +16,7 @@ matrix_set(matrix_world,matrix_build(-vx,-vy,0,0,0,0,1,1,1));
 surface_set_target(shad_surf);
 draw_clear_alpha(c_black,0);
 with(obj_light){
-	
+	if floor_i_am_on=Floor{
 	//Draw the shadows (AKA light blockers)
 	gpu_set_blendmode_ext_sepalpha(bm_zero,bm_one,bm_one,bm_zero);
 	shader_set(shd_shadow);
@@ -33,7 +33,7 @@ with(obj_light){
 //draw_set_color(color)
 //draw_circle(_vx,_vy,20,0)
 	draw_rectangle_color(_vx,_vy,_vx+Surf_Width,_vy+Surf_Height,color,color,color,color,0); //canvas for drawing the light
-}
+	}}
 surface_reset_target();
 matrix_set(matrix_world,matrix_build(0,0,0,0,0,0,1,1,1));
 

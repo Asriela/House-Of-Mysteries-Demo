@@ -7,6 +7,7 @@ my_mask=noone
 can_drop=0
 held_item=noone
 is_player=0
+my_light=noone
 //object_type=
 grid_x=0;
 grid_y=0;

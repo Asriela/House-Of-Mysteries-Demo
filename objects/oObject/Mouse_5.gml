@@ -17,7 +17,7 @@ if 	Held_Furniture=noone
 				ds_list_delete(Furn_List_X,pos)
 ds_list_delete(Furn_List_Y,pos)
 ds_list_delete(Furn_List_Type,pos)
-
+ds_list_delete(Furn_List_Floor,pos)
 }
 
 

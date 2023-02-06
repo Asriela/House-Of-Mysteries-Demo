@@ -17,7 +17,14 @@ function Quad(_vb,_x1,_y1,_x2,_y2){
 //Instead of using the four edges as the walls, we use the diagonals instead (Optimization)
 vertex_begin(vb,vf);
 var _vb = vb;
-with(obj_wall){
+var avoid=mWall_0
+	switch(Floor)
+	{
+		case 1:  avoid=mWall_1 break;
+		case 2:  avoid=mWall_2 break;
+		case 3:  avoid=mWall_3 break;
+	}
+with(avoid){
 	Quad(_vb,x,y,x+sprite_width,y+sprite_height); //Negative Slope Diagonal Wall
 	Quad(_vb,x+sprite_width,y,x,y+sprite_height); //Positive Slope Diagonal Wall
 }

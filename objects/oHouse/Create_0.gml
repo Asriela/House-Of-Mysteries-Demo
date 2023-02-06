@@ -171,8 +171,8 @@ function Place_Room(place_x,place_y,automated)
 {
 	if Game_Mode=game_mode.block_out exit;
 if !automated && (Over_Gui || (Available_Building_Space_Grid[# place_x,place_y]<1 && Game_Mode=game_mode.normal))   exit;//&& Cash>=10 exit;
-if place_x<0 || place_x>House_Grid_Width || place_y<0 || place_y>
-House_Grid_Width exit;
+if (place_x<0 || place_x>House_Grid_Width || place_y<0 || place_y>
+House_Grid_Width) exit;
 
 if Edit_Mode=edit.room || automated
 if  automated || !(Buildable_Grid[# place_x,place_y]==1 && Cash-30<0)
