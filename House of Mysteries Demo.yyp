@@ -210,6 +210,7 @@
     {"id":{"name":"Sepia","path":"shaders/Sepia/Sepia.yy",},"order":4,},
     {"id":{"name":"sChar_Jack","path":"sprites/sChar_Jack/sChar_Jack.yy",},"order":12,},
     {"id":{"name":"sObj_Bed_Ghost_1248","path":"sprites/sObj_Bed_Ghost_1248/sObj_Bed_Ghost_1248.yy",},"order":17,},
+    {"id":{"name":"sObj_StairsTop","path":"sprites/sObj_StairsTop/sObj_StairsTop.yy",},"order":2,},
     {"id":{"name":"Decipher_Action","path":"scripts/Decipher_Action/Decipher_Action.yy",},"order":6,},
     {"id":{"name":"sWall_Down_Ver","path":"sprites/sWall_Down_Ver/sWall_Down_Ver.yy",},"order":11,},
     {"id":{"name":"mPlayer","path":"objects/mPlayer/mPlayer.yy",},"order":8,},
@@ -385,6 +386,7 @@
     {"id":{"name":"sObj_Glow_Shroom_Blue","path":"sprites/sObj_Glow_Shroom_Blue/sObj_Glow_Shroom_Blue.yy",},"order":3,},
     {"id":{"name":"Note2","path":"notes/Note2/Note2.yy",},"order":1,},
     {"id":{"name":"sGUI_Speak_SideBar","path":"sprites/sGUI_Speak_SideBar/sGUI_Speak_SideBar.yy",},"order":14,},
+    {"id":{"name":"sGui_Obj_Group","path":"sprites/sGui_Obj_Group/sGui_Obj_Group.yy",},"order":0,},
     {"id":{"name":"sChar_Alien_Up","path":"sprites/sChar_Alien_Up/sChar_Alien_Up.yy",},"order":0,},
     {"id":{"name":"f_Story_Small","path":"fonts/f_Story_Small/f_Story_Small.yy",},"order":16,},
     {"id":{"name":"fStory","path":"fonts/fStory/fStory.yy",},"order":0,},
@@ -680,6 +682,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"toad","folderPath":"folders/SPRITES/OBJECT/ROOMS/toad.yy","order":0,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"WORDS","folderPath":"folders/SPRITES/WORDS.yy","order":11,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tile Sets","folderPath":"folders/Tile Sets.yy","order":10,},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"OBJECT","folderPath":"folders/SPRITES/GUI/OBJECT.yy","order":20,},
   ],
   "AudioGroups": [
     {"resourceType":"GMAudioGroup","resourceVersion":"1.3","name":"audiogroup_default","targets":-1,},

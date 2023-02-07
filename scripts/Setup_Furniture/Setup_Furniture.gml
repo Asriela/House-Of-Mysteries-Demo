@@ -120,10 +120,10 @@ style1=style.lodge
 	class=obj_class.shower
 	price=10
 	points=0
-		start_x=2
-	start_y=1
-	size_x=5
-	size_y=2
+		start_x=4
+	start_y=2
+	size_x=9
+	size_y=4
 	Set_Furniture_Item(item,name,desc,class,price,race,style1,style1_level,style2,style2_level,points,start_x,start_y,size_x,size_y,is_merch)
 	//LEVEL 0:
 	style1_level=0
@@ -133,7 +133,7 @@ style1=style.lodge
 	price=10
 	points=0
 		start_x=2
-	start_y=1
+	start_y=0
 	size_x=5
 	size_y=2
 	Set_Furniture_Item(item,name,desc,class,price,race,style1,style1_level,style2,style2_level,points,start_x,start_y,size_x,size_y,is_merch)
@@ -144,9 +144,9 @@ style1=style.lodge
 	class=obj_class.sink
 	price=10
 	points=0
-		start_x=2
-	start_y=1
-	size_x=5
+		start_x=0
+	start_y=0
+	size_x=2
 	size_y=2
 	Set_Furniture_Item(item,name,desc,class,price,race,style1,style1_level,style2,style2_level,points,start_x,start_y,size_x,size_y,is_merch)
 

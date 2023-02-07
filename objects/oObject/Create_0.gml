@@ -5,6 +5,7 @@ draw_me=1
 interactable=noone
 my_mask=noone
 can_drop=0
+can_pick_up=1
 held_item=noone
 is_player=0
 my_light=noone

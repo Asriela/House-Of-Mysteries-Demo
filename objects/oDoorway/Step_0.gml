@@ -13,7 +13,7 @@ Add_Object_To_Room(id,my_room,obj_class.doorway)
 
 if first{
 	first=0
-	my_object=Create_Object(real_x,real_y,"DoorPoint")
+	my_object=Create_Object(real_x,real_y,"DoorPoint",Floor)
 my_object.visible=0
 my_object.dont_sprite=1
 }

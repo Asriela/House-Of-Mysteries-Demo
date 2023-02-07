@@ -57,21 +57,27 @@ if list_text!=""
 				var xx_list=ini_read_string("a","furn_x",0);
 	var yy_list=ini_read_string("a","furn_y",0);
 	var angle_list=ini_read_string("a","furn_type",0);
+		var floor_list=ini_read_string("a","furn_floor",0);
 		if xx_list !=0 && yy_list!=0{
 				var xx_list_real=ds_list_create()
 	var yy_list_real=ds_list_create()
 	var angle_list_real=ds_list_create()
+	var floor_list_real=ds_list_create()
 		ds_list_read(xx_list_real,xx_list)
 	ds_list_read(yy_list_real,yy_list)
 	ds_list_read(angle_list_real,angle_list)
-	
+	ds_list_read(floor_list_real,floor_list)
 	
 			for (l=0;l<ds_list_size(xx_list_real);l++)
 		{
 								grid_x=xx_list_real[| l]
 			grid_y=yy_list_real[| l]
 			angle_var=angle_list_real[| l]
-			Create_Object(grid_x,grid_y,angle_var)
+			floor_var=floor_list_real[| l]
+		//	if floor_var=2
+//	sm(floor_var)
+
+			Create_Object(grid_x,grid_y,angle_var,floor_var)
 
 		
 		}
@@ -79,7 +85,7 @@ if list_text!=""
 		ds_list_destroy(yy_list_real)
 		ds_list_destroy(angle_list_real)
 		}
-		
+		Floor=1
 	//doors
 		var x_list=ini_read_string("a","saved_doors_x",0);
 	var y_list=ini_read_string("a","saved_doors_y",0);

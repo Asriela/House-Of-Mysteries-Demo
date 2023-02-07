@@ -8,7 +8,7 @@ draw_me=1
 
 
 
-
+if can_pick_up=1
 if Chosen_To_Pick_Up=id
 {
 	Selected_Furniture=id

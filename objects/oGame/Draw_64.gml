@@ -1546,16 +1546,17 @@ item=ds_map_find_next(Dishes_Map,item)
 			edit_mode_menu_y+=240+70
 			edit_mode_menu_x+=50+60
 						var gap=70
-			var width=40
-			var length=140
-					var left=75
+			var width=70
+			var length=70
+					var left=-40
 					Move_Furniture_Mode=1
-					Object_Menu_Mode = Button_Pressed(edit_mode_menu_x+left +100-30-75, edit_mode_menu_y-130-50, length+80, width, 0, "Merch", c_my_orange, c_black, Object_Menu_Mode,object_menu.merchanise , 0, controls.left_click, 0,shape.square, 0);
+					Object_Menu_Mode = Button_Pressed(edit_mode_menu_x+left , edit_mode_menu_y-140, length+80, width, sGui_Obj_Group, "", c_my_orange, c_grey, Object_Menu_Mode,object_menu.furniture , 0, controls.left_click, 0,0, 0);
 					
-				  Object_Menu_Mode = Button_Pressed(edit_mode_menu_x+left -100, edit_mode_menu_y-130, length+20, width, 0, "Objects", c_my_orange, c_black, Object_Menu_Mode,object_menu.furniture , 0, controls.left_click, 0,shape.square, 0);
+				  Object_Menu_Mode = Button_Pressed(edit_mode_menu_x+left +80, edit_mode_menu_y-140, length+20, width, sGui_Obj_Group, "", c_my_orange, c_grey, Object_Menu_Mode,object_menu.merchanise , 0, controls.left_click, 1,1, 0);
 			
-Object_Menu_Mode = Button_Pressed(edit_mode_menu_x+left +100-30, edit_mode_menu_y-130, length, width, 0, "Floor", c_my_orange, c_black, Object_Menu_Mode,object_menu.floors , 0, controls.left_click, 0,shape.square, 0);
-			
+				 Object_Menu_Mode = Button_Pressed(edit_mode_menu_x+left +80*2, edit_mode_menu_y-140, length, width, sGui_Obj_Group, "", c_my_orange, c_grey, Object_Menu_Mode,object_menu.floors , 0, controls.left_click, 2,2, 0);
+		//Object_Menu_Mode = Button_Pressed(edit_mode_menu_x+left +100-30, edit_mode_menu_y-130, length, width, 0, "Floor", c_my_orange, c_black, Object_Menu_Mode,object_menu.floors , 0, controls.left_click, 0,shape.square, 0);
+				
 	if Last_Edit_Mode!= edit.object
 	Move_Furniture_Mode=1
         start_value = Item_Being_Placed;
@@ -1633,18 +1634,23 @@ var first=1
 				first=0
 			}
 				line_count++
+		//	if just_selected_object=0 
 		if Furniture_Button(item,edit_mode_menu_x+20,edit_mode_menu_y,pass)  !=noone && Has_Pressed_Button_This_Step
 		{	
+		//	just_selected_object=1
+		//	if alarm[4]=-1 alarm[4]=2
 			if Furniture_Count_Map[? Item_Being_Placed]>0{
 			     with (oHouse)
                 {
 
 					Furniture_Count_Map[? Item_Being_Placed]--
-                    other.item_to_hold=Create_Object(mouse_small_grid_x+1, mouse_small_grid_y+1, Item_Being_Placed)
-					other.alarm[2]=1
-					other.item_to_hold.alarm[4]=1
+                    other.item_to_hold=Create_Object(mouse_small_grid_x+1, mouse_small_grid_y+1, Item_Being_Placed,Floor)
+					other.alarm[2]=2
+					
+				other.item_to_hold.alarm[4]=1
 					
                 }
+			//	Has_Pressed_Button_This_Step=0
 		f=9000
 			}
 		}

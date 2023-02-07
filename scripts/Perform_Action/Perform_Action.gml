@@ -573,7 +573,7 @@ else//WE HAVE AN OBJECT TYPE
 		case  function_word.create:
 //sm(action_map[? "what_to_create"])
 if exists(action_map[? "where_to_create"]){
-			state_target=Create_Object(action_map[? "what_to_create"],action_map[? "where_to_create"],0,0)
+			state_target=Create_Object(action_map[? "what_to_create"],action_map[? "where_to_create"],0,Floor)
 			action_map[? "where_to_create"].my_building=state_target
 			move_to_next_action=true
 }

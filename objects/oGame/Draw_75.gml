@@ -2,9 +2,9 @@
 // You can write your code in this editor
 //Draw_NightDay_Bar()
 depth=-9000
-draw_text(80,20,st(fps_real)+"\n"+st(Placed_Map[? obj_class.bed]))
+draw_text(80,20,st(fps_real)+"\n"+st(Held_Furniture))
 //draw_text(View_Width-80,20,st(mouse_x)+" "+st(mouse_y))
-draw_text(View_Width-80,20,instance_number(oDoor))
+//draw_text(View_Width-80,20,item_to_hold)
 
 draw_sprite(sGui_Pears_Bar,DayTime,View_Width/2,30)
 

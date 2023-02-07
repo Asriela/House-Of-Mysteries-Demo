@@ -76,7 +76,8 @@ my_room=Rooms_Grid[| floor_i_am_on][# grid_x,grid_y]
 ds_list_add(Furn_List_X,grid_x)
 ds_list_add(Furn_List_Y,grid_y)
 ds_list_add(Furn_List_Type,object_type)
-ds_list_add(Furn_List_Floor,floor_i_am_on)
+ds_list_add(Furn_List_Floors,floor_i_am_on)
+
 ds_list_add(Furn_List_Id,Furn_Id_Count)
 list_id=Furn_Id_Count
 Furn_Id_Count++

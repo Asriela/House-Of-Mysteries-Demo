@@ -1,11 +1,11 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function Create_Object(xx,yy,type){
+function Create_Object(xx,yy,type, var_floor){
  obj=instance_create_depth(xx,yy,1,oObject)
  obj.object_type=type
  obj.grid_x=xx
  obj.grid_y=yy
- obj.floor_i_am_on=Floor
+ obj.floor_i_am_on=var_floor
  		var x_position=House_Start_X+xx*Tile_Width;
 		var y_position=House_Start_Y+yy*Tile_Height;
 obj.x=x_position;

@@ -53,7 +53,8 @@ ini_write_string("a","event_lane",ds_list_write(event_lane_list))
 ini_write_string("a","furn_y",ds_list_write(Furn_List_Y));
 ini_write_string("a","furn_x",ds_list_write(Furn_List_X))
 ini_write_string("a","furn_type",ds_list_write(Furn_List_Type))
-ini_write_string("a","furn_floor",ds_list_write(Furn_List_Floor))
+ini_write_string("a","furn_floor",ds_list_write(Furn_List_Floors))
+sm(ds_list_size(Furn_List_Floors))
 
 ini_write_string("a","saved_doors_x",ds_list_write(Saved_Doors_X_List));
 ini_write_string("a","saved_doors_y",ds_list_write(Saved_Doors_Y_List))

@@ -62,6 +62,11 @@ if Dev_Help[? dev_help.access_object_room_data]
 if !is_undefined(my_room)
 if draw_me
 draw_text(x,y, my_room)
+
+if object_class=obj_class.staircase && Floor=floor_i_am_on+1
+{
+draw_sprite_ext(sObj_StairsTop,0,x,y,1,1,0,c_white,image_alpha)	
+}
 /*
 draw_set_color(c_red)
 if in_use
