@@ -26,7 +26,7 @@ Dev_Help[? dev_help.access_object_room_data]=0
 Dev_Help[? dev_help.auto_accept_guests]=1
 Dev_Help[? dev_help.trigger_emotions]=1
 Dev_Help[? dev_help.unlock_all_furniture]=1
-
+Dev_Help[? dev_help.fast_player]=2
 
 Edit_Mode=edit.none //edit.trade
 Can_Save=1

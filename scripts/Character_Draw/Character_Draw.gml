@@ -117,9 +117,9 @@ last_x=x
 		}
 */		
 if can_draw
-draw_sprite_ext(sprite_index,image_index,x,y,x_scale*my_scale,my_scale,image_angle,c_white,1)
+draw_sprite_ext(sprite_index,image_index,x,y-stairs_y,x_scale*my_scale,my_scale,image_angle,c_white,1)
 if selected && can_draw
-outline_draw_sprite_ext(sprite_index, image_index, x, y, x_scale*my_scale, my_scale, image_angle,c_white,1, 1,c_white,0.9, 0.7, 1,1, false)
+outline_draw_sprite_ext(sprite_index, image_index, x, y-stairs_y, x_scale*my_scale, my_scale, image_angle,c_white,1, 1,c_white,0.9, 0.7, 1,1, false)
 
 //draw_text(x,y,st(grid_x)+"_"+st(grid_y))
 if is_player=0 && is_tourist=0{

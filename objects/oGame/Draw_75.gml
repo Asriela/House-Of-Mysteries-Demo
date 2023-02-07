@@ -79,7 +79,7 @@ draw_text(center_x+90,center_y-4,text)
 draw_set_alpha(1)
 	}
 if Visualize[? vis.console]=1{
-	
+	console_text=""
 	if Console_Mode=con.show_objects_room_data
 {
 	
@@ -94,7 +94,9 @@ if Visualize[? vis.console]=1{
 	}
 }
 else
-console_text=string_copy(Main_Log,string_length(Main_Log)-900,900)
+if Log_Observed_Character!=noone
+if !is_undefined(Main_Log[? Log_Observed_Character])
+console_text=string_copy(Main_Log[? Log_Observed_Character],string_length(Main_Log[? Log_Observed_Character])-900,900)
 
 
 var start_x=View_Width-50;
@@ -108,7 +110,8 @@ draw_rectangle(start_x,start_y,start_x-debug_panel_width,10,1)
 draw_set_color(c_white)
 draw_set_halign(fa_left)
 draw_set_valign(fa_left)
-draw_text_ext(start_x-debug_panel_width+10,40,console_text,20,debug_panel_width-10)
+draw_text(start_x-debug_panel_width+10,20,	Event_Enum_To_String(Log_Observed_Character.my_current_event[?  my_event.event]))
+draw_text_ext(start_x-debug_panel_width+10,80,console_text,20,debug_panel_width-10)
 draw_set_color(c_my_orange)
 draw_set_valign(fa_center)
 }

@@ -1,8 +1,39 @@
 function Character_Move_Player(){
-move_speed=7//1.6
+	if Dev_Help[? dev_help.fast_player]>1
+move_speed=2*Dev_Help[? dev_help.fast_player]//1.6
+else
+move_speed=2//1.6
+
 vspd = (down_key + -up_key) * move_speed;
 hspd = (right_key + -left_key) * move_speed;
+stairs_y=0
 
+if on_stairs!=noone
+{
+	
+	stairs_y=(x-on_stairs.x)*0.67
+	
+	if floor_i_am_on=on_stairs.floor_i_am_on+1 && stairs_y<75{
+	stairs_y=79
+		}
+		else
+			vspd=0
+	
+	if stairs_y>78{
+	floor_i_am_on=on_stairs.floor_i_am_on+1
+	stairs_y=0
+	}
+	else
+	if stairs_y<78	{
+		floor_i_am_on=on_stairs.floor_i_am_on
+	}
+		if Edit_Mode=edit.none
+		Floor=floor_i_am_on
+	if stairs_y<0
+	stairs_y=0
+
+}
+on_stairs=noone
 var avoid=mWall_0
 	switch(floor_i_am_on)
 	{

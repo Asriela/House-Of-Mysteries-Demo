@@ -113,8 +113,7 @@ draw_set_font(f_Speak_Small2)
 		var col=c_style_dk_orange
 				draw_set_color(col)
 		
-		if Object_Menu_Mode!=obj_menu_mode.dish
-		draw_text(edit_mode_menu_x+53*the_scale,edit_mode_menu_y-33*the_scale,count)		
+
 				
 		Over_Button_Id=-1
 		if Object_Menu_Mode!=3 && Object_Menu_Mode!=obj_menu_mode.dish{
@@ -134,6 +133,9 @@ var style_level=Furniture_Map[? item][? furn.style1_level]
 var style_level=Floor_Map[? item][? floor_detail.style_level]
 if Object_Menu_Mode!=obj_menu_mode.dish
 		draw_text(edit_mode_menu_x+3*the_scale,edit_mode_menu_y-33*the_scale,style_level)
+		
+				if Object_Menu_Mode!=obj_menu_mode.dish
+		draw_text(edit_mode_menu_x+53*the_scale,edit_mode_menu_y-33*the_scale,count)		
 return temp_item_placed
    }
 

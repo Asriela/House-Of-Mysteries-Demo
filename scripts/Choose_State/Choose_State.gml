@@ -58,7 +58,7 @@ function Choose_State(idd,player_chosen_state, act_towards)//get chosen_state
 		if current_state!=last_state
 		{
 			running_animation=0
-				Log_Main(highest_state)
+				Log_Main("CHOSE NEW STATE: ["+st(highest_state)+"] \n=========\n")
 				if exists(state_target){
 				state_target.in_use=0
 

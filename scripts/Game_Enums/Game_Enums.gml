@@ -27,7 +27,7 @@ function Game_Enums(){
 		merch,
 		storage,
 		tray,
-		staircase,
+		stairs,
 		doorway,
 		food_prep,
 		chair,
@@ -85,7 +85,8 @@ function Game_Enums(){
 		access_object_room_data,
 		auto_accept_guests,
 		trigger_emotions,
-		unlock_all_furniture
+		unlock_all_furniture,
+		fast_player
 	
 	}
 	enum carry_item_type{

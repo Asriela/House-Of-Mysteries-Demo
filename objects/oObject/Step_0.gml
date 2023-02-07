@@ -2,6 +2,13 @@
 // You can write your code in this editor
 switch(object_class)
 {
+	case obj_class.stairs:
+	var col_obj=instance_place(x,y,mPlayer)
+	if col_obj!=noone && col_obj.y>y-17 && col_obj.y<y+20
+	{
+	col_obj.owner.on_stairs=id
+	}
+	break;
 	case obj_class.bed:
 
 	object_group="Bed"
@@ -26,6 +33,7 @@ outline=1
 if flag=0
 {
 	flag=1
+
 if is_undefined(Placed_Map[? object_class])
 Placed_Map[? object_class]=1
 else
@@ -35,12 +43,14 @@ else
 
 
 
+
+
 var ret=noone;
 	var closest=900000;
 
 
 depth=-y-700
-if object_class=obj_class.staircase
+if object_class=obj_class.stairs
 depth=-y-620
 
 if object_class=obj_class.floor_decor
