@@ -99,10 +99,12 @@ function Game_Enums(){
 		grid_numbers,
 		states,
 		needs,
+		room_grid,
 		doorways,
 		move_to_point,
 		show_tutorial,
-		character_lead
+		character_lead,
+		show_door
 	}
 	enum gui{
 		console,

@@ -242,6 +242,7 @@ if point_distance(x,y,nearest_bag.x,nearest_bag.y)<20
 			}
 			else//we are carrying so put down bag
 			{
+				
 				carrying_item.room_im_in=room_im_in
 				carrying_item.room_type_im_in=room_type_im_in
 				nearest_bag.holder=noone

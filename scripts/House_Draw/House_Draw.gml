@@ -24,6 +24,7 @@ if Buildable_Grid[# xx,yy]=1
 
 
 for( t=0;t<ds_list_size(Floor_List[|Floor]);t++)
+	
 	{
 
 		current_tile=Floor_List[|Floor][| t]
@@ -112,13 +113,19 @@ draw_set_font(f_tiny)
 if Visualize[? vis.grid]
 if !is_undefined(Rooms_Grid[| Floor][# xx,yy])
 	draw_text(x_position,y_position,Rooms_Grid[| Floor][# xx,yy])
+	
+		if Visualize[? vis.room_grid]=1{
+		var text=Rooms_Grid[| Floor][# xx,yy]
+if is_undefined(text)
+text="n"
+	draw_text(x_position,y_position,text)
 		}
 		
 
-				
-	
 
-	
+
+
+	}
 	}
 	
 	
