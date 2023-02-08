@@ -21,7 +21,7 @@ if in_room>0{
 //CHECK IF OBJECT IS A PERSON
 //
 
-sm("room "+st(my_event_room)+"\nobject class "+type+"\nobject class enum" +st(Object_Determine_Class(type)))
+//sm("room "+st(my_event_room)+"\nobject class "+type+"\nobject class enum" +st(Object_Determine_Class(type)))
 //ELSE LOOK THROUGH LIST OF OBJECTS MATCHING CLASS
 //!!!!!!!!!!! ADD NEAREST code
 //go through each

@@ -1,7 +1,7 @@
 function Quick_Settings(){
 	Game_Mode=game_mode.normal
 //	Game_Mode=game_mode.quick
-Game_Mode=game_mode.no_save
+//Game_Mode=game_mode.no_save
 Freeze_Time=0
 World_Seconds_Speed=2
 Game_Mode=game_mode.dev
