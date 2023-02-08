@@ -1,7 +1,7 @@
 function Quick_Settings(){
 	Game_Mode=game_mode.normal
 //	Game_Mode=game_mode.quick
-//Game_Mode=game_mode.no_save
+Game_Mode=game_mode.no_save
 Freeze_Time=0
 World_Seconds_Speed=2
 Game_Mode=game_mode.dev
@@ -18,6 +18,7 @@ Visualize[? vis.move_to_point]=0
 Visualize[? vis.show_tutorial]=1
 Visualize[?vis.character_lead]=1
 
+
 Console_Mode=con.state_data
 
 Dev_Help[? dev_help.auto_book_in]=1
@@ -26,7 +27,7 @@ Dev_Help[? dev_help.access_object_room_data]=0
 Dev_Help[? dev_help.auto_accept_guests]=1
 Dev_Help[? dev_help.trigger_emotions]=1
 Dev_Help[? dev_help.unlock_all_furniture]=1
-
+Dev_Help[? dev_help.fast_player]=2
 
 Edit_Mode=edit.none //edit.trade
 Can_Save=1

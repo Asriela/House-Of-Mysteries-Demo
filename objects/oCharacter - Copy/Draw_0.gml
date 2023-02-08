@@ -25,8 +25,6 @@ if Visualize[? vis.states]=1{
 	draw_set_font(f_tiny)
 draw_text(x,y,Event_Enum_To_String(my_current_event[? my_event.event]))
 }
-draw_text(x,y,stairs_y)
-
 
 if Visualize[? vis.move_to_point]=1{
 	draw_set_color(c_red)

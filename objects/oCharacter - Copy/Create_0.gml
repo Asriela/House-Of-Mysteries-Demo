@@ -1,8 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 last_y=0
-on_stairs=noone
-stairs_y=0
 floor_i_am_on=1
 avoid_this_object=mAvoid_0
 can_draw=1
@@ -95,7 +93,7 @@ backpack_map[? ingredient.worm]=3
 speech_scale=0
 speech_life=0
 show_character_dev_menu=noone
-	Log_Observed_Character=id
+
 
 function Speak()
 {
