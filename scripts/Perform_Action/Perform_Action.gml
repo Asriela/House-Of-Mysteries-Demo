@@ -637,8 +637,15 @@ if plotted_end_location=0
 								else
 								angle=0
 							}
+							if moving_to_stairs{
 							target_x=state_target.x+lengthdir_x(dis,angle)
 							target_y=state_target.y+lengthdir_y(dis,angle)
+							}
+							else
+							{
+							target_x=nearest_stairs.x+lengthdir_x(dis,angle)
+							target_y=nearest_stairs.y+lengthdir_y(dis,angle)
+							}
 						}
 						until(collision_point(target_x,target_y,avoid_this_object,0,1)=0 || chances>100)
 				

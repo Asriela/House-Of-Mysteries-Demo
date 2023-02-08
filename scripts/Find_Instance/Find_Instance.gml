@@ -21,12 +21,16 @@ if in_room>0{
 //CHECK IF OBJECT IS A PERSON
 //
 
-//sm("r"+st(my_event_room)+" t"+type+" c" +st(Object_Determine_Class(type)))
+//sm("room "+st(my_event_room)+"\nobject class "+type+"\nobject class enum" +st(Object_Determine_Class(type)))
 //ELSE LOOK THROUGH LIST OF OBJECTS MATCHING CLASS
 //!!!!!!!!!!! ADD NEAREST code
 //go through each
 chosen_instance=-1
-
+if is_undefined(Rooms_Objects_Map[? my_event_room])
+sm("no room of "+st(my_event_room))
+else
+if is_undefined(Rooms_Objects_Map[? my_event_room][? Object_Determine_Class(type)])
+sm("objects "+st(type)+" listed")
 var list=Rooms_Objects_Map[? my_event_room][? Object_Determine_Class(type)];
 if type="Food"
 {
@@ -63,7 +67,7 @@ if type="Food"
 	chosen_instance=best_dish
 }
 else
-if type="Doorway" chosen_instance=list[| 0]
+if type="Doorway"{ chosen_instance=list[| 0] Log_Main("CHOSE DOORWAY: "+st(chosen_instance))}
 else
 {
 if is_undefined(list)sm("r"+st(my_event_room)+" t"+type+" c" +st(Object_Determine_Class(type)))
@@ -75,6 +79,7 @@ var chosen=random(ds_list_size(list));
 //	sm("item"+st(chosen_instance)+" no"+st(chosen))
 }
 else
+{
 for( var f=0; f<ds_list_size(list);f++)
 {
 	var instance=list[| f];
@@ -83,6 +88,7 @@ for( var f=0; f<ds_list_size(list);f++)
 	chosen_instance=instance
 	break;
 	}
+}
 }
 
 

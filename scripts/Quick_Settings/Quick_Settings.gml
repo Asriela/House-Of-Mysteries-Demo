@@ -6,21 +6,25 @@ Freeze_Time=0
 World_Seconds_Speed=2
 Game_Mode=game_mode.dev
 //Game_Mode=game_mode.block_out
+
 //Game_Mode=game_mode.no_loading
 Visualize[? vis.path]=1
 Visualize[? vis.grid]=0
+Visualize[? vis.room_grid]=0
 Visualize[? vis.grid_numbers]=0
 Visualize[? vis.console]=1
-Visualize[? vis.states]=0
+Visualize[? vis.states]=1
 Visualize[? vis.needs]=0
 Visualize[? vis.doorways]=0
+Visualize[? vis.show_door]=0
 Visualize[? vis.move_to_point]=0
 Visualize[? vis.show_tutorial]=1
 Visualize[?vis.character_lead]=1
 
+
 Console_Mode=con.state_data
 
-Dev_Help[? dev_help.auto_book_in]=1
+Dev_Help[? dev_help.auto_book_in]=0
 Dev_Help[? dev_help.immediate_quest]=0
 Dev_Help[? dev_help.access_object_room_data]=0
 Dev_Help[? dev_help.auto_accept_guests]=1

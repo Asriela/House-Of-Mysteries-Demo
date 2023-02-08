@@ -9,3 +9,4 @@ my_room=noone
 
 first=1
 has_bag=0
+my_room=noone
