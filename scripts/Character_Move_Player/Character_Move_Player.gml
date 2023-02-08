@@ -13,15 +13,18 @@ if on_stairs!=noone
 	
 	stairs_y=(x-on_stairs.x)*0.67
 	
-	if floor_i_am_on=on_stairs.floor_i_am_on+1 && stairs_y<75{
-	stairs_y=79
-		}
-		else
+	if floor_i_am_on=on_stairs.floor_i_am_on+1 && stairs_y<73
+	{
 			vspd=0
+	//stairs_y=79
+		}
+		//else
+		
 	
-	if stairs_y>78{
+	if stairs_y>73{
 	floor_i_am_on=on_stairs.floor_i_am_on+1
 	stairs_y=0
+
 	}
 	else
 	if stairs_y<78	{

@@ -86,7 +86,9 @@ if !is_undefined(room_im_in) && room_im_in!=noone{
 		room_type_im_in=noone
 		inside=0
 	}
+//=========================================
 //>>>>>>   🎮   <<<<<<
+//=========================================
 if is_player>0
 	{
 		
