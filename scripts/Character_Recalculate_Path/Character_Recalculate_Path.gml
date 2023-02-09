@@ -4,6 +4,7 @@ function Character_Recalculate_Path(){
 
 		if exists(state_target)
 		{
+		//	ss()
 			lead.x=x
 			lead.y=y
 			lead.path_start_x=x
@@ -13,6 +14,7 @@ function Character_Recalculate_Path(){
 			if is_undefined(state_target) ss()
 			if state_target.floor_i_am_on!=floor_i_am_on
 			{
+			//	ss()
 					nearest_stairs=oStairs
 					move_to=nearest_stairs
 					moving_to_stairs=1
