@@ -62,10 +62,15 @@ last_x=x
 
 
 	if running_animation=0{
-		if action_animation=noone
+		if action_animation=noone{
 		var sprite=asset_get_index("sChar_"+character_type+dir_text);		
-		else
+		animation_name="running animation:  \nsChar_"+character_type+dir_text
+		}
+		else{
 			var sprite=action_animation
+			animation_name="action animation:  \n"+st(action_animation)
+		}
+			
 		sprite_index=sprite
 		if is_player=0{
 			if is_tourist=0{

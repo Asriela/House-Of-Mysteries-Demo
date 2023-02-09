@@ -19,14 +19,3 @@ if holder!=noone && exists(holder){
 
 
 
-if holder.is_player=0
-{
-	food-=0.1
-	
-	if food<0
-	{
-		with(holder){Satisfy_Need(need.eat)}
-		instance_destroy()
-		
-	}
-}

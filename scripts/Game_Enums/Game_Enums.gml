@@ -86,7 +86,9 @@ function Game_Enums(){
 		auto_accept_guests,
 		trigger_emotions,
 		unlock_all_furniture,
-		fast_player
+		fast_player,
+		auto_dish_up,
+		guest_speed
 	
 	}
 	enum carry_item_type{
@@ -104,7 +106,9 @@ function Game_Enums(){
 		move_to_point,
 		show_tutorial,
 		character_lead,
-		show_door
+		show_door,
+		animation,
+		food_left
 	}
 	enum gui{
 		console,

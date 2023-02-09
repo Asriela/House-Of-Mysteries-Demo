@@ -1,5 +1,6 @@
 🔼
 if is_tourist = 0
+if has_eaten = 0
 if eat event
 600 
 =
@@ -10,6 +11,6 @@ target nearest room chair
 goto 20
 use
 temp at_table 1
-animate( sit 40 ) 
+animate( sit 1 ) 
 eat
-wait
+

@@ -26,13 +26,22 @@ if in_room>0{
 //!!!!!!!!!!! ADD NEAREST code
 //go through each
 chosen_instance=-1
+
+var found_object=1
 if is_undefined(Rooms_Objects_Map[? my_event_room])
-sm("no room of "+st(my_event_room))
+found_object=0
+//sm("no room of "+st(my_event_room))
 else
 if is_undefined(Rooms_Objects_Map[? my_event_room][? Object_Determine_Class(type)])
-sm("objects "+st(type)+" listed")
+found_object=0
+//sm("objects "+st(type)+" listed")
+
+
+
 var list=Rooms_Objects_Map[? my_event_room][? Object_Determine_Class(type)];
-if type="Food"
+
+
+if type="Food" && found_object
 {
 
 	var best_dish=noone
@@ -70,7 +79,7 @@ else
 if type="Doorway"{ chosen_instance=list[| 0] Log_Main("CHOSE DOORWAY: "+st(chosen_instance))}
 else
 {
-if is_undefined(list)sm("r"+st(my_event_room)+" t"+type+" c" +st(Object_Determine_Class(type)))
+if is_undefined(list){//sm("r"+st(my_event_room)+" t"+type+" c" +st(Object_Determine_Class(type)))}
 else
 if proximity=proximity_word.any{
 var chosen=random(ds_list_size(list));
@@ -294,6 +303,8 @@ chosen_instance=any_list[| i]}
 }
 }
 //sm("end"+ st(chosen_instance))
+if found_object=0
+chosen_instance=noone
 		return chosen_instance;
 	
 }

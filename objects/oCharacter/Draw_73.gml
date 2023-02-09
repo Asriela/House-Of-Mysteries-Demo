@@ -166,3 +166,30 @@ if show_character_dev_menu=char_dev_menu.emotions{
 }
 
 
+
+
+
+
+	animation_ended=0
+	if last_image_index>image_index
+animation_ended=1
+last_image_index=image_index
+
+if Visualize[? vis.animation]=1{
+	var text=st(animation_name)+" \n index: "+st(image_index)+"|"+st(image_number);
+	draw_set_color(c_black)
+	var width=string_width(text)
+	var height=string_height(text)
+	draw_set_halign(fa_center)
+	draw_set_valign(fa_center)
+	draw_rectangle(x-width/2,y-height/2,x+width/2,y+height/2,0)
+	if animation_ended=1{
+
+	draw_set_color(c_red)
+	}
+	else
+	draw_set_color(c_white)
+	draw_set_font(f_tiny)
+draw_text(x,y,text)
+
+}

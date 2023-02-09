@@ -2,7 +2,7 @@
 // You can write your code in this editor
 placed_inside=0
 holder=noone
-floor_i_am_on=0
+floor_i_am_on=1
 image_alpha=1
 
 outline=0

@@ -94,7 +94,7 @@ if Visualize[? vis.console]=1{
 	}
 }
 else
-console_text=string_copy(Main_Log,string_length(Main_Log)-900,900)
+console_text=string_copy(Main_Log,string_length(Main_Log)-700,700)
 
 
 var start_x=View_Width-50;

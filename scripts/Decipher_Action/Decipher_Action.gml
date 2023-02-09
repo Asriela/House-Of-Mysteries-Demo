@@ -116,11 +116,11 @@ current_line_text+=string(val)+" "
 		case function_word.animate:
 		if Get_Action_Word(4)=","
 		{
-					action_map[? "shared animation"]=1
-		action_map[? "our animation"]=Get_Action_Word(2)
-		action_map[? "our animation rounds"]=Get_Action_Word(3)
-				action_map[? "their animation"]=Get_Action_Word(5)
-		action_map[? "their animation rounds"]=Get_Action_Word(6)
+			action_map[? "shared animation"]=1
+			action_map[? "our animation"]=Get_Action_Word(2)
+			action_map[? "our animation rounds"]=Get_Action_Word(3)
+			action_map[? "their animation"]=Get_Action_Word(5)
+			action_map[? "their animation rounds"]=Get_Action_Word(6)
 		
 		}
 		else

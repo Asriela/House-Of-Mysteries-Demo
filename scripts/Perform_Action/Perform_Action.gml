@@ -14,7 +14,7 @@ function Perform_Action(idd)
 	switch(action_map[? "action_type"])
 	{
 				case function_word.dish_up:
-				
+				if state_target!=noone{
 				plate=instance_create_depth(x,y,0,oPlate)
 				Set_Variable(state_var.carrying_item,plate)
 				plate.holder=id
@@ -27,7 +27,7 @@ function Perform_Action(idd)
 				
 				instance_destroy(state_target)
 				}
-				
+				}
 					move_to_next_action=true
 			break;
 			case function_word.take:
@@ -297,12 +297,15 @@ move_to_next_action=true
 						
 				break;
 		case function_word.animate:
+		
+		//START
+		//=============
 		if Action_Just_Started()
 		{
-if action_map[? "time_left"]=undefined
-timer=undefined
-else
-								timer=real(action_map[? "time_left"])*60
+			if action_map[? "time_left"]=undefined
+			timer=undefined
+			else
+			timer=real(action_map[? "time_left"])*60
 			our_animation_rounds=action_map[? "our animation rounds"]
 			our_animation_name=Capitalize(action_map[? "our animation"]) 
 			if action_map[? "shared animation"]=1{
@@ -316,43 +319,66 @@ else
 			}
 
 		}
+		//=============
 		
-			if action_map[? "shared animation"]=1{
+		//KEEP SETTING THESE:
+			if action_map[? "shared animation"]=1
+			{
 				face_towards=state_other
 				state_other.face_towards=id
 				state_other.running_animation=1
 				state_other.animation_type=their_animation_name
 				state_other.sprite_index=asset_get_index("s"+string(state_other.character_type)+"_"+string(their_animation_name)) 
 			}
+			
 			stop_walking=1
-running_animation=1
+			running_animation=1
 
-animation_type=our_animation_name
-//sm(our_animation_name)
-if our_animation_name!="Sleep"
-sprite_index=asset_get_index("sChar_"+string(character_type)+"_"+string(our_animation_name)+"_"+st(facing_direction)) 
-else{
+			animation_type=our_animation_name
+			//=====================
+			
+			
+// SLEEP ANIMATION 
+//HAS CHAR LAYING ON SIDE SO ANIMATION DIFFERENT
+if our_animation_name="Sleep"
+{
+	animation_name="state animation:  \nSleep"
 	busy_sleeping=1
-sprite_index=asset_get_index("sChar_"+string(character_type+"_Idle")) 
-image_angle=90
-x=state_target.x+23
-y=state_target.y-7
-sleeping=Furniture_Map[? state_target.object_type][? furn.level]
-
-
+	sprite_index=asset_get_index("sChar_"+string(character_type+"_Idle")) 
+	image_angle=90
+	x=state_target.x+23
+	y=state_target.y-7
+	sleeping=Furniture_Map[? state_target.object_type][? furn.level]
 
 }
+else{
+//SET ANIMAYTION HERE
+sprite_index=asset_get_index("sChar_"+string(character_type)+"_"+string(our_animation_name)+"_"+st(facing_direction)) 
+animation_name="state animation: \n"+"sChar_"+string(character_type)+"_"+string(our_animation_name)+"_"+st(facing_direction)
+}
+
+//IF WE ARE RUNNING ANIMATION ROUNDS 
+//as our determiner for when this animation action ends
 if timer<=0 || timer=undefined
 {
- 	if animation_ended
-		{
-			our_animation_rounds--
 
+ 	if animation_ended{
+
+			our_animation_rounds--
+	}
+		else
+		{
+			if image_index>= image_number{
+			animation_ended=1
+			//ss()
+			}
 		}
+		//if we reach the end of animation rounds
 		if our_animation_rounds=0{
 		running_animation=0
 		}
-			if action_map[? "shared animation"]=1{
+		
+		if action_map[? "shared animation"]=1{
 	 	if state_other.animation_ended
 		{
 			their_animation_rounds--
@@ -365,39 +391,41 @@ if timer<=0 || timer=undefined
 		
 }
 else
-			timer--
+	timer--
 			
-		if running_animation
-	image_speed=0.5
+
+	
+	
+//IF ANIMATION ACTION FINNISHED
+	if running_animation
+	{
+		
+		image_speed=0.5
+		if action_map[? "shared animation"]=1
+		state_other.image_speed=0.5
+	}
 	else
-	image_speed=0						if action_map[? "shared animation"]=1{
-
-
-		if state_other.running_animation
-state_other.image_speed=0.5
-else
-state_other.image_speed=0
-						}
-
-
-					if running_animation=0{
-			talk_emotion=""
-stop_walking=0
-face_towards=-1
-			
-
-
-				if action_map[? "shared animation"]=1{
+			if running_animation=0
+			{
+				if action_map[? "shared animation"]=1
+						state_other.image_speed=0
+						image_speed=0
+						talk_emotion=""
+						stop_walking=0
+						face_towards=-1
+				if action_map[? "shared animation"]=1
+				{
 					state_other.talk_emotion=""
-						state_other.face_towards=-1
-			state_other.running_animation=0}
-			running_animation=0
+					state_other.face_towards=-1
+					state_other.running_animation=0
+				}
+		
+
 
 			move_to_next_action=true
 			image_angle=0
 			face_towards=-1
 
-			//sm("")
 			}
 
 
@@ -536,16 +564,19 @@ else//WE HAVE AN OBJECT TYPE
 {
 //sm(action_map[? "object_type"])
 				state_target=Find_Instance(action_map[? "proximity"],action_map[? "object_type"],action_map[? "in_room"]  ) 
-				Log_Main("FOUND TARGET: " +st(state_target))
+
 			//	sm(state_target)
 
 }
 					if state_target!=noone{
 					//	sm("")
+									Log_Main("FOUND TARGET: " +st(state_target))
 				move_to_next_action=true
 					}
-				else
+				else{
 				end_state=true
+								Log_Main("FAILED TO FIND TARGET")
+				}
 
 				
 		break;
@@ -563,12 +594,28 @@ else//WE HAVE AN OBJECT TYPE
 		}
 		
 		Change_Variable("hunger",-eaten*50) */
-		sm("h")
-		Satisfy_Need(need.eat)
 
+
+		var plate=Get_Variable(state_var.carrying_item)
+			if !is_undefined(plate) && exists(plate){
+	plate.food-=0.1
+	
+	if plate.food<0
+	{
+		Satisfy_Need(need.eat)
+		with(plate)instance_destroy()
 		move_to_next_action=1
-		instance_destroy(Get_Variable(state_var.carrying_item))
 		Set_Variable(state_var.carrying_item, noone)
+		Set_Variable("has_eaten",1)
+	}
+
+			}
+			else
+			{
+				Set_Variable("has_eaten",-1)
+			move_to_next_action=1
+			}
+		
 		break;
 		case  function_word.create:
 //sm(action_map[? "what_to_create"])
@@ -601,7 +648,7 @@ move_to_next_action=true
 				if Last_World_Speed!=World_Speed{
 					var loc=path_position+1
 												//path_change_point(p_path,loc,path_get_point_x(p_path,loc),path_get_point_y(p_path,loc),other.char_speed*World_Speed-0.1)
-with(lead){path_speed=other.char_speed*World_Speed-0.1}
+with(lead){path_speed=(other.char_speed)*World_Speed-0.1}
 	
 				}
 				
@@ -637,15 +684,11 @@ if plotted_end_location=0
 								else
 								angle=0
 							}
-							if moving_to_stairs{
+		
 							target_x=state_target.x+lengthdir_x(dis,angle)
 							target_y=state_target.y+lengthdir_y(dis,angle)
-							}
-							else
-							{
-							target_x=nearest_stairs.x+lengthdir_x(dis,angle)
-							target_y=nearest_stairs.y+lengthdir_y(dis,angle)
-							}
+							
+
 						}
 						until(collision_point(target_x,target_y,avoid_this_object,0,1)=0 || chances>100)
 				
@@ -822,5 +865,5 @@ if plotted_end_location=0
 	just_started_action=0
 } 
 
-animation_ended=0
+
 }

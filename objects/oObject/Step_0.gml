@@ -2,6 +2,24 @@
 // You can write your code in this editor
 switch(object_class)
 {
+	case obj_class.tray:
+		if Dev_Help[? dev_help.auto_dish_up]!=0
+		if held_item=noone
+		{
+		var type=Dev_Help[? dev_help.auto_dish_up]
+						var	plate=instance_create_depth(x,y,0,oPlate)
+				plate.sprite_index=asset_get_index("sDish_"+type)
+				plate.dish_type=type;
+				plate.servings=Dishes_Map[?type][? dish.portion_size]
+				plate.floor_i_am_on=mPlayer.owner.floor_i_am_on
+			held_item=plate
+			plate.holder=id
+			plate.held_by_object=1
+			plate.floor_i_am_on=floor_i_am_on
+			Add_Object_To_Room(plate,Rooms_Grid[| Floor][# grid_x,grid_y],obj_class.available_food)
+
+		}
+	break;
 	case obj_class.staircase:
 	var col_obj=instance_place(x,y,mPlayer)
 	if col_obj!=noone && col_obj.y>y-17 && col_obj.y<y+20
@@ -67,7 +85,7 @@ if object_class=obj_class.storage
 depth=-y-700
 
 if object_class=obj_class.light
-depth=-y-723
+depth=-y-743
 
 if first=1{
 	if object_class=obj_class.food_prep || object_class=obj_class.work_bench ||  object_class=obj_class.tray

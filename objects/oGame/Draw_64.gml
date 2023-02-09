@@ -1281,6 +1281,7 @@ var first=1
 	 
 	 if Object_Menu_Mode=object_menu.floors
 	 {
+		 
 	var item=ds_map_find_first(Dishes_Map)
 	
 	for(var f=0;f<ds_map_size(Dishes_Map);f++)
@@ -1314,6 +1315,7 @@ var first=1
 				plate.holder=Player_Object
 				plate.dish_type=item;
 				plate.servings=Dishes_Map[?item][? dish.portion_size]
+				plate.floor_i_am_on=mPlayer.owner.floor_i_am_on
 		//		sm(plate.servings)
 				Set_Variable_Of(Player_Object,state_var.carrying_item,plate)
 
@@ -1830,6 +1832,7 @@ if Chosen_Tutorial!=-1 && Visualize[? vis.show_tutorial]=1 && Chosen_Tutorial!=t
 	draw_sprite(sGui_Tutorial_Bar,0,View_Width/2,150)
 	draw_set_font(fTutorial)
 var text=Tutorial_Map[? Chosen_Tutorial];
+if !is_undefined(text){
 var length=string_width_ext(text,25,1200)/2+10
 var width=string_height_ext(text,25,1200)/2+10
 draw_set_color(c_old)
@@ -1844,6 +1847,7 @@ draw_set_color(c_white)
 draw_set_halign(fa_center)
 draw_text_ext(sx,sy,text,25,1200)
 draw_set_alpha(1)
+}
 }
 
 Exit_Edit_Modes_Code()

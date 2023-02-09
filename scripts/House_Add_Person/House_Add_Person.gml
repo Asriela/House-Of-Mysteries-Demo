@@ -9,6 +9,7 @@ character.x=x_position;
 character.y=y_position;
 character.is_player=player;
 Set_Variable_Of(character,"is_tourist",0)
+Set_Variable_Of(character,"has_eaten",0)
 if player=0{
 	character.npc_mask=instance_create_depth(x,y,1,oNpc)
 	character.npc_mask.owner=character

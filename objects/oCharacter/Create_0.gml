@@ -2,6 +2,7 @@
 // You can write your code in this editor
 last_y=0
 on_stairs=noone
+animation_name="no animation"
 stairs_y=0
 floor_i_am_on=1
 avoid_this_object=mAvoid_0
@@ -11,6 +12,7 @@ moving_to_stairs=0
 is_tourist=0
 mess_type=""
 mess_rate=0
+last_image_index=0
 mess_timer=0
 last_x=x
 near_cash_register=0
@@ -73,7 +75,8 @@ path_start_x=0
 path_start_y=0
 move_speed=10
 guest_id=char.none
-char_speed=1
+if Dev_Help[? dev_help.guest_speed]>0
+char_speed=1*Dev_Help[? dev_help.guest_speed]
 AI_Local_Vars()
 alarm[0]=2
 vspd=0

@@ -10,6 +10,7 @@ function Character_Recalculate_Path(){
 			lead.path_start_y=y
 			var move_to=state_target;
 			moving_to_stairs=0
+			if is_undefined(state_target) ss()
 			if state_target.floor_i_am_on!=floor_i_am_on
 			{
 					nearest_stairs=oStairs
