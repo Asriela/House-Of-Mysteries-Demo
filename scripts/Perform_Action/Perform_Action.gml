@@ -653,6 +653,21 @@ with(lead){path_speed=(other.char_speed)*World_Speed-0.1}
 				}
 				
 			//	sm(lead)
+
+//Checks to see if the guest have made contact with the stairs
+if moving_to_stairs != 0
+{
+	if (x > nearest_stairs.x-10 && x < nearest_stairs.x+10) && (y > nearest_stairs.y-10 && y < nearest_stairs.y+10)
+			{
+				//change stairs
+				floor_i_am_on=state_target.floor_i_am_on
+				//make new path
+				Character_Recalculate_Path()
+				//replot end location
+				plotted_end_location=0
+			}
+}
+
 if plotted_end_location=0
 {
 		mp_potential_step_object(lead.x,lead.y,char_speed*World_Speed,avoid_this_object)
@@ -668,7 +683,7 @@ if plotted_end_location=0
 				var dis_to_target=point_distance(x,y,nearest_stairs.x,nearest_stairs.y);
 				else
 				var dis_to_target=point_distance(x,y,state_target.x,state_target.y);
-				if ( moving_to_stairs=1 && dis_to_target<10) || (moving_to_stairs=0 && dis_to_target< dis*3)
+				if ( moving_to_stairs=1 && dis_to_target<10) || (moving_to_stairs=0 && dis_to_target< dis*20)
 				{
 					//find position away from target so we dont stand ontop of them
 					var angle=point_direction(state_target.x,state_target.y,x,y);
@@ -718,15 +733,17 @@ if plotted_end_location=0
 										move_to_next_action=true
 										face_towards=state_target
 										}
-										else
-										{
-											//change stairs
-											floor_i_am_on=state_target.floor_i_am_on
-											//make new path
-											Character_Recalculate_Path()
-											//replot end location
-											plotted_end_location=0
-										}
+										//Changing the floor here doesn't work logically, as this is doesn't account for
+										//when the guest makes contact with the stairs
+										/*else 
+											{
+												//change stairs
+												floor_i_am_on=state_target.floor_i_am_on
+												//make new path
+												Character_Recalculate_Path()
+												//replot end location
+												plotted_end_location=0
+											}*/
 					}
 					
 				}
