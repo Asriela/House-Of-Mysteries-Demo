@@ -221,7 +221,8 @@ if instance_number(oInteractable)>0
 if instance_number(oBag_Mask)>0
 {
 	//find nearest
-
+if carrying_item!=noone
+carrying_item.floor_i_am_on=floor_i_am_on
 		var nearest_bag= instance_nearest(x,y,oBag_Mask).owner
 
 

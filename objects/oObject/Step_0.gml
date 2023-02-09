@@ -87,6 +87,9 @@ depth=-y-700
 if object_class=obj_class.light
 depth=-y-743
 
+
+if object_type="Fireplace"
+depth=-y-600
 if first=1{
 	if object_class=obj_class.food_prep || object_class=obj_class.work_bench ||  object_class=obj_class.tray
 	{

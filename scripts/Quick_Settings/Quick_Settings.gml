@@ -25,7 +25,7 @@ Visualize[?vis.food_left]=0
 
 Console_Mode=con.state_data
 
-Dev_Help[? dev_help.auto_book_in]=1
+Dev_Help[? dev_help.auto_book_in]=0
 Dev_Help[? dev_help.immediate_quest]=0
 Dev_Help[? dev_help.auto_dish_up]=0//"Gross_goop"
 Dev_Help[? dev_help.access_object_room_data]=0
