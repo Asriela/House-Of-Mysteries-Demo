@@ -16,7 +16,7 @@ switch(object_class)
 			plate.holder=id
 			plate.held_by_object=1
 			plate.floor_i_am_on=floor_i_am_on
-			Add_Object_To_Room(plate,Rooms_Grid[| Floor][# grid_x,grid_y],obj_class.available_food)
+			Add_Object_To_Room(plate,Rooms_Grid[| floor_i_am_on][# grid_x,grid_y],obj_class.available_food)
 
 		}
 	break;

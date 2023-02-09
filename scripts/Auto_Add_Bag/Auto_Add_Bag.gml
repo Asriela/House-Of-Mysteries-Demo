@@ -21,6 +21,7 @@ function Auto_Add_Bag(bag){
 								bag.room_im_in=my_room
 								bag.x=x
 								bag.y=y
+								bag.floor_i_am_on=floor_i_am_on
 						}
 				
 			

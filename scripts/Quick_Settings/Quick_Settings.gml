@@ -19,15 +19,15 @@ Visualize[? vis.doorways]=0
 Visualize[? vis.show_door]=0
 Visualize[? vis.move_to_point]=0
 Visualize[? vis.show_tutorial]=1
-Visualize[?vis.character_lead]=1
+Visualize[?vis.character_lead]=0
 Visualize[?vis.animation]=0
-Visualize[?vis.food_left]=0
+Visualize[?vis.food_left]=1
 
 Console_Mode=con.state_data
 
-Dev_Help[? dev_help.auto_book_in]=0
+Dev_Help[? dev_help.auto_book_in]=1
 Dev_Help[? dev_help.immediate_quest]=0
-Dev_Help[? dev_help.auto_dish_up]=0//"Gross_goop"
+Dev_Help[? dev_help.auto_dish_up]="Gross_goop"
 Dev_Help[? dev_help.access_object_room_data]=0
 Dev_Help[? dev_help.auto_accept_guests]=1
 Dev_Help[? dev_help.trigger_emotions]=1

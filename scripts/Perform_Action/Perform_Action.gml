@@ -15,11 +15,13 @@ function Perform_Action(idd)
 	{
 				case function_word.dish_up:
 				if state_target!=noone{
+
 				plate=instance_create_depth(x,y,0,oPlate)
 				Set_Variable(state_var.carrying_item,plate)
 				plate.holder=id
 				plate.sprite_index=asset_get_index("sPlate_"+state_target.dish_type)
 				plate.held_by_object=0
+				plate.floor_i_am_on=floor_i_am_on
 
 				state_target.servings--
 					state_target.holder.held_item=noone
@@ -90,11 +92,16 @@ function Perform_Action(idd)
 	break;
 		///TARGET KEYWORD
 		case function_word.try_purchase:
-
+if state_target=noone{
+Set_Variable("paid",1)
+	 move_to_next_action=true
+}
+else{
 			Set_Variable("finnished_shopping",1)
 			Set_Variable("item_to_buy",state_target.object_type)
 state_target.alarm[5]=2
-		
+
+}
 		
 		
 		break;

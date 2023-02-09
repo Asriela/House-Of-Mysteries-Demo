@@ -5,7 +5,7 @@ function Find_Instance(proximity,type,in_room,in_shop)
 			closest_distance=9999999;
 type=Capitalize(type)
 
-
+var found_object=1
 
 
 any_list=ds_list_create()
@@ -27,7 +27,7 @@ if in_room>0{
 //go through each
 chosen_instance=-1
 
-var found_object=1
+
 if is_undefined(Rooms_Objects_Map[? my_event_room])
 found_object=0
 //sm("no room of "+st(my_event_room))
@@ -50,6 +50,7 @@ if type="Food" && found_object
 	for( var f=0; f<ds_list_size(list);f++)
 	{
 		var check_dish=list[| f];
+		if exists(check_dish){
 		if check_dish.held_by_object=1
 		{
 			var styles_map=Dishes_Map[? check_dish.dish_type][? dish.style_map];
@@ -70,9 +71,12 @@ if type="Food" && found_object
 		if highest_level < dish_level
 		best_dish=check_dish
 		}
+		}
+
+		
 	}
 	
-	if best_dish!=noone
+	//if best_dish!=noone
 	chosen_instance=best_dish
 }
 else
