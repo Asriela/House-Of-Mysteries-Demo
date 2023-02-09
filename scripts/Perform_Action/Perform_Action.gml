@@ -663,6 +663,8 @@ if moving_to_stairs != 0
 				floor_i_am_on=state_target.floor_i_am_on
 				//make new path
 				Character_Recalculate_Path()
+				
+				with(lead){path_start(p_path,other.char_speed*World_Speed-0.1,0,0)}
 				//replot end location
 				plotted_end_location=0
 			}
@@ -683,7 +685,7 @@ if plotted_end_location=0
 				var dis_to_target=point_distance(x,y,nearest_stairs.x,nearest_stairs.y);
 				else
 				var dis_to_target=point_distance(x,y,state_target.x,state_target.y);
-				if ( moving_to_stairs=1 && dis_to_target<10) || (moving_to_stairs=0 && dis_to_target< dis*20)
+				if ( moving_to_stairs=1 && dis_to_target<10) || (moving_to_stairs=0 && dis_to_target< dis*3)
 				{
 					//find position away from target so we dont stand ontop of them
 					var angle=point_direction(state_target.x,state_target.y,x,y);
