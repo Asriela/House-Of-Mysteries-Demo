@@ -80,6 +80,7 @@ if type="Doorway"{ chosen_instance=list[| 0] Log_Main("CHOSE DOORWAY: "+st(chose
 else
 {
 if is_undefined(list){//sm("r"+st(my_event_room)+" t"+type+" c" +st(Object_Determine_Class(type)))}
+}
 else
 if proximity=proximity_word.any{
 var chosen=random(ds_list_size(list));
