@@ -37,7 +37,7 @@ Dev_Help[? dev_help.guest_speed]=2
 
 Edit_Mode=edit.none //edit.trade
 Can_Save=1
-Chosen_Tutorial=tu.add_beds
+Chosen_Tutorial=tutorial.add_beds
 //Chosen_Tutorial=tu.social 
 World_Speed=1
 Cash=900

@@ -9,7 +9,7 @@ function Run_Particular_Tutorial(){
 	Flash_Button_Alpha-=0.02
 	switch(Chosen_Tutorial)
 	{
-		case tu.add_beds:
+		case tutorial.add_beds:
 		
 			switch(Tutorial_Sub_Step)
 			{
@@ -37,8 +37,29 @@ function Run_Particular_Tutorial(){
 
 				Flash_Button=noone
 				Flash_Room=5
+				if exists(Object_That_Was_Placed)
 				if Object_That_Was_Placed.object_type="Bed_Gnome_1" && Object_That_Was_Placed.my_room=5
 				Tutorial_Sub_Step++
+			break;
+		case 5:
+
+				Flash_Button=style.arcane
+				if Flashing_Button_Was_Pressed
+				Tutorial_Sub_Step++
+			break;
+		case 6:
+
+				Flash_Button="Bed_Ghost_1"
+				if Flashing_Button_Was_Pressed
+				Tutorial_Sub_Step++
+			break;
+		case 7:
+
+				Flash_Button=noone
+				Flash_Room=6
+				if exists(Object_That_Was_Placed)
+				if Object_That_Was_Placed.object_type="Bed_Ghost_1" && Object_That_Was_Placed.my_room=6
+				Chosen_Tutorial=tu.take_bags
 			break;
 			}
 		

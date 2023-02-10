@@ -48,7 +48,7 @@ if Chosen_Tutorial=tu.trade2
 			World_Minutes=59
 	}
 }
-if Chosen_Tutorial=tu.add_beds{
+if Chosen_Tutorial=tutorial.add_beds{
 	Tutorial_Highlight_Button=tu_highlight_button.furniture
 
 if Placed_Map[? obj_class.bed]>1// && Placed_Map[? obj_class.chair]>1 && Placed_Map[? obj_class.table] 

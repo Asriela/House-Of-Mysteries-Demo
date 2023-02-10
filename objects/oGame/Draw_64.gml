@@ -1837,6 +1837,8 @@ if Chosen_Tutorial!=-1 && Visualize[? vis.show_tutorial]=1 && Chosen_Tutorial!=t
 	draw_sprite(sGui_Tutorial_Bar,0,View_Width/2,150)
 	draw_set_font(fTutorial)
 var text=Tutorial_Map[? Chosen_Tutorial];
+
+
 var text2=Tutorial_Sub_Map[? Chosen_Tutorial][| Tutorial_Sub_Step];
 if !is_undefined(text){
 var length=string_width_ext(text,25,1200)/2+10

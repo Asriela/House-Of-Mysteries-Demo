@@ -78,8 +78,10 @@ Tutorial_Map=ds_map_create()
 Move_Furniture_Mode=0
 obj_gui_back=noone
 box_tracker=noone
+
 Setup_Tutorial()
 portrait_animation=0
+
 end_hour_gui=1
 item_to_hold=noone
 /*
