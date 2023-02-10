@@ -1567,14 +1567,19 @@ item=ds_map_find_next(Dishes_Map,item)
 		var left=75
 		width=length
 			 if Object_Menu_Mode=object_menu.furniture || Object_Menu_Mode=object_menu.floors{
+				 var flash=0
 		var t_class=style.lodge;
-		  Object_Category = Button_Pressed(edit_mode_menu_x+left -100, edit_mode_menu_y-70, length, width, sGUI_Elements, "", Get_Class_Color(t_class), c_gray, Object_Category,t_class , 0, controls.left_click, 0,t_class, 1);
+			if Flash_Button = t_class flash=1 else flash=0
+		  Object_Category = Button_Pressed(edit_mode_menu_x+left -100, edit_mode_menu_y-70, length, width, sGUI_Elements, "", Get_Class_Color(t_class,flash), c_gray, Object_Category,t_class , 0, controls.left_click, 0,t_class, 1);
 		var t_class=style.wild;
-		  Object_Category = Button_Pressed(edit_mode_menu_x +left-50, edit_mode_menu_y-70, length, width, sGUI_Elements, "", Get_Class_Color(t_class), c_gray, Object_Category,t_class , 0, controls.left_click, 0,t_class, 1);
+	if Flash_Button = t_class flash=1 else flash=0
+		  Object_Category = Button_Pressed(edit_mode_menu_x +left-50, edit_mode_menu_y-70, length, width, sGUI_Elements, "", Get_Class_Color(t_class,flash), c_gray, Object_Category,t_class , 0, controls.left_click, 0,t_class, 1);
 		var t_class=style.arcane;
-		  Object_Category = Button_Pressed(edit_mode_menu_x +left, edit_mode_menu_y-70, length, width, sGUI_Elements, "", Get_Class_Color(t_class), c_gray, Object_Category,t_class , 0, controls.left_click, 0,t_class, 1);
+		if Flash_Button = t_class flash=1 else flash=0
+		  Object_Category = Button_Pressed(edit_mode_menu_x +left, edit_mode_menu_y-70, length, width, sGUI_Elements, "", Get_Class_Color(t_class,flash), c_gray, Object_Category,t_class , 0, controls.left_click, 0,t_class, 1);
 		  		var t_class=style.sci_fi;
-		  Object_Category = Button_Pressed(edit_mode_menu_x+left+ 50, edit_mode_menu_y-70, length, width, sGUI_Elements, "", Get_Class_Color(t_class), c_gray, Object_Category,t_class , 0, controls.left_click, 0,t_class, 1);
+				if Flash_Button = t_class flash=1 else flash=0
+		  Object_Category = Button_Pressed(edit_mode_menu_x+left+ 50, edit_mode_menu_y-70, length, width, sGUI_Elements, "", Get_Class_Color(t_class,flash), c_gray, Object_Category,t_class , 0, controls.left_click, 0,t_class, 1);
 			 }
 			 else
 			 {
@@ -1832,12 +1837,13 @@ if Chosen_Tutorial!=-1 && Visualize[? vis.show_tutorial]=1 && Chosen_Tutorial!=t
 	draw_sprite(sGui_Tutorial_Bar,0,View_Width/2,150)
 	draw_set_font(fTutorial)
 var text=Tutorial_Map[? Chosen_Tutorial];
+var text2=Tutorial_Sub_Map[? Chosen_Tutorial][| Tutorial_Sub_Step];
 if !is_undefined(text){
 var length=string_width_ext(text,25,1200)/2+10
 var width=string_height_ext(text,25,1200)/2+10
 draw_set_color(c_old)
 var sx=View_Width/2//gui_x
-var sy=165//View_Height-100//gui_y
+var sy=165-30//View_Height-100//gui_y
 //draw_rectangle(sx-length-2,sy-width-2,sx+length+2,sy+width+2,1)
 //draw_rectangle(sx-length-1,sy-width-1,sx+length+1,sy+width+1,1)
 draw_set_color(c_dark_brown)
@@ -1847,6 +1853,10 @@ draw_set_color(c_white)
 draw_set_halign(fa_center)
 draw_text_ext(sx,sy,text,25,1200)
 draw_set_alpha(1)
+
+	draw_set_font(fTutorial_Small)
+draw_text_ext(sx,sy+25,text2,25,1200)
+
 }
 }
 

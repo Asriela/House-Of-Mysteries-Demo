@@ -34,9 +34,12 @@ switch(need){
 }
 return ret
 }
-function Get_Class_Color(style)
+function Get_Class_Color(style,flash)
 {
-		ret=""
+var ret=""
+	if flash
+	ret=c_aqua
+	else
 		if DayTime=1{
 switch(style){
 	case style.lodge: ret=c_style_dk_orange break;
