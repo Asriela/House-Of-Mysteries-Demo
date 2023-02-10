@@ -34,7 +34,8 @@ function Get_State_Score(idd,state_name,our_own_score_evaluation,start_line,end_
 					line_index=l
 					//the word that determines how the line will function
 					Get_All_Evaluation_Words(state_name,line_index)
-
+			
+		
 					//break down the evaluation 
 					switch(word[1])
 					{
@@ -300,14 +301,14 @@ function Get_State_Score(idd,state_name,our_own_score_evaluation,start_line,end_
 				}
 				break;
 				}
-
+				
 			}
 			else
 			break;
 
 		}
 			if failed_evaluation{
-			Log_Main("FAILED WITH => \n "+potential_log+"\n ====== \n")
+
 			score_value=0
 			}
 	//return the score value

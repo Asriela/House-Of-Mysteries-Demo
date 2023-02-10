@@ -12,7 +12,7 @@ obj.x=x_position;
 obj.y=y_position;
 if !is_undefined(Furniture_Map[? type]){
 obj.object_class=Furniture_Map[? type][? furn.class]
-if obj.object_class=obj_class.stairs
+if obj.object_class=obj_class.staircase
 {
 	obj.my_stairs_mask=instance_create(x,y,oStairs)
 	obj.my_stairs_mask.owner=obj

@@ -31,9 +31,21 @@ place_dish_on_tray,
 	}
 	
 function Setup_Tutorial(){
-		Tutorial_Map[? tu.add_beds]="add a bed to each empty bedroom"	
+
+		Tutorial_Map[? tu.add_beds]="TODO: Add Beds For Guests"	
+		Tutorial_Sub_Map[? tu.add_beds]=ds_list_create()
+		
+		var	list=Tutorial_Sub_Map[? tu.add_beds];
+		list[| 1]="goto objects menu"	
+		list[| 2]="select the wild furniture style"	
+		list[| 3]="select the gnome bed"	
+		list[| 4]="place gnome bed in the bedroom"	
+		list[| 5]="select the arcane furniture style"	
+		list[| 2]="select the gnome bed"	
 		Tutorial_Map[? tu.take_bags]="place the guests bags in their rooms"	
 		Tutorial_Map[? tu.prep_food]="cook food for guests"	
 		Tutorial_Map[? tu.place_dish_on_tray]="take your cooked dish to tray"	
+
+
 
 }

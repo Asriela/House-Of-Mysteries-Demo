@@ -98,8 +98,8 @@ style1=style.lodge
 	//LEVEL 0:
 	style1_level=0
 		item="Stairs"
-	desc="stairs"
-	class=obj_class.stairs
+	desc="staircase"
+	class=obj_class.staircase
 	price=10
 	points=0
 		start_x=2

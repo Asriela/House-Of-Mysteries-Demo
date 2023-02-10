@@ -75,16 +75,20 @@ var added_down=0
         if (count>0 || Object_Menu_Mode=2 )&& temp_item_placed!=0 && temp_item_placed!=noone{
 			//ss()
 		Item_Being_Placed=temp_item_placed
-
+		if Flash_Button=item
+		Flashing_Button_Was_Pressed=1
+		
 		}
 if temp_item_placed!=noone
 Chosen_Object=1
 
-
+if Flash_Button=item
+draw_set_color(c_aqua)
+else
 draw_set_color(c_dark_brown)
 draw_set_alpha(1)
 //draw_rectangle(edit_mode_menu_x-20,edit_mode_menu_y-40,edit_mode_menu_x+60,edit_mode_menu_y-33+15,0)
-		draw_set_color(c_dark_brown)
+
 draw_set_font(f_Speak_Small)
 		var the_scale=1
 		if Over_Button_Id=1{
@@ -111,19 +115,29 @@ draw_set_font(f_Speak_Small2)
 		var col=Get_Class_Color(class);
 		else
 		var col=c_style_dk_orange
-				draw_set_color(col)
-		
+		var back_alpha=1
+		if Flash_Button=item{
+		col=c_aqua
+		var back_col=c_aqua
+		var back_alpha=Flash_Button_Alpha
+		}
+		else{
+				var back_col=c_white
+			
+		}
+			draw_set_color(col)
+				draw_set_alpha(back_alpha)
 
-				
+			
 		Over_Button_Id=-1
 		if Object_Menu_Mode!=3 && Object_Menu_Mode!=obj_menu_mode.dish{
 draw_sprite_ext(sGUI_Elements_Small_Back,0,edit_mode_menu_x-13*the_scale,
-edit_mode_menu_y-32*the_scale,the_scale,the_scale,0,c_white,1)
+edit_mode_menu_y-32*the_scale,the_scale,the_scale,0,back_col,back_alpha)
 
 draw_sprite_ext(sGUI_Elements_Small,class,edit_mode_menu_x-13*the_scale,
-edit_mode_menu_y-32*the_scale,the_scale,the_scale,0,c_white,1)
+edit_mode_menu_y-32*the_scale,the_scale,the_scale,0,back_col,back_alpha)
 		}
-		draw_sprite_ext(sGUI_Back_Box_Frame,0,edit_mode_menu_x+20 , edit_mode_menu_y,the_scale,the_scale,0,col,0.4)		
+		draw_sprite_ext(sGUI_Back_Box_Frame,0,edit_mode_menu_x+20 , edit_mode_menu_y,the_scale,the_scale,0,col,back_alpha-0.6)		
 		if Object_Menu_Mode=1 || Object_Menu_Mode=3
 var style_level=Furniture_Map[? item][? furn.style1_level]
 		else
@@ -133,9 +147,10 @@ var style_level=Furniture_Map[? item][? furn.style1_level]
 var style_level=Floor_Map[? item][? floor_detail.style_level]
 if Object_Menu_Mode!=obj_menu_mode.dish
 		draw_text(edit_mode_menu_x+3*the_scale,edit_mode_menu_y-33*the_scale,style_level)
-		
 				if Object_Menu_Mode!=obj_menu_mode.dish
 		draw_text(edit_mode_menu_x+53*the_scale,edit_mode_menu_y-33*the_scale,count)		
+		draw_set_alpha(1)
+		
 return temp_item_placed
    }
 

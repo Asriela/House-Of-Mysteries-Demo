@@ -84,6 +84,11 @@ if Selected_Room=current_room
 the_alpha=0.6
 else
 the_alpha=0.4
+
+if current_room=Flash_Room{
+the_alpha=Flash_Button_Alpha
+color=c_aqua
+}
 				if Edit_Mode=edit.room || Edit_Mode=edit.object
 				{
 					if the_alpha!=0.6{//not selected

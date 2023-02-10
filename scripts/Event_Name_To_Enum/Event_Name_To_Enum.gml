@@ -4,7 +4,7 @@ function Event_Name_To_Enum(event_string){
 	var ret=event.none;
 switch(event_string)
 {
-	case "idle": ret=event.has_no_room break;
+	case "idle": ret=event.none break;
 	case "eat": ret=event.eat break;
 	case "sleep": ret=event.sleep break;
 	case "drink": ret=event.drink break;
