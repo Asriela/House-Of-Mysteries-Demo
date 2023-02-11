@@ -224,7 +224,8 @@ if instance_number(oBag_Mask)>0
 
 		var nearest_bag= instance_nearest(x,y,oBag_Mask).owner
 
-
+if carrying_item!=noone
+carrying_item.floor_i_am_on=floor_i_am_on
 if point_distance(x,y,nearest_bag.x,nearest_bag.y)<20 
 {
 
@@ -242,7 +243,7 @@ if point_distance(x,y,nearest_bag.x,nearest_bag.y)<20
 			}
 			else//we are carrying so put down bag
 			{
-				
+				Tutorial_Sub_Step++
 				carrying_item.room_im_in=room_im_in
 				carrying_item.room_type_im_in=room_type_im_in
 				nearest_bag.holder=noone

@@ -35,34 +35,108 @@ function Run_Particular_Tutorial(){
 			break;
 			case 4:
 
+			Flash_Button=noone
+			Flash_Tutorial=1
+				if Floor=2{
+				Tutorial_Sub_Step++
+				Flash_Tutorial=0
+				}
+			break;
+			case 5:
+
 				Flash_Button=noone
 				Flash_Room=5
 				if exists(Object_That_Was_Placed)
 				if Object_That_Was_Placed.object_type="Bed_Gnome_1" && Object_That_Was_Placed.my_room=5
 				Tutorial_Sub_Step++
 			break;
-		case 5:
-
-				Flash_Button=style.arcane
-				if Flashing_Button_Was_Pressed
-				Tutorial_Sub_Step++
-			break;
 		case 6:
-
-				Flash_Button="Bed_Ghost_1"
+				Flash_Room=noone
+				Flash_Button=style.arcane
 				if Flashing_Button_Was_Pressed
 				Tutorial_Sub_Step++
 			break;
 		case 7:
 
+				Flash_Button="Bed_Ghost_1"
+				if Flashing_Button_Was_Pressed
+				Tutorial_Sub_Step++
+			break;
+		case 8:
+
 				Flash_Button=noone
 				Flash_Room=6
 				if exists(Object_That_Was_Placed)
-				if Object_That_Was_Placed.object_type="Bed_Ghost_1" && Object_That_Was_Placed.my_room=6
+				if Object_That_Was_Placed.object_type="Bed_Ghost_1" && Object_That_Was_Placed.my_room=6{
 				Chosen_Tutorial=tu.take_bags
+				Flash_Room=noone
+				Tutorial_Sub_Step=1
+				}
 			break;
 			}
 		
+		break;
+		case tutorial.take_bags:
+		switch(Tutorial_Sub_Step)
+			{
+			case 1:
+			if Spawned_Starter_Guests=0
+		{
+	Spawned_Starter_Guests=1
+			Add_Guest_To_Arrive(World_Hour+1,char.witch)
+		Add_Guest_To_Arrive(World_Hour+1,char.ghost)
+	World_Minutes=59
+World_Seconds=59
+
+		}
+
+				Tutorial_Highlight_Button=tu_highlight_button.none
+				if  Edit_Mode=edit.none{
+				Tutorial_Sub_Step++
+				
+				}
+			break;
+			case 2:
+				Tutorial_Highlight_Button=noone
+				if instance_number(oCarryItem)>0{
+				Tutorial_Arrow=instance_nearest(x,y,oCarryItem)
+				if  point_distance(mPlayer.x,mPlayer.y,Tutorial_Arrow.x,Tutorial_Arrow.y)<60{
+				Tutorial_Sub_Step++
+				}
+				}
+			break;				
+				case 3:
+				Flash_Tutorial=1
+				Tutorial_Arrow=noone
+				if keyboard_check_pressed(vk_space)
+				Tutorial_Sub_Step++
+				break;
+				case 4:
+				Flash_Tutorial=0
+				Tutorial_Arrow=oStairs
+
+				Tutorial_Arrow=instance_nearest(x,y,oStairs)
+				if  point_distance(mPlayer.x,mPlayer.y,Tutorial_Arrow.x,Tutorial_Arrow.y)<60
+				Tutorial_Sub_Step++
+				break;
+				case 5:
+				Tutorial_Arrow=noone
+				if Floor=2
+				Tutorial_Sub_Step++
+				
+				break;
+				case 6:
+				Flash_Tutorial=1
+				break;
+				case 7:
+				Flash_Tutorial=1
+				break;
+				case 8:
+				Flash_Tutorial=0
+				Chosen_Tutorial=tutorial.make_food
+				Tutorial_Sub_Step=1
+				break;
+			}
 		break;
 	}
 }

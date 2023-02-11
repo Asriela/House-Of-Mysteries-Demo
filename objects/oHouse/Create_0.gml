@@ -3,7 +3,7 @@ globalvar Door_Orientation,Floor_Variation_Grid,Buildable_Grid,House_Path_Floor,
 grid_width= 100;
 grid_height=100;
 Door_Orientation=0
-House_Path_Floor= mp_grid_create(0,0,grid_width,grid_height,1,1)
+
 Buildable_Grid=ds_grid_create(grid_width,grid_height)
 Rooms_Objects_Map=ds_map_create()
 Taken_Rooms_Map=ds_map_create()
@@ -90,7 +90,7 @@ image_xscale=2
 image_yscale=2
 oGame.x=x
 oGame.y=y+200
-House_Path_Grid = mp_grid_create(0,0,grid_width,grid_height,1,1)
+//House_Path_Grid = mp_grid_create(0,0,grid_width,grid_height,1,1)
 
 Spawn_X=room_width/2;
 Spawn_Y=room_height/2;

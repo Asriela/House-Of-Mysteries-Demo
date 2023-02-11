@@ -4,5 +4,5 @@
 Wall_Grid[| Floor][# xx,yy]=0
 //sm("destroy")
 	//mp_grid_clear_cell(House_Path_Grid,xx,yy)
-mp_grid_clear_cell(House_Path_Floor,xx,yy)
+//mp_grid_clear_cell(House_Path_Floor,xx,yy)
 	

@@ -365,7 +365,8 @@ enum object_menu{
 }
 enum tu_highlight_button
 {
-	furniture
+	furniture,
+	none
 }
 enum style{
 	none,

@@ -66,6 +66,7 @@ var truth_id=truth_hare_runaway_watch.ran_away;
 
 //MY NEEDS
 //=========================================
+
 		list=Guest_Map[? me][? guest_detail.needs_list]=ds_list_create();
 		ds_list_add(list,event.eat)
 		ds_list_add(list,event.sleep)

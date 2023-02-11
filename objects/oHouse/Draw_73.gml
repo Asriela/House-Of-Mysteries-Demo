@@ -9,14 +9,14 @@ var val=Rooms_Objects_Map[? 2][? obj_class.doorway][|i]
 //sm("doorway found")
 draw_text(View_Width-300,100+i*40,val)
 }}
-
+/*
 if Visualize[? vis.grid]
 		for(i=0;i<ds_grid_width(House_Path_Grid);i++)
 	for(j=0;j<ds_grid_height(House_Path_Grid);j++)
 	{
 
 //ss()
-current_room=mp_grid_get_cell(House_Path_Floor,i,j)
+//current_room=mp_grid_get_cell(House_Path_Floor,i,j)
 
 		var x_position=House_Start_X+i*Tile_Width;
 		var y_position=House_Start_Y+j*Tile_Height;
@@ -32,7 +32,7 @@ current_room=mp_grid_get_cell(House_Path_Floor,i,j)
 draw_sprite_ext(sTile_Blank,0,x_position,y_position,1,1,0,col,0.2)
 //draw_text(x_position,y_position,current_room)
 	}
-	
+	*/
 
 
 if Edit_Mode=edit.room

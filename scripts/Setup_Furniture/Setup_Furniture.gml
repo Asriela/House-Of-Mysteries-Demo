@@ -567,6 +567,17 @@ style1=style.wild
 	size_y=5
 	Set_Furniture_Item(item,name,desc,class,price,race,style1,style1_level,style2,style2_level,points,start_x,start_y,size_x,size_y,is_merch)
 	
+	item="Swamp_Bed"
+	desc="swamp bed"
+	class=obj_class.bed
+	price=10
+	points=0
+	start_x=4
+	start_y=2
+	size_x=9
+	size_y=5
+	Set_Furniture_Item(item,name,desc,class,price,race,style1,style1_level,style2,style2_level,points,start_x,start_y,size_x,size_y,is_merch)
+		
 	item="Lillypad_Table"
 	desc="lillypad bedside table"
 	class=obj_class.shelf_decor

@@ -65,7 +65,7 @@ function Create_Wall(xx,yy,vert,hori)
 	if hori=1 && vert=0
 	the_wall.room_color[| dir.right]=the_wall.my_color
 		tile_room_grid[| Floor][# xx,yy]=Selected_Room
-		mp_grid_add_cell(House_Path_Grid,xx,yy)
+		//mp_grid_add_cell(House_Path_Grid,xx,yy)
 }
 
 function House_Add_Tile(xx,yy,type,walls){

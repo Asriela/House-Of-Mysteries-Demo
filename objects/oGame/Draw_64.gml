@@ -40,7 +40,7 @@ Edit_Mode = Button_Pressed(edit_mode_menu_x - 10+80, edit_mode_menu_y - 44, 80, 
 Edit_Mode = Button_Pressed(edit_mode_menu_x - 10+80, edit_mode_menu_y-44+80, 80, 76, 0, "", -1, -1, Edit_Mode, edit.recipies, 0, default_input, 0, shape.square, 0);
 Edit_Mode = Button_Pressed(edit_mode_menu_x - 10, edit_mode_menu_y-44+80, 80, 76, 0, "", -1, -1, Edit_Mode, edit.none, 0, default_input, 0, shape.square, 0);
   
-
+if Edit_Mode=edit.none Floor=mPlayer.owner.floor_i_am_on
     
     if (Edit_Mode == edit.recipies && Sub_Menu="Ingredient" && obj_gui_back=noone)
     {
@@ -450,8 +450,7 @@ Give_Quest(our_ghost,quest.ask_out)
 	Guest_Map[? char.ghost][? guest_detail.visual_description]="the ghost appears to be showing you by creating forms out of their hands that they are in love with Gnor the gnome, they seem to want to know whether you think they should confess their love "
 		}
 		}
-		else
-		Chosen_Tutorial=tu.take_bags
+
 		
 		}
 		
@@ -1739,13 +1738,13 @@ if Object_Menu_Mode=1
 
     case edit.character:
         start_value = Item_Being_Placed;
-        for (var c = 0; c < ds_list_size(Guests_List); c++)
+     /*   for (var c = 0; c < ds_list_size(Guests_List); c++)
         {
             item = Guests_List[| c];
             Item_Being_Placed = Button_Pressed(edit_mode_menu_x + 50, edit_mode_menu_y, 120, 20, 0, item, c_white, c_black, Item_Being_Placed, item, 0, default_input, 0, shape.square, 0);
             edit_mode_menu_y += 25;
         }
-        
+        */
         if (is_string(Item_Being_Placed))
         {
             draw_sprite_ext(asset_get_index("sChar_" + Item_Being_Placed), 0, device_mouse_x_to_gui(0), device_mouse_y_to_gui(0), 1, 1, 0, c_white, 0.5);
@@ -1838,7 +1837,8 @@ if Chosen_Tutorial!=-1 && Visualize[? vis.show_tutorial]=1 && Chosen_Tutorial!=t
 	draw_set_font(fTutorial)
 var text=Tutorial_Map[? Chosen_Tutorial];
 
-
+//if is_undefined(Tutorial_Sub_Map[? Chosen_Tutorial])
+//sm(Chosen_Tutorial)
 var text2=Tutorial_Sub_Map[? Chosen_Tutorial][| Tutorial_Sub_Step];
 if !is_undefined(text){
 var length=string_width_ext(text,25,1200)/2+10
@@ -1855,10 +1855,14 @@ draw_set_color(c_white)
 draw_set_halign(fa_center)
 draw_text_ext(sx,sy,text,25,1200)
 draw_set_alpha(1)
-
+if Flash_Tutorial
+{
+draw_set_color(c_aqua)
+draw_set_alpha(Flash_Button_Alpha)
+}
 	draw_set_font(fTutorial_Small)
 draw_text_ext(sx,sy+25,text2,25,1200)
-
+draw_set_alpha(1)
 }
 }
 

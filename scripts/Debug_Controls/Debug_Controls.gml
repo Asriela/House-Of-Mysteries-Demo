@@ -6,6 +6,6 @@ if keyboard_check_pressed(ord("T"))
 Edit_Mode=edit.review_day
 
 if keyboard_check_pressed(ord("G"))
-Spawn_Starter_Guests=1
+Spawned_Starter_Guests=1
 
 }

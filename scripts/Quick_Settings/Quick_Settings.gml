@@ -4,7 +4,7 @@ function Quick_Settings(){
 Game_Mode=game_mode.no_save
 Freeze_Time=0
 World_Seconds_Speed=2
-Game_Mode=game_mode.dev
+
 //Game_Mode=game_mode.block_out
 
 //Game_Mode=game_mode.no_loading
@@ -25,7 +25,7 @@ Visualize[?vis.food_left]=0
 
 Console_Mode=con.state_data
 
-Dev_Help[? dev_help.auto_book_in]=1
+Dev_Help[? dev_help.auto_book_in]=0
 Dev_Help[? dev_help.immediate_quest]=0
 Dev_Help[? dev_help.auto_dish_up]=0//"Gross_goop"
 Dev_Help[? dev_help.access_object_room_data]=0
@@ -37,7 +37,7 @@ Dev_Help[? dev_help.guest_speed]=2
 
 Edit_Mode=edit.none //edit.trade
 Can_Save=1
-Chosen_Tutorial=tutorial.add_beds
+Chosen_Tutorial=tutorial.take_bags
 //Chosen_Tutorial=tu.social 
 World_Speed=1
 Cash=900
@@ -138,7 +138,7 @@ Furniture_Count_Map[? "Ghost_Light"]=1
 Furniture_Count_Map[? "Ghost_Bedside_Table"]=1
 Furniture_Count_Map[? "Bed_Ghost_1"]=1
 Furniture_Count_Map[? "Glow_Shroom_Blue"]=10
-Furniture_Count_Map[? "Bed_Gnome_1"]=10
+Furniture_Count_Map[? "Swamp_Bed"]=10
 Furniture_Count_Map[? "Table_Gnome_1"]=10
 Furniture_Count_Map[? "Chair_Gnome_1"]=10
 

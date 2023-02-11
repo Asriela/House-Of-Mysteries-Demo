@@ -13,6 +13,7 @@ enum char{
 	vampires,
 	cats,
 	tourist,
+	witch,
 	gnomes,
 	magicians,
 	old_toad_bogo,

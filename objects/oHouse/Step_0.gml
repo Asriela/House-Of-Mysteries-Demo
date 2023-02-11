@@ -48,23 +48,5 @@ if Chosen_Tutorial=tu.trade2
 			World_Minutes=59
 	}
 }
-if Chosen_Tutorial=tutorial.add_beds{
-	Tutorial_Highlight_Button=tu_highlight_button.furniture
 
-if Placed_Map[? obj_class.bed]>1// && Placed_Map[? obj_class.chair]>1 && Placed_Map[? obj_class.table] 
-if Edit_Mode=edit.none
-{
 
-Spawn_Starter_Guests=1
-}
-}
-
-if Spawn_Starter_Guests
-{
-	Spawn_Starter_Guests=0
-			Add_Guest_To_Arrive(World_Hour+1,char.gnor_the_gnome)
-		Add_Guest_To_Arrive(World_Hour+1,char.ghost)
-	World_Minutes=59
-World_Seconds=59
-Chosen_Tutorial=tu.take_bags
-}

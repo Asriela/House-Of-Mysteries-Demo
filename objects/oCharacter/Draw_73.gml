@@ -5,6 +5,17 @@ draw_set_color(c_lime)
 if Visualize[? vis.move_to_point] && exists(state_target)
 draw_circle(state_target.x,state_target.y,2,0)
 	
+	if is_player
+	if Tutorial_Arrow!=noone
+{
+	var v_dir=point_direction(x,y-30,Tutorial_Arrow.x,Tutorial_Arrow.y-30)
+	var xx=x+lengthdir_x(20,v_dir)
+		var yy=y-30+lengthdir_y(20,v_dir)
+ draw_sprite_ext(sGui_Tu_Arrow,0,xx,yy,1,1,v_dir,c_white,1)
+}
+
+
+
 if is_player || is_tourist exit
 
 if ds_list_size(conversation_list)>0{
@@ -193,3 +204,5 @@ if Visualize[? vis.animation]=1{
 draw_text(x,y,text)
 
 }
+
+

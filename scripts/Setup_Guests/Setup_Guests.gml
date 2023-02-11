@@ -6,7 +6,8 @@ Setup_Player()
 //Setup_Hare_Knower_Watch()
 Setup_Ghost()
 Setup_Alien()
-Setup_Gnome()
+Setup_Witch()
+
 //Setup_Vampire_Seeker()
 
 
