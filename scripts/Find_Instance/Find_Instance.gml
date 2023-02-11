@@ -5,7 +5,7 @@ function Find_Instance(proximity,type,in_room,in_shop)
 			closest_distance=9999999;
 type=Capitalize(type)
 
-
+var found_object=1
 
 
 any_list=ds_list_create()
@@ -27,7 +27,7 @@ if in_room>0{
 //go through each
 chosen_instance=-1
 
-var found_object=1
+
 if is_undefined(Rooms_Objects_Map[? my_event_room])
 found_object=0
 //sm("no room of "+st(my_event_room))

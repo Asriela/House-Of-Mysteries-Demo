@@ -122,7 +122,13 @@ last_x=x
 		}
 */		
 if can_draw
+{
+	if sprite_exists(sprite_index)
 draw_sprite_ext(sprite_index,image_index,x,y-stairs_y,x_scale*my_scale,my_scale,image_angle,c_white,1)
+else
+sm("could not draw: "+st(animation_name))
+}
+
 if selected && can_draw
 outline_draw_sprite_ext(sprite_index, image_index, x, y-stairs_y, x_scale*my_scale, my_scale, image_angle,c_white,1, 1,c_white,0.9, 0.7, 1,1, false)
 

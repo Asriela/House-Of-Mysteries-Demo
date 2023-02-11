@@ -80,7 +80,11 @@ Tutorial_Sub_Map[? tutorial.take_bags]=ds_list_create();
 		Tutorial_Sub_Map[? tutorial.talk_to_guest]=ds_list_create();		
 		steps=Tutorial_Sub_Map[? tutorial.talk_to_guest];
 			steps[| 1]="it is now the eat event wait for the guests to sit and begin eating"
-			steps[| 2]="the ghost has a request of you, left click the ghost"
+			steps[| 2]="the ghost has a request for you, left click the ghost"
+			steps[| 3]="click yes"
+			steps[| 4]="..."
+			steps[| 5]="oh no she rejected the ghost, now we have a haunting problem, left click the witch"
+			steps[|6]="lets see if we can talk to the witch to make this better, click Ask"
 			
 		Tutorial_Map[? tutorial.use_alien_ability]="TODO: Calm down Ghost"	
 

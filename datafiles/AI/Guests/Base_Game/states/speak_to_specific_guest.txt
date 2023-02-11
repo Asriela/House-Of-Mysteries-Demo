@@ -1,6 +1,5 @@
 🔼
 if is_tourist = 0
-if idle event
 if has person_to_meet
 600 
 =

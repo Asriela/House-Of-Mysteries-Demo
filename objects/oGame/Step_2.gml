@@ -3,6 +3,7 @@
 
 if Visualize[? vis.show_tutorial]=1{
 Run_Particular_Tutorial()
+Last_Sub_Step=Tutorial_Sub_Step
 Last_Chosent_Tutorial=Chosen_Tutorial
 Flashing_Button_Was_Pressed=0
 }

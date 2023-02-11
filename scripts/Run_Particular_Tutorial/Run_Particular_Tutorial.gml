@@ -7,6 +7,22 @@ function Run_Particular_Tutorial(){
 	if Flash_Button_Alpha<0
 	Flash_Button_Alpha=1
 	Flash_Button_Alpha-=0.02
+	
+				if Dev_Help[? dev_help.spawn_guests_at]=Chosen_Tutorial
+				{
+						if Spawned_Starter_Guests=0
+		{
+	Spawned_Starter_Guests=1
+			Add_Guest_To_Arrive(World_Hour+1,char.witch)
+		Add_Guest_To_Arrive(World_Hour+1,char.ghost)
+	World_Minutes=59
+World_Seconds=59
+
+		}
+				}
+			
+				
+				
 	switch(Chosen_Tutorial)
 	{
 		case tutorial.add_beds:
@@ -174,5 +190,48 @@ World_Seconds=59
 			break;
 		}
 		break;
+		case tutorial.talk_to_guest:
+		switch(Tutorial_Sub_Step)
+		{
+			case 1:
+
+			Flash_Tutorial=1
+			break;
+			case 2:
+			if Last_Sub_Step=1{
+				var our_ghost=Get_Guest_Object(char.ghost);
+				var quest_text="the ghost appears to be showing you by creating forms out of their hands that they are in love with Weltiry the witch they seem to want to know whether you think they should confess their love "
+		
+				Give_Quest(our_ghost,quest.ask_out,quest_text)
+				
+
+					}
+
+
+			if Edit_Mode=edit.speak
+			Tutorial_Sub_Step++
+			
+			break;
+			case 3:
+			if Edit_Mode!=edit.speak
+			Tutorial_Sub_Step++
+			
+			break;
+			case 4:
+			var our_ghost=Get_Guest_Object(char.ghost);
+			if our_ghost.action_animation=sChar_Ghost_Haunt{
+			Tutorial_Sub_Step++
+			 Add_People_Memory( char.player,char.ghost,truth_ghost.loves_witch,mem_secrecy.will_share,0,emotion.custom)
+			}
+			break;
+			case 5:
+			if Edit_Mode=edit.speak
+			{
+				Tutorial_Sub_Step++
+			}
+			break;
+		}
+		break;
+	
 	}
 }

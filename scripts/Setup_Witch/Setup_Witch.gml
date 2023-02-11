@@ -62,16 +62,16 @@ Guest_Map[? me][? guest_detail.our_needs]=ds_map_create()
 //==============================	
 
 enum truth_witch{
-	interest_in_you
+	slips
 }
 
 	
-	var truth_id=truth_witch.interest_in_you;
-	var secrecy=mem_secrecy.personal;
+	var truth_id=truth_witch.slips;
+	var secrecy=mem_secrecy.will_share;
 	var short_text="knows about my parents";
-	var long_text="'my poor child I sense you have lost your parents havent you and now you wish for us to be your family? How exquisite."
+	var long_text="'That lost soul will have non of this dear. Speaking of lost souls, wouldnt you rather find out what happened to your parents? You should ask around about the slips. Oh and dear, dont get crazy on me."
 	var starting_memory=true;
-	Create_Truth(truth_id,me,short_text,long_text,starting_memory,secrecy,1,emotion.custom)
+	Create_Truth(truth_id,char.ghost,short_text,long_text,starting_memory,secrecy,1,emotion.custom)
 //MY STARTING MEMORIES
 //===================================
 

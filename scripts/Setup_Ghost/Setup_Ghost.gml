@@ -62,14 +62,15 @@ Guest_Add_Need(me,guest_need.mood,3)
 //==============================	
 
 enum truth_ghost{
-	loves_gnome
+	loves_witch,
+	
 }
 
 	
-	var truth_id=truth_ghost.loves_gnome;
+	var truth_id=truth_ghost.loves_witch;
 	var secrecy=mem_secrecy.personal;
-	var short_text="loves gnome";
-	var long_text="the ghost appears to be showing you by creating forms out of their hands that they are in love with Gnor the Gnome "
+	var short_text="loves witch";
+	var long_text=" "
 var starting_memory=true;
 	Create_Truth(truth_id,me,short_text,long_text,starting_memory,secrecy,1,emotion.custom)
 //MY STARTING MEMORIES

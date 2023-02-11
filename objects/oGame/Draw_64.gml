@@ -773,8 +773,8 @@ if Current_Guest.has_quest!=noone
 					                if Button_Pressed(starting_x - 400, starting_y + 10+downward, 340, 80,sGUI_Speak_Option,"Yes",c_old,c_yellow,0,0,1,controls.left_click,0,shape.square,0){
 					
 									var our_ghost=Get_Guest_Object(char.ghost);
-									var our_hare=Get_Guest_Object(char.gnor_the_gnome)
-	
+									var our_hare=Get_Guest_Object(char.witch)
+									our_ghost.has_ask=0
 									Set_Variable_Of(our_ghost,"person_to_meet",our_hare)
 									Edit_Mode=edit.none
 									
@@ -790,10 +790,10 @@ Edit_Mode=edit.none
 			}
 				}
 				else{
-                Talk_Menu = Button_Pressed(starting_x - 400, starting_y + 10+downward, 340, 80, sGUI_Speak_Option, "Ask info", -1, c_yellow, Talk_Menu, talk_menu.question_people, 0, default_input, 0, shape.square, 0);
+                Talk_Menu = Button_Pressed(starting_x - 400, starting_y + 10+downward, 340, 80, sGUI_Speak_Option, "Ask", -1, c_yellow, Talk_Menu, talk_menu.question_people, 0, default_input, 0, shape.square, 0);
                 
                 
-                Talk_Menu = Button_Pressed(starting_x + 400, starting_y + 10+downward, 340, 80, sGUI_Speak_Option, "Share info", -1, c_yellow, Talk_Menu, talk_menu.statement_people, 0, default_input, 0, shape.square, 0);
+                Talk_Menu = Button_Pressed(starting_x + 400, starting_y + 10+downward, 340, 80, sGUI_Speak_Option, "Share", -1, c_yellow, Talk_Menu, talk_menu.statement_people, 0, default_input, 0, shape.square, 0);
                 
 	                Talk_Menu = Button_Pressed(starting_x , starting_y + 180+downward, 340, 80, sGUI_Speak_Option, "Instruct", -1, c_yellow, Talk_Menu, talk_menu.instruct, 0, default_input, 0, shape.square, 0);
 				}
@@ -894,6 +894,7 @@ Edit_Mode=edit.none
 					var col2=c_dkgray
 					  var guest_map=Guest_Map[? Current_Guest.guest_id]
 					  			var pronoun=guest_map[?  guest_detail.pronoun]
+								/*
                         if (Button_Pressed(starting_x - 300 + hor_index * 150, starting_y + 70 + 50 * vert_index, 130, 60, 0, "News", col2, c_black, Chosen_Memory, 1, 1, default_input, 0, shape.square, 0))
                        if Could_Find_News
 					   {
@@ -912,7 +913,7 @@ Edit_Mode=edit.none
 							break;
                         }
 						else
-						guest_speaking_text=pronoun+" either didn't have any more news or didn't want to share it with you"
+						guest_speaking_text=pronoun+" either didn't have any more news or didn't want to share it with you"*/
                     }
                     else
                     {

@@ -53,6 +53,11 @@ function Perform_Action(idd)
 			facing_direction=state_target.facing_direction
 			x=state_target.x
 			y=state_target.y+3
+			if Chosen_Tutorial=tutorial.talk_to_guest
+			{
+				if Tutorial_Sub_Step=1
+				Tutorial_Sub_Step++
+			}
 		}
 		move_to_next_action=true
 		break;

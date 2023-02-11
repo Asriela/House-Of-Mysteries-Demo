@@ -33,6 +33,8 @@ Guest_Add_Need(me,guest_need.mood,0)
 
 /// TRUTHS ABOUT ME
 //==============================	
+
+
 /*	
 enum truth_hare_runaway_watch{
 	ran_away,

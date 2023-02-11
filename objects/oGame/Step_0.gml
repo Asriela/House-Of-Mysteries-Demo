@@ -34,19 +34,7 @@ World_Darkness=darkness- 0.5
 else{
 World_Darkness=darkness-0.3
 }
-	var our_ghost=Get_Guest_Object(char.ghost);
-	var our_hare=Get_Guest_Object(char.gnor_the_gnome)
-if Current_Event!=event.eat && Chosen_Tutorial=tu.social && our_ghost!=-1 && our_hare!=-1
-{
 
-Give_Quest(our_ghost,quest.ask_out)
-	our_ghost.has_quest=quest.ask_out
-
-//with(our_ghost)
-//sm(Get_Variable("person_to_meet"))
-	Guest_Map[? char.ghost][? guest_detail.visual_description]="the ghost appears to be showing you by creating forms out of their hands that they are in love with Bella the rabbit they seem to want to know whether you think they should confess their love "
-
-}
 
 
 if Chosen_Tutorial=tu.give_news_or_leave && Edit_Mode!=edit.speak{

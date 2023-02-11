@@ -88,7 +88,8 @@ function Game_Enums(){
 		unlock_all_furniture,
 		fast_player,
 		auto_dish_up,
-		guest_speed
+		guest_speed,
+		spawn_guests_at
 	
 	}
 	enum carry_item_type{

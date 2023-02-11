@@ -10,7 +10,7 @@
     {"id":{"name":"sNat_Ing_Blue_Mushroom","path":"sprites/sNat_Ing_Blue_Mushroom/sNat_Ing_Blue_Mushroom.yy",},"order":7,},
     {"id":{"name":"oDoor","path":"objects/oDoor/oDoor.yy",},"order":4,},
     {"id":{"name":"oBowl_Ingredient","path":"objects/oBowl_Ingredient/oBowl_Ingredient.yy",},"order":5,},
-    {"id":{"name":"sChar_Witch_Sit_up","path":"sprites/sChar_Witch_Sit_up/sChar_Witch_Sit_up.yy",},"order":3,},
+    {"id":{"name":"sChar_Witch_Sit_Up","path":"sprites/sChar_Witch_Sit_Up/sChar_Witch_Sit_Up.yy",},"order":3,},
     {"id":{"name":"Get_Ing_Value","path":"scripts/Get_Ing_Value/Get_Ing_Value.yy",},"order":4,},
     {"id":{"name":"Simple_Fullscreen_Shaders","path":"extensions/Simple_Fullscreen_Shaders/Simple_Fullscreen_Shaders.yy",},"order":0,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":2,},

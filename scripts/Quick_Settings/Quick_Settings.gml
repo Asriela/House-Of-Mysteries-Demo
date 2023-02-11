@@ -25,19 +25,19 @@ Visualize[?vis.food_left]=0
 
 Console_Mode=con.state_data
 
-Dev_Help[? dev_help.auto_book_in]=0
+Dev_Help[? dev_help.auto_book_in]=1
 Dev_Help[? dev_help.immediate_quest]=0
-Dev_Help[? dev_help.auto_dish_up]=0//"Gross_goop"
+Dev_Help[? dev_help.auto_dish_up]="Gross_goop"
 Dev_Help[? dev_help.access_object_room_data]=0
 Dev_Help[? dev_help.auto_accept_guests]=1
 Dev_Help[? dev_help.trigger_emotions]=1
 Dev_Help[? dev_help.unlock_all_furniture]=0
-Dev_Help[? dev_help.fast_player]=0
-Dev_Help[? dev_help.guest_speed]=1
-
+Dev_Help[? dev_help.fast_player]=3
+Dev_Help[? dev_help.guest_speed]=2
+Dev_Help[? dev_help.spawn_guests_at]=tutorial.talk_to_guest
 Edit_Mode=edit.none //edit.trade
 Can_Save=1
-Chosen_Tutorial=tutorial.add_beds
+Chosen_Tutorial=tutorial.talk_to_guest
 //Chosen_Tutorial=tu.social 
 World_Speed=1
 Cash=900
@@ -141,6 +141,8 @@ Furniture_Count_Map[? "Glow_Shroom_Blue"]=10
 Furniture_Count_Map[? "Swamp_Bed"]=10
 Furniture_Count_Map[? "Table_Gnome_1"]=10
 Furniture_Count_Map[? "Chair_Gnome_1"]=10
+Furniture_Count_Map[? "Merch_Ectoplasm_Salve"]=0
+Furniture_Count_Map[? "Merch_Gnome"]=0
 
 //??LOCKED ITEMS
 if Dev_Help[? dev_help.unlock_all_furniture]=1
@@ -156,8 +158,7 @@ Furniture_Count_Map[? "Kitchen_Sink"]=3
 Furniture_Count_Map[? "Kitchen_Fridge"]=3
 Furniture_Count_Map[? "Workbench"]=3
 
-Furniture_Count_Map[? "Merch_Ectoplasm_Salve"]=0
-Furniture_Count_Map[? "Merch_Gnome"]=0
+
 Furniture_Count_Map[? "GiftShop_Entrace_Sign"]=1
 Furniture_Count_Map[? "GiftShop_Entrace_Monster"]=1
 

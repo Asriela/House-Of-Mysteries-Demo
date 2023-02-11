@@ -55,7 +55,7 @@ else
 	started_sentance=0;
 	the_speaker=noone
 	var nearest=npc_mask.my_closest;
-if nearest!=noone && nearest!=npc_mask && ds_list_size(nearest.conversation_list)=0
+if nearest!=noone && nearest!=npc_mask && ds_list_size(nearest.conversation_list)=0 && nearest.action_animation!=sChar_Ghost_Haunt
 if point_distance(x,y,nearest.x,nearest.y)<70 && my_current_event[? my_event.event]!=event.has_no_room
 &&  nearest.my_current_event[? my_event.event]!=event.has_no_room
 {
@@ -129,7 +129,7 @@ if say_word!=noone
 
 
 
-if has_quest!=noone
+if has_quest!=noone && has_ask!=0
 {
 	draw_sprite(sQuest,0,x,y-24)
 }
