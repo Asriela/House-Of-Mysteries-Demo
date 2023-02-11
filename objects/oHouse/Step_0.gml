@@ -40,7 +40,7 @@ if Chosen_Tutorial=tu.trade2
 		other.bed_count++
 	}
 	if bed_count>2{
-	Chosen_Tutorial=tu.arrival2
+//	Chosen_Tutorial=tu.arrival2
 	Add_Guest_To_Arrive(World_Hour+1,char.old_toad_bogo)
 	Add_Guest_To_Arrive(World_Hour+1,char.gnor_the_gnome)
 	Add_Guest_To_Arrive(World_Hour+1,char.ghost)

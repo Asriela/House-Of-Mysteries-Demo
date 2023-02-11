@@ -12,7 +12,7 @@ switch(guest_id)
 			if Chosen_Tutorial=tu.instruct || Chosen_Tutorial=tu.ghost{
 				World_Hour=1
 				World_Minutes=61
-			Chosen_Tutorial=tu.no_sleep
+			//Chosen_Tutorial=tu.no_sleep
 			}
 			//state
 				Set_Variable("haunting",1)

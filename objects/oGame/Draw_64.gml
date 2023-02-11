@@ -441,7 +441,7 @@ draw_set_alpha(1)
 		if our_ghost!=-1{
 			
 
-			Chosen_Tutorial=tu.ghost 
+		
 Give_Quest(our_ghost,quest.ask_out)
 	
 		//	ss()
@@ -528,7 +528,7 @@ draw_set_font(f_StoryMedium)
 											starting_y+=56
 											
 										if Do_Review{
-											Chosen_Tutorial=tu.review
+										
 										}
 										if Do_Review
 										ds_map_clear(materials_gained_map)
@@ -658,7 +658,7 @@ Style_Progression_Map[? element]+=element_change
 				draw_text(starting_x,starting_y+430,"Total earned: "+st(total_money)+"$")
 				if Exit_Menu(starting_x-220,starting_y+110)
 				{
-					Chosen_Tutorial=tu.alien
+
 							 Add_Guest_To_Arrive(World_Hour+1,char.alien)
 				
 				}
@@ -784,7 +784,7 @@ if Current_Guest.has_quest!=noone
                 
        if      Button_Pressed(starting_x + 400, starting_y + 10+downward, 340, 80, sGUI_Speak_Option, "No", c_old, c_yellow, Talk_Menu, 1, 1, default_input, 0, shape.square, 0)
 			if Has_Pressed_Button_This_Step{
-			Chosen_Tutorial=tu.ending
+
 Edit_Mode=edit.none
 				 
 			}
@@ -1306,12 +1306,12 @@ var first=1
 
 																//sm(ds_map_size(recipe_requirements_map[? Over_Button_Id]))
 			// && col2!=c_my_bar_red{			
-					if Chosen_Tutorial=tu.prep_food 
-					Chosen_Tutorial=tu.give_food
-					
+		if Chosen_Tutorial=tutorial.make_food && Tutorial_Sub_Step=3
+					Tutorial_Sub_Step++
 				var	plate=instance_create_depth(Player_Object.x,Player_Object.y,0,oPlate)
 				plate.sprite_index=asset_get_index("sDish_"+item)
 				plate.holder=Player_Object
+				
 				plate.dish_type=item;
 				plate.servings=Dishes_Map[?item][? dish.portion_size]
 				plate.floor_i_am_on=mPlayer.owner.floor_i_am_on

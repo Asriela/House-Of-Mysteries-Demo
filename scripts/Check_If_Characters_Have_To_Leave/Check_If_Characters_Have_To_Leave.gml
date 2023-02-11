@@ -6,7 +6,7 @@ with(oCharacter){
 		if hours_left_in_stay<1
 		{
 			if Guest_Map[? guest_id][? guest_detail.has_leave_panel]{
-		ds_list_add(Guests_That_Are_Leaving_List,id)
+//		ds_list_add(Guests_That_Are_Leaving_List,id)
 added_to_leave_list=1
 		hours_left_in_stay=0
 			}

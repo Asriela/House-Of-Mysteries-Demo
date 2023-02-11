@@ -29,7 +29,7 @@ function Run_Particular_Tutorial(){
 			break;
 			case 3:
 
-				Flash_Button="Bed_Gnome_1"
+				Flash_Button="Swamp_Bed"
 				if Flashing_Button_Was_Pressed
 				Tutorial_Sub_Step++
 			break;
@@ -47,7 +47,7 @@ function Run_Particular_Tutorial(){
 				Flash_Button=noone
 				Flash_Room=5
 				if exists(Object_That_Was_Placed)
-				if Object_That_Was_Placed.object_type="Bed_Gnome_1" && Object_That_Was_Placed.my_room=5
+				if Object_That_Was_Placed.object_type="Swamp_Bed" && Object_That_Was_Placed.my_room=5
 				Tutorial_Sub_Step++
 			break;
 		case 6:
@@ -137,6 +137,42 @@ World_Seconds=59
 				Tutorial_Sub_Step=1
 				break;
 			}
+		break;
+		case tutorial.make_food:
+		switch(Tutorial_Sub_Step)
+		{
+			case 1:
+
+			if exists(mFood_Prep){
+				Tutorial_Arrow=instance_nearest(x,y,mFood_Prep)
+				if  point_distance(mPlayer.x,mPlayer.y,Tutorial_Arrow.x,Tutorial_Arrow.y)<60
+				Tutorial_Sub_Step++
+}
+			break;
+			case 2:
+			Tutorial_Arrow=noone
+			if Edit_Mode=edit.food_prep
+			{
+				
+				Tutorial_Sub_Step++
+			}
+			break;
+			case 3:
+			
+			Flash_Button="Gross_goop"
+			
+			break;
+			case 4:
+			if Get_Variable_From(Player_Object,state_var.carrying_item)=noone
+			{
+				Tutorial_Sub_Step=1
+				Chosen_Tutorial=tutorial.talk_to_guest
+				World_Hour=20
+				World_Minutes=59
+				
+			}
+			break;
+		}
 		break;
 	}
 }

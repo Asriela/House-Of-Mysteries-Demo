@@ -87,13 +87,14 @@ var starting_memory=true;
 
 //MY NEEDS
 //=========================================
-		list=Guest_Map[? me][? guest_detail.needs_list]=ds_list_create();
+
+list=Guest_Map[? me][? guest_detail.needs_list]=ds_list_create();
 		ds_list_add(list,event.eat)
 		ds_list_add(list,event.sleep)
-		Set_Food_Preferences_From_Char_Type(Guest_Map[? me][? guest_detail.type],me)
+Set_Food_Preferences_From_Char_Type(Guest_Map[? me][? guest_detail.type],me)
 
 
-		
+
 
 
 		

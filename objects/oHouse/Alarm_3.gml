@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-Chosen_Tutorial=tu.trade2
+//Chosen_Tutorial=tu.trade2
 
 Style_Progression_Map[? style.wild]=1
 

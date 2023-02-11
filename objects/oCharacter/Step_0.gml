@@ -232,7 +232,7 @@ if point_distance(x,y,nearest_bag.x,nearest_bag.y)<20
 	
 	if nearest_interaction=noone
 	nearest_bag.outline=1
-	show_tip="Press space to pick up guest luggage to take to their room"
+	show_tip="Press space to pick up luggage"
 	if keyboard_check_pressed(vk_space)
 	{
 		//not carrying anything yet so pick up the bag

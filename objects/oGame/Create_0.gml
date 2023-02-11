@@ -74,7 +74,7 @@ Current_Housed_Guests_List=ds_list_create()
 Room_Placement_X_List=ds_list_create()
 Room_Placement_Y_List=ds_list_create()
 Room_Placement_Type_List=ds_list_create()
-Tourists_Present_List=ds_list_create()
+
 person_spawn_count=0
 Tutorial_Map=ds_map_create()
 Move_Furniture_Mode=0
@@ -121,7 +121,7 @@ Set_Guest_Furn_Class_Preferences()
 Player_Object=noone
 Could_Find_News=0
 All_Instances_List=ds_list_create()
-Guests_That_Are_Leaving_List=ds_list_create()
+//Guests_That_Are_Leaving_List=ds_list_create()
 Character_Truths_List=ds_map_create()
 Furn_List_Id=ds_list_create()
 Truths_Map=ds_map_create()

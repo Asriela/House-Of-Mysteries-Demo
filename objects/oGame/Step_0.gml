@@ -23,10 +23,10 @@ Gift_Shop_Open=0
 
 if Gift_Shop_Open{
 	if Tourist_Spawn_Timer<=0
-	if ds_list_size(Tourists_Present_List)<4{
+
 	Spawn_Tourist()
 	Tourist_Spawn_Timer=rr(15,200)
-	}
+	
 }
 
 if Edit_Mode=edit.room ||Edit_Mode=edit.object
@@ -38,7 +38,7 @@ World_Darkness=darkness-0.3
 	var our_hare=Get_Guest_Object(char.gnor_the_gnome)
 if Current_Event!=event.eat && Chosen_Tutorial=tu.social && our_ghost!=-1 && our_hare!=-1
 {
-	Chosen_Tutorial=tu.ghost 
+
 Give_Quest(our_ghost,quest.ask_out)
 	our_ghost.has_quest=quest.ask_out
 
@@ -53,11 +53,13 @@ if Chosen_Tutorial=tu.give_news_or_leave && Edit_Mode!=edit.speak{
 //Chosen_Tutorial=tu.add_new_room
 }
 // You can write your code in this editor
+/*
 	if Edit_Mode!=edit.guest_leave &&  ds_list_size(Guests_That_Are_Leaving_List)>0{
 	 Left_Guest=Guests_That_Are_Leaving_List[| 0]
 	 		Edit_Mode=edit.guest_leave
 			ds_list_delete(Guests_That_Are_Leaving_List,0)
 	}
+	*/
 
 
 if Slow_Down
