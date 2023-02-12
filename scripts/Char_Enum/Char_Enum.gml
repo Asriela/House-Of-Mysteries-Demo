@@ -1,6 +1,4 @@
-enum char{
-	none,
-	player,
+enum char{none,player,
 	wogs,
 	hares,
 	toads,

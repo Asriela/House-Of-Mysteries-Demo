@@ -856,7 +856,7 @@ Edit_Mode=edit.none
             {
 				
                 draw_set_font(f_OptionsMedium);
-               if   Exit_Speak_Menu(starting_x+34, starting_y+75+downward)exit;
+               if   Exit_Speak_Menu(starting_x+34, starting_y+downward-5)exit;
                 if (Talk_Menu == talk_menu.question_people)
                 {
                     var people_map = Guest_Map[? char.player][? guest_detail.people_memories_map]
@@ -934,9 +934,17 @@ Edit_Mode=edit.none
 					   if (Button_Was_Pressed)
 							{
 								if fact_struct!=-1{
-                                guest_speaking_text = Truths_Map[? person][? fact_struct.memory][? truth.long_text]
-						flash_openess=c_my_bar_red
-								Guest_Map[? Current_Guest.guest_id][? guest_detail.openness]-=fact_struct.penalty
+									if Override_Person_Memory_Is_About=noone
+								    guest_speaking_text = Truths_Map[? person][? fact_struct.memory][? truth.long_text]
+									else
+									{
+									//	sm(Override_Person_Memory_Is_About)
+									//	sm(fact_struct.memory)
+									Add_People_Memory( char.player,char.witch,truth_witch.slips,mem_secrecy.will_share,0,emotion.custom)
+									 guest_speaking_text = Truths_Map[? Override_Person_Memory_Is_About][? 0][? truth.long_text]
+									}
+									flash_openess=c_my_bar_red
+									Guest_Map[? Current_Guest.guest_id][? guest_detail.openness]-=fact_struct.penalty
 								}
 								else
 								guest_speaking_text=pronoun+" either didn't know anything more about them, or didn't want to share it with you"

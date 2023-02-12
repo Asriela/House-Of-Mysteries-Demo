@@ -50,7 +50,7 @@ Guest_Add_Need(me,guest_need.mood,3)
 		Guest_Map[? me][? guest_detail.introduction]
 		=""
 		Guest_Map[? me][? guest_detail.visual_description]
-		="'with a mischievous but elegant smile she looks at you with curiousity"
+		="with a mischievous but elegant smile she looks at you with great curiousity"
 
 Guest_Map[? me][? guest_detail.our_needs]=ds_map_create()
 	var map=Guest_Map[? me][? guest_detail.our_needs]
@@ -68,10 +68,10 @@ enum truth_witch{
 	
 	var truth_id=truth_witch.slips;
 	var secrecy=mem_secrecy.will_share;
-	var short_text="knows about my parents";
-	var long_text="'That lost soul will have non of this dear. Speaking of lost souls, wouldnt you rather find out what happened to your parents? You should ask around about the slips. Oh and dear, dont get crazy on me."
+	var short_text="portals";
+	var long_text="'That lost soul will have non of me dear. Speaking of lost souls, wouldnt you rather find out what happened to your parents? You should ask around about the slips or how shall i call them... portals. Oh and dear, dont go getting crazy on me..."
 	var starting_memory=true;
-	Create_Truth(truth_id,char.ghost,short_text,long_text,starting_memory,secrecy,1,emotion.custom)
+	Create_Truth(truth_id,me,me,short_text,long_text,starting_memory,secrecy,1,emotion.custom)
 //MY STARTING MEMORIES
 //===================================
 

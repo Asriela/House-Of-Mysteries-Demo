@@ -70,7 +70,8 @@ function Game_Enums(){
 	}
 	enum con{
 		state_data,
-		show_objects_room_data
+		show_objects_room_data,
+		guest_memories
 	}
 	enum con_item{
 		prime_id,
@@ -89,7 +90,8 @@ function Game_Enums(){
 		fast_player,
 		auto_dish_up,
 		guest_speed,
-		spawn_guests_at
+		spawn_guests_at,
+		access_guest_memories
 	
 	}
 	enum carry_item_type{

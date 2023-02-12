@@ -1,5 +1,14 @@
 /// @description Insert description here
 // You can write your code in this editor
+if Dev_Help[? dev_help.access_guest_memories] && selected
+{
+	//ss()
+	Console_Mode=con.guest_memories
+	Console_Inspected_Item_Map[? con_item.prime_id]=id
+}
+
+
+
 if Dev_Help[? dev_help.trigger_emotions]=1 
 {
 	if show_character_dev_menu!=char_dev_menu.emotions && selected{

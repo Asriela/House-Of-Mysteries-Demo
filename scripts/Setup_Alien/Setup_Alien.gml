@@ -72,7 +72,9 @@ enum truth_alien{
 	var short_text="ghosts caused crash";
 	var long_text="'ghosts crashed the ship of b3-19, they were my friends, perhapse this ghost was involved.' said z-51 in their high pitched almost screeching alien voice"
 var starting_memory=true;
-	Create_Truth(truth_id,me,short_text,long_text,starting_memory,secrecy,1,emotion.custom)
+//WE CAN ONLY MAKE TRUTHS ABOUT OURSELVES OTHERWISE WE CANT TRACK TRUTHS
+	Create_Truth(truth_id,me,me,short_text,long_text,starting_memory,secrecy,1,emotion.custom)
+
 //MY STARTING MEMORIES
 //===================================
 

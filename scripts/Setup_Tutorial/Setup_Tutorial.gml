@@ -86,7 +86,12 @@ Tutorial_Sub_Map[? tutorial.take_bags]=ds_list_create();
 			steps[| 5]="oh no she rejected the ghost, now we have a haunting problem, left click the witch"
 			steps[|6]="lets see if we can talk to the witch to make this better, click Ask"
 			
+			
 		Tutorial_Map[? tutorial.use_alien_ability]="TODO: Calm down Ghost"	
+				Tutorial_Sub_Map[? tutorial.use_alien_ability]=ds_list_create();		
+		steps=Tutorial_Sub_Map[? tutorial.use_alien_ability];
+			steps[| 1]="we will have to find another way to calm down the ghost, click X to exit the talk screen"
+			steps[| 2]="a new guest has arrived, book them in by taking up their bag"
 
 		Tutorial_Map[? tutorial.craft_merchandise]="TODO: Craft Merchandise"	
 		

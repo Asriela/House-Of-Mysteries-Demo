@@ -72,7 +72,7 @@ enum truth_ghost{
 	var short_text="loves witch";
 	var long_text=" "
 var starting_memory=true;
-	Create_Truth(truth_id,me,short_text,long_text,starting_memory,secrecy,1,emotion.custom)
+	Create_Truth(truth_id,me,me,short_text,long_text,starting_memory,secrecy,1,emotion.custom)
 //MY STARTING MEMORIES
 //===================================
 

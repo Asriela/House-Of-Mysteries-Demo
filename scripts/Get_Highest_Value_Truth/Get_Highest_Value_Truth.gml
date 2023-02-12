@@ -230,29 +230,46 @@ function Get_Highest_Value_Truth(guest,person_we_want_to_know_about){
  var memory_type=guest_detail.people_memories_map;
  var memory=noone
  var memory_person_map=Guest_Map[?  guest][? memory_type][? person_we_want_to_know_about];
+ if Chosen_Tutorial=tutorial.talk_to_guest
+ {
+	// ss()
+	 			struct.memory=Guest_Map[?  guest][? memory_type][? guest][? 0]
+			struct.penalty=mem_secrecy.will_share-1
+			Override_Person_Memory_Is_About=guest
+ }
+ else
+ {
 var last_lowest=8
 if !is_undefined(memory_person_map){
+
 	var temp_mem=ds_map_find_first(memory_person_map)
+//sm("2person "+st(person_we_want_to_know_about)+"\n guest:"+st(guest))
+	//	sm(ds_map_size(Guest_Map[?  guest][? memory_type][? person_we_want_to_know_about]))
 	for (var i=0;i<ds_map_size(memory_person_map);i++){
 		var memory_secrecy=memory_person_map[? temp_mem][? memory_detail.memory_secrecy]-3
 
 //if the player already has that memory
-if is_undefined(Guest_Map[?  char.player][? memory_type][? person_we_want_to_know_about][? temp_mem])
+if is_undefined(Guest_Map[?  char.player][? memory_type][? person_we_want_to_know_about][? temp_mem]){
+	
 		//if memory_person_map[? temp_mem][? memory_detail.memory_talked_about]=0
-	if Guest_Map[? guest][? guest_detail.openness]>=memory_secrecy//if we havent said it yet
+//	if Guest_Map[? guest][? guest_detail.openness]>=memory_secrecy//if we havent said it yet
 	if memory_secrecy<last_lowest
 		{
+	//		sm("works")
 			last_lowest=memory_secrecy
-struct.memory=temp_mem
-
-	struct.penalty=memory_secrecy+3-5+1
+			struct.memory=temp_mem
+			struct.penalty=memory_secrecy+3-5+1
 
 		}
+	}
+	else
+	//sm("has mem already =>"+st(Truths_Map[? person_we_want_to_know_about][? temp_mem][? truth.short_text]))
 			ds_map_find_next(memory_person_map,temp_mem)
 	}
 }
-	
-	
+
+
+}
 if struct.memory!=-1{
 				
 		return struct 

@@ -203,7 +203,11 @@ World_Seconds=59
 				var quest_text="the ghost appears to be showing you by creating forms out of their hands that they are in love with Weltiry the witch they seem to want to know whether you think they should confess their love "
 		
 				Give_Quest(our_ghost,quest.ask_out,quest_text)
+				//	sm(ds_map_size(Guest_Map[?  char.witch][? guest_detail.people_memories_map][? char.ghost]))
+
 				
+						//
+						
 
 					}
 
@@ -213,18 +217,22 @@ World_Seconds=59
 			
 			break;
 			case 3:
-			if Edit_Mode!=edit.speak
+			if Edit_Mode!=edit.speak{
 			Tutorial_Sub_Step++
-			
+		
+			}
 			break;
 			case 4:
+			Flash_Tutorial=0
 			var our_ghost=Get_Guest_Object(char.ghost);
 			if our_ghost.action_animation=sChar_Ghost_Haunt{
 			Tutorial_Sub_Step++
 			 Add_People_Memory( char.player,char.ghost,truth_ghost.loves_witch,mem_secrecy.will_share,0,emotion.custom)
+			 
 			}
 			break;
 			case 5:
+			Flash_Tutorial=1
 			if Edit_Mode=edit.speak
 			{
 				Tutorial_Sub_Step++

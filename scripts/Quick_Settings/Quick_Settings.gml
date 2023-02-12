@@ -12,7 +12,7 @@ Visualize[? vis.path]=0
 Visualize[? vis.grid]=0
 Visualize[? vis.room_grid]=0
 Visualize[? vis.grid_numbers]=0
-Visualize[? vis.console]=0
+Visualize[? vis.console]=1
 Visualize[? vis.states]=0
 Visualize[? vis.needs]=0
 Visualize[? vis.doorways]=0
@@ -23,7 +23,7 @@ Visualize[?vis.character_lead]=0
 Visualize[?vis.animation]=0
 Visualize[?vis.food_left]=0
 
-Console_Mode=con.state_data
+Console_Mode=con.guest_memories
 
 Dev_Help[? dev_help.auto_book_in]=1
 Dev_Help[? dev_help.immediate_quest]=0
@@ -32,9 +32,11 @@ Dev_Help[? dev_help.access_object_room_data]=0
 Dev_Help[? dev_help.auto_accept_guests]=1
 Dev_Help[? dev_help.trigger_emotions]=1
 Dev_Help[? dev_help.unlock_all_furniture]=0
-Dev_Help[? dev_help.fast_player]=3
-Dev_Help[? dev_help.guest_speed]=2
+Dev_Help[? dev_help.fast_player]=4
+Dev_Help[? dev_help.guest_speed]=6
 Dev_Help[? dev_help.spawn_guests_at]=tutorial.talk_to_guest
+Dev_Help[? dev_help.access_guest_memories]=1
+
 Edit_Mode=edit.none //edit.trade
 Can_Save=1
 Chosen_Tutorial=tutorial.talk_to_guest

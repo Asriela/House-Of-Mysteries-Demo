@@ -110,16 +110,16 @@ function Set_Memory_As_Hand_Crafted_Dialogue(the_guest,memory_type,memory_id,mem
 }
 function Add_People_Memory(the_guest,truth_about,truth_id,secrecy,news,the_emotion)
 {
+
 if is_undefined(Guest_Map[? the_guest][? guest_detail.people_memories_map][? truth_about])
 			Guest_Map[? the_guest][? guest_detail.people_memories_map][? truth_about]=ds_map_create()
-			
 			Guest_Map[? the_guest][? guest_detail.people_memories_map][? truth_about][? truth_id]=ds_map_create()
 			Guest_Map[? the_guest][? guest_detail.people_memories_map][? truth_about][? truth_id][? memory_detail.memory_secrecy]=secrecy
-						Guest_Map[? the_guest][? guest_detail.people_memories_map][? truth_about][? truth_id][? memory_detail.memory_talked_about]=1
-						Guest_Map[? the_guest][? guest_detail.people_memories_map][? truth_about][? truth_id][? memory_detail.news_memory]=news
-						Guest_Map[? the_guest][? guest_detail.people_memories_map][? truth_about][? truth_id][? memory_detail.emotion]=the_emotion
-							Guest_Map[? the_guest][? guest_detail.people_memories_map][? truth_about][? truth_id][? memory_detail.shared_with]=ds_list_create()
-						
+			Guest_Map[? the_guest][? guest_detail.people_memories_map][? truth_about][? truth_id][? memory_detail.memory_talked_about]=1
+			Guest_Map[? the_guest][? guest_detail.people_memories_map][? truth_about][? truth_id][? memory_detail.news_memory]=news
+			Guest_Map[? the_guest][? guest_detail.people_memories_map][? truth_about][? truth_id][? memory_detail.emotion]=the_emotion
+			Guest_Map[? the_guest][? guest_detail.people_memories_map][? truth_about][? truth_id][? memory_detail.shared_with]=ds_list_create()
+
 /*	}
 	else
 	{
