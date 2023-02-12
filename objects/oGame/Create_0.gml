@@ -181,7 +181,7 @@ Selected_Event=-1
 World_Minutes=59
 
 World_Seconds=0
-Twitch_commands_list=ds_list_create()
+
 Twitch_Response_Waiting_Time=10*60
 Half_Tile_Width=Tile_Width/2
 Half_Tile_Height=Tile_Height/2
@@ -234,11 +234,10 @@ Total_World_Hours=0
 Setup_Guests()
 
 randomize()
-Story_Text=ds_list_create()
-ds_list_add(Story_Text,"")
+//Story_Text=ds_list_create()
+//ds_list_add(Story_Text,"")
 current_page=0
-Add_Story("Once long ago deep in the forest there resided a place called the Hollow... it started as nothing more than"
-+" a simple hole in the ground. The digger of this hole? The last remaining forest nymp, Milda... ")
+//Add_Story("Once long ago deep in the forest there resided a place called the Hollow... it started as nothing more than"+" a simple hole in the ground. The digger of this hole? The last remaining forest nymp, Milda... ")
 
 
 

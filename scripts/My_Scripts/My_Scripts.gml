@@ -28,7 +28,7 @@ function Button_Pressed(center_x,center_y,length,width,sprite,text,front_color,b
 	
 	Button_Type_Pressed=check_for
 	
-	if Flash_Button=check_for && front_color=c_aqua{
+	if (Flash_Button=check_for && front_color=c_aqua) || on_off=-10{
 	selected=1
 	alpha=Flash_Button_Alpha
 	}

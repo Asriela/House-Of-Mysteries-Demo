@@ -12,6 +12,16 @@ obj.x=x_position;
 obj.y=y_position;
 if !is_undefined(Furniture_Map[? type]){
 obj.object_class=Furniture_Map[? type][? furn.class]
+if obj.object_class=obj_class.cash_register
+{
+	obj.my_stairs_mask=instance_create(x,y,mTill)
+	obj.my_stairs_mask.owner=obj
+}
+if obj.object_class=obj_class.work_bench
+{
+	obj.my_stairs_mask=instance_create(x,y,mCrafting_Station)
+	obj.my_stairs_mask.owner=obj
+}
 if obj.object_class=obj_class.food_prep
 {
 	obj.my_stairs_mask=instance_create(x,y,mFood_Prep)

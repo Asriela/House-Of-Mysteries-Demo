@@ -34,6 +34,22 @@ switch(need){
 }
 return ret
 }
+function Get_Merch_Color(style,flash)
+{
+var ret=""
+	if flash
+	ret=c_aqua
+	else
+switch(style){
+	case merch_type.bottled: ret=c_style_dk_orange break;
+	case merch_type.clothing: ret=c_regal break;
+	case merch_type.stations: ret=c_style_dk_blue  break;
+	case merch_type.statue: ret=c_style_dk_red break
+}
+		
+
+return ret
+}
 function Get_Class_Color(style,flash)
 {
 var ret=""

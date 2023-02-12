@@ -12,7 +12,7 @@ style1=merch_type.bottled
 	//LEVEL 0:
 	style1_level=0
 		item="Merch_Ectoplasm_Salve"
-	name="Ectoplasm salve"
+	name="Youth Salve"
 	desc="bring back your youth with the goop of the dead"
 	class=obj_class.merch
 	price=10

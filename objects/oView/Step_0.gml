@@ -88,7 +88,7 @@ with(Player)
 }
 
 if Edit_Mode=edit.recipies
-DEFAULT_ZOOM=.75
+DEFAULT_ZOOM=.25
 
 //speed=16
 //direction=point_direction(x,y,move_to_x,move_to_y)

@@ -10,7 +10,10 @@ function Auto_Add_Bag(bag){
 			{
 			//	Dev_Help[? dev_help.auto_book_in]=0
 
-
+			if Chosen_Tutorial=tutorial.use_alien_ability
+			{
+				Tutorial_Sub_Step++
+			}
 
 						if bag.placed_inside=0
 						{

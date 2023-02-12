@@ -15,6 +15,8 @@ if Held_Furniture=id && can_drop
 	
 	floor_i_am_on=Floor
 	my_room=Rooms_Grid[| floor_i_am_on][# grid_x,grid_y]
+	
+	
 
 Object_That_Was_Placed=id
 	Add_Object_To_Room(id,my_room,object_class)

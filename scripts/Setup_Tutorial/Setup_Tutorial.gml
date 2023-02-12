@@ -88,13 +88,33 @@ Tutorial_Sub_Map[? tutorial.take_bags]=ds_list_create();
 			
 			
 		Tutorial_Map[? tutorial.use_alien_ability]="TODO: Calm down Ghost"	
-				Tutorial_Sub_Map[? tutorial.use_alien_ability]=ds_list_create();		
+		Tutorial_Sub_Map[? tutorial.use_alien_ability]=ds_list_create();		
 		steps=Tutorial_Sub_Map[? tutorial.use_alien_ability];
 			steps[| 1]="we will have to find another way to calm down the ghost, click X to exit the talk screen"
 			steps[| 2]="a new guest has arrived, book them in by taking up their bag"
-
+			steps[| 3]="the alien has an ability that can calm down guests left click the alien"
+			steps[| 4]="click Actions button then click calming shout"
+			steps[| 5]="click Ask then witch then portals to ask about portals"
+		steps[| 1]="a day has ended, meaning your guests have now paid you in materials, click X"
 		Tutorial_Map[? tutorial.craft_merchandise]="TODO: Craft Merchandise"	
-		
-		Tutorial_Map[? tutorial.make_a_sale]="TODO: Make a sale"
+		Tutorial_Sub_Map[? tutorial.craft_merchandise]=ds_list_create();		
+		steps=Tutorial_Sub_Map[? tutorial.craft_merchandise];
 
+		steps[| 1]="go downstairs to the crafting bench and press space"
+		steps[| 2]="craft some youth salve with the materials you just gained"
+		steps[| 3]="when you are done, go to Objects menu"
+		steps[| 4]="go to the merchandise category"
+		steps[| 5]="go to the bottles categories to find your merch you made"
+		steps[| 6]="select the youth salve item"
+		steps[| 7]="place the merch item on the empty table"
+		
+
+		Tutorial_Map[? tutorial.make_a_sale]="TODO: Make a sale"
+		Tutorial_Sub_Map[? tutorial.make_a_sale]=ds_list_create();		
+		steps=Tutorial_Sub_Map[? tutorial.make_a_sale];
+		steps[| 1]="Press X button to go back to walk mode"
+		steps[| 2]="go to the till"
+		steps[| 3]="wait for the tourist to finnish choosing an item"
+		steps[| 4]="press space to ring up the customer"
+		steps[| 5]="congradulations made it to the end of the demo... for now"
 }

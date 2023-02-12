@@ -193,6 +193,7 @@ var line_count=0;
 							
 							draw_rectangle(edit_mode_menu_x+15-box_size+line_count*sep,edit_mode_menu_y-box_size,edit_mode_menu_x+15+box_size+line_count*sep,edit_mode_menu_y+box_size,selected)
 						
+						
 			            Selected_Recipe = Button_Pressed(edit_mode_menu_x+15-box_size/2+20+line_count*sep, edit_mode_menu_y-box_size/2+20, box_size*2, box_size*2, asset_get_index("sObj_"+recipe), "", c_white, c_white, Selected_Recipe, recipe, 1, default_input, recipe, shape.square, 4);
 			          draw_set_color(c_white)
 draw_text(+15-box_size/2+20+line_count*sep-39, edit_mode_menu_y-box_size/2+20-30,Furniture_Count_Map[? recipe])
@@ -676,23 +677,25 @@ Style_Progression_Map[? element]+=element_change
 				draw_rectangle(0,0,room_width,room_height,0)
 				draw_set_alpha(1)
 							var downward=60
+							var y_shift=50
             draw_set_font(fStoryLarge);
-            draw_sprite(sGui_SpeakBack, 0, starting_x, starting_y+downward);
+            draw_sprite(sGui_SpeakBack, 0, starting_x, starting_y+downward+y_shift);
             portrait_animation+=0.2
 
             // Speaking_To.portrait
 			draw_set_color(c_white)
-            draw_text(starting_x, 295-20+10+downward, Guest_Map[? Current_Guest.guest_id][? guest_detail.name]);
+            draw_text(starting_x, 295-20+10+downward+y_shift, Guest_Map[? Current_Guest.guest_id][? guest_detail.name]);
             draw_set_font(fStory);
             draw_set_alpha(0.4);
           //  draw_text(starting_x, 330, Guest_Map[? Current_Guest.guest_id][? guest_detail.prefix]);
-            draw_sprite_ext(Guest_Map[? Current_Guest.guest_id][? guest_detail.portrait], portrait_animation, starting_x, 220-60+downward,2, 2, 0, c_white, 1);
+            draw_sprite_ext(Guest_Map[? Current_Guest.guest_id][? guest_detail.portrait], portrait_animation, starting_x, 220-60+downward+y_shift,2, 2, 0, c_white, 1);
             draw_set_font(fStory);
             
             
             draw_set_alpha(0.4);
             draw_set_halign(fa_center);
             var amount = Guest_Map[? Current_Guest.guest_id][? guest_detail.openness];
+			
            	 if last_flash_openess!=flash_openess
 			 {
 				 flash_value=1
@@ -703,6 +706,7 @@ Style_Progression_Map[? element]+=element_change
 		flash_value-=0.01
 		else
 		flash_value=0
+		
 		last_flash_openess=flash_openess
             var amount = Guest_Map[? Current_Guest.guest_id][? guest_detail.impression_of_player];
         //    draw_sprite_ext(sGui_Speak_Relationship_Bar, amount + 3, starting_x - 250, 290, 2, 2, 0, c_white, 0.3);
@@ -725,7 +729,7 @@ if Current_Guest.has_quest!=noone
 			draw_set_color(c_my_orange)
 			else
 						draw_set_color(c_old)
-            draw_text_ext(starting_x-505, 370-60+downward, typed_guest_text, 32, 1000);
+            draw_text_ext(starting_x-505, 370-60+downward+y_shift, typed_guest_text, 32, 1000);
 			            draw_set_halign(fa_center);
 			draw_set_alpha(1)
 			if text_alpha<1
@@ -744,7 +748,7 @@ if Current_Guest.has_quest!=noone
 				if Skip_First=1
 				{Skip_First=0 break; }
                 Exit_Speak_Menu(starting_x+34, starting_y+75+downward);
-                starting_y = 550;
+                starting_y = 600;
                 Talk_Menu_Text = "";
                 col = make_color_rgb(141, 146, 151);
                 starting_y += 130;
@@ -795,7 +799,7 @@ Edit_Mode=edit.none
                 
                 Talk_Menu = Button_Pressed(starting_x + 400, starting_y + 10+downward, 340, 80, sGUI_Speak_Option, "Share", -1, c_yellow, Talk_Menu, talk_menu.statement_people, 0, default_input, 0, shape.square, 0);
                 
-	                Talk_Menu = Button_Pressed(starting_x , starting_y + 180+downward, 340, 80, sGUI_Speak_Option, "Instruct", -1, c_yellow, Talk_Menu, talk_menu.instruct, 0, default_input, 0, shape.square, 0);
+	                Talk_Menu = Button_Pressed(starting_x , starting_y + 180+downward, 340, 80, sGUI_Speak_Option, "Actions", -1, c_yellow, Talk_Menu, talk_menu.instruct, 0, default_input, 0, shape.square, 0);
 				}
 		
 				if (Talk_Menu == talk_menu.up_to)
@@ -854,7 +858,7 @@ Edit_Mode=edit.none
   			////////////////////////////////
             if (Talk_Menu == talk_menu.question_people || Talk_Menu == talk_menu.question_things)
             {
-				
+				var people_map=noone
                 draw_set_font(f_OptionsMedium);
                if   Exit_Speak_Menu(starting_x+34, starting_y+downward-5)exit;
                 if (Talk_Menu == talk_menu.question_people)
@@ -880,6 +884,7 @@ Edit_Mode=edit.none
                 {
                     Talk_Menu = talk_menu.main;
                 }
+				if people_map!=noone && !is_undefined(ds_map_find_first(people_map)){
                 var person = ds_map_find_first(people_map)
                     ;
 
@@ -940,6 +945,7 @@ Edit_Mode=edit.none
 									{
 									//	sm(Override_Person_Memory_Is_About)
 									//	sm(fact_struct.memory)
+									Flash_Tutorial=0
 									Add_People_Memory( char.player,char.witch,truth_witch.slips,mem_secrecy.will_share,0,emotion.custom)
 									 guest_speaking_text = Truths_Map[? Override_Person_Memory_Is_About][? 0][? truth.long_text]
 									}
@@ -959,6 +965,7 @@ Edit_Mode=edit.none
                         hor_index = 0;
                     }
                 }
+			}
             }
 			////////////////////////////////
   ////STATEMENT          
@@ -1030,6 +1037,12 @@ Edit_Mode=edit.none
 					
    hor_index=0
    vert_index=1
+   if Chosen_Person_Id.ability_action!=noone
+    if Button_Pressed(starting_x -160, starting_y +25 + 50 * vert_index, 230, 60, 0, "Calm Guests", col, c_black, Chosen_Person_Id,0, 1, default_input, 0, shape.square, 0) // if openess is more than secrecy
+       {
+		   Do_Ability_Action(Chosen_Person_Id,Chosen_Person_Id.ability_action)
+	   }
+	   
            if Button_Pressed(starting_x -160, starting_y +25 + 50 * vert_index, 230, 60, 0, "Speak to...", col, c_black, Chosen_Person_Id,0, 1, default_input, 0, shape.square, 0) // if openess is more than secrecy
        {
 		   Chosen_Action=action.talk_to
@@ -1560,9 +1573,11 @@ item=ds_map_find_next(Dishes_Map,item)
 			var length=70
 					var left=-40
 					Move_Furniture_Mode=1
-					Object_Menu_Mode = Button_Pressed(edit_mode_menu_x+left , edit_mode_menu_y-140, length+80, width, sGui_Obj_Group, "", c_my_orange, c_grey, Object_Menu_Mode,object_menu.furniture , 0, controls.left_click, 0,0, 0);
-					
-				  Object_Menu_Mode = Button_Pressed(edit_mode_menu_x+left +80, edit_mode_menu_y-140, length+20, width, sGui_Obj_Group, "", c_my_orange, c_grey, Object_Menu_Mode,object_menu.merchanise , 0, controls.left_click, 1,1, 0);
+					Object_Menu_Mode = Button_Pressed(edit_mode_menu_x+left , edit_mode_menu_y-140, length, width, sGui_Obj_Group, "", c_my_orange, c_grey, Object_Menu_Mode,object_menu.furniture , 0, controls.left_click, 0,0, 0);
+					var flash_values=0
+					var vcol=c_my_orange
+					if Flash_Button="merch" {flash_values=-10 vcol=c_aqua} 
+				  Object_Menu_Mode = Button_Pressed(edit_mode_menu_x+left +80, edit_mode_menu_y-140, length, width, sGui_Obj_Group, "", vcol, c_grey, Object_Menu_Mode,object_menu.merchanise , 0, controls.left_click, 1,1, flash_values);
 			
 				 Object_Menu_Mode = Button_Pressed(edit_mode_menu_x+left +80*2, edit_mode_menu_y-140, length, width, sGui_Obj_Group, "", c_my_orange, c_grey, Object_Menu_Mode,object_menu.floors , 0, controls.left_click, 2,2, 0);
 		//Object_Menu_Mode = Button_Pressed(edit_mode_menu_x+left +100-30, edit_mode_menu_y-130, length, width, 0, "Floor", c_my_orange, c_black, Object_Menu_Mode,object_menu.floors , 0, controls.left_click, 0,shape.square, 0);
@@ -1592,13 +1607,17 @@ item=ds_map_find_next(Dishes_Map,item)
 			 else
 			 {
 				 		var t_class=merch_type.stations;
-		  Object_Category = Button_Pressed(edit_mode_menu_x+left -100, edit_mode_menu_y-70, length, width, sGUI_Merch_Types, "", c_my_orange, c_gray, Object_Category,t_class , 0, controls.left_click, 0,t_class, 1);
+							if Flash_Button = t_class flash=1 else flash=0
+		  Object_Category = Button_Pressed(edit_mode_menu_x+left -100, edit_mode_menu_y-70, length, width, sGUI_Merch_Types, "", Get_Merch_Color(t_class,flash), c_gray, Object_Category,t_class , 0, controls.left_click, 0,t_class, 1);
 		var t_class=merch_type.bottled;
-		  Object_Category = Button_Pressed(edit_mode_menu_x +left-50, edit_mode_menu_y-70, length, width, sGUI_Merch_Types, "", c_my_orange, c_gray, Object_Category,t_class , 0, controls.left_click, 0,t_class, 1);
+			if Flash_Button = t_class flash=1 else flash=0
+		  Object_Category = Button_Pressed(edit_mode_menu_x +left-50, edit_mode_menu_y-70, length, width, sGUI_Merch_Types, "", Get_Merch_Color(t_class,flash), c_gray, Object_Category,t_class , 0, controls.left_click, 0,t_class, 1);
 		var t_class=merch_type.clothing;
-		  Object_Category = Button_Pressed(edit_mode_menu_x +left, edit_mode_menu_y-70, length, width, sGUI_Merch_Types, "", c_my_orange, c_gray, Object_Category,t_class , 0, controls.left_click, 0,t_class, 1);
+			if Flash_Button = t_class flash=1 else flash=0
+		  Object_Category = Button_Pressed(edit_mode_menu_x +left, edit_mode_menu_y-70, length, width, sGUI_Merch_Types, "", Get_Merch_Color(t_class,flash), c_gray, Object_Category,t_class , 0, controls.left_click, 0,t_class, 1);
 		  		var t_class=merch_type.statue;
-		  Object_Category = Button_Pressed(edit_mode_menu_x+left+ 50, edit_mode_menu_y-70, length, width, sGUI_Merch_Types, "", c_my_orange, c_gray, Object_Category,t_class , 0, controls.left_click, 0,t_class, 1);
+					if Flash_Button = t_class flash=1 else flash=0
+		  Object_Category = Button_Pressed(edit_mode_menu_x+left+ 50, edit_mode_menu_y-70, length, width, sGUI_Merch_Types, "", Get_Merch_Color(t_class,flash), c_gray, Object_Category,t_class , 0, controls.left_click, 0,t_class, 1);
 			 }
 			 
 	 if Object_Menu_Mode=object_menu.furniture
@@ -1842,7 +1861,8 @@ if (Last_Sub_Menu == "Ingredient" && Sub_Menu != "Ingredient")
 
 
 if Chosen_Tutorial!=-1 && Visualize[? vis.show_tutorial]=1 && Chosen_Tutorial!=tu.none{
-	draw_sprite(sGui_Tutorial_Bar,0,View_Width/2,150)
+	draw_set_alpha(1)
+	draw_sprite_ext(sGui_Tutorial_Bar,0,View_Width/2,150,1,1,0,c_white,1)
 	draw_set_font(fTutorial)
 var text=Tutorial_Map[? Chosen_Tutorial];
 
@@ -1870,7 +1890,7 @@ draw_set_color(c_aqua)
 draw_set_alpha(Flash_Button_Alpha)
 }
 	draw_set_font(fTutorial_Small)
-draw_text_ext(sx,sy+25,text2,25,1200)
+draw_text_ext(sx,sy+25,text2,25,800)
 draw_set_alpha(1)
 }
 }

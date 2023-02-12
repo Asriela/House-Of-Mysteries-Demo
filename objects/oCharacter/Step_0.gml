@@ -24,6 +24,7 @@ if is_player && near_cash_register && near_tourist && Get_Variable_From(near_tou
 show_tip="press space to ring up customer"
 if keyboard_check_pressed(vk_space)
 {
+	Tutorial_Sub_Step++
 	var object=Get_Variable_From(near_tourist,"item_to_buy")
 	var price=Furniture_Map[? object][? furn.price]
 	Cash+=price

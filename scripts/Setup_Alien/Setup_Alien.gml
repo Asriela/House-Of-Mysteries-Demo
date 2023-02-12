@@ -15,7 +15,7 @@ Guest_Map[? me][? guest_detail.pronoun2]="their"
 Guest_Map[? me][? guest_detail.cash]=10
 Guest_Map[? me][? guest_detail.sprite]="Alien"
 Guest_Map[? me][? guest_detail.type]=char.aliens
-Guest_Map[? me][? guest_detail.bag]="Backpack"
+Guest_Map[? me][? guest_detail.bag]="Alien_Luggage"
 Guest_Map[? me][? guest_detail.element]=style.sci_fi
 Guest_Map[? me][? guest_detail.portrait]=sPort_Alien
 Guest_Map[? me][? guest_detail.up_to]="'"
@@ -52,7 +52,7 @@ Guest_Add_Need(me,guest_need.mood,3)
 		Guest_Map[? me][? guest_detail.introduction]
 		=""
 		Guest_Map[? me][? guest_detail.visual_description]
-		="Gari tilts their head and looks at you curiously."
+		="z-51 tilts their head and looks at you curiously."
 		
 	Guest_Map[? me][? guest_detail.our_needs]=ds_map_create()
 	var map=Guest_Map[? me][? guest_detail.our_needs]

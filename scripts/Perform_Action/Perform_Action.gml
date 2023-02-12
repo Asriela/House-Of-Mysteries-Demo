@@ -34,6 +34,7 @@ function Perform_Action(idd)
 				Set_Variable(state_var.carrying_item,state_target)
 				state_target.holder=id
 				state_target.held_by_object=0
+				//Tutorial_Sub_Step
 			break;
 		case function_word.wait:
 //do nothing cannot move further from this -put at end of states- can only move to next state if another state scores higher
@@ -95,7 +96,8 @@ function Perform_Action(idd)
 	break;
 		///TARGET KEYWORD
 		case function_word.try_purchase:
-
+		if Tutorial_Sub_Step=3
+Tutorial_Sub_Step++
 			Set_Variable("finnished_shopping",1)
 			Set_Variable("item_to_buy",state_target.object_type)
 state_target.alarm[5]=2

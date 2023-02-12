@@ -91,7 +91,8 @@ function Game_Enums(){
 		auto_dish_up,
 		guest_speed,
 		spawn_guests_at,
-		access_guest_memories
+		access_guest_memories,
+		player_starting_floor
 	
 	}
 	enum carry_item_type{
@@ -464,6 +465,9 @@ enum room_type
 enum building{
 	dirt,
 	grass
+}
+enum ability{
+	calm,
 }
 enum edit
 {

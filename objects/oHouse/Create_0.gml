@@ -103,7 +103,7 @@ Spawn_Y=room_height/2;
  
  player.mask=instance_create(x,y,mPlayer)
  player.mask.owner=player
-player.floor_i_am_on=2
+player.floor_i_am_on=Dev_Help[? dev_help.player_starting_floor]
 //display_mouse_set(player.x,player.y)
 Spawn_X=player.x
  Spawn_Y=player.y

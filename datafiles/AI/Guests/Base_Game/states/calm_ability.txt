@@ -1,0 +1,6 @@
+🔼🔼
+if is_tourist = 0
+if do_calm_ability = 1
+1000 
+=
+stand for 10

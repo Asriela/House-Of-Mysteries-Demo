@@ -238,8 +238,126 @@ World_Seconds=59
 				Tutorial_Sub_Step++
 			}
 			break;
+			case 6: 
+			if Flash_Tutorial=0{
+			Chosen_Tutorial=tutorial.use_alien_ability
+			Tutorial_Sub_Step=1
+			}
+			
+			break;
 		}
 		break;
-	
+		case tutorial.use_alien_ability:
+		switch(Tutorial_Sub_Step){
+			case 1: 
+			if Edit_Mode!=edit.speak
+			{
+				
+				Tutorial_Sub_Step++
+				Spawned_Starter_Guests=0
+				//Dev_Help[? dev_help.auto_book_in]=0
+			}
+			break;
+			case 2:
+		if Spawned_Starter_Guests=0
+		{
+			Spawned_Starter_Guests=1
+			Add_Guest_To_Arrive(World_Hour+1,char.alien)
+			World_Minutes=59
+			World_Seconds=59
+
+		}
+		
+			break;
+			case 3:
+			if Edit_Mode=edit.speak
+			{
+				Tutorial_Sub_Step++
+			}
+			break;
+		}
+		break;
+		case tutorial.craft_merchandise:
+		switch(Tutorial_Sub_Step){
+			case 1: 
+			
+			if exists(mCrafting_Station){
+				Tutorial_Arrow=instance_nearest(x,y,mCrafting_Station)
+			}
+				
+			if Edit_Mode=edit.work_bench{
+				Tutorial_Sub_Step++
+				Tutorial_Arrow=noone
+			}
+			break;
+			case 2:
+			if Furniture_Count_Map[? "Merch_Ectoplasm_Salve"]>0 {
+			Tutorial_Sub_Step++
+			Tutorial_Highlight_Button=tu_highlight_button.furniture
+			}
+		
+			break;
+			case 3:
+			if Edit_Mode=edit.object
+			{
+				Tutorial_Sub_Step++
+				Tutorial_Highlight_Button=noone
+				Flash_Button="merch"
+				Object_Category=merch_type.stations
+			}
+			break;
+			case 4:
+			if Object_Menu_Mode=obj_menu_mode.merch{
+			Tutorial_Sub_Step++
+			Flash_Button=noone
+			Flash_Button=merch_type.bottled
+			}
+			break;
+				case 5:
+			if Flashing_Button_Was_Pressed{
+			Tutorial_Sub_Step++
+			Flash_Button="Merch_Ectoplasm_Salve"
+			}
+			break;		
+			case 6:
+			if Flashing_Button_Was_Pressed{
+				Tutorial_Sub_Step++
+				Flash_Button=noone
+			}
+			break;
+			case 7:
+			Flash_Tutorial=1
+			if Held_Furniture=noone
+			{
+			Tutorial_Sub_Step=1
+			Chosen_Tutorial=tutorial.make_a_sale
+			}
+			break;
+			}
+		break;
+		case tutorial.make_a_sale:
+		switch(Tutorial_Sub_Step){
+			case 1:
+			Tutorial_Highlight_Button=tu_highlight_button.none
+			if Edit_Mode=edit.none{
+				Tutorial_Sub_Step++
+				Tutorial_Highlight_Button=noone
+			}
+			break;
+			case 2:
+				if exists(mTill){
+				Tutorial_Arrow=instance_nearest(x,y,mTill)
+				if  point_distance(mPlayer.x,mPlayer.y,Tutorial_Arrow.x,Tutorial_Arrow.y)<20{
+				Tutorial_Sub_Step++
+				Spawn_Tourist()
+				Tutorial_Arrow=noone
+				}
+			}
+			break;
+			case 3:
+				
+			break;
+				}
+		break;
 	}
 }

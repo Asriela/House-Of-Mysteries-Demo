@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 last_y=0
+ability_action=noone
 has_ask=0
 on_stairs=noone
 animation_name="no animation"
