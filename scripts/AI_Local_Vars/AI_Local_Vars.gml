@@ -124,7 +124,8 @@ enum function_word
 	give,
 	eatmana,
 	quest,
-	try_purchase
+	try_purchase,
+	use_ability
 }
 lifetime=0
 enum proximity_word

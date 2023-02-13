@@ -53,12 +53,12 @@ if is_player=0 && selected && Edit_Mode!=edit.food_prep && Edit_Mode!=edit.trade
 Open_Dialogue(id)
 	
 
-		
+
 	}
 }
 
 
-if point_in_rectangle(mouse_x,mouse_y,x-40,y-50,x+10,y) && Dev_Help[? dev_help.trigger_emotions]=1 
+if is_player=0 && point_in_rectangle(mouse_x,mouse_y,x-40,y-50,x+10,y) && Dev_Help[? dev_help.trigger_emotions]=1 
 {
 Slow_Down=1
 }
@@ -182,6 +182,7 @@ if instance_number(oInteractable)>0
 	nearest_interaction= instance_nearest(x,y,oInteractable)
 		
 	//sm(nearest_interaction)
+	if nearest_interaction.floor_i_am_on=floor_i_am_on
 	if point_distance(x,y,nearest_interaction.x,nearest_interaction.y)>40
 	nearest_interaction=noone
 	else{

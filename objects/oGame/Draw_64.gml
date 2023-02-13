@@ -745,6 +745,7 @@ if Current_Guest.has_quest!=noone
             draw_set_font(f_OptionsMedium);
             if (Talk_Menu == talk_menu.main)
             {
+				Is_Asking=0
 				if Skip_First=1
 				{Skip_First=0 break; }
                 Exit_Speak_Menu(starting_x+34, starting_y+75+downward);
@@ -883,6 +884,7 @@ Edit_Mode=edit.none
                 if (Button_Pressed(starting_x, starting_y + 208, 130, 50, 0, "BACK", color_drinking, c_black, Chosen_Feeling, 0, 1, default_input, 0, shape.square, 0))
                 {
                     Talk_Menu = talk_menu.main;
+					
                 }
 				if people_map!=noone && !is_undefined(ds_map_find_first(people_map)){
                 var person = ds_map_find_first(people_map)
@@ -925,7 +927,7 @@ Edit_Mode=edit.none
                         //	 sm(ds_map_size(people_map))
                         //	 sm(person)
                         text_of_memory = Character_Enum_To_Text(person);
-						var fact_struct=Get_Highest_Value_Truth(Current_Guest.guest_id, person);
+					fact_struct=Get_Highest_Value_Truth(Current_Guest.guest_id, person);
 						if fact_struct=-1
 						var col2=c_dkgray
 						else
@@ -938,22 +940,11 @@ Edit_Mode=edit.none
 					draw_text( starting_x - 300 + hor_index * 150, starting_y + 70 + 50 * vert_index+20,  text_of_memory)
 					   if (Button_Was_Pressed)
 							{
-								if fact_struct!=-1{
-									if Override_Person_Memory_Is_About=noone
-								    guest_speaking_text = Truths_Map[? person][? fact_struct.memory][? truth.long_text]
-									else
-									{
-									//	sm(Override_Person_Memory_Is_About)
-									//	sm(fact_struct.memory)
-									Flash_Tutorial=0
-									Add_People_Memory( char.player,char.witch,truth_witch.slips,mem_secrecy.will_share,0,emotion.custom)
-									 guest_speaking_text = Truths_Map[? Override_Person_Memory_Is_About][? 0][? truth.long_text]
-									}
-									flash_openess=c_my_bar_red
-									Guest_Map[? Current_Guest.guest_id][? guest_detail.openness]-=fact_struct.penalty
-								}
-								else
-								guest_speaking_text=pronoun+" either didn't know anything more about them, or didn't want to share it with you"
+																	Talk_Menu = talk_menu.statement_feelings
+									Last_Talk_Menu=talk_menu.statement_people
+									Chosen_Person = Character_Enum_To_Text(person);
+									Chosen_Person_Id=person
+									Is_Asking=1
 							}
                         person = ds_map_find_next(people_map, person);
                     }
@@ -968,12 +959,12 @@ Edit_Mode=edit.none
 			}
             }
 			////////////////////////////////
-  ////STATEMENT          
+			////STATEMENT          
   			////////////////////////////////
             if (Talk_Menu == talk_menu.statement_people || Talk_Menu == talk_menu.statement_things)
             {
                 draw_set_font(f_OptionsMedium);
-                Exit_Speak_Menu(starting_x+34, starting_y+75+downward)
+                Exit_Speak_Menu(starting_x+34, starting_y+downward-5)
 				
                 if (Button_Pressed(starting_x, starting_y + 208, 130, 50, 0, "BACK", color_drinking, c_black, Chosen_Feeling, 0, 1, default_input, 0, shape.square, 0))
                     {
@@ -1026,7 +1017,7 @@ Edit_Mode=edit.none
        {
 				                    Talk_Menu_Text = "Tell them to...";
 				        draw_set_font(f_OptionsMedium);
-                Exit_Speak_Menu(starting_x+34, starting_y+75+downward)
+                Exit_Speak_Menu(starting_x+34, starting_y+downward-5)
 				
                 if (Button_Pressed(starting_x, starting_y + 208, 130, 50, 0, "BACK", color_drinking, c_black, Chosen_Feeling, 0, 1, default_input, 0, shape.square, 0))
                     {
@@ -1037,10 +1028,15 @@ Edit_Mode=edit.none
 					
    hor_index=0
    vert_index=1
-   if Chosen_Person_Id.ability_action!=noone
-    if Button_Pressed(starting_x -160, starting_y +25 + 50 * vert_index, 230, 60, 0, "Calm Guests", col, c_black, Chosen_Person_Id,0, 1, default_input, 0, shape.square, 0) // if openess is more than secrecy
+   col=c_old
+   if Current_Guest.ability_action!=noone
+    if Button_Pressed(starting_x , starting_y +25 + 50 * vert_index+70, 265, 60, 0, "Calm Guests", col, c_black, Chosen_Person_Id,0, 1, default_input, 0, shape.square, 0) // if openess is more than secrecy
        {
-		   Do_Ability_Action(Chosen_Person_Id,Chosen_Person_Id.ability_action)
+		   Do_Ability_Action(Current_Guest,Current_Guest.ability_action)
+		   			Edit_Mode=edit.none
+			Talk_Menu=talk_menu.main
+			Current_Guest=noone
+		   Tutorial_Sub_Step++
 	   }
 	   
            if Button_Pressed(starting_x -160, starting_y +25 + 50 * vert_index, 230, 60, 0, "Speak to...", col, c_black, Chosen_Person_Id,0, 1, default_input, 0, shape.square, 0) // if openess is more than secrecy
@@ -1062,7 +1058,7 @@ Edit_Mode=edit.none
 			if (Talk_Menu == talk_menu.instruct_to_who)
             {
 				        draw_set_font(f_OptionsMedium);
-                Exit_Speak_Menu(starting_x+34, starting_y+75+downward)
+                Exit_Speak_Menu(starting_x+34, starting_y+downward-5)
 				
                 if (Button_Pressed(starting_x, starting_y + 208, 130, 50, 0, "BACK", color_drinking, c_black, Chosen_Feeling, 0, 1, default_input, 0, shape.square, 0))
                     {
@@ -1137,12 +1133,15 @@ Edit_Mode=edit.none
             if (Last_Talk_Menu == talk_menu.statement_people && Talk_Menu == talk_menu.statement_feelings)
             {
 		
-                if Exit_Speak_Menu(starting_x+34, starting_y+75+downward){
+                if Exit_Speak_Menu(starting_x+34, starting_y+downward-5){
 					exit;
 				}
                 if (Last_Talk_Menu == talk_menu.statement_people)
                 {
-                    Talk_Menu_Text = "What about " + Chosen_Person+ " do you want to say?";
+					if Is_Asking
+                    Talk_Menu_Text = "What about " + Chosen_Person+ " do you want to ask?";
+					else
+					Talk_Menu_Text = "What about " + Chosen_Person+ " do you want to say?";
                     var mem_type = guest_detail.people_memories_map;
                         var known_facts_about_person_map=Guest_Map[? char.player][? guest_detail.people_memories_map][? Chosen_Person_Id]
                 }
@@ -1174,7 +1173,41 @@ Edit_Mode=edit.none
                     // if openess is more than secrecy
                     if (Button_Was_Pressed && Chosen_Fact != noone && button_was_pressed=0)
                     {
-                
+                if Is_Asking{
+							
+									if Override_Person_Memory_Is_About=noone
+									{
+										if fact_struct!=-1
+								    guest_speaking_text = Truths_Map[? person][? fact_struct.memory][? truth.long_text]
+															
+								else
+								guest_speaking_text=pronoun+" either didn't know anything more about them, or didn't want to share it with you"
+									}
+									else
+									{
+									//	sm(Override_Person_Memory_Is_About)
+									//	sm(fact_struct.memory)
+									
+									Flash_Tutorial=0
+									if Chosen_Tutorial=tutorial.talk_to_guest{
+									Add_People_Memory( char.player,char.witch,truth_witch.slips,mem_secrecy.will_share,0,emotion.custom)
+										 guest_speaking_text = Truths_Map[? Override_Person_Memory_Is_About][? 0][? truth.long_text]}
+									else
+										if Chosen_Tutorial=tutorial.use_alien_ability{
+										Add_People_Memory( char.player,char.alien,truth_alien.portals,mem_secrecy.will_share,0,emotion.custom)
+										Tutorial_Sub_Step++
+										Override_Person_Memory_Is_About=char.alien
+											 guest_speaking_text = Truths_Map[? Override_Person_Memory_Is_About][? 0][? truth.long_text]
+										}
+										else
+										guest_speaking_text=pronoun+" either didn't know anything more about them, or didn't want to share it with you"
+								
+									}
+								//	flash_openess=c_my_bar_red
+									//Guest_Map[? Current_Guest.guest_id][? guest_detail.openness]-=fact_struct.penalty
+
+				}
+								else{
                           if col2!=c_dkgray
                             {
 								flash_openess=c_my_bar_green
@@ -1187,6 +1220,7 @@ Edit_Mode=edit.none
                             }
 							else
 							guest_speaking_text=pronoun+" already knew that"
+								}
                             button_was_pressed=1
                             /*	else{
 				//	sm(Guest_Map[? Current_Guest.guest_id][? mem_type][? Chosen_Memory][? memory_detail.memory_feeling])
@@ -1218,7 +1252,7 @@ Edit_Mode=edit.none
             }}
         }
         
-		            draw_set_font(f_OptionsMedium);
+		            draw_set_font(f_Talk_Menu_Text);
 					draw_set_color(c_my_orange)
             draw_text(starting_x, 540+67, Talk_Menu_Text);
         break;
@@ -1890,7 +1924,7 @@ draw_set_color(c_aqua)
 draw_set_alpha(Flash_Button_Alpha)
 }
 	draw_set_font(fTutorial_Small)
-draw_text_ext(sx,sy+25,text2,25,800)
+draw_text_ext(sx,sy+25,text2,18,660)
 draw_set_alpha(1)
 }
 }

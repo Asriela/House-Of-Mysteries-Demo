@@ -1,6 +1,7 @@
 🔼🔼
 if is_tourist = 0
 if do_calm_ability = 1
-1000 
+1200 
 =
-stand for 10
+animate( wow 10 ) 
+use_ability calm

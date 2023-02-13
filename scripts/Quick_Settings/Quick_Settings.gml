@@ -40,7 +40,7 @@ Dev_Help[? dev_help.player_starting_floor]=2
 
 Edit_Mode=edit.none //edit.trade
 Can_Save=1
-Chosen_Tutorial=tutorial.use_alien_ability
+Chosen_Tutorial=tutorial.talk_to_guest
 //Chosen_Tutorial=tu.social 
 World_Speed=1
 Cash=900

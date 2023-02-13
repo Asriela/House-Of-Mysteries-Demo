@@ -23,6 +23,7 @@ Guest_Map[? me][? guest_detail.body_height]=59
 Guest_Map[? me][? guest_detail.noise_resistance]=10
 Guest_Map[? me][? guest_detail.resistance_to_open]=2
 Guest_Map[? me][? guest_detail.openness]=3
+Guest_Map[? me][? guest_detail.ability_action]=noone
 
 Guest_Map[? me][? guest_detail.styles_list]=ds_list_create()
 var list_of_styles=Guest_Map[? me][? guest_detail.styles_list];
@@ -69,7 +70,7 @@ enum truth_ghost{
 	
 	var truth_id=truth_ghost.loves_witch;
 	var secrecy=mem_secrecy.personal;
-	var short_text="loves witch";
+	var short_text="Ghosts love for the witch";
 	var long_text=" "
 var starting_memory=true;
 	Create_Truth(truth_id,me,me,short_text,long_text,starting_memory,secrecy,1,emotion.custom)

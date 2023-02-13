@@ -19,6 +19,7 @@ character.my_House=id
 character.character_type=sprite;
 character.my_height=Guest_Map[? the_id][? guest_detail.body_height]
 character.noise_resistance=Guest_Map[? the_id][? guest_detail.noise_resistance]
+character.ability_action=Guest_Map[? the_id][? guest_detail.ability_action]
 if player=0{
 	//sm(Guest_Map[? the_id][? guest_detail.our_needs])
 var map_text=ds_map_write(Guest_Map[? the_id][? guest_detail.our_needs])

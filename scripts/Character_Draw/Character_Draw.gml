@@ -61,10 +61,10 @@ last_y=y
 last_x=x
 
 
-	if running_animation=0{
+	if running_animation=0 && action_map[? "action_type"]!=function_word.animate{
 		if action_animation=noone{
 		var sprite=asset_get_index("sChar_"+character_type+dir_text);		
-		animation_name="running animation:  \nsChar_"+character_type+dir_text
+		animation_name="running animation:  \n sChar_"+character_type+dir_text
 		}
 		else{
 			var sprite=action_animation

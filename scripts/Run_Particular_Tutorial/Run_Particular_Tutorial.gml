@@ -259,13 +259,14 @@ World_Seconds=59
 			}
 			break;
 			case 2:
+			
 		if Spawned_Starter_Guests=0
 		{
 			Spawned_Starter_Guests=1
 			Add_Guest_To_Arrive(World_Hour+1,char.alien)
 			World_Minutes=59
 			World_Seconds=59
-
+Flash_Tutorial=1
 		}
 		
 			break;
@@ -274,6 +275,26 @@ World_Seconds=59
 			{
 				Tutorial_Sub_Step++
 			}
+			break;
+			case 6:
+			if Edit_Mode=edit.speak
+			{
+				Tutorial_Sub_Step++
+			}
+			break;
+			case 7:
+			//if final{
+			//	World_Hour=5
+			//	World_Minutes=59
+				
+			//}
+			case 8:
+			if Edit_Mode=edit.none
+			{
+				Tutorial_Sub_Step=1
+				Chosen_Tutorial=tutorial.craft_merchandise
+			}
+			break;
 			break;
 		}
 		break;

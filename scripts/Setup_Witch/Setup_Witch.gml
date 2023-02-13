@@ -26,6 +26,7 @@ Guest_Map[? me][? guest_detail.openness]=3
 Guest_Map[? me][? guest_detail.impression_of_player]=0
 Guest_Map[? me][? guest_detail.stay_length_days]=10
 Guest_Map[? me][? guest_detail.stay_length]=24*Guest_Map[? me][? guest_detail.stay_length_days]
+Guest_Map[? me][? guest_detail.ability_action]=noone//ability.calm
 
 Guest_Map[? me][? guest_detail.styles_list]=ds_list_create()
 var list_of_styles=Guest_Map[? me][? guest_detail.styles_list];
@@ -68,8 +69,8 @@ enum truth_witch{
 	
 	var truth_id=truth_witch.slips;
 	var secrecy=mem_secrecy.will_share;
-	var short_text="portals";
-	var long_text="'That lost soul will have non of me dear. Speaking of lost souls, wouldnt you rather find out what happened to your parents? You should ask around about the slips or how shall i call them... portals. Oh and dear, dont go getting crazy on me..."
+	var short_text="the slips";
+	var long_text="'That lost soul will have non of me dear. Speaking of lost souls, wouldnt you rather find out where your parents went? You should ask around about the slips... Oh and dear, dont get freaky deaky on me, keep that little head of yours screwed on."
 	var starting_memory=true;
 	Create_Truth(truth_id,me,me,short_text,long_text,starting_memory,secrecy,1,emotion.custom)
 //MY STARTING MEMORIES

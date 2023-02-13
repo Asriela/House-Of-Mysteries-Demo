@@ -340,7 +340,8 @@ enum guest_detail{
 	starting_mood,
 	our_needs, 
 	mess_rate,
-	mess_type
+	mess_type,
+	ability_action
 }
 enum class_pref{
 	pos,

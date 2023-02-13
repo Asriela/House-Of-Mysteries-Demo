@@ -213,7 +213,7 @@ function Exit_Menu(starting_x,starting_y){
 		return ret;
 }
 function Exit_Speak_Menu(starting_x,starting_y){
-				if  Button_Pressed(starting_x+470,starting_y-333+50,50,50,0,"X",c_old,c_black,Chosen_Feeling,0,1,controls.left_click,0,shape.square,0)
+		if  Button_Pressed(starting_x+470,starting_y-333+50,50,50,0,"X",c_old,c_black,Chosen_Feeling,0,1,controls.left_click,0,shape.square,0)
 		{
 			Edit_Mode=edit.none
 			Talk_Menu=talk_menu.main

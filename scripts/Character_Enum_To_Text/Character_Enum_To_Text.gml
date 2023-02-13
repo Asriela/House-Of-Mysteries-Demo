@@ -3,6 +3,9 @@
 function Character_Enum_To_Text(char_id){
 ret=""
 switch(char_id){
+	case char.ghost: ret="Gari the Ghost" break;
+	case char.witch: ret="Weltiry the Witch" break;
+	case char.alien: ret="z-51 the Alien" break;
 	case char.cats: ret="Cats" break;
 	case char.gnomes: ret="Gnomes" break;
 	case char.golums: ret="Golums" break;

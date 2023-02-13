@@ -13,7 +13,21 @@ function Perform_Action(idd)
 //if state_target!=-4 && current_state="talk" sm(st(action_name)+" "+st(state_target))
 	switch(action_map[? "action_type"])
 	{
-				case function_word.dish_up:
+		case function_word.use_ability:
+				with(oCharacter)
+				{
+					if my_emotion=sE_Crying 
+					my_emotion=sE_Fine
+					Set_Variable("haunting",0)
+				}
+				Tutorial_Sub_Step++
+				Edit_Mode=edit.none
+				Set_Variable("do_calm_ability",0)
+				move_to_next_action=true
+				
+		
+		break;
+		case function_word.dish_up:
 				if state_target!=noone{
 				plate=instance_create_depth(x,y,0,oPlate)
 				Set_Variable(state_var.carrying_item,plate)

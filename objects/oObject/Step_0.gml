@@ -96,6 +96,8 @@ if first=1{
 		//ss()
 		interactable=instance_create_depth(x,y,0,oInteractable)
 		interactable.owner=id
+		interactable.floor_i_am_on=floor_i_am_on
+		
 	}
 if floor_i_am_on=2	
 {

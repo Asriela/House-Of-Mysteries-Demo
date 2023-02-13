@@ -23,6 +23,7 @@ Guest_Map[? me][? guest_detail.body_height]=59
 Guest_Map[? me][? guest_detail.noise_resistance]=8
 Guest_Map[? me][? guest_detail.resistance_to_open]=2
 Guest_Map[? me][? guest_detail.openness]=3
+Guest_Map[? me][? guest_detail.ability_action]=ability.calm
 
 Guest_Map[? me][? guest_detail.styles_list]=ds_list_create()
 var list_of_styles=Guest_Map[? me][? guest_detail.styles_list];
@@ -63,14 +64,14 @@ Guest_Add_Need(me,guest_need.mood,3)
 //==============================	
 
 enum truth_alien{
-	ghost_caused_crash
+	portals
 }
 
 	
-	var truth_id=truth_alien.ghost_caused_crash;
+	var truth_id=truth_alien.portals;
 	var secrecy=mem_secrecy.personal;
-	var short_text="ghosts caused crash";
-	var long_text="'ghosts crashed the ship of b3-19, they were my friends, perhapse this ghost was involved.' said z-51 in their high pitched almost screeching alien voice"
+	var short_text="portals ";
+	var long_text="'The slips is what they are calling the reality transmution fields or portals. It is very likely your parents may have gone through one of them, why I do not know. It is however, how we all got here.' they said, seemingly staring at your organs under your skin."
 var starting_memory=true;
 //WE CAN ONLY MAKE TRUTHS ABOUT OURSELVES OTHERWISE WE CANT TRACK TRUTHS
 	Create_Truth(truth_id,me,me,short_text,long_text,starting_memory,secrecy,1,emotion.custom)
