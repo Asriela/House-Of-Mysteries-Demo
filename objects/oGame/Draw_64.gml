@@ -1916,7 +1916,9 @@ draw_set_color(c_dark_brown)
 draw_set_alpha(0.6)
 draw_set_color(c_white)
 draw_set_halign(fa_center)
+
 draw_text_ext(sx,sy,text,25,1200)
+draw_set_valign(fa_left)
 draw_set_alpha(1)
 if Flash_Tutorial
 {
@@ -1924,9 +1926,10 @@ draw_set_color(c_aqua)
 draw_set_alpha(Flash_Button_Alpha)
 }
 	draw_set_font(fTutorial_Small)
-draw_text_ext(sx,sy+25,text2,18,660)
+draw_text_ext(sx,sy+15,text2,23,640)
 draw_set_alpha(1)
 }
 }
+draw_set_valign(fa_center)
 
 Exit_Edit_Modes_Code()

@@ -16,9 +16,13 @@ function Perform_Action(idd)
 		case function_word.use_ability:
 				with(oCharacter)
 				{
+					if id!=other{
 					if my_emotion=sE_Crying 
 					my_emotion=sE_Fine
 					Set_Variable("haunting",0)
+					action_animation=noone
+					my_mood=60
+					}
 				}
 				Tutorial_Sub_Step++
 				Edit_Mode=edit.none

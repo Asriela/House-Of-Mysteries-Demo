@@ -4,9 +4,9 @@ function Run_Particular_Tutorial(){
 	if Last_Chosent_Tutorial!=Chosen_Tutorial
 	Tutorial_Sub_Step=1
 	
-	if Flash_Button_Alpha<0
+	if Flash_Button_Alpha<0.3
 	Flash_Button_Alpha=1
-	Flash_Button_Alpha-=0.02
+	Flash_Button_Alpha-=0.01
 	
 				if Dev_Help[? dev_help.spawn_guests_at]=Chosen_Tutorial
 				{
@@ -179,6 +179,7 @@ World_Seconds=59
 			
 			break;
 			case 4:
+			Flash_Button=noone
 			if Get_Variable_From(Player_Object,state_var.carrying_item)=noone
 			{
 				Tutorial_Sub_Step=1
@@ -290,6 +291,15 @@ Flash_Tutorial=1
 			//}
 			case 8:
 			if Edit_Mode=edit.none
+			{
+				World_Hour=6
+				World_Minutes=59
+				//Edit_Mode=edit.review_day
+				Tutorial_Sub_Step++
+			}
+			break;
+			case 9:
+			if Edit_Mode=edit.none && Last_Edit_Mode=edit.review_day
 			{
 				Tutorial_Sub_Step=1
 				Chosen_Tutorial=tutorial.craft_merchandise

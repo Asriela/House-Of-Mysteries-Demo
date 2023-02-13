@@ -48,17 +48,17 @@ function Setup_Tutorial(){
 		steps[| 2]="select the wild furniture style"	
 		steps[| 3]="select the swamp bed"
 		steps[| 4]="press the 2 key to go to the second floor"	
-		steps[| 5]="place the gnome bed in the bedroom"	
+		steps[| 5]="WASD moves the camera, place the gnome bed in the bedroom"	
 		steps[| 6]="select the arcane furniture style"	
 		steps[|7]="select the ghost bed"	
 		steps[| 8]="place the ghost bed in the bedroom"	
 		
-Tutorial_Sub_Map[? tutorial.take_bags]=ds_list_create();
+		Tutorial_Sub_Map[? tutorial.take_bags]=ds_list_create();
 
 		Tutorial_Map[? tutorial.take_bags]="TODO: Place the guests bags in their rooms"	
 		//
 		
-	steps=Tutorial_Sub_Map[? tu.take_bags];
+		steps=Tutorial_Sub_Map[? tu.take_bags];
 		steps[| 1]="goto Walk Mode"	
 		steps[| 2]="WASD to walk to guests"	
 		steps[| 3]="press space to pick up guests bag"	
@@ -79,26 +79,26 @@ Tutorial_Sub_Map[? tutorial.take_bags]=ds_list_create();
 		Tutorial_Map[? tutorial.talk_to_guest]="TODO: Talk with guests"
 		Tutorial_Sub_Map[? tutorial.talk_to_guest]=ds_list_create();		
 		steps=Tutorial_Sub_Map[? tutorial.talk_to_guest];
-			steps[| 1]="it is now the eat event wait for the guests to sit and begin eating"
-			steps[| 2]="the ghost has a request for you, left click the ghost"
-			steps[| 3]="click yes"
-			steps[| 4]="..."
-			steps[| 5]="oh no she rejected the ghost, now we have a haunting problem, left click the witch"
-			steps[|6]="lets see if we can talk to the witch to make this better, click Ask, then ghost then our memory of ghost liking witch"
+		steps[| 1]="it is now the eat event wait for the guests to sit and begin eating"
+		steps[| 2]="the ghost has a request for you, left click the ghost"
+		steps[| 3]="click yes"
+		steps[| 4]="..."
+		steps[| 5]="oh no she rejected the ghost, now we have a haunting problem, left click the witch"
+		steps[|6]="lets see if we can talk to the witch to make this better, click Ask, then ghost then our memory of ghost liking witch"
 			
 			
 		Tutorial_Map[? tutorial.use_alien_ability]="TODO: Calm down Ghost"	
 		Tutorial_Sub_Map[? tutorial.use_alien_ability]=ds_list_create();		
 		steps=Tutorial_Sub_Map[? tutorial.use_alien_ability];
 			steps[| 1]="we will have to find another way to calm down the ghost, click on the X to exit the talk screen"
-			steps[| 2]="a new guest has arrived, its an alien, book them in by taking up their bag"
+			steps[| 2]="a new guest has arrived downstairs, its an alien, book them in by taking up their bag"
 			steps[| 3]="the alien has an ability that can calm down guests. Left click the alien"
 			steps[| 4]="click Actions button then click calm guests"
 			steps[| 5]="..."
 			steps[| 6]="now that the ghost has been calmed down, left click the alien again"
 			steps[| 7]="click Ask then witch then our memory of the slips to ask about them"
-			steps[| 8]="you can do more than just ask about memories you can also share them. For now just lick on the X."
-			steps[| 8]="a day has ended, meaning your guests have now paid you in materials, click on the X"
+			steps[| 8]="you can do more than just ask about memories you can also share them. For now just click on the X."
+			steps[| 9]="a day has ended, meaning your guests have now paid you in materials, click on the X"
 		Tutorial_Map[? tutorial.craft_merchandise]="TODO: Craft Merchandise"	
 		Tutorial_Sub_Map[? tutorial.craft_merchandise]=ds_list_create();
 		

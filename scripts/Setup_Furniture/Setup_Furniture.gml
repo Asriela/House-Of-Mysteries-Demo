@@ -470,6 +470,16 @@ style1=style.arcane
 	size_x=2
 	size_y=2
 	Set_Furniture_Item(item,name,desc,class,price,race,style1,style1_level,style2,style2_level,points,start_x,start_y,size_x,size_y,is_merch)
+			item="Magic_Circle"
+	desc="magic circle "
+	class=obj_class.floor_decor
+	price=10
+	points=0
+	start_x=3
+	start_y=2
+	size_x=7
+	size_y=5
+	Set_Furniture_Item(item,name,desc,class,price,race,style1,style1_level,style2,style2_level,points,start_x,start_y,size_x,size_y,is_merch)
 	
 		item="Ghost_Light"
 	desc="ghost light"

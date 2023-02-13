@@ -44,16 +44,23 @@ var avoid=mWall_0
 		case 2:  avoid=mWall_2 break;
 		case 3:  avoid=mWall_3 break;
 	}
+	var avoid2=mAvoid_0
+	switch(floor_i_am_on)
+	{
+		case 1:  avoid2=mAvoid_1 break;
+		case 2:  avoid2=mAvoid_2 break;
+		case 3:  avoid2=mAvoid_3 break;
+	}
 	
-	if (place_meeting(x + hspd, y, avoid)) {
-    while (!place_meeting(x + sign(hspd), y, avoid))
+	if (place_meeting(x + hspd, y, avoid)||  place_meeting(x + hspd, y, avoid2)){
+    while (!place_meeting(x + sign(hspd), y, avoid) && !place_meeting(x + sign(hspd), y, avoid2) )
         x += sign(hspd);
     hspd = 0;
 }
 x += hspd;
 
-if (place_meeting(x, y + vspd, avoid)) {
-    while (!place_meeting(x, y + sign(vspd), avoid))
+if (place_meeting(x, y + vspd, avoid)||  place_meeting(x , y+vspd, avoid2)){
+    while (!place_meeting(x, y + sign(vspd), avoid)&& !place_meeting(x , y+sign(vspd), avoid2) )
         y += sign(vspd);
     vspd = 0;
 }

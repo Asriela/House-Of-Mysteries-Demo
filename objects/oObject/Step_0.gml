@@ -104,6 +104,12 @@ if floor_i_am_on=2
 	//sm(floor_i_am_on)
 //	sm(Rooms_Grid[| floor_i_am_on])
 }
+
+if floor_i_am_on=undefined || is_undefined(Rooms_Grid[| floor_i_am_on]){
+instance_destroy()
+exit;
+}
+else
 my_room=Rooms_Grid[| floor_i_am_on][# grid_x,grid_y]
 
 ds_list_add(Furn_List_X,grid_x)

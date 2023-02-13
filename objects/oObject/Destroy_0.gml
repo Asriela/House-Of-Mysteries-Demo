@@ -5,5 +5,5 @@ instance_destroy(interactable)
 
 if !is_undefined(my_mask) && my_mask!=noone 
 instance_destroy(my_mask)
-
+if my_room!=noone
 Remove_Object_From_Room(id,my_room,object_class)

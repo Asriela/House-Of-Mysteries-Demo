@@ -325,6 +325,7 @@
     {"id":{"name":"sMess_Ectoplasm","path":"sprites/sMess_Ectoplasm/sMess_Ectoplasm.yy",},"order":0,},
     {"id":{"name":"tle_wall","path":"tilesets/tle_wall/tle_wall.yy",},"order":3,},
     {"id":{"name":"sObj_GiftShop_Decor_No_Refunds","path":"sprites/sObj_GiftShop_Decor_No_Refunds/sObj_GiftShop_Decor_No_Refunds.yy",},"order":4,},
+    {"id":{"name":"sObj_Bed_Ghost_1248294","path":"sprites/sObj_Bed_Ghost_1248294/sObj_Bed_Ghost_1248294.yy",},"order":22,},
     {"id":{"name":"sDish_Forest_Floor_Salad","path":"sprites/sDish_Forest_Floor_Salad/sDish_Forest_Floor_Salad.yy",},"order":4,},
     {"id":{"name":"sObj_Dining_Chair_0","path":"sprites/sObj_Dining_Chair_0/sObj_Dining_Chair_0.yy",},"order":1,},
     {"id":{"name":"sGUI_Finnished_Shopping","path":"sprites/sGUI_Finnished_Shopping/sGUI_Finnished_Shopping.yy",},"order":11,},

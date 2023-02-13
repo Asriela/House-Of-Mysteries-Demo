@@ -12,7 +12,7 @@ Visualize[? vis.path]=0
 Visualize[? vis.grid]=0
 Visualize[? vis.room_grid]=0
 Visualize[? vis.grid_numbers]=0
-Visualize[? vis.console]=1
+Visualize[? vis.console]=0
 Visualize[? vis.states]=0
 Visualize[? vis.needs]=0
 Visualize[? vis.doorways]=0
@@ -25,22 +25,22 @@ Visualize[?vis.food_left]=0
 
 Console_Mode=con.guest_memories
 
-Dev_Help[? dev_help.auto_book_in]=1
+Dev_Help[? dev_help.auto_book_in]=0
 Dev_Help[? dev_help.immediate_quest]=0
-Dev_Help[? dev_help.auto_dish_up]="Gross_goop"
+Dev_Help[? dev_help.auto_dish_up]=0//"Gross_goop"
 Dev_Help[? dev_help.access_object_room_data]=0
 Dev_Help[? dev_help.auto_accept_guests]=1
 Dev_Help[? dev_help.trigger_emotions]=1
 Dev_Help[? dev_help.unlock_all_furniture]=0
-Dev_Help[? dev_help.fast_player]=3
-Dev_Help[? dev_help.guest_speed]=2
-Dev_Help[? dev_help.spawn_guests_at]=tutorial.talk_to_guest
-Dev_Help[? dev_help.access_guest_memories]=1
-Dev_Help[? dev_help.player_starting_floor]=2
+Dev_Help[? dev_help.fast_player]=0
+Dev_Help[? dev_help.guest_speed]=1
+Dev_Help[? dev_help.spawn_guests_at]=noone
+Dev_Help[? dev_help.access_guest_memories]=0
+Dev_Help[? dev_help.player_starting_floor]=1
 
 Edit_Mode=edit.none //edit.trade
 Can_Save=1
-Chosen_Tutorial=tutorial.talk_to_guest
+Chosen_Tutorial=tutorial.add_beds
 //Chosen_Tutorial=tu.social 
 World_Speed=1
 Cash=900
@@ -146,7 +146,10 @@ Furniture_Count_Map[? "Table_Gnome_1"]=10
 Furniture_Count_Map[? "Chair_Gnome_1"]=10
 Furniture_Count_Map[? "Merch_Ectoplasm_Salve"]=0
 Furniture_Count_Map[? "Merch_Gnome"]=0
-
+Furniture_Count_Map[? "Alien_Bed"]=1
+Furniture_Count_Map[? "Alien_Lamp_Aqua"]=1
+Furniture_Count_Map[? "Monster_Pink_Lamp"]=1
+Furniture_Count_Map[? "Magic_Circle"]=1
 //??LOCKED ITEMS
 if Dev_Help[? dev_help.unlock_all_furniture]=1
 {
@@ -185,9 +188,7 @@ Furniture_Count_Map[? "Fireplace"]=1
 Furniture_Count_Map[? "Rug_0"]=1
 //Furniture_Count_Map[? "Bed_0"]=1
 
-Furniture_Count_Map[? "Alien_Bed"]=1
-Furniture_Count_Map[? "Alien_Lamp_Aqua"]=1
-Furniture_Count_Map[? "Monster_Pink_Lamp"]=1
+
 
 
 }

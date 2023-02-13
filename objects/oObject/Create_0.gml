@@ -32,3 +32,4 @@ alarm[1]=4
 object_group="Bed"
 alarm[2]=4
 animation_type=ani_type.random
+my_room=noone
