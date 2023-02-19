@@ -1,7 +1,4 @@
 {
-  "resourceType": "GMFont",
-  "resourceVersion": "1.0",
-  "name": "fnt_lucida",
   "hinting": 0,
   "glyphOperations": 0,
   "interpreter": 0,
@@ -24,7 +21,6 @@
     "path": "texturegroups/Default",
   },
   "ascenderOffset": 0,
-  "ascender": 0,
   "glyphs": {
     "32": {"x":2,"y":2,"w":11,"h":16,"character":32,"shift":11,"offset":0,},
     "33": {"x":196,"y":55,"w":2,"h":14,"character":33,"shift":10,"offset":4,},
@@ -134,4 +130,8 @@
     "name": "FONTS",
     "path": "folders/FONTS.yy",
   },
+  "resourceVersion": "1.0",
+  "name": "fnt_lucida",
+  "tags": [],
+  "resourceType": "GMFont",
 }

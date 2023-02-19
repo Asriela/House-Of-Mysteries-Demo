@@ -1,7 +1,4 @@
 {
-  "resourceType": "GMSprite",
-  "resourceVersion": "1.0",
-  "name": "sObj_Ghost_Bedside_Table",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -17,7 +14,6 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "DynamicTexturePage": false,
   "width": 64,
   "height": 64,
   "textureGroupId": {
@@ -28,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"695008d5-3cbd-4767-9698-fd6e776047a2",},
+    {"compositeImage":{"FrameId":{"name":"695008d5-3cbd-4767-9698-fd6e776047a2","path":"sprites/sObj_Ghost_Bedside_Table/sObj_Ghost_Bedside_Table.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"695008d5-3cbd-4767-9698-fd6e776047a2","path":"sprites/sObj_Ghost_Bedside_Table/sObj_Ghost_Bedside_Table.yy",},"LayerId":{"name":"22394dc2-d606-4ba3-b4a8-8d3127412232","path":"sprites/sObj_Ghost_Bedside_Table/sObj_Ghost_Bedside_Table.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sObj_Ghost_Bedside_Table","path":"sprites/sObj_Ghost_Bedside_Table/sObj_Ghost_Bedside_Table.yy",},"resourceVersion":"1.0","name":"695008d5-3cbd-4767-9698-fd6e776047a2","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "resourceType": "GMSequence",
-    "resourceVersion": "1.4",
-    "name": "sObj_Ghost_Bedside_Table",
+    "spriteId": {"name":"sObj_Ghost_Bedside_Table","path":"sprites/sObj_Ghost_Bedside_Table/sObj_Ghost_Bedside_Table.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -44,9 +40,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"9533efe1-e2fd-43b2-8ec4-b87c562101e0","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"695008d5-3cbd-4767-9698-fd6e776047a2","path":"sprites/sObj_Ghost_Bedside_Table/sObj_Ghost_Bedside_Table.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -62,13 +58,22 @@
     "yorigin": 34,
     "eventToFunction": {},
     "eventStubScript": null,
+    "parent": {"name":"sObj_Ghost_Bedside_Table","path":"sprites/sObj_Ghost_Bedside_Table/sObj_Ghost_Bedside_Table.yy",},
+    "resourceVersion": "1.3",
+    "name": "sObj_Ghost_Bedside_Table",
+    "tags": [],
+    "resourceType": "GMSequence",
   },
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"22394dc2-d606-4ba3-b4a8-8d3127412232","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"22394dc2-d606-4ba3-b4a8-8d3127412232","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "start",
     "path": "folders/SPRITES/OBJECT/ROOMS/start.yy",
   },
+  "resourceVersion": "1.0",
+  "name": "sObj_Ghost_Bedside_Table",
+  "tags": [],
+  "resourceType": "GMSprite",
 }

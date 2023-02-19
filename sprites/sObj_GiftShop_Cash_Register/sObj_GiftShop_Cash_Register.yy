@@ -1,7 +1,4 @@
 {
-  "resourceType": "GMSprite",
-  "resourceVersion": "1.0",
-  "name": "sObj_GiftShop_Cash_Register",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -17,7 +14,6 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "DynamicTexturePage": false,
   "width": 15,
   "height": 23,
   "textureGroupId": {
@@ -28,13 +24,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"dde9927c-824d-478e-8e14-be05661eda2c",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"78644a81-d03c-4b03-968a-98f2e6c5df83",},
+    {"compositeImage":{"FrameId":{"name":"dde9927c-824d-478e-8e14-be05661eda2c","path":"sprites/sObj_GiftShop_Cash_Register/sObj_GiftShop_Cash_Register.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"dde9927c-824d-478e-8e14-be05661eda2c","path":"sprites/sObj_GiftShop_Cash_Register/sObj_GiftShop_Cash_Register.yy",},"LayerId":{"name":"4bc26f84-3946-432a-b9c2-f22b5ad4d3df","path":"sprites/sObj_GiftShop_Cash_Register/sObj_GiftShop_Cash_Register.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sObj_GiftShop_Cash_Register","path":"sprites/sObj_GiftShop_Cash_Register/sObj_GiftShop_Cash_Register.yy",},"resourceVersion":"1.0","name":"dde9927c-824d-478e-8e14-be05661eda2c","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"78644a81-d03c-4b03-968a-98f2e6c5df83","path":"sprites/sObj_GiftShop_Cash_Register/sObj_GiftShop_Cash_Register.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"78644a81-d03c-4b03-968a-98f2e6c5df83","path":"sprites/sObj_GiftShop_Cash_Register/sObj_GiftShop_Cash_Register.yy",},"LayerId":{"name":"4bc26f84-3946-432a-b9c2-f22b5ad4d3df","path":"sprites/sObj_GiftShop_Cash_Register/sObj_GiftShop_Cash_Register.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sObj_GiftShop_Cash_Register","path":"sprites/sObj_GiftShop_Cash_Register/sObj_GiftShop_Cash_Register.yy",},"resourceVersion":"1.0","name":"78644a81-d03c-4b03-968a-98f2e6c5df83","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "resourceType": "GMSequence",
-    "resourceVersion": "1.4",
-    "name": "sObj_GiftShop_Cash_Register",
+    "spriteId": {"name":"sObj_GiftShop_Cash_Register","path":"sprites/sObj_GiftShop_Cash_Register/sObj_GiftShop_Cash_Register.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -45,10 +43,10 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"b87b467f-932a-4a2d-a7d6-924ef6fe161e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"dde9927c-824d-478e-8e14-be05661eda2c","path":"sprites/sObj_GiftShop_Cash_Register/sObj_GiftShop_Cash_Register.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"ce2978df-3c45-4eb4-92f3-2380d1137b64","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"78644a81-d03c-4b03-968a-98f2e6c5df83","path":"sprites/sObj_GiftShop_Cash_Register/sObj_GiftShop_Cash_Register.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -64,13 +62,22 @@
     "yorigin": 12,
     "eventToFunction": {},
     "eventStubScript": null,
+    "parent": {"name":"sObj_GiftShop_Cash_Register","path":"sprites/sObj_GiftShop_Cash_Register/sObj_GiftShop_Cash_Register.yy",},
+    "resourceVersion": "1.3",
+    "name": "sObj_GiftShop_Cash_Register",
+    "tags": [],
+    "resourceType": "GMSequence",
   },
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"4bc26f84-3946-432a-b9c2-f22b5ad4d3df","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"4bc26f84-3946-432a-b9c2-f22b5ad4d3df","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "GIFT SHOP",
     "path": "folders/SPRITES/OBJECT/GIFT SHOP.yy",
   },
+  "resourceVersion": "1.0",
+  "name": "sObj_GiftShop_Cash_Register",
+  "tags": [],
+  "resourceType": "GMSprite",
 }

@@ -1,7 +1,4 @@
 {
-  "resourceType": "GMSprite",
-  "resourceVersion": "1.0",
-  "name": "sChar_Rabbit_Jack_Sleep",
   "bboxMode": 2,
   "collisionKind": 1,
   "type": 0,
@@ -17,7 +14,6 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "DynamicTexturePage": false,
   "width": 17,
   "height": 13,
   "textureGroupId": {
@@ -28,17 +24,27 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"054c7817-9617-4c23-ba0a-9d893b172ce7",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"27e58160-7c45-4326-b1ab-1914c3f4aa1d",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4b08b85a-d0dc-4545-8a76-c30d6948ce92",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4602bece-fc3b-417b-8a6b-153c102efda5",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"117adbd2-6a86-4be4-ab25-5cba8a7130f2",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a8974885-5c77-4d66-989c-89b3293057f8",},
+    {"compositeImage":{"FrameId":{"name":"054c7817-9617-4c23-ba0a-9d893b172ce7","path":"sprites/sChar_Rabbit_Jack_Sleep/sChar_Rabbit_Jack_Sleep.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"054c7817-9617-4c23-ba0a-9d893b172ce7","path":"sprites/sChar_Rabbit_Jack_Sleep/sChar_Rabbit_Jack_Sleep.yy",},"LayerId":{"name":"d4a16336-3ea5-4372-9754-174621428aeb","path":"sprites/sChar_Rabbit_Jack_Sleep/sChar_Rabbit_Jack_Sleep.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sChar_Rabbit_Jack_Sleep","path":"sprites/sChar_Rabbit_Jack_Sleep/sChar_Rabbit_Jack_Sleep.yy",},"resourceVersion":"1.0","name":"054c7817-9617-4c23-ba0a-9d893b172ce7","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"27e58160-7c45-4326-b1ab-1914c3f4aa1d","path":"sprites/sChar_Rabbit_Jack_Sleep/sChar_Rabbit_Jack_Sleep.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"27e58160-7c45-4326-b1ab-1914c3f4aa1d","path":"sprites/sChar_Rabbit_Jack_Sleep/sChar_Rabbit_Jack_Sleep.yy",},"LayerId":{"name":"d4a16336-3ea5-4372-9754-174621428aeb","path":"sprites/sChar_Rabbit_Jack_Sleep/sChar_Rabbit_Jack_Sleep.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sChar_Rabbit_Jack_Sleep","path":"sprites/sChar_Rabbit_Jack_Sleep/sChar_Rabbit_Jack_Sleep.yy",},"resourceVersion":"1.0","name":"27e58160-7c45-4326-b1ab-1914c3f4aa1d","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"4b08b85a-d0dc-4545-8a76-c30d6948ce92","path":"sprites/sChar_Rabbit_Jack_Sleep/sChar_Rabbit_Jack_Sleep.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"4b08b85a-d0dc-4545-8a76-c30d6948ce92","path":"sprites/sChar_Rabbit_Jack_Sleep/sChar_Rabbit_Jack_Sleep.yy",},"LayerId":{"name":"d4a16336-3ea5-4372-9754-174621428aeb","path":"sprites/sChar_Rabbit_Jack_Sleep/sChar_Rabbit_Jack_Sleep.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sChar_Rabbit_Jack_Sleep","path":"sprites/sChar_Rabbit_Jack_Sleep/sChar_Rabbit_Jack_Sleep.yy",},"resourceVersion":"1.0","name":"4b08b85a-d0dc-4545-8a76-c30d6948ce92","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"4602bece-fc3b-417b-8a6b-153c102efda5","path":"sprites/sChar_Rabbit_Jack_Sleep/sChar_Rabbit_Jack_Sleep.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"4602bece-fc3b-417b-8a6b-153c102efda5","path":"sprites/sChar_Rabbit_Jack_Sleep/sChar_Rabbit_Jack_Sleep.yy",},"LayerId":{"name":"d4a16336-3ea5-4372-9754-174621428aeb","path":"sprites/sChar_Rabbit_Jack_Sleep/sChar_Rabbit_Jack_Sleep.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sChar_Rabbit_Jack_Sleep","path":"sprites/sChar_Rabbit_Jack_Sleep/sChar_Rabbit_Jack_Sleep.yy",},"resourceVersion":"1.0","name":"4602bece-fc3b-417b-8a6b-153c102efda5","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"117adbd2-6a86-4be4-ab25-5cba8a7130f2","path":"sprites/sChar_Rabbit_Jack_Sleep/sChar_Rabbit_Jack_Sleep.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"117adbd2-6a86-4be4-ab25-5cba8a7130f2","path":"sprites/sChar_Rabbit_Jack_Sleep/sChar_Rabbit_Jack_Sleep.yy",},"LayerId":{"name":"d4a16336-3ea5-4372-9754-174621428aeb","path":"sprites/sChar_Rabbit_Jack_Sleep/sChar_Rabbit_Jack_Sleep.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sChar_Rabbit_Jack_Sleep","path":"sprites/sChar_Rabbit_Jack_Sleep/sChar_Rabbit_Jack_Sleep.yy",},"resourceVersion":"1.0","name":"117adbd2-6a86-4be4-ab25-5cba8a7130f2","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"a8974885-5c77-4d66-989c-89b3293057f8","path":"sprites/sChar_Rabbit_Jack_Sleep/sChar_Rabbit_Jack_Sleep.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"a8974885-5c77-4d66-989c-89b3293057f8","path":"sprites/sChar_Rabbit_Jack_Sleep/sChar_Rabbit_Jack_Sleep.yy",},"LayerId":{"name":"d4a16336-3ea5-4372-9754-174621428aeb","path":"sprites/sChar_Rabbit_Jack_Sleep/sChar_Rabbit_Jack_Sleep.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sChar_Rabbit_Jack_Sleep","path":"sprites/sChar_Rabbit_Jack_Sleep/sChar_Rabbit_Jack_Sleep.yy",},"resourceVersion":"1.0","name":"a8974885-5c77-4d66-989c-89b3293057f8","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "resourceType": "GMSequence",
-    "resourceVersion": "1.4",
-    "name": "sChar_Rabbit_Jack_Sleep",
+    "spriteId": {"name":"sChar_Rabbit_Jack_Sleep","path":"sprites/sChar_Rabbit_Jack_Sleep/sChar_Rabbit_Jack_Sleep.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -49,14 +55,14 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"120b06c2-e5b1-430d-b0c1-7720f928d8c4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"054c7817-9617-4c23-ba0a-9d893b172ce7","path":"sprites/sChar_Rabbit_Jack_Sleep/sChar_Rabbit_Jack_Sleep.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"db94ded7-1033-4428-977a-92fdb1595dae","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"27e58160-7c45-4326-b1ab-1914c3f4aa1d","path":"sprites/sChar_Rabbit_Jack_Sleep/sChar_Rabbit_Jack_Sleep.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"c93c08d1-f9df-4b84-b42b-4da50ff5d797","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4b08b85a-d0dc-4545-8a76-c30d6948ce92","path":"sprites/sChar_Rabbit_Jack_Sleep/sChar_Rabbit_Jack_Sleep.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"cefd3fcd-8ad9-4903-bbd9-8c75fdf5d661","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4602bece-fc3b-417b-8a6b-153c102efda5","path":"sprites/sChar_Rabbit_Jack_Sleep/sChar_Rabbit_Jack_Sleep.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"2cf0607f-6ce3-45ae-96ba-4d6d3cdc0259","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"117adbd2-6a86-4be4-ab25-5cba8a7130f2","path":"sprites/sChar_Rabbit_Jack_Sleep/sChar_Rabbit_Jack_Sleep.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"98f84f99-c5ec-46ac-be15-0e40312659ce","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a8974885-5c77-4d66-989c-89b3293057f8","path":"sprites/sChar_Rabbit_Jack_Sleep/sChar_Rabbit_Jack_Sleep.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -72,13 +78,22 @@
     "yorigin": 11,
     "eventToFunction": {},
     "eventStubScript": null,
+    "parent": {"name":"sChar_Rabbit_Jack_Sleep","path":"sprites/sChar_Rabbit_Jack_Sleep/sChar_Rabbit_Jack_Sleep.yy",},
+    "resourceVersion": "1.3",
+    "name": "sChar_Rabbit_Jack_Sleep",
+    "tags": [],
+    "resourceType": "GMSequence",
   },
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"d4a16336-3ea5-4372-9754-174621428aeb","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d4a16336-3ea5-4372-9754-174621428aeb","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "old",
     "path": "folders/SPRITES/CHARACTER/GUESTS/BODIES/old.yy",
   },
+  "resourceVersion": "1.0",
+  "name": "sChar_Rabbit_Jack_Sleep",
+  "tags": [],
+  "resourceType": "GMSprite",
 }

@@ -625,6 +625,20 @@ else//WE HAVE AN OBJECT TYPE
 			if !is_undefined(plate) && exists(plate){
 	plate.food-=0.1
 	
+	if audio_is_playing(sEat_1)=0 && audio_is_playing(sEat_2)=0 && audio_is_playing(sEat_3)=0 && audio_is_playing(sEat_4)=0 && audio_is_playing(sEat_5)=0
+	{
+		if last_x!=0 && last_y!=0
+		{
+		if sound_wait=0
+	audio_play_sound(choose(sEat_1, sEat_2, sEat_3, sEat_4, sEat_5), 0.5, false)
+		if sound_wait>=0
+		sound_wait-=1
+		else
+		sound_wait=70
+		}
+	}
+
+	
 	if plate.food<0
 	{
 		Satisfy_Need(need.eat)

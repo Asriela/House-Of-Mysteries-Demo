@@ -1,7 +1,4 @@
 {
-  "resourceType": "GMFont",
-  "resourceVersion": "1.0",
-  "name": "default_font",
   "hinting": 0,
   "glyphOperations": 0,
   "interpreter": 0,
@@ -24,7 +21,6 @@
     "path": "texturegroups/Default",
   },
   "ascenderOffset": 0,
-  "ascender": 0,
   "glyphs": {
     "32": {"x":2,"y":2,"w":9,"h":19,"character":32,"shift":9,"offset":0,},
     "33": {"x":149,"y":44,"w":3,"h":19,"character":33,"shift":9,"offset":3,},
@@ -135,4 +131,8 @@
     "name": "Extensions",
     "path": "folders/NOTES/Extensions.yy",
   },
+  "resourceVersion": "1.0",
+  "name": "default_font",
+  "tags": [],
+  "resourceType": "GMFont",
 }

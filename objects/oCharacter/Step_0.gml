@@ -1,11 +1,14 @@
 /// @description Insert description here
 // You can write your code in this editor
+if is_player=1
+	audio_listener_position(x, y, 0)
+	
 Get_Gui_X_Y()
 if is_player && Chosen_Tutorial=tu.social{
 	tu_count++
 		
 	if tu_count>700{
-
+	
 World_Minutes=61
 World_Hour=20
 	}
@@ -25,6 +28,7 @@ show_tip="press space to ring up customer"
 if keyboard_check_pressed(vk_space)
 {
 	Tutorial_Sub_Step++
+	audio_play_sound(sCashRegister, 1, false)
 	var object=Get_Variable_From(near_tourist,"item_to_buy")
 	var price=Furniture_Map[? object][? furn.price]
 	Cash+=price
@@ -46,6 +50,7 @@ selected=0
 	}
 if is_player=0 && selected && Edit_Mode!=edit.food_prep && Edit_Mode!=edit.trade
 && Edit_Mode!=edit.recipies && Edit_Mode!=edit.speak
+
 {
 
 		if mouse_check_button_released(mb_left) && Edit_Mode=edit.none{
@@ -188,7 +193,7 @@ if instance_number(oInteractable)>0
 	else{
 		if nearest_interaction.owner.object_class=obj_class.food_prep
 				show_tip="Press space to prepare food"
-				
+
 					if nearest_interaction.owner.object_class=obj_class.work_bench
 				show_tip="Press space to craft merch"
 				
@@ -270,6 +275,9 @@ else
 		Perform_Runs(id)
 		if start_thinking
 		Run_State(id)
+		
+		Behaviour_Sounds()
+		Character_Ambient_Sounds()
 	
 		Perform_Quest()
 		Run_Emotions()
@@ -278,3 +286,4 @@ else
 	
 		
 }
+

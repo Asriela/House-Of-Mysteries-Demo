@@ -1,7 +1,4 @@
 {
-  "resourceType": "GMSprite",
-  "resourceVersion": "1.0",
-  "name": "sChar_Tourist_Adult_Man_Idle",
   "bboxMode": 2,
   "collisionKind": 1,
   "type": 0,
@@ -17,7 +14,6 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "DynamicTexturePage": false,
   "width": 29,
   "height": 60,
   "textureGroupId": {
@@ -28,13 +24,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1164ba00-bec7-48b7-b994-e2a9236a50b9",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6f045fcf-f376-4811-80c1-8221c597d32e",},
+    {"compositeImage":{"FrameId":{"name":"1164ba00-bec7-48b7-b994-e2a9236a50b9","path":"sprites/sChar_Tourist_Adult_Man_Idle/sChar_Tourist_Adult_Man_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"1164ba00-bec7-48b7-b994-e2a9236a50b9","path":"sprites/sChar_Tourist_Adult_Man_Idle/sChar_Tourist_Adult_Man_Idle.yy",},"LayerId":{"name":"d4a16336-3ea5-4372-9754-174621428aeb","path":"sprites/sChar_Tourist_Adult_Man_Idle/sChar_Tourist_Adult_Man_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sChar_Tourist_Adult_Man_Idle","path":"sprites/sChar_Tourist_Adult_Man_Idle/sChar_Tourist_Adult_Man_Idle.yy",},"resourceVersion":"1.0","name":"1164ba00-bec7-48b7-b994-e2a9236a50b9","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"6f045fcf-f376-4811-80c1-8221c597d32e","path":"sprites/sChar_Tourist_Adult_Man_Idle/sChar_Tourist_Adult_Man_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"6f045fcf-f376-4811-80c1-8221c597d32e","path":"sprites/sChar_Tourist_Adult_Man_Idle/sChar_Tourist_Adult_Man_Idle.yy",},"LayerId":{"name":"d4a16336-3ea5-4372-9754-174621428aeb","path":"sprites/sChar_Tourist_Adult_Man_Idle/sChar_Tourist_Adult_Man_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sChar_Tourist_Adult_Man_Idle","path":"sprites/sChar_Tourist_Adult_Man_Idle/sChar_Tourist_Adult_Man_Idle.yy",},"resourceVersion":"1.0","name":"6f045fcf-f376-4811-80c1-8221c597d32e","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "resourceType": "GMSequence",
-    "resourceVersion": "1.4",
-    "name": "sChar_Tourist_Adult_Man_Idle",
+    "spriteId": {"name":"sChar_Tourist_Adult_Man_Idle","path":"sprites/sChar_Tourist_Adult_Man_Idle/sChar_Tourist_Adult_Man_Idle.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -45,10 +43,10 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"c896ea1a-199e-425b-a2b5-70a90c45401e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1164ba00-bec7-48b7-b994-e2a9236a50b9","path":"sprites/sChar_Tourist_Adult_Man_Idle/sChar_Tourist_Adult_Man_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"041cec40-22b7-4f4f-888c-f604c13bfce0","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6f045fcf-f376-4811-80c1-8221c597d32e","path":"sprites/sChar_Tourist_Adult_Man_Idle/sChar_Tourist_Adult_Man_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -64,13 +62,22 @@
     "yorigin": 56,
     "eventToFunction": {},
     "eventStubScript": null,
+    "parent": {"name":"sChar_Tourist_Adult_Man_Idle","path":"sprites/sChar_Tourist_Adult_Man_Idle/sChar_Tourist_Adult_Man_Idle.yy",},
+    "resourceVersion": "1.3",
+    "name": "sChar_Tourist_Adult_Man_Idle",
+    "tags": [],
+    "resourceType": "GMSequence",
   },
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"d4a16336-3ea5-4372-9754-174621428aeb","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d4a16336-3ea5-4372-9754-174621428aeb","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "TOURISTS",
     "path": "folders/SPRITES/CHARACTER/TOURISTS.yy",
   },
+  "resourceVersion": "1.0",
+  "name": "sChar_Tourist_Adult_Man_Idle",
+  "tags": [],
+  "resourceType": "GMSprite",
 }

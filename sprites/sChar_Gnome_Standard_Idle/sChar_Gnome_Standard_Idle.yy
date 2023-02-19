@@ -1,7 +1,4 @@
 {
-  "resourceType": "GMSprite",
-  "resourceVersion": "1.0",
-  "name": "sChar_Gnome_Standard_Idle",
   "bboxMode": 2,
   "collisionKind": 1,
   "type": 0,
@@ -17,7 +14,6 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "DynamicTexturePage": false,
   "width": 17,
   "height": 38,
   "textureGroupId": {
@@ -28,24 +24,48 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ea1cd149-387e-4741-9fd1-5531daa12147",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e91b3250-07f6-4072-88a1-b4fb24304980",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f26d475c-4757-4974-833f-95e1afc1196a",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"edfa3e29-1f13-4fed-85eb-12535e5ea7c3",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"de7b8451-8680-482f-ac82-fe940d5e0fc2",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8567e899-7819-4737-98de-87c763be4d2d",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"49d865f7-474a-4108-adfd-f4108ad0829b",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"63129495-6718-4005-9777-a0b18b66f8c4",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"984b9998-631c-4b75-b2b3-c024117f7ca4",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d1718b6b-f584-46ca-ab4a-951086979b05",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4f842a8e-560a-42f3-a917-4446c7210fbd",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"901423df-c1c5-4940-8245-d1720f25680a",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5bfb7033-16d0-4207-830f-f717abc3105e",},
+    {"compositeImage":{"FrameId":{"name":"ea1cd149-387e-4741-9fd1-5531daa12147","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"ea1cd149-387e-4741-9fd1-5531daa12147","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"LayerId":{"name":"d4a16336-3ea5-4372-9754-174621428aeb","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sChar_Gnome_Standard_Idle","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"resourceVersion":"1.0","name":"ea1cd149-387e-4741-9fd1-5531daa12147","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"e91b3250-07f6-4072-88a1-b4fb24304980","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"e91b3250-07f6-4072-88a1-b4fb24304980","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"LayerId":{"name":"d4a16336-3ea5-4372-9754-174621428aeb","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sChar_Gnome_Standard_Idle","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"resourceVersion":"1.0","name":"e91b3250-07f6-4072-88a1-b4fb24304980","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"f26d475c-4757-4974-833f-95e1afc1196a","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"f26d475c-4757-4974-833f-95e1afc1196a","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"LayerId":{"name":"d4a16336-3ea5-4372-9754-174621428aeb","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sChar_Gnome_Standard_Idle","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"resourceVersion":"1.0","name":"f26d475c-4757-4974-833f-95e1afc1196a","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"edfa3e29-1f13-4fed-85eb-12535e5ea7c3","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"edfa3e29-1f13-4fed-85eb-12535e5ea7c3","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"LayerId":{"name":"d4a16336-3ea5-4372-9754-174621428aeb","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sChar_Gnome_Standard_Idle","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"resourceVersion":"1.0","name":"edfa3e29-1f13-4fed-85eb-12535e5ea7c3","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"de7b8451-8680-482f-ac82-fe940d5e0fc2","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"de7b8451-8680-482f-ac82-fe940d5e0fc2","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"LayerId":{"name":"d4a16336-3ea5-4372-9754-174621428aeb","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sChar_Gnome_Standard_Idle","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"resourceVersion":"1.0","name":"de7b8451-8680-482f-ac82-fe940d5e0fc2","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"8567e899-7819-4737-98de-87c763be4d2d","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"8567e899-7819-4737-98de-87c763be4d2d","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"LayerId":{"name":"d4a16336-3ea5-4372-9754-174621428aeb","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sChar_Gnome_Standard_Idle","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"resourceVersion":"1.0","name":"8567e899-7819-4737-98de-87c763be4d2d","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"49d865f7-474a-4108-adfd-f4108ad0829b","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"49d865f7-474a-4108-adfd-f4108ad0829b","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"LayerId":{"name":"d4a16336-3ea5-4372-9754-174621428aeb","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sChar_Gnome_Standard_Idle","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"resourceVersion":"1.0","name":"49d865f7-474a-4108-adfd-f4108ad0829b","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"63129495-6718-4005-9777-a0b18b66f8c4","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"63129495-6718-4005-9777-a0b18b66f8c4","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"LayerId":{"name":"d4a16336-3ea5-4372-9754-174621428aeb","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sChar_Gnome_Standard_Idle","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"resourceVersion":"1.0","name":"63129495-6718-4005-9777-a0b18b66f8c4","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"984b9998-631c-4b75-b2b3-c024117f7ca4","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"984b9998-631c-4b75-b2b3-c024117f7ca4","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"LayerId":{"name":"d4a16336-3ea5-4372-9754-174621428aeb","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sChar_Gnome_Standard_Idle","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"resourceVersion":"1.0","name":"984b9998-631c-4b75-b2b3-c024117f7ca4","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"d1718b6b-f584-46ca-ab4a-951086979b05","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"d1718b6b-f584-46ca-ab4a-951086979b05","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"LayerId":{"name":"d4a16336-3ea5-4372-9754-174621428aeb","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sChar_Gnome_Standard_Idle","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"resourceVersion":"1.0","name":"d1718b6b-f584-46ca-ab4a-951086979b05","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"4f842a8e-560a-42f3-a917-4446c7210fbd","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"4f842a8e-560a-42f3-a917-4446c7210fbd","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"LayerId":{"name":"d4a16336-3ea5-4372-9754-174621428aeb","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sChar_Gnome_Standard_Idle","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"resourceVersion":"1.0","name":"4f842a8e-560a-42f3-a917-4446c7210fbd","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"901423df-c1c5-4940-8245-d1720f25680a","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"901423df-c1c5-4940-8245-d1720f25680a","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"LayerId":{"name":"d4a16336-3ea5-4372-9754-174621428aeb","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sChar_Gnome_Standard_Idle","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"resourceVersion":"1.0","name":"901423df-c1c5-4940-8245-d1720f25680a","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"5bfb7033-16d0-4207-830f-f717abc3105e","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"5bfb7033-16d0-4207-830f-f717abc3105e","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"LayerId":{"name":"d4a16336-3ea5-4372-9754-174621428aeb","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sChar_Gnome_Standard_Idle","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"resourceVersion":"1.0","name":"5bfb7033-16d0-4207-830f-f717abc3105e","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "resourceType": "GMSequence",
-    "resourceVersion": "1.4",
-    "name": "sChar_Gnome_Standard_Idle",
+    "spriteId": {"name":"sChar_Gnome_Standard_Idle","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -56,7 +76,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"769bfadd-71b9-4342-b127-7465eb79b575","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ea1cd149-387e-4741-9fd1-5531daa12147","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"5673d32a-85cc-4efb-afd6-f85889998f8a","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e91b3250-07f6-4072-88a1-b4fb24304980","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"009b7701-15d7-4b8b-bc55-ee6fcb93f8b4","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f26d475c-4757-4974-833f-95e1afc1196a","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -70,7 +90,7 @@
             {"id":"b62be68b-07ca-432c-87ee-621d5e534970","Key":10.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4f842a8e-560a-42f3-a917-4446c7210fbd","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"2f000d9d-4c4f-4cc9-849d-a87168cc3366","Key":11.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"901423df-c1c5-4940-8245-d1720f25680a","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"fdf7e8be-7ace-4539-b80a-4882d8f84f99","Key":12.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5bfb7033-16d0-4207-830f-f717abc3105e","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -86,13 +106,22 @@
     "yorigin": 35,
     "eventToFunction": {},
     "eventStubScript": null,
+    "parent": {"name":"sChar_Gnome_Standard_Idle","path":"sprites/sChar_Gnome_Standard_Idle/sChar_Gnome_Standard_Idle.yy",},
+    "resourceVersion": "1.3",
+    "name": "sChar_Gnome_Standard_Idle",
+    "tags": [],
+    "resourceType": "GMSequence",
   },
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"d4a16336-3ea5-4372-9754-174621428aeb","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d4a16336-3ea5-4372-9754-174621428aeb","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "gnome",
     "path": "folders/SPRITES/CHARACTER/GUESTS/BODIES/gnome.yy",
   },
+  "resourceVersion": "1.0",
+  "name": "sChar_Gnome_Standard_Idle",
+  "tags": [],
+  "resourceType": "GMSprite",
 }

@@ -50,6 +50,8 @@ if type="Food" && found_object
 	for( var f=0; f<ds_list_size(list);f++)
 	{
 		var check_dish=list[| f];
+		if check_dish
+		if exists(check_dish)
 		if check_dish.held_by_object=1
 		{
 			var styles_map=Dishes_Map[? check_dish.dish_type][? dish.style_map];

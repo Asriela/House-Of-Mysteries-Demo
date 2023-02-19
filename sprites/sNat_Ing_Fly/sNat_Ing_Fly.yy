@@ -1,7 +1,4 @@
 {
-  "resourceType": "GMSprite",
-  "resourceVersion": "1.0",
-  "name": "sNat_Ing_Fly",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -17,7 +14,6 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "DynamicTexturePage": false,
   "width": 11,
   "height": 8,
   "textureGroupId": {
@@ -28,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8934aad4-93df-4969-be7d-6a06f81ad4d6",},
+    {"compositeImage":{"FrameId":{"name":"8934aad4-93df-4969-be7d-6a06f81ad4d6","path":"sprites/sNat_Ing_Fly/sNat_Ing_Fly.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"8934aad4-93df-4969-be7d-6a06f81ad4d6","path":"sprites/sNat_Ing_Fly/sNat_Ing_Fly.yy",},"LayerId":{"name":"ad09505a-bbf8-4111-8ea9-9312cec7e081","path":"sprites/sNat_Ing_Fly/sNat_Ing_Fly.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sNat_Ing_Fly","path":"sprites/sNat_Ing_Fly/sNat_Ing_Fly.yy",},"resourceVersion":"1.0","name":"8934aad4-93df-4969-be7d-6a06f81ad4d6","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "resourceType": "GMSequence",
-    "resourceVersion": "1.4",
-    "name": "sNat_Ing_Fly",
+    "spriteId": {"name":"sNat_Ing_Fly","path":"sprites/sNat_Ing_Fly/sNat_Ing_Fly.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -44,9 +40,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"154dd941-2156-4b98-9620-b7499df9a39d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8934aad4-93df-4969-be7d-6a06f81ad4d6","path":"sprites/sNat_Ing_Fly/sNat_Ing_Fly.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -62,13 +58,22 @@
     "yorigin": 5,
     "eventToFunction": {},
     "eventStubScript": null,
+    "parent": {"name":"sNat_Ing_Fly","path":"sprites/sNat_Ing_Fly/sNat_Ing_Fly.yy",},
+    "resourceVersion": "1.3",
+    "name": "sNat_Ing_Fly",
+    "tags": [],
+    "resourceType": "GMSequence",
   },
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"ad09505a-bbf8-4111-8ea9-9312cec7e081","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"ad09505a-bbf8-4111-8ea9-9312cec7e081","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "NATURE",
     "path": "folders/SPRITES/NATURE.yy",
   },
+  "resourceVersion": "1.0",
+  "name": "sNat_Ing_Fly",
+  "tags": [],
+  "resourceType": "GMSprite",
 }

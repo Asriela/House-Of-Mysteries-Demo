@@ -1,7 +1,4 @@
 {
-  "resourceType": "GMSprite",
-  "resourceVersion": "1.0",
-  "name": "sTile_Wood_Red",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -17,7 +14,6 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "DynamicTexturePage": false,
   "width": 8,
   "height": 8,
   "textureGroupId": {
@@ -28,17 +24,27 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"76cfb611-1956-4094-bcdf-8cce0e628430",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c408b022-26d9-4084-8447-f635c5a1e11c",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b6250a41-c845-449d-87c7-c673e8d35cc6",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"52e33698-687b-488b-99bc-270cd10ac2b1",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f82b7f6e-96f9-461e-8e60-5d99dd60ff96",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8026383b-8dd0-40f0-a416-2225720ef5cb",},
+    {"compositeImage":{"FrameId":{"name":"76cfb611-1956-4094-bcdf-8cce0e628430","path":"sprites/sTile_Wood_Red/sTile_Wood_Red.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"76cfb611-1956-4094-bcdf-8cce0e628430","path":"sprites/sTile_Wood_Red/sTile_Wood_Red.yy",},"LayerId":{"name":"b40280a7-83d7-407a-b8b1-a24c1d1478b9","path":"sprites/sTile_Wood_Red/sTile_Wood_Red.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sTile_Wood_Red","path":"sprites/sTile_Wood_Red/sTile_Wood_Red.yy",},"resourceVersion":"1.0","name":"76cfb611-1956-4094-bcdf-8cce0e628430","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"c408b022-26d9-4084-8447-f635c5a1e11c","path":"sprites/sTile_Wood_Red/sTile_Wood_Red.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"c408b022-26d9-4084-8447-f635c5a1e11c","path":"sprites/sTile_Wood_Red/sTile_Wood_Red.yy",},"LayerId":{"name":"b40280a7-83d7-407a-b8b1-a24c1d1478b9","path":"sprites/sTile_Wood_Red/sTile_Wood_Red.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sTile_Wood_Red","path":"sprites/sTile_Wood_Red/sTile_Wood_Red.yy",},"resourceVersion":"1.0","name":"c408b022-26d9-4084-8447-f635c5a1e11c","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"b6250a41-c845-449d-87c7-c673e8d35cc6","path":"sprites/sTile_Wood_Red/sTile_Wood_Red.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"b6250a41-c845-449d-87c7-c673e8d35cc6","path":"sprites/sTile_Wood_Red/sTile_Wood_Red.yy",},"LayerId":{"name":"b40280a7-83d7-407a-b8b1-a24c1d1478b9","path":"sprites/sTile_Wood_Red/sTile_Wood_Red.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sTile_Wood_Red","path":"sprites/sTile_Wood_Red/sTile_Wood_Red.yy",},"resourceVersion":"1.0","name":"b6250a41-c845-449d-87c7-c673e8d35cc6","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"52e33698-687b-488b-99bc-270cd10ac2b1","path":"sprites/sTile_Wood_Red/sTile_Wood_Red.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"52e33698-687b-488b-99bc-270cd10ac2b1","path":"sprites/sTile_Wood_Red/sTile_Wood_Red.yy",},"LayerId":{"name":"b40280a7-83d7-407a-b8b1-a24c1d1478b9","path":"sprites/sTile_Wood_Red/sTile_Wood_Red.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sTile_Wood_Red","path":"sprites/sTile_Wood_Red/sTile_Wood_Red.yy",},"resourceVersion":"1.0","name":"52e33698-687b-488b-99bc-270cd10ac2b1","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"f82b7f6e-96f9-461e-8e60-5d99dd60ff96","path":"sprites/sTile_Wood_Red/sTile_Wood_Red.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"f82b7f6e-96f9-461e-8e60-5d99dd60ff96","path":"sprites/sTile_Wood_Red/sTile_Wood_Red.yy",},"LayerId":{"name":"b40280a7-83d7-407a-b8b1-a24c1d1478b9","path":"sprites/sTile_Wood_Red/sTile_Wood_Red.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sTile_Wood_Red","path":"sprites/sTile_Wood_Red/sTile_Wood_Red.yy",},"resourceVersion":"1.0","name":"f82b7f6e-96f9-461e-8e60-5d99dd60ff96","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"8026383b-8dd0-40f0-a416-2225720ef5cb","path":"sprites/sTile_Wood_Red/sTile_Wood_Red.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"8026383b-8dd0-40f0-a416-2225720ef5cb","path":"sprites/sTile_Wood_Red/sTile_Wood_Red.yy",},"LayerId":{"name":"b40280a7-83d7-407a-b8b1-a24c1d1478b9","path":"sprites/sTile_Wood_Red/sTile_Wood_Red.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sTile_Wood_Red","path":"sprites/sTile_Wood_Red/sTile_Wood_Red.yy",},"resourceVersion":"1.0","name":"8026383b-8dd0-40f0-a416-2225720ef5cb","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "resourceType": "GMSequence",
-    "resourceVersion": "1.4",
-    "name": "sTile_Wood_Red",
+    "spriteId": {"name":"sTile_Wood_Red","path":"sprites/sTile_Wood_Red/sTile_Wood_Red.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -49,14 +55,14 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"1d112278-b366-4a18-b12e-d02fe34c0ad3","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"76cfb611-1956-4094-bcdf-8cce0e628430","path":"sprites/sTile_Wood_Red/sTile_Wood_Red.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"9d7918ad-3d1a-4fb3-90a7-93052f0b0b75","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c408b022-26d9-4084-8447-f635c5a1e11c","path":"sprites/sTile_Wood_Red/sTile_Wood_Red.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"0b853d21-e0ee-4b3f-a5b3-3fa533436c75","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b6250a41-c845-449d-87c7-c673e8d35cc6","path":"sprites/sTile_Wood_Red/sTile_Wood_Red.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"f75b5d33-6701-4674-8823-e162744e6302","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"52e33698-687b-488b-99bc-270cd10ac2b1","path":"sprites/sTile_Wood_Red/sTile_Wood_Red.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"cef8980f-25bc-465d-b35f-ddf522502c80","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f82b7f6e-96f9-461e-8e60-5d99dd60ff96","path":"sprites/sTile_Wood_Red/sTile_Wood_Red.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"915d7baf-2c93-4157-a8a2-29c397fb670f","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8026383b-8dd0-40f0-a416-2225720ef5cb","path":"sprites/sTile_Wood_Red/sTile_Wood_Red.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -72,13 +78,22 @@
     "yorigin": 4,
     "eventToFunction": {},
     "eventStubScript": null,
+    "parent": {"name":"sTile_Wood_Red","path":"sprites/sTile_Wood_Red/sTile_Wood_Red.yy",},
+    "resourceVersion": "1.3",
+    "name": "sTile_Wood_Red",
+    "tags": [],
+    "resourceType": "GMSequence",
   },
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"b40280a7-83d7-407a-b8b1-a24c1d1478b9","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"b40280a7-83d7-407a-b8b1-a24c1d1478b9","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "TILES",
     "path": "folders/SPRITES/HOUSE/TILES.yy",
   },
+  "resourceVersion": "1.0",
+  "name": "sTile_Wood_Red",
+  "tags": [],
+  "resourceType": "GMSprite",
 }

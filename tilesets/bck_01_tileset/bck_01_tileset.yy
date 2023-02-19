@@ -1,7 +1,4 @@
 {
-  "resourceType": "GMTileSet",
-  "resourceVersion": "1.0",
-  "name": "bck_01_tileset",
   "spriteId": null,
   "tileWidth": 24,
   "tileHeight": 24,
@@ -37,4 +34,8 @@
     "name": "Tile Sets",
     "path": "folders/NOTES/Tile Sets.yy",
   },
+  "resourceVersion": "1.0",
+  "name": "bck_01_tileset",
+  "tags": [],
+  "resourceType": "GMTileSet",
 }

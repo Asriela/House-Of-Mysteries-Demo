@@ -1,3 +1,5 @@
+sound_wait=0
+
 /// @description Insert description here
 // You can write your code in this editor
 last_y=0

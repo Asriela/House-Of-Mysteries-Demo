@@ -1,7 +1,4 @@
 {
-  "resourceType": "GMExtension",
-  "resourceVersion": "1.2",
-  "name": "Simple_Fullscreen_Shaders",
   "optionsFile": "options.json",
   "options": [],
   "exportToGame": true,
@@ -68,4 +65,8 @@
     "name": "Extensions",
     "path": "folders/NOTES/Extensions.yy",
   },
+  "resourceVersion": "1.2",
+  "name": "Simple_Fullscreen_Shaders",
+  "tags": [],
+  "resourceType": "GMExtension",
 }

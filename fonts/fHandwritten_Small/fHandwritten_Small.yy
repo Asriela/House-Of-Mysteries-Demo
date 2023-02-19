@@ -1,7 +1,4 @@
 {
-  "resourceType": "GMFont",
-  "resourceVersion": "1.0",
-  "name": "fHandwritten_Small",
   "hinting": 0,
   "glyphOperations": 0,
   "interpreter": 0,
@@ -24,7 +21,6 @@
     "path": "texturegroups/Default",
   },
   "ascenderOffset": 0,
-  "ascender": 25,
   "glyphs": {
     "32": {"x":2,"y":2,"w":9,"h":35,"character":32,"shift":9,"offset":0,},
     "33": {"x":137,"y":76,"w":7,"h":35,"character":33,"shift":6,"offset":0,},
@@ -680,4 +676,8 @@
     "name": "FONTS",
     "path": "folders/FONTS.yy",
   },
+  "resourceVersion": "1.0",
+  "name": "fHandwritten_Small",
+  "tags": [],
+  "resourceType": "GMFont",
 }

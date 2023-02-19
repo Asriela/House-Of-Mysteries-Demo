@@ -1,7 +1,4 @@
 {
-  "resourceType": "GMFont",
-  "resourceVersion": "1.0",
-  "name": "fHandwritten",
   "hinting": 0,
   "glyphOperations": 0,
   "interpreter": 0,
@@ -24,7 +21,6 @@
     "path": "texturegroups/Default",
   },
   "ascenderOffset": 0,
-  "ascender": 39,
   "glyphs": {
     "32": {"x":2,"y":2,"w":14,"h":54,"character":32,"shift":14,"offset":0,},
     "33": {"x":134,"y":170,"w":11,"h":54,"character":33,"shift":10,"offset":0,},
@@ -1164,4 +1160,8 @@
     "name": "FONTS",
     "path": "folders/FONTS.yy",
   },
+  "resourceVersion": "1.0",
+  "name": "fHandwritten",
+  "tags": [],
+  "resourceType": "GMFont",
 }

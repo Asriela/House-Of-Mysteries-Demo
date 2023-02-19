@@ -1,7 +1,4 @@
 {
-  "resourceType": "GMFont",
-  "resourceVersion": "1.0",
-  "name": "f_tiny",
   "hinting": 0,
   "glyphOperations": 0,
   "interpreter": 0,
@@ -24,7 +21,6 @@
     "path": "texturegroups/Default",
   },
   "ascenderOffset": 0,
-  "ascender": 7,
   "glyphs": {
     "32": {"x":2,"y":2,"w":2,"h":9,"character":32,"shift":2,"offset":0,},
     "33": {"x":59,"y":35,"w":2,"h":9,"character":33,"shift":2,"offset":0,},
@@ -135,4 +131,8 @@
     "name": "FONTS",
     "path": "folders/FONTS.yy",
   },
+  "resourceVersion": "1.0",
+  "name": "f_tiny",
+  "tags": [],
+  "resourceType": "GMFont",
 }

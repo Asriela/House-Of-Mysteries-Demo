@@ -30,6 +30,9 @@ if Tutorial_Highlight_Alpha>0.5
 Tutorial_Highlight_Alpha-=0.01
 else
 Tutorial_Highlight_Alpha=1
+
+
+		
 if Tutorial_Highlight_Button!=noone
 draw_sprite_ext(sGui_Pie_Menu_Tu,Tutorial_Highlight_Button,edit_mode_menu_x+30,edit_mode_menu_y,1,1,0,c_white,Tutorial_Highlight_Alpha)
 
@@ -39,7 +42,11 @@ Edit_Mode = Button_Pressed(edit_mode_menu_x - 10+80, edit_mode_menu_y - 44, 80, 
 
 Edit_Mode = Button_Pressed(edit_mode_menu_x - 10+80, edit_mode_menu_y-44+80, 80, 76, 0, "", -1, -1, Edit_Mode, edit.recipies, 0, default_input, 0, shape.square, 0);
 Edit_Mode = Button_Pressed(edit_mode_menu_x - 10, edit_mode_menu_y-44+80, 80, 76, 0, "", -1, -1, Edit_Mode, edit.none, 0, default_input, 0, shape.square, 0);
-  
+
+if Edit_Mode != Last_Edit_Mode && (Edit_Mode=edit.object || Edit_Mode = edit.room)
+	audio_play_sound(sMenuOpenMain, 0.5, false)
+		
+		
 if Edit_Mode=edit.none Floor=mPlayer.owner.floor_i_am_on
     
     if (Edit_Mode == edit.recipies && Sub_Menu="Ingredient" && obj_gui_back=noone)

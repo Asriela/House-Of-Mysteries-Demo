@@ -1,7 +1,4 @@
 {
-  "resourceType": "GMSprite",
-  "resourceVersion": "1.0",
-  "name": "sChar_Rabbit_Grandfather129",
   "bboxMode": 2,
   "collisionKind": 1,
   "type": 0,
@@ -17,7 +14,6 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "DynamicTexturePage": false,
   "width": 32,
   "height": 53,
   "textureGroupId": {
@@ -28,16 +24,24 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f777ff30-87ee-402d-b9db-9e35a9fb2bae",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"14e91068-de45-4bcc-8fbc-4316ce502652",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ae017d0b-505e-4f7e-884b-ebcf7a9375da",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"26ce5069-8eb2-410a-ae68-7f92577ba131",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"80d4d0c7-7973-4648-b3c7-6e252759991b",},
+    {"compositeImage":{"FrameId":{"name":"f777ff30-87ee-402d-b9db-9e35a9fb2bae","path":"sprites/sChar_Rabbit_Grandfather129/sChar_Rabbit_Grandfather129.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"f777ff30-87ee-402d-b9db-9e35a9fb2bae","path":"sprites/sChar_Rabbit_Grandfather129/sChar_Rabbit_Grandfather129.yy",},"LayerId":{"name":"d4a16336-3ea5-4372-9754-174621428aeb","path":"sprites/sChar_Rabbit_Grandfather129/sChar_Rabbit_Grandfather129.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sChar_Rabbit_Grandfather129","path":"sprites/sChar_Rabbit_Grandfather129/sChar_Rabbit_Grandfather129.yy",},"resourceVersion":"1.0","name":"f777ff30-87ee-402d-b9db-9e35a9fb2bae","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"14e91068-de45-4bcc-8fbc-4316ce502652","path":"sprites/sChar_Rabbit_Grandfather129/sChar_Rabbit_Grandfather129.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"14e91068-de45-4bcc-8fbc-4316ce502652","path":"sprites/sChar_Rabbit_Grandfather129/sChar_Rabbit_Grandfather129.yy",},"LayerId":{"name":"d4a16336-3ea5-4372-9754-174621428aeb","path":"sprites/sChar_Rabbit_Grandfather129/sChar_Rabbit_Grandfather129.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sChar_Rabbit_Grandfather129","path":"sprites/sChar_Rabbit_Grandfather129/sChar_Rabbit_Grandfather129.yy",},"resourceVersion":"1.0","name":"14e91068-de45-4bcc-8fbc-4316ce502652","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"ae017d0b-505e-4f7e-884b-ebcf7a9375da","path":"sprites/sChar_Rabbit_Grandfather129/sChar_Rabbit_Grandfather129.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"ae017d0b-505e-4f7e-884b-ebcf7a9375da","path":"sprites/sChar_Rabbit_Grandfather129/sChar_Rabbit_Grandfather129.yy",},"LayerId":{"name":"d4a16336-3ea5-4372-9754-174621428aeb","path":"sprites/sChar_Rabbit_Grandfather129/sChar_Rabbit_Grandfather129.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sChar_Rabbit_Grandfather129","path":"sprites/sChar_Rabbit_Grandfather129/sChar_Rabbit_Grandfather129.yy",},"resourceVersion":"1.0","name":"ae017d0b-505e-4f7e-884b-ebcf7a9375da","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"26ce5069-8eb2-410a-ae68-7f92577ba131","path":"sprites/sChar_Rabbit_Grandfather129/sChar_Rabbit_Grandfather129.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"26ce5069-8eb2-410a-ae68-7f92577ba131","path":"sprites/sChar_Rabbit_Grandfather129/sChar_Rabbit_Grandfather129.yy",},"LayerId":{"name":"d4a16336-3ea5-4372-9754-174621428aeb","path":"sprites/sChar_Rabbit_Grandfather129/sChar_Rabbit_Grandfather129.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sChar_Rabbit_Grandfather129","path":"sprites/sChar_Rabbit_Grandfather129/sChar_Rabbit_Grandfather129.yy",},"resourceVersion":"1.0","name":"26ce5069-8eb2-410a-ae68-7f92577ba131","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"80d4d0c7-7973-4648-b3c7-6e252759991b","path":"sprites/sChar_Rabbit_Grandfather129/sChar_Rabbit_Grandfather129.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"80d4d0c7-7973-4648-b3c7-6e252759991b","path":"sprites/sChar_Rabbit_Grandfather129/sChar_Rabbit_Grandfather129.yy",},"LayerId":{"name":"d4a16336-3ea5-4372-9754-174621428aeb","path":"sprites/sChar_Rabbit_Grandfather129/sChar_Rabbit_Grandfather129.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sChar_Rabbit_Grandfather129","path":"sprites/sChar_Rabbit_Grandfather129/sChar_Rabbit_Grandfather129.yy",},"resourceVersion":"1.0","name":"80d4d0c7-7973-4648-b3c7-6e252759991b","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "resourceType": "GMSequence",
-    "resourceVersion": "1.4",
-    "name": "sChar_Rabbit_Grandfather",
+    "spriteId": {"name":"sChar_Rabbit_Grandfather129","path":"sprites/sChar_Rabbit_Grandfather129/sChar_Rabbit_Grandfather129.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -48,13 +52,13 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"3fdd92a3-28b5-4c07-880d-ba8ab9cb7a62","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f777ff30-87ee-402d-b9db-9e35a9fb2bae","path":"sprites/sChar_Rabbit_Grandfather129/sChar_Rabbit_Grandfather129.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"0b5347d4-b45e-4dd9-b132-649d8dbe7e5e","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"14e91068-de45-4bcc-8fbc-4316ce502652","path":"sprites/sChar_Rabbit_Grandfather129/sChar_Rabbit_Grandfather129.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"8f28febf-d752-4361-baa8-3c9b17ebf3b4","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ae017d0b-505e-4f7e-884b-ebcf7a9375da","path":"sprites/sChar_Rabbit_Grandfather129/sChar_Rabbit_Grandfather129.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"9fd4cfae-b71a-4825-9824-0e03549b92f8","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"26ce5069-8eb2-410a-ae68-7f92577ba131","path":"sprites/sChar_Rabbit_Grandfather129/sChar_Rabbit_Grandfather129.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"af7dd630-9f6b-4541-b3f1-172d5604a894","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"80d4d0c7-7973-4648-b3c7-6e252759991b","path":"sprites/sChar_Rabbit_Grandfather129/sChar_Rabbit_Grandfather129.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -70,13 +74,22 @@
     "yorigin": 49,
     "eventToFunction": {},
     "eventStubScript": null,
+    "parent": {"name":"sChar_Rabbit_Grandfather129","path":"sprites/sChar_Rabbit_Grandfather129/sChar_Rabbit_Grandfather129.yy",},
+    "resourceVersion": "1.3",
+    "name": "sChar_Rabbit_Grandfather",
+    "tags": [],
+    "resourceType": "GMSequence",
   },
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"d4a16336-3ea5-4372-9754-174621428aeb","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d4a16336-3ea5-4372-9754-174621428aeb","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "old",
     "path": "folders/SPRITES/CHARACTER/GUESTS/BODIES/old.yy",
   },
+  "resourceVersion": "1.0",
+  "name": "sChar_Rabbit_Grandfather129",
+  "tags": [],
+  "resourceType": "GMSprite",
 }

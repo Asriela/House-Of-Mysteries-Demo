@@ -1,11 +1,7 @@
 {
-  "resourceType": "GMObject",
-  "resourceVersion": "1.0",
-  "name": "oAvailable_Food",
   "spriteId": null,
   "solid": false,
   "visible": true,
-  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
@@ -28,4 +24,8 @@
     "name": "MAIN",
     "path": "folders/OBJECTS/MAIN.yy",
   },
+  "resourceVersion": "1.0",
+  "name": "oAvailable_Food",
+  "tags": [],
+  "resourceType": "GMObject",
 }

@@ -1,14 +1,10 @@
 {
-  "resourceType": "GMObject",
-  "resourceVersion": "1.0",
-  "name": "obj_wall",
   "spriteId": {
     "name": "Sprite1",
     "path": "sprites/Sprite1/Sprite1.yy",
   },
   "solid": false,
   "visible": false,
-  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
@@ -31,4 +27,8 @@
     "name": "LIGHT",
     "path": "folders/OBJECTS/LIGHT.yy",
   },
+  "resourceVersion": "1.0",
+  "name": "obj_wall",
+  "tags": [],
+  "resourceType": "GMObject",
 }

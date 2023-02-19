@@ -1,7 +1,4 @@
 {
-  "resourceType": "GMSprite",
-  "resourceVersion": "1.0",
-  "name": "sTile_DarkStone",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -17,7 +14,6 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "DynamicTexturePage": false,
   "width": 8,
   "height": 8,
   "textureGroupId": {
@@ -28,19 +24,33 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"76cfb611-1956-4094-bcdf-8cce0e628430",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3277943c-43f5-4154-8d64-6d9e874053a8",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5aa728c5-bbd3-4dac-bba4-4c581040b51a",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"92dd074c-6c12-4997-8618-aa8cee5c69eb",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c315364b-3572-47aa-8495-fbac5c59cf15",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"63476727-d5c3-4f45-b855-2034db99eefe",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3a7322f3-cb2c-41ca-8d41-1ae680701c03",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6a38b40b-64cc-41d5-9cc4-7d5110f9ace9",},
+    {"compositeImage":{"FrameId":{"name":"76cfb611-1956-4094-bcdf-8cce0e628430","path":"sprites/sTile_DarkStone/sTile_DarkStone.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"76cfb611-1956-4094-bcdf-8cce0e628430","path":"sprites/sTile_DarkStone/sTile_DarkStone.yy",},"LayerId":{"name":"b40280a7-83d7-407a-b8b1-a24c1d1478b9","path":"sprites/sTile_DarkStone/sTile_DarkStone.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sTile_DarkStone","path":"sprites/sTile_DarkStone/sTile_DarkStone.yy",},"resourceVersion":"1.0","name":"76cfb611-1956-4094-bcdf-8cce0e628430","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"3277943c-43f5-4154-8d64-6d9e874053a8","path":"sprites/sTile_DarkStone/sTile_DarkStone.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"3277943c-43f5-4154-8d64-6d9e874053a8","path":"sprites/sTile_DarkStone/sTile_DarkStone.yy",},"LayerId":{"name":"b40280a7-83d7-407a-b8b1-a24c1d1478b9","path":"sprites/sTile_DarkStone/sTile_DarkStone.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sTile_DarkStone","path":"sprites/sTile_DarkStone/sTile_DarkStone.yy",},"resourceVersion":"1.0","name":"3277943c-43f5-4154-8d64-6d9e874053a8","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"5aa728c5-bbd3-4dac-bba4-4c581040b51a","path":"sprites/sTile_DarkStone/sTile_DarkStone.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"5aa728c5-bbd3-4dac-bba4-4c581040b51a","path":"sprites/sTile_DarkStone/sTile_DarkStone.yy",},"LayerId":{"name":"b40280a7-83d7-407a-b8b1-a24c1d1478b9","path":"sprites/sTile_DarkStone/sTile_DarkStone.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sTile_DarkStone","path":"sprites/sTile_DarkStone/sTile_DarkStone.yy",},"resourceVersion":"1.0","name":"5aa728c5-bbd3-4dac-bba4-4c581040b51a","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"92dd074c-6c12-4997-8618-aa8cee5c69eb","path":"sprites/sTile_DarkStone/sTile_DarkStone.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"92dd074c-6c12-4997-8618-aa8cee5c69eb","path":"sprites/sTile_DarkStone/sTile_DarkStone.yy",},"LayerId":{"name":"b40280a7-83d7-407a-b8b1-a24c1d1478b9","path":"sprites/sTile_DarkStone/sTile_DarkStone.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sTile_DarkStone","path":"sprites/sTile_DarkStone/sTile_DarkStone.yy",},"resourceVersion":"1.0","name":"92dd074c-6c12-4997-8618-aa8cee5c69eb","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"c315364b-3572-47aa-8495-fbac5c59cf15","path":"sprites/sTile_DarkStone/sTile_DarkStone.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"c315364b-3572-47aa-8495-fbac5c59cf15","path":"sprites/sTile_DarkStone/sTile_DarkStone.yy",},"LayerId":{"name":"b40280a7-83d7-407a-b8b1-a24c1d1478b9","path":"sprites/sTile_DarkStone/sTile_DarkStone.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sTile_DarkStone","path":"sprites/sTile_DarkStone/sTile_DarkStone.yy",},"resourceVersion":"1.0","name":"c315364b-3572-47aa-8495-fbac5c59cf15","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"63476727-d5c3-4f45-b855-2034db99eefe","path":"sprites/sTile_DarkStone/sTile_DarkStone.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"63476727-d5c3-4f45-b855-2034db99eefe","path":"sprites/sTile_DarkStone/sTile_DarkStone.yy",},"LayerId":{"name":"b40280a7-83d7-407a-b8b1-a24c1d1478b9","path":"sprites/sTile_DarkStone/sTile_DarkStone.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sTile_DarkStone","path":"sprites/sTile_DarkStone/sTile_DarkStone.yy",},"resourceVersion":"1.0","name":"63476727-d5c3-4f45-b855-2034db99eefe","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"3a7322f3-cb2c-41ca-8d41-1ae680701c03","path":"sprites/sTile_DarkStone/sTile_DarkStone.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"3a7322f3-cb2c-41ca-8d41-1ae680701c03","path":"sprites/sTile_DarkStone/sTile_DarkStone.yy",},"LayerId":{"name":"b40280a7-83d7-407a-b8b1-a24c1d1478b9","path":"sprites/sTile_DarkStone/sTile_DarkStone.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sTile_DarkStone","path":"sprites/sTile_DarkStone/sTile_DarkStone.yy",},"resourceVersion":"1.0","name":"3a7322f3-cb2c-41ca-8d41-1ae680701c03","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"6a38b40b-64cc-41d5-9cc4-7d5110f9ace9","path":"sprites/sTile_DarkStone/sTile_DarkStone.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"6a38b40b-64cc-41d5-9cc4-7d5110f9ace9","path":"sprites/sTile_DarkStone/sTile_DarkStone.yy",},"LayerId":{"name":"b40280a7-83d7-407a-b8b1-a24c1d1478b9","path":"sprites/sTile_DarkStone/sTile_DarkStone.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sTile_DarkStone","path":"sprites/sTile_DarkStone/sTile_DarkStone.yy",},"resourceVersion":"1.0","name":"6a38b40b-64cc-41d5-9cc4-7d5110f9ace9","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "resourceType": "GMSequence",
-    "resourceVersion": "1.4",
-    "name": "sTile_DarkStone",
+    "spriteId": {"name":"sTile_DarkStone","path":"sprites/sTile_DarkStone/sTile_DarkStone.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -51,7 +61,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"f3df2d84-2ccb-471e-b320-97dff36aed77","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"76cfb611-1956-4094-bcdf-8cce0e628430","path":"sprites/sTile_DarkStone/sTile_DarkStone.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"c45c10a1-e0b2-4407-8b13-34aef7d4bba7","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3277943c-43f5-4154-8d64-6d9e874053a8","path":"sprites/sTile_DarkStone/sTile_DarkStone.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"87b7cdd2-e583-4336-9421-39e707315a9d","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5aa728c5-bbd3-4dac-bba4-4c581040b51a","path":"sprites/sTile_DarkStone/sTile_DarkStone.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -60,7 +70,7 @@
             {"id":"619cc3c8-9c14-4252-b98a-c39f98de5130","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"63476727-d5c3-4f45-b855-2034db99eefe","path":"sprites/sTile_DarkStone/sTile_DarkStone.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"e80d3df9-be84-4b4c-943d-f4a5a867459c","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3a7322f3-cb2c-41ca-8d41-1ae680701c03","path":"sprites/sTile_DarkStone/sTile_DarkStone.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"fb20258b-32a4-4341-aa77-92f7bf051096","Key":7.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6a38b40b-64cc-41d5-9cc4-7d5110f9ace9","path":"sprites/sTile_DarkStone/sTile_DarkStone.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -76,13 +86,22 @@
     "yorigin": 4,
     "eventToFunction": {},
     "eventStubScript": null,
+    "parent": {"name":"sTile_DarkStone","path":"sprites/sTile_DarkStone/sTile_DarkStone.yy",},
+    "resourceVersion": "1.3",
+    "name": "sTile_DarkStone",
+    "tags": [],
+    "resourceType": "GMSequence",
   },
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"b40280a7-83d7-407a-b8b1-a24c1d1478b9","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"b40280a7-83d7-407a-b8b1-a24c1d1478b9","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "TILES",
     "path": "folders/SPRITES/HOUSE/TILES.yy",
   },
+  "resourceVersion": "1.0",
+  "name": "sTile_DarkStone",
+  "tags": [],
+  "resourceType": "GMSprite",
 }

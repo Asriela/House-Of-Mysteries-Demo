@@ -1,7 +1,4 @@
 {
-  "resourceType": "GMTileSet",
-  "resourceVersion": "1.0",
-  "name": "tle_wall",
   "spriteId": {
     "name": "spr_tile",
     "path": "sprites/spr_tile/spr_tile.yy",
@@ -22,7 +19,7 @@
   "out_columns": 7,
   "tile_count": 48,
   "autoTileSets": [
-    {"resourceType":"GMAutoTileSet","resourceVersion":"1.0","name":"autotile_1","tiles":[
+    {"tiles":[
         47,
         2,
         2,
@@ -70,7 +67,7 @@
         44,
         45,
         46,
-      ],"closed_edge":false,},
+      ],"closed_edge":false,"resourceVersion":"1.0","name":"autotile_1","tags":[],"resourceType":"GMAutoTileSet",},
   ],
   "tileAnimationFrames": [],
   "tileAnimationSpeed": 15.0,
@@ -136,4 +133,8 @@
     "name": "Tile Sets",
     "path": "folders/Tile Sets.yy",
   },
+  "resourceVersion": "1.0",
+  "name": "tle_wall",
+  "tags": [],
+  "resourceType": "GMTileSet",
 }

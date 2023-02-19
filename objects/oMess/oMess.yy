@@ -1,11 +1,7 @@
 {
-  "resourceType": "GMObject",
-  "resourceVersion": "1.0",
-  "name": "oMess",
   "spriteId": null,
   "solid": false,
   "visible": true,
-  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
@@ -28,4 +24,8 @@
     "name": "HOUSE",
     "path": "folders/OBJECTS/HOUSE.yy",
   },
+  "resourceVersion": "1.0",
+  "name": "oMess",
+  "tags": [],
+  "resourceType": "GMObject",
 }

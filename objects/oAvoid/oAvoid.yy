@@ -1,11 +1,7 @@
 {
-  "resourceType": "GMObject",
-  "resourceVersion": "1.0",
-  "name": "oAvoid",
   "spriteId": null,
   "solid": false,
   "visible": false,
-  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
@@ -22,7 +18,7 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -30,4 +26,8 @@
     "name": "Avoid",
     "path": "folders/OBJECTS/HOUSE/Avoid.yy",
   },
+  "resourceVersion": "1.0",
+  "name": "oAvoid",
+  "tags": [],
+  "resourceType": "GMObject",
 }

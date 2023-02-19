@@ -1,7 +1,4 @@
 {
-  "resourceType": "GMSprite",
-  "resourceVersion": "1.0",
-  "name": "sChar_Pooka_Laughing_Sit_Down",
   "bboxMode": 2,
   "collisionKind": 1,
   "type": 0,
@@ -17,7 +14,6 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "DynamicTexturePage": false,
   "width": 53,
   "height": 70,
   "textureGroupId": {
@@ -28,14 +24,18 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3d331b51-c5ce-43cc-a8e7-6184b1d6d2b4",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bdcc63dc-f2be-4ba8-90ae-af0d37aff5ad",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"87f3e098-a873-4320-ab52-7c9efcf3e4d8",},
+    {"compositeImage":{"FrameId":{"name":"3d331b51-c5ce-43cc-a8e7-6184b1d6d2b4","path":"sprites/sChar_Pooka_Laughing_Sit_Down/sChar_Pooka_Laughing_Sit_Down.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"3d331b51-c5ce-43cc-a8e7-6184b1d6d2b4","path":"sprites/sChar_Pooka_Laughing_Sit_Down/sChar_Pooka_Laughing_Sit_Down.yy",},"LayerId":{"name":"d4a16336-3ea5-4372-9754-174621428aeb","path":"sprites/sChar_Pooka_Laughing_Sit_Down/sChar_Pooka_Laughing_Sit_Down.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sChar_Pooka_Laughing_Sit_Down","path":"sprites/sChar_Pooka_Laughing_Sit_Down/sChar_Pooka_Laughing_Sit_Down.yy",},"resourceVersion":"1.0","name":"3d331b51-c5ce-43cc-a8e7-6184b1d6d2b4","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"bdcc63dc-f2be-4ba8-90ae-af0d37aff5ad","path":"sprites/sChar_Pooka_Laughing_Sit_Down/sChar_Pooka_Laughing_Sit_Down.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"bdcc63dc-f2be-4ba8-90ae-af0d37aff5ad","path":"sprites/sChar_Pooka_Laughing_Sit_Down/sChar_Pooka_Laughing_Sit_Down.yy",},"LayerId":{"name":"d4a16336-3ea5-4372-9754-174621428aeb","path":"sprites/sChar_Pooka_Laughing_Sit_Down/sChar_Pooka_Laughing_Sit_Down.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sChar_Pooka_Laughing_Sit_Down","path":"sprites/sChar_Pooka_Laughing_Sit_Down/sChar_Pooka_Laughing_Sit_Down.yy",},"resourceVersion":"1.0","name":"bdcc63dc-f2be-4ba8-90ae-af0d37aff5ad","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"87f3e098-a873-4320-ab52-7c9efcf3e4d8","path":"sprites/sChar_Pooka_Laughing_Sit_Down/sChar_Pooka_Laughing_Sit_Down.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"87f3e098-a873-4320-ab52-7c9efcf3e4d8","path":"sprites/sChar_Pooka_Laughing_Sit_Down/sChar_Pooka_Laughing_Sit_Down.yy",},"LayerId":{"name":"d4a16336-3ea5-4372-9754-174621428aeb","path":"sprites/sChar_Pooka_Laughing_Sit_Down/sChar_Pooka_Laughing_Sit_Down.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sChar_Pooka_Laughing_Sit_Down","path":"sprites/sChar_Pooka_Laughing_Sit_Down/sChar_Pooka_Laughing_Sit_Down.yy",},"resourceVersion":"1.0","name":"87f3e098-a873-4320-ab52-7c9efcf3e4d8","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "resourceType": "GMSequence",
-    "resourceVersion": "1.4",
-    "name": "sChar_Pooka_Laughing_Sit_Down",
+    "spriteId": {"name":"sChar_Pooka_Laughing_Sit_Down","path":"sprites/sChar_Pooka_Laughing_Sit_Down/sChar_Pooka_Laughing_Sit_Down.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -46,11 +46,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"2ae60360-a0c6-4c57-b1b5-8bd987b23f7b","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3d331b51-c5ce-43cc-a8e7-6184b1d6d2b4","path":"sprites/sChar_Pooka_Laughing_Sit_Down/sChar_Pooka_Laughing_Sit_Down.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"ae9d9c1a-20a2-45b0-968f-5177133623ea","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bdcc63dc-f2be-4ba8-90ae-af0d37aff5ad","path":"sprites/sChar_Pooka_Laughing_Sit_Down/sChar_Pooka_Laughing_Sit_Down.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"8fa0e102-6a40-4d66-9829-06cb9648f405","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"87f3e098-a873-4320-ab52-7c9efcf3e4d8","path":"sprites/sChar_Pooka_Laughing_Sit_Down/sChar_Pooka_Laughing_Sit_Down.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,13 +66,22 @@
     "yorigin": 57,
     "eventToFunction": {},
     "eventStubScript": null,
+    "parent": {"name":"sChar_Pooka_Laughing_Sit_Down","path":"sprites/sChar_Pooka_Laughing_Sit_Down/sChar_Pooka_Laughing_Sit_Down.yy",},
+    "resourceVersion": "1.3",
+    "name": "sChar_Pooka_Laughing_Sit_Down",
+    "tags": [],
+    "resourceType": "GMSequence",
   },
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"d4a16336-3ea5-4372-9754-174621428aeb","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d4a16336-3ea5-4372-9754-174621428aeb","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "pooka",
     "path": "folders/SPRITES/CHARACTER/GUESTS/BODIES/old/rabbit/pooka.yy",
   },
+  "resourceVersion": "1.0",
+  "name": "sChar_Pooka_Laughing_Sit_Down",
+  "tags": [],
+  "resourceType": "GMSprite",
 }

@@ -1,7 +1,4 @@
 {
-  "resourceType": "GMFont",
-  "resourceVersion": "1.0",
-  "name": "fOutdoors_small",
   "hinting": 0,
   "glyphOperations": 0,
   "interpreter": 0,
@@ -24,7 +21,6 @@
     "path": "texturegroups/Default",
   },
   "ascenderOffset": 0,
-  "ascender": 18,
   "glyphs": {
     "32": {"x":2,"y":2,"w":4,"h":31,"character":32,"shift":4,"offset":0,},
     "33": {"x":228,"y":68,"w":4,"h":31,"character":33,"shift":6,"offset":1,},
@@ -135,4 +131,8 @@
     "name": "FONTS",
     "path": "folders/FONTS.yy",
   },
+  "resourceVersion": "1.0",
+  "name": "fOutdoors_small",
+  "tags": [],
+  "resourceType": "GMFont",
 }

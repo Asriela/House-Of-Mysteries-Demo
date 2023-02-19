@@ -1,7 +1,4 @@
 {
-  "resourceType": "GMSprite",
-  "resourceVersion": "1.0",
-  "name": "sBoulderMask",
   "bboxMode": 2,
   "collisionKind": 2,
   "type": 0,
@@ -17,7 +14,6 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "DynamicTexturePage": false,
   "width": 137,
   "height": 105,
   "textureGroupId": {
@@ -28,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a10b0d6d-0077-4159-83d2-16ab21ed9878",},
+    {"compositeImage":{"FrameId":{"name":"a10b0d6d-0077-4159-83d2-16ab21ed9878","path":"sprites/sBoulderMask/sBoulderMask.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"a10b0d6d-0077-4159-83d2-16ab21ed9878","path":"sprites/sBoulderMask/sBoulderMask.yy",},"LayerId":{"name":"26e482ad-d3a4-4e06-a43b-33407a5f680f","path":"sprites/sBoulderMask/sBoulderMask.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sBoulderMask","path":"sprites/sBoulderMask/sBoulderMask.yy",},"resourceVersion":"1.0","name":"a10b0d6d-0077-4159-83d2-16ab21ed9878","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "resourceType": "GMSequence",
-    "resourceVersion": "1.4",
-    "name": "sBoulderMask",
+    "spriteId": {"name":"sBoulderMask","path":"sprites/sBoulderMask/sBoulderMask.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -44,9 +40,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"36bca495-1a71-4e88-8b54-25defa1c3572","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a10b0d6d-0077-4159-83d2-16ab21ed9878","path":"sprites/sBoulderMask/sBoulderMask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -62,13 +58,22 @@
     "yorigin": 97,
     "eventToFunction": {},
     "eventStubScript": null,
+    "parent": {"name":"sBoulderMask","path":"sprites/sBoulderMask/sBoulderMask.yy",},
+    "resourceVersion": "1.3",
+    "name": "sBoulderMask",
+    "tags": [],
+    "resourceType": "GMSequence",
   },
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"26e482ad-d3a4-4e06-a43b-33407a5f680f","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"26e482ad-d3a4-4e06-a43b-33407a5f680f","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "NATURE",
     "path": "folders/SPRITES/NATURE.yy",
   },
+  "resourceVersion": "1.0",
+  "name": "sBoulderMask",
+  "tags": [],
+  "resourceType": "GMSprite",
 }

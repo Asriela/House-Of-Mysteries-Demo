@@ -313,3 +313,6 @@ var h= View_Height;
 window_set_fullscreen(0)
 View_Width = window_get_width() 
 View_Height = window_get_height() 
+
+// Play background music
+audio_play_sound(mMusic, 1, true)

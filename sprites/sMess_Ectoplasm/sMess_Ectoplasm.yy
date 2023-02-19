@@ -1,7 +1,4 @@
 {
-  "resourceType": "GMSprite",
-  "resourceVersion": "1.0",
-  "name": "sMess_Ectoplasm",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -17,7 +14,6 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "DynamicTexturePage": false,
   "width": 61,
   "height": 35,
   "textureGroupId": {
@@ -28,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"123eec1f-de52-4a8c-ad71-486e6eee7611",},
+    {"compositeImage":{"FrameId":{"name":"123eec1f-de52-4a8c-ad71-486e6eee7611","path":"sprites/sMess_Ectoplasm/sMess_Ectoplasm.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"123eec1f-de52-4a8c-ad71-486e6eee7611","path":"sprites/sMess_Ectoplasm/sMess_Ectoplasm.yy",},"LayerId":{"name":"75b9692f-0849-4a45-b309-fc1e75802bdf","path":"sprites/sMess_Ectoplasm/sMess_Ectoplasm.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sMess_Ectoplasm","path":"sprites/sMess_Ectoplasm/sMess_Ectoplasm.yy",},"resourceVersion":"1.0","name":"123eec1f-de52-4a8c-ad71-486e6eee7611","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "resourceType": "GMSequence",
-    "resourceVersion": "1.4",
-    "name": "sMess_Ectoplasm",
+    "spriteId": {"name":"sMess_Ectoplasm","path":"sprites/sMess_Ectoplasm/sMess_Ectoplasm.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -44,9 +40,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"fac6d6c7-82ac-4822-8a61-68fa3213c170","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"123eec1f-de52-4a8c-ad71-486e6eee7611","path":"sprites/sMess_Ectoplasm/sMess_Ectoplasm.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -62,13 +58,22 @@
     "yorigin": 20,
     "eventToFunction": {},
     "eventStubScript": null,
+    "parent": {"name":"sMess_Ectoplasm","path":"sprites/sMess_Ectoplasm/sMess_Ectoplasm.yy",},
+    "resourceVersion": "1.3",
+    "name": "sMess_Ectoplasm",
+    "tags": [],
+    "resourceType": "GMSequence",
   },
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"75b9692f-0849-4a45-b309-fc1e75802bdf","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"75b9692f-0849-4a45-b309-fc1e75802bdf","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "GUEST STUFF",
     "path": "folders/SPRITES/CHARACTER/GUESTS/GUEST STUFF.yy",
   },
+  "resourceVersion": "1.0",
+  "name": "sMess_Ectoplasm",
+  "tags": [],
+  "resourceType": "GMSprite",
 }

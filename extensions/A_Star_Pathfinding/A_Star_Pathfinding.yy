@@ -1,7 +1,4 @@
 {
-  "resourceType": "GMExtension",
-  "resourceVersion": "1.2",
-  "name": "A_Star_Pathfinding",
   "optionsFile": "options.json",
   "options": [],
   "exportToGame": true,
@@ -66,4 +63,8 @@
     "name": "Extensions",
     "path": "folders/Extensions.yy",
   },
+  "resourceVersion": "1.2",
+  "name": "A_Star_Pathfinding",
+  "tags": [],
+  "resourceType": "GMExtension",
 }

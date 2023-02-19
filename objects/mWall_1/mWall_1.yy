@@ -1,14 +1,10 @@
 {
-  "resourceType": "GMObject",
-  "resourceVersion": "1.0",
-  "name": "mWall_1",
   "spriteId": {
     "name": "sWall_Down",
     "path": "sprites/sWall_Down/sWall_Down.yy",
   },
   "solid": false,
   "visible": true,
-  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
@@ -34,4 +30,8 @@
     "name": "walls",
     "path": "folders/OBJECTS/HOUSE/walls.yy",
   },
+  "resourceVersion": "1.0",
+  "name": "mWall_1",
+  "tags": [],
+  "resourceType": "GMObject",
 }

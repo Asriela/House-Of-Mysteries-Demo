@@ -1,7 +1,4 @@
 {
-  "resourceType": "GMExtension",
-  "resourceVersion": "1.2",
-  "name": "Fake_light_II",
   "optionsFile": "options.json",
   "options": [],
   "exportToGame": true,
@@ -76,4 +73,8 @@
     "name": "Extensions",
     "path": "folders/NOTES/Extensions.yy",
   },
+  "resourceVersion": "1.2",
+  "name": "Fake_light_II",
+  "tags": [],
+  "resourceType": "GMExtension",
 }

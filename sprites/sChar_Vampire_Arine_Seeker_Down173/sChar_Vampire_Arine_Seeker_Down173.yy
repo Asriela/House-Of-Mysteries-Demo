@@ -1,7 +1,4 @@
 {
-  "resourceType": "GMSprite",
-  "resourceVersion": "1.0",
-  "name": "sChar_Vampire_Arine_Seeker_Down173",
   "bboxMode": 2,
   "collisionKind": 1,
   "type": 0,
@@ -17,7 +14,6 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "DynamicTexturePage": false,
   "width": 40,
   "height": 75,
   "textureGroupId": {
@@ -28,14 +24,18 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8d091a76-9b3c-491b-a375-208a4a480874",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2447c30b-ae55-477a-8185-25ad8a050f59",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"123cdf1b-0d39-4496-a2d0-f328a6945574",},
+    {"compositeImage":{"FrameId":{"name":"8d091a76-9b3c-491b-a375-208a4a480874","path":"sprites/sChar_Vampire_Arine_Seeker_Down173/sChar_Vampire_Arine_Seeker_Down173.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"8d091a76-9b3c-491b-a375-208a4a480874","path":"sprites/sChar_Vampire_Arine_Seeker_Down173/sChar_Vampire_Arine_Seeker_Down173.yy",},"LayerId":{"name":"d4a16336-3ea5-4372-9754-174621428aeb","path":"sprites/sChar_Vampire_Arine_Seeker_Down173/sChar_Vampire_Arine_Seeker_Down173.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sChar_Vampire_Arine_Seeker_Down173","path":"sprites/sChar_Vampire_Arine_Seeker_Down173/sChar_Vampire_Arine_Seeker_Down173.yy",},"resourceVersion":"1.0","name":"8d091a76-9b3c-491b-a375-208a4a480874","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"2447c30b-ae55-477a-8185-25ad8a050f59","path":"sprites/sChar_Vampire_Arine_Seeker_Down173/sChar_Vampire_Arine_Seeker_Down173.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"2447c30b-ae55-477a-8185-25ad8a050f59","path":"sprites/sChar_Vampire_Arine_Seeker_Down173/sChar_Vampire_Arine_Seeker_Down173.yy",},"LayerId":{"name":"d4a16336-3ea5-4372-9754-174621428aeb","path":"sprites/sChar_Vampire_Arine_Seeker_Down173/sChar_Vampire_Arine_Seeker_Down173.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sChar_Vampire_Arine_Seeker_Down173","path":"sprites/sChar_Vampire_Arine_Seeker_Down173/sChar_Vampire_Arine_Seeker_Down173.yy",},"resourceVersion":"1.0","name":"2447c30b-ae55-477a-8185-25ad8a050f59","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"123cdf1b-0d39-4496-a2d0-f328a6945574","path":"sprites/sChar_Vampire_Arine_Seeker_Down173/sChar_Vampire_Arine_Seeker_Down173.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"123cdf1b-0d39-4496-a2d0-f328a6945574","path":"sprites/sChar_Vampire_Arine_Seeker_Down173/sChar_Vampire_Arine_Seeker_Down173.yy",},"LayerId":{"name":"d4a16336-3ea5-4372-9754-174621428aeb","path":"sprites/sChar_Vampire_Arine_Seeker_Down173/sChar_Vampire_Arine_Seeker_Down173.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sChar_Vampire_Arine_Seeker_Down173","path":"sprites/sChar_Vampire_Arine_Seeker_Down173/sChar_Vampire_Arine_Seeker_Down173.yy",},"resourceVersion":"1.0","name":"123cdf1b-0d39-4496-a2d0-f328a6945574","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "resourceType": "GMSequence",
-    "resourceVersion": "1.4",
-    "name": "sChar_Vampire_Arine_Seeker_Down",
+    "spriteId": {"name":"sChar_Vampire_Arine_Seeker_Down173","path":"sprites/sChar_Vampire_Arine_Seeker_Down173/sChar_Vampire_Arine_Seeker_Down173.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -46,11 +46,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"dded78f6-e0ce-4590-8d23-386179a5b0e0","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8d091a76-9b3c-491b-a375-208a4a480874","path":"sprites/sChar_Vampire_Arine_Seeker_Down173/sChar_Vampire_Arine_Seeker_Down173.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"ed7c5c38-53f2-4cc1-8f2c-d7d14884b0f8","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2447c30b-ae55-477a-8185-25ad8a050f59","path":"sprites/sChar_Vampire_Arine_Seeker_Down173/sChar_Vampire_Arine_Seeker_Down173.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"77d72e40-2290-4330-aa86-0beadb5b299d","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"123cdf1b-0d39-4496-a2d0-f328a6945574","path":"sprites/sChar_Vampire_Arine_Seeker_Down173/sChar_Vampire_Arine_Seeker_Down173.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,13 +66,22 @@
     "yorigin": 71,
     "eventToFunction": {},
     "eventStubScript": null,
+    "parent": {"name":"sChar_Vampire_Arine_Seeker_Down173","path":"sprites/sChar_Vampire_Arine_Seeker_Down173/sChar_Vampire_Arine_Seeker_Down173.yy",},
+    "resourceVersion": "1.3",
+    "name": "sChar_Vampire_Arine_Seeker_Down",
+    "tags": [],
+    "resourceType": "GMSequence",
   },
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"d4a16336-3ea5-4372-9754-174621428aeb","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d4a16336-3ea5-4372-9754-174621428aeb","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "old",
     "path": "folders/SPRITES/CHARACTER/GUESTS/BODIES/old.yy",
   },
+  "resourceVersion": "1.0",
+  "name": "sChar_Vampire_Arine_Seeker_Down173",
+  "tags": [],
+  "resourceType": "GMSprite",
 }

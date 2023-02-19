@@ -1,7 +1,4 @@
 {
-  "resourceType": "GMSprite",
-  "resourceVersion": "1.0",
-  "name": "sObj_Stairs279",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -17,7 +14,6 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "DynamicTexturePage": false,
   "width": 165,
   "height": 120,
   "textureGroupId": {
@@ -28,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7c905951-1202-48e1-8b85-160c6edc209e",},
+    {"compositeImage":{"FrameId":{"name":"7c905951-1202-48e1-8b85-160c6edc209e","path":"sprites/sObj_Stairs279/sObj_Stairs279.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"7c905951-1202-48e1-8b85-160c6edc209e","path":"sprites/sObj_Stairs279/sObj_Stairs279.yy",},"LayerId":{"name":"909d159b-696e-44bb-ab3b-2eb4916d4e46","path":"sprites/sObj_Stairs279/sObj_Stairs279.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sObj_Stairs279","path":"sprites/sObj_Stairs279/sObj_Stairs279.yy",},"resourceVersion":"1.0","name":"7c905951-1202-48e1-8b85-160c6edc209e","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "resourceType": "GMSequence",
-    "resourceVersion": "1.4",
-    "name": "sObj_Stairs",
+    "spriteId": {"name":"sObj_Stairs279","path":"sprites/sObj_Stairs279/sObj_Stairs279.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -44,9 +40,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"62142ff0-3599-4e3b-85c8-f16f2965704d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7c905951-1202-48e1-8b85-160c6edc209e","path":"sprites/sObj_Stairs279/sObj_Stairs279.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -62,13 +58,22 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
+    "parent": {"name":"sObj_Stairs279","path":"sprites/sObj_Stairs279/sObj_Stairs279.yy",},
+    "resourceVersion": "1.3",
+    "name": "sObj_Stairs",
+    "tags": [],
+    "resourceType": "GMSequence",
   },
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"909d159b-696e-44bb-ab3b-2eb4916d4e46","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"909d159b-696e-44bb-ab3b-2eb4916d4e46","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "STAIRS",
     "path": "folders/SPRITES/HOUSE/STAIRS.yy",
   },
+  "resourceVersion": "1.0",
+  "name": "sObj_Stairs279",
+  "tags": [],
+  "resourceType": "GMSprite",
 }

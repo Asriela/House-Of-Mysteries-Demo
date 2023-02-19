@@ -1,7 +1,4 @@
 {
-  "resourceType": "GMFont",
-  "resourceVersion": "1.0",
-  "name": "fTutorial_Small",
   "hinting": 0,
   "glyphOperations": 0,
   "interpreter": 0,
@@ -24,7 +21,6 @@
     "path": "texturegroups/Default",
   },
   "ascenderOffset": 0,
-  "ascender": 20,
   "glyphs": {
     "32": {"x":2,"y":2,"w":7,"h":27,"character":32,"shift":7,"offset":0,},
     "33": {"x":193,"y":89,"w":6,"h":27,"character":33,"shift":5,"offset":0,},
@@ -377,4 +373,8 @@
     "name": "FONTS",
     "path": "folders/FONTS.yy",
   },
+  "resourceVersion": "1.0",
+  "name": "fTutorial_Small",
+  "tags": [],
+  "resourceType": "GMFont",
 }

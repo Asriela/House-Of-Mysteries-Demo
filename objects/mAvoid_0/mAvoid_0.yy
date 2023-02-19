@@ -1,11 +1,7 @@
 {
-  "resourceType": "GMObject",
-  "resourceVersion": "1.0",
-  "name": "mAvoid_0",
   "spriteId": null,
   "solid": false,
   "visible": true,
-  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
@@ -28,4 +24,8 @@
     "name": "Avoid",
     "path": "folders/OBJECTS/HOUSE/Avoid.yy",
   },
+  "resourceVersion": "1.0",
+  "name": "mAvoid_0",
+  "tags": [],
+  "resourceType": "GMObject",
 }

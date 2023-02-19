@@ -1,7 +1,4 @@
 {
-  "resourceType": "GMSprite",
-  "resourceVersion": "1.0",
-  "name": "sIng_Tomato",
   "bboxMode": 0,
   "collisionKind": 0,
   "type": 0,
@@ -17,7 +14,6 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "DynamicTexturePage": false,
   "width": 64,
   "height": 64,
   "textureGroupId": {
@@ -28,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"56075b54-0b66-4b62-95f2-a97ca11b64e2",},
+    {"compositeImage":{"FrameId":{"name":"56075b54-0b66-4b62-95f2-a97ca11b64e2","path":"sprites/sIng_Tomato/sIng_Tomato.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"56075b54-0b66-4b62-95f2-a97ca11b64e2","path":"sprites/sIng_Tomato/sIng_Tomato.yy",},"LayerId":{"name":"21e5626b-ce34-49a5-b237-d407308a234c","path":"sprites/sIng_Tomato/sIng_Tomato.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sIng_Tomato","path":"sprites/sIng_Tomato/sIng_Tomato.yy",},"resourceVersion":"1.0","name":"56075b54-0b66-4b62-95f2-a97ca11b64e2","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "resourceType": "GMSequence",
-    "resourceVersion": "1.4",
-    "name": "sIng_Tomato",
+    "spriteId": {"name":"sIng_Tomato","path":"sprites/sIng_Tomato/sIng_Tomato.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -44,9 +40,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"8a0fdc22-3e6c-42c4-ae9d-18a825ee34be","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"56075b54-0b66-4b62-95f2-a97ca11b64e2","path":"sprites/sIng_Tomato/sIng_Tomato.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -62,13 +58,22 @@
     "yorigin": 32,
     "eventToFunction": {},
     "eventStubScript": null,
+    "parent": {"name":"sIng_Tomato","path":"sprites/sIng_Tomato/sIng_Tomato.yy",},
+    "resourceVersion": "1.3",
+    "name": "sIng_Tomato",
+    "tags": [],
+    "resourceType": "GMSequence",
   },
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"21e5626b-ce34-49a5-b237-d407308a234c","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"21e5626b-ce34-49a5-b237-d407308a234c","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "FOOD",
     "path": "folders/SPRITES/GUI/FOOD.yy",
   },
+  "resourceVersion": "1.0",
+  "name": "sIng_Tomato",
+  "tags": [],
+  "resourceType": "GMSprite",
 }

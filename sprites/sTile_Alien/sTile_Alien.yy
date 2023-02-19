@@ -1,7 +1,4 @@
 {
-  "resourceType": "GMSprite",
-  "resourceVersion": "1.0",
-  "name": "sTile_Alien",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -17,7 +14,6 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "DynamicTexturePage": false,
   "width": 8,
   "height": 8,
   "textureGroupId": {
@@ -28,18 +24,30 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"76cfb611-1956-4094-bcdf-8cce0e628430",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1f67769d-736c-4f50-abb9-1c15c4169f35",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a8caa5b6-c72b-49b1-b044-12308e75265d",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"11e52aac-5212-489b-b5b8-0eb665230881",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6a3934d7-2f29-415b-8166-1518fa0bfde4",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ac4b8cf4-683b-4036-9bc7-72e04cccb0e9",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"29ac8699-8a2f-4c8f-9510-29f42e3cc470",},
+    {"compositeImage":{"FrameId":{"name":"76cfb611-1956-4094-bcdf-8cce0e628430","path":"sprites/sTile_Alien/sTile_Alien.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"76cfb611-1956-4094-bcdf-8cce0e628430","path":"sprites/sTile_Alien/sTile_Alien.yy",},"LayerId":{"name":"b40280a7-83d7-407a-b8b1-a24c1d1478b9","path":"sprites/sTile_Alien/sTile_Alien.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sTile_Alien","path":"sprites/sTile_Alien/sTile_Alien.yy",},"resourceVersion":"1.0","name":"76cfb611-1956-4094-bcdf-8cce0e628430","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"1f67769d-736c-4f50-abb9-1c15c4169f35","path":"sprites/sTile_Alien/sTile_Alien.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"1f67769d-736c-4f50-abb9-1c15c4169f35","path":"sprites/sTile_Alien/sTile_Alien.yy",},"LayerId":{"name":"b40280a7-83d7-407a-b8b1-a24c1d1478b9","path":"sprites/sTile_Alien/sTile_Alien.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sTile_Alien","path":"sprites/sTile_Alien/sTile_Alien.yy",},"resourceVersion":"1.0","name":"1f67769d-736c-4f50-abb9-1c15c4169f35","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"a8caa5b6-c72b-49b1-b044-12308e75265d","path":"sprites/sTile_Alien/sTile_Alien.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"a8caa5b6-c72b-49b1-b044-12308e75265d","path":"sprites/sTile_Alien/sTile_Alien.yy",},"LayerId":{"name":"b40280a7-83d7-407a-b8b1-a24c1d1478b9","path":"sprites/sTile_Alien/sTile_Alien.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sTile_Alien","path":"sprites/sTile_Alien/sTile_Alien.yy",},"resourceVersion":"1.0","name":"a8caa5b6-c72b-49b1-b044-12308e75265d","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"11e52aac-5212-489b-b5b8-0eb665230881","path":"sprites/sTile_Alien/sTile_Alien.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"11e52aac-5212-489b-b5b8-0eb665230881","path":"sprites/sTile_Alien/sTile_Alien.yy",},"LayerId":{"name":"b40280a7-83d7-407a-b8b1-a24c1d1478b9","path":"sprites/sTile_Alien/sTile_Alien.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sTile_Alien","path":"sprites/sTile_Alien/sTile_Alien.yy",},"resourceVersion":"1.0","name":"11e52aac-5212-489b-b5b8-0eb665230881","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"6a3934d7-2f29-415b-8166-1518fa0bfde4","path":"sprites/sTile_Alien/sTile_Alien.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"6a3934d7-2f29-415b-8166-1518fa0bfde4","path":"sprites/sTile_Alien/sTile_Alien.yy",},"LayerId":{"name":"b40280a7-83d7-407a-b8b1-a24c1d1478b9","path":"sprites/sTile_Alien/sTile_Alien.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sTile_Alien","path":"sprites/sTile_Alien/sTile_Alien.yy",},"resourceVersion":"1.0","name":"6a3934d7-2f29-415b-8166-1518fa0bfde4","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"ac4b8cf4-683b-4036-9bc7-72e04cccb0e9","path":"sprites/sTile_Alien/sTile_Alien.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"ac4b8cf4-683b-4036-9bc7-72e04cccb0e9","path":"sprites/sTile_Alien/sTile_Alien.yy",},"LayerId":{"name":"b40280a7-83d7-407a-b8b1-a24c1d1478b9","path":"sprites/sTile_Alien/sTile_Alien.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sTile_Alien","path":"sprites/sTile_Alien/sTile_Alien.yy",},"resourceVersion":"1.0","name":"ac4b8cf4-683b-4036-9bc7-72e04cccb0e9","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"29ac8699-8a2f-4c8f-9510-29f42e3cc470","path":"sprites/sTile_Alien/sTile_Alien.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"29ac8699-8a2f-4c8f-9510-29f42e3cc470","path":"sprites/sTile_Alien/sTile_Alien.yy",},"LayerId":{"name":"b40280a7-83d7-407a-b8b1-a24c1d1478b9","path":"sprites/sTile_Alien/sTile_Alien.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sTile_Alien","path":"sprites/sTile_Alien/sTile_Alien.yy",},"resourceVersion":"1.0","name":"29ac8699-8a2f-4c8f-9510-29f42e3cc470","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "resourceType": "GMSequence",
-    "resourceVersion": "1.4",
-    "name": "sTile_Alien",
+    "spriteId": {"name":"sTile_Alien","path":"sprites/sTile_Alien/sTile_Alien.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -50,7 +58,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"b692e081-2af1-4a94-83dd-be29c7df8239","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"76cfb611-1956-4094-bcdf-8cce0e628430","path":"sprites/sTile_Alien/sTile_Alien.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"4262d6af-344c-4248-8151-bbee2308ef9b","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1f67769d-736c-4f50-abb9-1c15c4169f35","path":"sprites/sTile_Alien/sTile_Alien.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"9b8b23cd-5b36-443d-8361-61c7ae2f3e5e","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a8caa5b6-c72b-49b1-b044-12308e75265d","path":"sprites/sTile_Alien/sTile_Alien.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -58,7 +66,7 @@
             {"id":"76579d20-3e63-4997-bae1-b9320c4f2b6f","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6a3934d7-2f29-415b-8166-1518fa0bfde4","path":"sprites/sTile_Alien/sTile_Alien.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"3500e885-ae4a-493f-86ce-88de6ccf0de0","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ac4b8cf4-683b-4036-9bc7-72e04cccb0e9","path":"sprites/sTile_Alien/sTile_Alien.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"9b6ac3b5-e6c5-41f6-80c3-018e4e2383e0","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"29ac8699-8a2f-4c8f-9510-29f42e3cc470","path":"sprites/sTile_Alien/sTile_Alien.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -74,13 +82,22 @@
     "yorigin": 4,
     "eventToFunction": {},
     "eventStubScript": null,
+    "parent": {"name":"sTile_Alien","path":"sprites/sTile_Alien/sTile_Alien.yy",},
+    "resourceVersion": "1.3",
+    "name": "sTile_Alien",
+    "tags": [],
+    "resourceType": "GMSequence",
   },
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"b40280a7-83d7-407a-b8b1-a24c1d1478b9","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"b40280a7-83d7-407a-b8b1-a24c1d1478b9","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "TILES",
     "path": "folders/SPRITES/HOUSE/TILES.yy",
   },
+  "resourceVersion": "1.0",
+  "name": "sTile_Alien",
+  "tags": [],
+  "resourceType": "GMSprite",
 }

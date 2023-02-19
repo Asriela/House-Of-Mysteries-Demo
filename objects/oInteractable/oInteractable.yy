@@ -1,14 +1,10 @@
 {
-  "resourceType": "GMObject",
-  "resourceVersion": "1.0",
-  "name": "oInteractable",
   "spriteId": {
     "name": "sGui_Pearls",
     "path": "sprites/sGui_Pearls/sGui_Pearls.yy",
   },
   "solid": false,
   "visible": false,
-  "managed": true,
   "spriteMaskId": {
     "name": "sGui_Pearls",
     "path": "sprites/sGui_Pearls/sGui_Pearls.yy",
@@ -28,8 +24,8 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -37,4 +33,8 @@
     "name": "HOUSE",
     "path": "folders/OBJECTS/HOUSE.yy",
   },
+  "resourceVersion": "1.0",
+  "name": "oInteractable",
+  "tags": [],
+  "resourceType": "GMObject",
 }

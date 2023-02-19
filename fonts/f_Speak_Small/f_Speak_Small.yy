@@ -1,7 +1,4 @@
 {
-  "resourceType": "GMFont",
-  "resourceVersion": "1.0",
-  "name": "f_Speak_Small",
   "hinting": 0,
   "glyphOperations": 0,
   "interpreter": 0,
@@ -24,7 +21,6 @@
     "path": "texturegroups/Default",
   },
   "ascenderOffset": 0,
-  "ascender": 17,
   "glyphs": {
     "32": {"x":2,"y":2,"w":6,"h":23,"character":32,"shift":6,"offset":0,},
     "33": {"x":78,"y":77,"w":3,"h":23,"character":33,"shift":7,"offset":2,},
@@ -135,4 +131,8 @@
     "name": "FONTS",
     "path": "folders/FONTS.yy",
   },
+  "resourceVersion": "1.0",
+  "name": "f_Speak_Small",
+  "tags": [],
+  "resourceType": "GMFont",
 }
