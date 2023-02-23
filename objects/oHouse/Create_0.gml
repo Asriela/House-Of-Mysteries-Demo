@@ -1,9 +1,14 @@
 globalvar Door_Orientation,Floor_Variation_Grid,Buildable_Grid,House_Path_Floor,Floor_List,Game_Mode,Rooms_Objects_Map,Distinguished_Rooms,House_Grid_Width,Wall_Grid,Rooms_Map,Taken_Rooms_Map,House_Start_X,House_Start_Y,Bigger_Tile_Height,Bigger_Tile_Width,Rooms_Grid,down_key,up_key,left_key,right_key,Player_View_Direction,Player,mouse_grid_x,mouse_grid_y,House_Path_Grid,Spawn_X,Spawn_Y;
 // You can write your code in this editor
+
+global.ground_layer = layer_create(-1);
+global.first_layer = layer_create(0);
+global.second_layer = layer_create(1);
+
 grid_width= 100;
 grid_height=100;
 Door_Orientation=0
-House_Path_Floor= mp_grid_create(0,0,grid_width,grid_height,1,1)
+
 Buildable_Grid=ds_grid_create(grid_width,grid_height)
 Rooms_Objects_Map=ds_map_create()
 Taken_Rooms_Map=ds_map_create()
@@ -90,7 +95,7 @@ image_xscale=2
 image_yscale=2
 oGame.x=x
 oGame.y=y+200
-House_Path_Grid = mp_grid_create(0,0,grid_width,grid_height,1,1)
+//House_Path_Grid = mp_grid_create(0,0,grid_width,grid_height,1,1)
 
 Spawn_X=room_width/2;
 Spawn_Y=room_height/2;
@@ -103,7 +108,7 @@ Spawn_Y=room_height/2;
  
  player.mask=instance_create(x,y,mPlayer)
  player.mask.owner=player
-
+player.floor_i_am_on=Dev_Help[? dev_help.player_starting_floor]
 //display_mouse_set(player.x,player.y)
 Spawn_X=player.x
  Spawn_Y=player.y
