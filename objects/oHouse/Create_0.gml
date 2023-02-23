@@ -1,5 +1,10 @@
 globalvar Door_Orientation,Floor_Variation_Grid,Buildable_Grid,House_Path_Floor,Floor_List,Game_Mode,Rooms_Objects_Map,Distinguished_Rooms,House_Grid_Width,Wall_Grid,Rooms_Map,Taken_Rooms_Map,House_Start_X,House_Start_Y,Bigger_Tile_Height,Bigger_Tile_Width,Rooms_Grid,down_key,up_key,left_key,right_key,Player_View_Direction,Player,mouse_grid_x,mouse_grid_y,House_Path_Grid,Spawn_X,Spawn_Y;
 // You can write your code in this editor
+
+global.ground_layer = layer_create(-1);
+global.first_layer = layer_create(0);
+global.second_layer = layer_create(1);
+
 grid_width= 100;
 grid_height=100;
 Door_Orientation=0

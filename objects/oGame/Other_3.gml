@@ -76,10 +76,11 @@ ini_close()
 
 
 ini_open("save.ini")
-for(f=0;f<3;f++)
-for(ix=0;ix<100;ix++)
-for(iy=0;iy<100;iy++)
-Floor_Grid[| f][# ix,iy]=sprite_get_name(Floor_Grid[| f][# ix,iy])
+
+for(f=1;f<3;f++)
+	for(ix=0;ix<100;ix++)
+		for(iy=0;iy<100;iy++)
+			Floor_Grid[| f][# ix,iy]=sprite_get_name(Floor_Grid[| f][# ix,iy])
 
 
 
