@@ -30,6 +30,9 @@ if Tutorial_Highlight_Alpha>0.5
 Tutorial_Highlight_Alpha-=0.01
 else
 Tutorial_Highlight_Alpha=1
+
+
+		
 if Tutorial_Highlight_Button!=noone
 draw_sprite_ext(sGui_Pie_Menu_Tu,Tutorial_Highlight_Button,edit_mode_menu_x+30,edit_mode_menu_y,1,1,0,c_white,Tutorial_Highlight_Alpha)
 
@@ -39,8 +42,12 @@ Edit_Mode = Button_Pressed(edit_mode_menu_x - 10+80, edit_mode_menu_y - 44, 80, 
 
 Edit_Mode = Button_Pressed(edit_mode_menu_x - 10+80, edit_mode_menu_y-44+80, 80, 76, 0, "", -1, -1, Edit_Mode, edit.recipies, 0, default_input, 0, shape.square, 0);
 Edit_Mode = Button_Pressed(edit_mode_menu_x - 10, edit_mode_menu_y-44+80, 80, 76, 0, "", -1, -1, Edit_Mode, edit.none, 0, default_input, 0, shape.square, 0);
-  
 
+if Edit_Mode != Last_Edit_Mode && (Edit_Mode=edit.object || Edit_Mode = edit.room)
+	audio_play_sound(sMenuOpenMain, 0.5, false)
+		
+		
+if Edit_Mode=edit.none Floor=mPlayer.owner.floor_i_am_on
     
     if (Edit_Mode == edit.recipies && Sub_Menu="Ingredient" && obj_gui_back=noone)
     {
@@ -192,6 +199,7 @@ var line_count=0;
 								selected=0
 							
 							draw_rectangle(edit_mode_menu_x+15-box_size+line_count*sep,edit_mode_menu_y-box_size,edit_mode_menu_x+15+box_size+line_count*sep,edit_mode_menu_y+box_size,selected)
+						
 						
 			            Selected_Recipe = Button_Pressed(edit_mode_menu_x+15-box_size/2+20+line_count*sep, edit_mode_menu_y-box_size/2+20, box_size*2, box_size*2, asset_get_index("sObj_"+recipe), "", c_white, c_white, Selected_Recipe, recipe, 1, default_input, recipe, shape.square, 4);
 			          draw_set_color(c_white)
@@ -441,7 +449,7 @@ draw_set_alpha(1)
 		if our_ghost!=-1{
 			
 
-			Chosen_Tutorial=tu.ghost 
+		
 Give_Quest(our_ghost,quest.ask_out)
 	
 		//	ss()
@@ -450,8 +458,7 @@ Give_Quest(our_ghost,quest.ask_out)
 	Guest_Map[? char.ghost][? guest_detail.visual_description]="the ghost appears to be showing you by creating forms out of their hands that they are in love with Gnor the gnome, they seem to want to know whether you think they should confess their love "
 		}
 		}
-		else
-		Chosen_Tutorial=tu.take_bags
+
 		
 		}
 		
@@ -529,7 +536,7 @@ draw_set_font(f_StoryMedium)
 											starting_y+=56
 											
 										if Do_Review{
-											Chosen_Tutorial=tu.review
+										
 										}
 										if Do_Review
 										ds_map_clear(materials_gained_map)
@@ -659,7 +666,7 @@ Style_Progression_Map[? element]+=element_change
 				draw_text(starting_x,starting_y+430,"Total earned: "+st(total_money)+"$")
 				if Exit_Menu(starting_x-220,starting_y+110)
 				{
-					Chosen_Tutorial=tu.alien
+
 							 Add_Guest_To_Arrive(World_Hour+1,char.alien)
 				
 				}
@@ -677,23 +684,25 @@ Style_Progression_Map[? element]+=element_change
 				draw_rectangle(0,0,room_width,room_height,0)
 				draw_set_alpha(1)
 							var downward=60
+							var y_shift=50
             draw_set_font(fStoryLarge);
-            draw_sprite(sGui_SpeakBack, 0, starting_x, starting_y+downward);
+            draw_sprite(sGui_SpeakBack, 0, starting_x, starting_y+downward+y_shift);
             portrait_animation+=0.2
 
             // Speaking_To.portrait
 			draw_set_color(c_white)
-            draw_text(starting_x, 295-20+10+downward, Guest_Map[? Current_Guest.guest_id][? guest_detail.name]);
+            draw_text(starting_x, 295-20+10+downward+y_shift, Guest_Map[? Current_Guest.guest_id][? guest_detail.name]);
             draw_set_font(fStory);
             draw_set_alpha(0.4);
           //  draw_text(starting_x, 330, Guest_Map[? Current_Guest.guest_id][? guest_detail.prefix]);
-            draw_sprite_ext(Guest_Map[? Current_Guest.guest_id][? guest_detail.portrait], portrait_animation, starting_x, 220-60+downward,2, 2, 0, c_white, 1);
+            draw_sprite_ext(Guest_Map[? Current_Guest.guest_id][? guest_detail.portrait], portrait_animation, starting_x, 220-60+downward+y_shift,2, 2, 0, c_white, 1);
             draw_set_font(fStory);
             
             
             draw_set_alpha(0.4);
             draw_set_halign(fa_center);
             var amount = Guest_Map[? Current_Guest.guest_id][? guest_detail.openness];
+			
            	 if last_flash_openess!=flash_openess
 			 {
 				 flash_value=1
@@ -704,6 +713,7 @@ Style_Progression_Map[? element]+=element_change
 		flash_value-=0.01
 		else
 		flash_value=0
+		
 		last_flash_openess=flash_openess
             var amount = Guest_Map[? Current_Guest.guest_id][? guest_detail.impression_of_player];
         //    draw_sprite_ext(sGui_Speak_Relationship_Bar, amount + 3, starting_x - 250, 290, 2, 2, 0, c_white, 0.3);
@@ -726,7 +736,7 @@ if Current_Guest.has_quest!=noone
 			draw_set_color(c_my_orange)
 			else
 						draw_set_color(c_old)
-            draw_text_ext(starting_x-505, 370-60+downward, typed_guest_text, 32, 1000);
+            draw_text_ext(starting_x-505, 370-60+downward+y_shift, typed_guest_text, 32, 1000);
 			            draw_set_halign(fa_center);
 			draw_set_alpha(1)
 			if text_alpha<1
@@ -742,10 +752,11 @@ if Current_Guest.has_quest!=noone
             draw_set_font(f_OptionsMedium);
             if (Talk_Menu == talk_menu.main)
             {
+				Is_Asking=0
 				if Skip_First=1
 				{Skip_First=0 break; }
                 Exit_Speak_Menu(starting_x+34, starting_y+75+downward);
-                starting_y = 550;
+                starting_y = 600;
                 Talk_Menu_Text = "";
                 col = make_color_rgb(141, 146, 151);
                 starting_y += 130;
@@ -774,8 +785,8 @@ if Current_Guest.has_quest!=noone
 					                if Button_Pressed(starting_x - 400, starting_y + 10+downward, 340, 80,sGUI_Speak_Option,"Yes",c_old,c_yellow,0,0,1,controls.left_click,0,shape.square,0){
 					
 									var our_ghost=Get_Guest_Object(char.ghost);
-									var our_hare=Get_Guest_Object(char.gnor_the_gnome)
-	
+									var our_hare=Get_Guest_Object(char.witch)
+									our_ghost.has_ask=0
 									Set_Variable_Of(our_ghost,"person_to_meet",our_hare)
 									Edit_Mode=edit.none
 									
@@ -785,18 +796,18 @@ if Current_Guest.has_quest!=noone
                 
        if      Button_Pressed(starting_x + 400, starting_y + 10+downward, 340, 80, sGUI_Speak_Option, "No", c_old, c_yellow, Talk_Menu, 1, 1, default_input, 0, shape.square, 0)
 			if Has_Pressed_Button_This_Step{
-			Chosen_Tutorial=tu.ending
+
 Edit_Mode=edit.none
 				 
 			}
 				}
 				else{
-                Talk_Menu = Button_Pressed(starting_x - 400, starting_y + 10+downward, 340, 80, sGUI_Speak_Option, "Ask info", -1, c_yellow, Talk_Menu, talk_menu.question_people, 0, default_input, 0, shape.square, 0);
+                Talk_Menu = Button_Pressed(starting_x - 400, starting_y + 10+downward, 340, 80, sGUI_Speak_Option, "Ask", -1, c_yellow, Talk_Menu, talk_menu.question_people, 0, default_input, 0, shape.square, 0);
                 
                 
-                Talk_Menu = Button_Pressed(starting_x + 400, starting_y + 10+downward, 340, 80, sGUI_Speak_Option, "Share info", -1, c_yellow, Talk_Menu, talk_menu.statement_people, 0, default_input, 0, shape.square, 0);
+                Talk_Menu = Button_Pressed(starting_x + 400, starting_y + 10+downward, 340, 80, sGUI_Speak_Option, "Share", -1, c_yellow, Talk_Menu, talk_menu.statement_people, 0, default_input, 0, shape.square, 0);
                 
-	                Talk_Menu = Button_Pressed(starting_x , starting_y + 180+downward, 340, 80, sGUI_Speak_Option, "Instruct", -1, c_yellow, Talk_Menu, talk_menu.instruct, 0, default_input, 0, shape.square, 0);
+	                Talk_Menu = Button_Pressed(starting_x , starting_y + 180+downward, 340, 80, sGUI_Speak_Option, "Actions", -1, c_yellow, Talk_Menu, talk_menu.instruct, 0, default_input, 0, shape.square, 0);
 				}
 		
 				if (Talk_Menu == talk_menu.up_to)
@@ -855,9 +866,9 @@ Edit_Mode=edit.none
   			////////////////////////////////
             if (Talk_Menu == talk_menu.question_people || Talk_Menu == talk_menu.question_things)
             {
-				
+				var people_map=noone
                 draw_set_font(f_OptionsMedium);
-               if   Exit_Speak_Menu(starting_x+34, starting_y+75+downward)exit;
+               if   Exit_Speak_Menu(starting_x+34, starting_y+downward-5)exit;
                 if (Talk_Menu == talk_menu.question_people)
                 {
                     var people_map = Guest_Map[? char.player][? guest_detail.people_memories_map]
@@ -880,7 +891,9 @@ Edit_Mode=edit.none
                 if (Button_Pressed(starting_x, starting_y + 208, 130, 50, 0, "BACK", color_drinking, c_black, Chosen_Feeling, 0, 1, default_input, 0, shape.square, 0))
                 {
                     Talk_Menu = talk_menu.main;
+					
                 }
+				if people_map!=noone && !is_undefined(ds_map_find_first(people_map)){
                 var person = ds_map_find_first(people_map)
                     ;
 
@@ -895,6 +908,7 @@ Edit_Mode=edit.none
 					var col2=c_dkgray
 					  var guest_map=Guest_Map[? Current_Guest.guest_id]
 					  			var pronoun=guest_map[?  guest_detail.pronoun]
+								/*
                         if (Button_Pressed(starting_x - 300 + hor_index * 150, starting_y + 70 + 50 * vert_index, 130, 60, 0, "News", col2, c_black, Chosen_Memory, 1, 1, default_input, 0, shape.square, 0))
                        if Could_Find_News
 					   {
@@ -913,14 +927,14 @@ Edit_Mode=edit.none
 							break;
                         }
 						else
-						guest_speaking_text=pronoun+" either didn't have any more news or didn't want to share it with you"
+						guest_speaking_text=pronoun+" either didn't have any more news or didn't want to share it with you"*/
                     }
                     else
                     {
                         //	 sm(ds_map_size(people_map))
                         //	 sm(person)
                         text_of_memory = Character_Enum_To_Text(person);
-						var fact_struct=Get_Highest_Value_Truth(Current_Guest.guest_id, person);
+					fact_struct=Get_Highest_Value_Truth(Current_Guest.guest_id, person);
 						if fact_struct=-1
 						var col2=c_dkgray
 						else
@@ -933,13 +947,11 @@ Edit_Mode=edit.none
 					draw_text( starting_x - 300 + hor_index * 150, starting_y + 70 + 50 * vert_index+20,  text_of_memory)
 					   if (Button_Was_Pressed)
 							{
-								if fact_struct!=-1{
-                                guest_speaking_text = Truths_Map[? person][? fact_struct.memory][? truth.long_text]
-						flash_openess=c_my_bar_red
-								Guest_Map[? Current_Guest.guest_id][? guest_detail.openness]-=fact_struct.penalty
-								}
-								else
-								guest_speaking_text=pronoun+" either didn't know anything more about them, or didn't want to share it with you"
+																	Talk_Menu = talk_menu.statement_feelings
+									Last_Talk_Menu=talk_menu.statement_people
+									Chosen_Person = Character_Enum_To_Text(person);
+									Chosen_Person_Id=person
+									Is_Asking=1
 							}
                         person = ds_map_find_next(people_map, person);
                     }
@@ -951,14 +963,15 @@ Edit_Mode=edit.none
                         hor_index = 0;
                     }
                 }
+			}
             }
 			////////////////////////////////
-  ////STATEMENT          
+			////STATEMENT          
   			////////////////////////////////
             if (Talk_Menu == talk_menu.statement_people || Talk_Menu == talk_menu.statement_things)
             {
                 draw_set_font(f_OptionsMedium);
-                Exit_Speak_Menu(starting_x+34, starting_y+75+downward)
+                Exit_Speak_Menu(starting_x+34, starting_y+downward-5)
 				
                 if (Button_Pressed(starting_x, starting_y + 208, 130, 50, 0, "BACK", color_drinking, c_black, Chosen_Feeling, 0, 1, default_input, 0, shape.square, 0))
                     {
@@ -1011,7 +1024,7 @@ Edit_Mode=edit.none
        {
 				                    Talk_Menu_Text = "Tell them to...";
 				        draw_set_font(f_OptionsMedium);
-                Exit_Speak_Menu(starting_x+34, starting_y+75+downward)
+                Exit_Speak_Menu(starting_x+34, starting_y+downward-5)
 				
                 if (Button_Pressed(starting_x, starting_y + 208, 130, 50, 0, "BACK", color_drinking, c_black, Chosen_Feeling, 0, 1, default_input, 0, shape.square, 0))
                     {
@@ -1022,6 +1035,17 @@ Edit_Mode=edit.none
 					
    hor_index=0
    vert_index=1
+   col=c_old
+   if Current_Guest.ability_action!=noone
+    if Button_Pressed(starting_x , starting_y +25 + 50 * vert_index+70, 265, 60, 0, "Calm Guests", col, c_black, Chosen_Person_Id,0, 1, default_input, 0, shape.square, 0) // if openess is more than secrecy
+       {
+		   Do_Ability_Action(Current_Guest,Current_Guest.ability_action)
+		   			Edit_Mode=edit.none
+			Talk_Menu=talk_menu.main
+			Current_Guest=noone
+		   Tutorial_Sub_Step++
+	   }
+	   
            if Button_Pressed(starting_x -160, starting_y +25 + 50 * vert_index, 230, 60, 0, "Speak to...", col, c_black, Chosen_Person_Id,0, 1, default_input, 0, shape.square, 0) // if openess is more than secrecy
        {
 		   Chosen_Action=action.talk_to
@@ -1041,7 +1065,7 @@ Edit_Mode=edit.none
 			if (Talk_Menu == talk_menu.instruct_to_who)
             {
 				        draw_set_font(f_OptionsMedium);
-                Exit_Speak_Menu(starting_x+34, starting_y+75+downward)
+                Exit_Speak_Menu(starting_x+34, starting_y+downward-5)
 				
                 if (Button_Pressed(starting_x, starting_y + 208, 130, 50, 0, "BACK", color_drinking, c_black, Chosen_Feeling, 0, 1, default_input, 0, shape.square, 0))
                     {
@@ -1116,12 +1140,15 @@ Edit_Mode=edit.none
             if (Last_Talk_Menu == talk_menu.statement_people && Talk_Menu == talk_menu.statement_feelings)
             {
 		
-                if Exit_Speak_Menu(starting_x+34, starting_y+75+downward){
+                if Exit_Speak_Menu(starting_x+34, starting_y+downward-5){
 					exit;
 				}
                 if (Last_Talk_Menu == talk_menu.statement_people)
                 {
-                    Talk_Menu_Text = "What about " + Chosen_Person+ " do you want to say?";
+					if Is_Asking
+                    Talk_Menu_Text = "What about " + Chosen_Person+ " do you want to ask?";
+					else
+					Talk_Menu_Text = "What about " + Chosen_Person+ " do you want to say?";
                     var mem_type = guest_detail.people_memories_map;
                         var known_facts_about_person_map=Guest_Map[? char.player][? guest_detail.people_memories_map][? Chosen_Person_Id]
                 }
@@ -1153,7 +1180,41 @@ Edit_Mode=edit.none
                     // if openess is more than secrecy
                     if (Button_Was_Pressed && Chosen_Fact != noone && button_was_pressed=0)
                     {
-                
+                if Is_Asking{
+							
+									if Override_Person_Memory_Is_About=noone
+									{
+										if fact_struct!=-1
+								    guest_speaking_text = Truths_Map[? person][? fact_struct.memory][? truth.long_text]
+															
+								else
+								guest_speaking_text=pronoun+" either didn't know anything more about them, or didn't want to share it with you"
+									}
+									else
+									{
+									//	sm(Override_Person_Memory_Is_About)
+									//	sm(fact_struct.memory)
+									
+									Flash_Tutorial=0
+									if Chosen_Tutorial=tutorial.talk_to_guest{
+									Add_People_Memory( char.player,char.witch,truth_witch.slips,mem_secrecy.will_share,0,emotion.custom)
+										 guest_speaking_text = Truths_Map[? Override_Person_Memory_Is_About][? 0][? truth.long_text]}
+									else
+										if Chosen_Tutorial=tutorial.use_alien_ability{
+										Add_People_Memory( char.player,char.alien,truth_alien.portals,mem_secrecy.will_share,0,emotion.custom)
+										Tutorial_Sub_Step++
+										Override_Person_Memory_Is_About=char.alien
+											 guest_speaking_text = Truths_Map[? Override_Person_Memory_Is_About][? 0][? truth.long_text]
+										}
+										else
+										guest_speaking_text=pronoun+" either didn't know anything more about them, or didn't want to share it with you"
+								
+									}
+								//	flash_openess=c_my_bar_red
+									//Guest_Map[? Current_Guest.guest_id][? guest_detail.openness]-=fact_struct.penalty
+
+				}
+								else{
                           if col2!=c_dkgray
                             {
 								flash_openess=c_my_bar_green
@@ -1166,6 +1227,7 @@ Edit_Mode=edit.none
                             }
 							else
 							guest_speaking_text=pronoun+" already knew that"
+								}
                             button_was_pressed=1
                             /*	else{
 				//	sm(Guest_Map[? Current_Guest.guest_id][? mem_type][? Chosen_Memory][? memory_detail.memory_feeling])
@@ -1197,7 +1259,7 @@ Edit_Mode=edit.none
             }}
         }
         
-		            draw_set_font(f_OptionsMedium);
+		            draw_set_font(f_Talk_Menu_Text);
 					draw_set_color(c_my_orange)
             draw_text(starting_x, 540+67, Talk_Menu_Text);
         break;
@@ -1307,12 +1369,12 @@ var first=1
 
 																//sm(ds_map_size(recipe_requirements_map[? Over_Button_Id]))
 			// && col2!=c_my_bar_red{			
-					if Chosen_Tutorial=tu.prep_food 
-					Chosen_Tutorial=tu.give_food
-					
+		if Chosen_Tutorial=tutorial.make_food && Tutorial_Sub_Step=3
+					Tutorial_Sub_Step++
 				var	plate=instance_create_depth(Player_Object.x,Player_Object.y,0,oPlate)
 				plate.sprite_index=asset_get_index("sDish_"+item)
 				plate.holder=Player_Object
+				
 				plate.dish_type=item;
 				plate.servings=Dishes_Map[?item][? dish.portion_size]
 				plate.floor_i_am_on=mPlayer.owner.floor_i_am_on
@@ -1552,9 +1614,11 @@ item=ds_map_find_next(Dishes_Map,item)
 			var length=70
 					var left=-40
 					Move_Furniture_Mode=1
-					Object_Menu_Mode = Button_Pressed(edit_mode_menu_x+left , edit_mode_menu_y-140, length+80, width, sGui_Obj_Group, "", c_my_orange, c_grey, Object_Menu_Mode,object_menu.furniture , 0, controls.left_click, 0,0, 0);
-					
-				  Object_Menu_Mode = Button_Pressed(edit_mode_menu_x+left +80, edit_mode_menu_y-140, length+20, width, sGui_Obj_Group, "", c_my_orange, c_grey, Object_Menu_Mode,object_menu.merchanise , 0, controls.left_click, 1,1, 0);
+					Object_Menu_Mode = Button_Pressed(edit_mode_menu_x+left , edit_mode_menu_y-140, length, width, sGui_Obj_Group, "", c_my_orange, c_grey, Object_Menu_Mode,object_menu.furniture , 0, controls.left_click, 0,0, 0);
+					var flash_values=0
+					var vcol=c_my_orange
+					if Flash_Button="merch" {flash_values=-10 vcol=c_aqua} 
+				  Object_Menu_Mode = Button_Pressed(edit_mode_menu_x+left +80, edit_mode_menu_y-140, length, width, sGui_Obj_Group, "", vcol, c_grey, Object_Menu_Mode,object_menu.merchanise , 0, controls.left_click, 1,1, flash_values);
 			
 				 Object_Menu_Mode = Button_Pressed(edit_mode_menu_x+left +80*2, edit_mode_menu_y-140, length, width, sGui_Obj_Group, "", c_my_orange, c_grey, Object_Menu_Mode,object_menu.floors , 0, controls.left_click, 2,2, 0);
 		//Object_Menu_Mode = Button_Pressed(edit_mode_menu_x+left +100-30, edit_mode_menu_y-130, length, width, 0, "Floor", c_my_orange, c_black, Object_Menu_Mode,object_menu.floors , 0, controls.left_click, 0,shape.square, 0);
@@ -1584,13 +1648,17 @@ item=ds_map_find_next(Dishes_Map,item)
 			 else
 			 {
 				 		var t_class=merch_type.stations;
-		  Object_Category = Button_Pressed(edit_mode_menu_x+left -100, edit_mode_menu_y-70, length, width, sGUI_Merch_Types, "", c_my_orange, c_gray, Object_Category,t_class , 0, controls.left_click, 0,t_class, 1);
+							if Flash_Button = t_class flash=1 else flash=0
+		  Object_Category = Button_Pressed(edit_mode_menu_x+left -100, edit_mode_menu_y-70, length, width, sGUI_Merch_Types, "", Get_Merch_Color(t_class,flash), c_gray, Object_Category,t_class , 0, controls.left_click, 0,t_class, 1);
 		var t_class=merch_type.bottled;
-		  Object_Category = Button_Pressed(edit_mode_menu_x +left-50, edit_mode_menu_y-70, length, width, sGUI_Merch_Types, "", c_my_orange, c_gray, Object_Category,t_class , 0, controls.left_click, 0,t_class, 1);
+			if Flash_Button = t_class flash=1 else flash=0
+		  Object_Category = Button_Pressed(edit_mode_menu_x +left-50, edit_mode_menu_y-70, length, width, sGUI_Merch_Types, "", Get_Merch_Color(t_class,flash), c_gray, Object_Category,t_class , 0, controls.left_click, 0,t_class, 1);
 		var t_class=merch_type.clothing;
-		  Object_Category = Button_Pressed(edit_mode_menu_x +left, edit_mode_menu_y-70, length, width, sGUI_Merch_Types, "", c_my_orange, c_gray, Object_Category,t_class , 0, controls.left_click, 0,t_class, 1);
+			if Flash_Button = t_class flash=1 else flash=0
+		  Object_Category = Button_Pressed(edit_mode_menu_x +left, edit_mode_menu_y-70, length, width, sGUI_Merch_Types, "", Get_Merch_Color(t_class,flash), c_gray, Object_Category,t_class , 0, controls.left_click, 0,t_class, 1);
 		  		var t_class=merch_type.statue;
-		  Object_Category = Button_Pressed(edit_mode_menu_x+left+ 50, edit_mode_menu_y-70, length, width, sGUI_Merch_Types, "", c_my_orange, c_gray, Object_Category,t_class , 0, controls.left_click, 0,t_class, 1);
+					if Flash_Button = t_class flash=1 else flash=0
+		  Object_Category = Button_Pressed(edit_mode_menu_x+left+ 50, edit_mode_menu_y-70, length, width, sGUI_Merch_Types, "", Get_Merch_Color(t_class,flash), c_gray, Object_Category,t_class , 0, controls.left_click, 0,t_class, 1);
 			 }
 			 
 	 if Object_Menu_Mode=object_menu.furniture
@@ -1739,13 +1807,13 @@ if Object_Menu_Mode=1
 
     case edit.character:
         start_value = Item_Being_Placed;
-        for (var c = 0; c < ds_list_size(Guests_List); c++)
+     /*   for (var c = 0; c < ds_list_size(Guests_List); c++)
         {
             item = Guests_List[| c];
             Item_Being_Placed = Button_Pressed(edit_mode_menu_x + 50, edit_mode_menu_y, 120, 20, 0, item, c_white, c_black, Item_Being_Placed, item, 0, default_input, 0, shape.square, 0);
             edit_mode_menu_y += 25;
         }
-        
+        */
         if (is_string(Item_Being_Placed))
         {
             draw_sprite_ext(asset_get_index("sChar_" + Item_Being_Placed), 0, device_mouse_x_to_gui(0), device_mouse_y_to_gui(0), 1, 1, 0, c_white, 0.5);
@@ -1834,9 +1902,13 @@ if (Last_Sub_Menu == "Ingredient" && Sub_Menu != "Ingredient")
 
 
 if Chosen_Tutorial!=-1 && Visualize[? vis.show_tutorial]=1 && Chosen_Tutorial!=tu.none{
-	draw_sprite(sGui_Tutorial_Bar,0,View_Width/2,150)
+	draw_set_alpha(1)
+	draw_sprite_ext(sGui_Tutorial_Bar,0,View_Width/2,150,1,1,0,c_white,1)
 	draw_set_font(fTutorial)
 var text=Tutorial_Map[? Chosen_Tutorial];
+
+//if is_undefined(Tutorial_Sub_Map[? Chosen_Tutorial])
+//sm(Chosen_Tutorial)
 var text2=Tutorial_Sub_Map[? Chosen_Tutorial][| Tutorial_Sub_Step];
 if !is_undefined(text){
 var length=string_width_ext(text,25,1200)/2+10
@@ -1851,13 +1923,20 @@ draw_set_color(c_dark_brown)
 draw_set_alpha(0.6)
 draw_set_color(c_white)
 draw_set_halign(fa_center)
+
 draw_text_ext(sx,sy,text,25,1200)
+draw_set_valign(fa_left)
 draw_set_alpha(1)
-
+if Flash_Tutorial
+{
+draw_set_color(c_aqua)
+draw_set_alpha(Flash_Button_Alpha)
+}
 	draw_set_font(fTutorial_Small)
-draw_text_ext(sx,sy+25,text2,25,1200)
-
+draw_text_ext(sx,sy+15,text2,23,640)
+draw_set_alpha(1)
 }
 }
+draw_set_valign(fa_center)
 
 Exit_Edit_Modes_Code()

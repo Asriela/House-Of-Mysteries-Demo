@@ -94,6 +94,30 @@ if Visualize[? vis.console]=1{
 	}
 }
 else
+	if Console_Mode=con.guest_memories && Console_Inspected_Item_Map[? con_item.prime_id]!=noone
+	{	
+			var the_object_id=Console_Inspected_Item_Map[? con_item.prime_id];
+			var object_char_id=the_object_id.guest_id
+			
+			var all_people=Guest_Map[? object_char_id][? guest_detail.people_memories_map]
+			console_text="MEMORIES OF "+st(Guest_Map[? object_char_id][? guest_detail.name])+"\n==========="+"\n===========\n"
+			var person=ds_map_find_first(all_people)
+		for(var p=0;p<ds_map_size(all_people );p++)
+		{
+			console_text+="TRUTHS ABOUT:\n"+st(Guest_Map[? person][? guest_detail.name])+"\n================\n"
+			var all_truths=Guest_Map[? object_char_id][? guest_detail.people_memories_map][? person]
+				var truths=ds_map_find_first(all_truths)
+				for(var t=0;t<ds_map_size(all_truths );t++)
+				{
+				console_text+=st(Truths_Map[? person][? truths][? truth.short_text])+"\n"
+				
+				truths=ds_map_find_next(all_truths,truths)
+				}
+				
+			var person=ds_map_find_next(all_people,person)
+		}
+	}
+else
 console_text=string_copy(Main_Log,string_length(Main_Log)-700,700)
 
 

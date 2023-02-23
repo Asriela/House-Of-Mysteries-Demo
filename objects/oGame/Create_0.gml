@@ -1,20 +1,27 @@
 /// @main
 // You can write your code in this editor
 randomize()
-globalvar Flashing_Button_Was_Pressed,Flash_Button_Alpha,Button_Type_Pressed,Tutorial_Sub_Map,Tutorial_Sub_Step,Last_Chosent_Tutorial,Flash_Button,Remove_Tiles_List_Floor,Saved_Doors_Floor_List,Furn_List_Floors,Spawn_Starter_Guests,Floor,Tutorial_Highlight_Alpha,Tutorial_Highlight_Button,Dishes_Map,Last_Selected,Materials_Count_Map,materials_gained_map,Monster_Entrance_X,Monster_Entrance_Y,c_my_aqua,Entrance_X,Entrance_Y,Entrance_Placed,Shop_Room,Add_Minutes,Tourist_Spawn_X,Tourist_Spawn_Y,Tourists_Present_List,Tourist_Spawn_Timer,Gift_Shop_Open,Selected_Furniture,Chosen_To_Pick_Up,DayTime,Tile_Bush_Size,Floor_Map,Floor_Count_Map,Cant_Pickup,Object_Menu_Mode,Floor_Grid,Object_Category,c_dark_brown,Last_World_Speed,Slow_Down,World_Speed,Room_Placement_Type_List,Room_Placement_X_List,Room_Placement_Y_List,Console_Inspected_Item_Map,Console_Mode,Dev_Help,Minute_Speed,Chosen_Object,Mouse_Icon_Type,AStar_Map,Placed_Bags,Current_Event,Dining_Room_Count,World_Seconds_Speed,Do_Review,Has_Pressed_Button_This_Step,Current_Housed_Guests_List,Chosen_Action,c_my_green,c_my_red,Freeze_Time,Bedroom_Count,Selected_Name,Placed_Map,Can_Save,Last_Tutorial,Chosen_Tutorial,Tutorial_Map,Style_Progression_Map,Arrived_Guest,Guests_That_Are_Leaving_List,Left_Guest,Trade_Hour,Furniture_Map,Relationships_Map,Furn_Id_Count,Furn_List_Id,Last_Edit_Mode,Held_Furniture,Move_Furniture_Mode,Furniture_Count_Map,Could_Find_News,Skip_First,Chosen_Fact,Chosen_Person_Id,Chosen_Person,Player_Object,Furn_List_Y,Furn_List_X,Furn_List_Type,Truths_Map,Character_Truths_List,Start_States,Visualize,Game_Mode,Chosen_Feeling,Memory_Word,Last_Talk_Menu,Chosen_Memory,Known_People_Memory_Tags_List,Known_Things_Memory_Tags_List,Current_Guest,Talk_Menu_Text,Talk_Menu,Obj_Food_Back,Held_Ingredient,Button_Was_Pressed,Selected_Recipe,Last_Sub_Menu,Recipies_Map,Remove_Tiles_List_X,Remove_Tiles_List_Y,Rooms_Type_Map,Global_ID_Index,All_Instances_List,Spawn_Point_X,Spawn_Point_Y,c_my_dark_aqua,Available_Building_Space_Grid,Over_Building_Block,Cash,Zoom,Guest_Map,color_bedroom,Clicked,Sub_Menu,Events_Lanes_List,Unique_Events_Map,Event_Id_Count,Over_Button_Id,c_my_navy,World_Seconds,World_Days,World_Minutes,World_Hour,Time_Table_List,Twitch_commands_list,tribal_base_game_dir,c_my_orange,Over_Gui,View_Width,View_Height,colour,Selected_Room,Global_Room_Number,Half_Tile_Height,Half_Tile_Width,Item_Being_Placed,Tile_Width,Tile_Height,Edit_Mode,Item_List;
+globalvar Is_Asking,Override_Person_Memory_Is_About,First_Few_Seconds_Of_Game,Last_Sub_Step,Tutorial_Arrow,Flash_Tutorial,Object_That_Was_Placed,Flash_Room,Flashing_Button_Was_Pressed,Flash_Button_Alpha,Button_Type_Pressed,Tutorial_Sub_Map,Tutorial_Sub_Step,Last_Chosent_Tutorial,Flash_Button,Remove_Tiles_List_Floor,Saved_Doors_Floor_List,Furn_List_Floors,Spawned_Starter_Guests,Floor,Tutorial_Highlight_Alpha,Tutorial_Highlight_Button,Dishes_Map,Last_Selected,Materials_Count_Map,materials_gained_map,Monster_Entrance_X,Monster_Entrance_Y,c_my_aqua,Entrance_X,Entrance_Y,Entrance_Placed,Shop_Room,Add_Minutes,Tourist_Spawn_X,Tourist_Spawn_Y,Tourists_Present_List,Tourist_Spawn_Timer,Gift_Shop_Open,Selected_Furniture,Chosen_To_Pick_Up,DayTime,Tile_Bush_Size,Floor_Map,Floor_Count_Map,Cant_Pickup,Object_Menu_Mode,Floor_Grid,Object_Category,c_dark_brown,Last_World_Speed,Slow_Down,World_Speed,Room_Placement_Type_List,Room_Placement_X_List,Room_Placement_Y_List,Console_Inspected_Item_Map,Console_Mode,Dev_Help,Minute_Speed,Chosen_Object,Mouse_Icon_Type,AStar_Map,Placed_Bags,Current_Event,Dining_Room_Count,World_Seconds_Speed,Do_Review,Has_Pressed_Button_This_Step,Current_Housed_Guests_List,Chosen_Action,c_my_green,c_my_red,Freeze_Time,Bedroom_Count,Selected_Name,Placed_Map,Can_Save,Last_Tutorial,Chosen_Tutorial,Tutorial_Map,Style_Progression_Map,Arrived_Guest,Guests_That_Are_Leaving_List,Left_Guest,Trade_Hour,Furniture_Map,Relationships_Map,Furn_Id_Count,Furn_List_Id,Last_Edit_Mode,Held_Furniture,Move_Furniture_Mode,Furniture_Count_Map,Could_Find_News,Skip_First,Chosen_Fact,Chosen_Person_Id,Chosen_Person,Player_Object,Furn_List_Y,Furn_List_X,Furn_List_Type,Truths_Map,Character_Truths_List,Start_States,Visualize,Game_Mode,Chosen_Feeling,Memory_Word,Last_Talk_Menu,Chosen_Memory,Known_People_Memory_Tags_List,Known_Things_Memory_Tags_List,Current_Guest,Talk_Menu_Text,Talk_Menu,Obj_Food_Back,Held_Ingredient,Button_Was_Pressed,Selected_Recipe,Last_Sub_Menu,Recipies_Map,Remove_Tiles_List_X,Remove_Tiles_List_Y,Rooms_Type_Map,Global_ID_Index,All_Instances_List,Spawn_Point_X,Spawn_Point_Y,c_my_dark_aqua,Available_Building_Space_Grid,Over_Building_Block,Cash,Zoom,Guest_Map,color_bedroom,Clicked,Sub_Menu,Events_Lanes_List,Unique_Events_Map,Event_Id_Count,Over_Button_Id,c_my_navy,World_Seconds,World_Days,World_Minutes,World_Hour,Time_Table_List,Twitch_commands_list,tribal_base_game_dir,c_my_orange,Over_Gui,View_Width,View_Height,colour,Selected_Room,Global_Room_Number,Half_Tile_Height,Half_Tile_Width,Item_Being_Placed,Tile_Width,Tile_Height,Edit_Mode,Item_List;
 Floor=1
+First_Few_Seconds_Of_Game=1
+Last_Sub_Step=0
+Override_Person_Memory_Is_About=noone
+Flash_Tutorial=0
 Gui_Active=ds_map_create()
 Dishes_Map=ds_map_create()
 materials_gained_map=ds_map_create()
 Tutorial_Sub_Map=ds_map_create()
 Materials_Count_Map=ds_map_create()
 Tourist_Spawn_X=0
+Is_Asking=0
 Tutorial_Highlight_Alpha=0
 Flashing_Button_Was_Pressed=0
 Last_Chosent_Tutorial=noone
+Object_That_Was_Placed=noone
+Flash_Room=noone
 Button_Type_Pressed=noone
 Flash_Button_Alpha=0
-Spawn_Starter_Guests=0
+Spawned_Starter_Guests=0
 Flash_Button=0
 Tutorial_Sub_Step=0
 Shop_Room=noone
@@ -40,7 +47,7 @@ Cant_Pickup=0
 DayTime=0
 Tile_Bush_Size=1
 Console_Inspected_Item_Map=ds_map_create()
-
+Console_Inspected_Item_Map[? con_item.prime_id]=noone
 Mouse_Icon_Type=0
 Object_Menu_Mode=1
 Slow_Down=0
@@ -52,6 +59,7 @@ Trade_Hour=48
 Event_Id_Count=1
 Placed_Bags=0
 Tutorial_Highlight_Button=noone
+Tutorial_Arrow=noone
 Current_Event=event.none
 Bedroom_Count=0
 Has_Pressed_Button_This_Step=0
@@ -70,14 +78,16 @@ Current_Housed_Guests_List=ds_list_create()
 Room_Placement_X_List=ds_list_create()
 Room_Placement_Y_List=ds_list_create()
 Room_Placement_Type_List=ds_list_create()
-Tourists_Present_List=ds_list_create()
+
 person_spawn_count=0
 Tutorial_Map=ds_map_create()
 Move_Furniture_Mode=0
 obj_gui_back=noone
 box_tracker=noone
+
 Setup_Tutorial()
 portrait_animation=0
+
 end_hour_gui=1
 item_to_hold=noone
 /*
@@ -114,8 +124,8 @@ Visualize=ds_map_create()
 Set_Guest_Furn_Class_Preferences()
 Player_Object=noone
 Could_Find_News=0
-All_Instances_List=ds_list_create()
-Guests_That_Are_Leaving_List=ds_list_create()
+//All_Instances_List=ds_list_create()
+//Guests_That_Are_Leaving_List=ds_list_create()
 Character_Truths_List=ds_map_create()
 Furn_List_Id=ds_list_create()
 Truths_Map=ds_map_create()
@@ -172,7 +182,7 @@ Selected_Event=-1
 World_Minutes=59
 
 World_Seconds=0
-Twitch_commands_list=ds_list_create()
+
 Twitch_Response_Waiting_Time=10*60
 Half_Tile_Width=Tile_Width/2
 Half_Tile_Height=Tile_Height/2
@@ -182,11 +192,7 @@ Item_Being_Placed=room_type.hallway
 Global_Room_Number=0
 
 Guest_Map=ds_map_create()
-Guests_List=ds_list_create()
-ds_list_add(Guests_List,"Milda")
-ds_list_add(Guests_List,"Rabbit_Jack")
-ds_list_add(Guests_List,"Toad_King")
-ds_list_add(Guests_List,"Gnome_Standard")
+
 count=0
 c_my_orange=make_color_hex("FF8700")
 c_my_red=make_color_hex("8F2655")
@@ -229,11 +235,10 @@ Total_World_Hours=0
 Setup_Guests()
 
 randomize()
-Story_Text=ds_list_create()
-ds_list_add(Story_Text,"")
+//Story_Text=ds_list_create()
+//ds_list_add(Story_Text,"")
 current_page=0
-Add_Story("Once long ago deep in the forest there resided a place called the Hollow... it started as nothing more than"
-+" a simple hole in the ground. The digger of this hole? The last remaining forest nymp, Milda... ")
+//Add_Story("Once long ago deep in the forest there resided a place called the Hollow... it started as nothing more than"+" a simple hole in the ground. The digger of this hole? The last remaining forest nymp, Milda... ")
 
 
 
@@ -308,3 +313,6 @@ var h= View_Height;
 window_set_fullscreen(0)
 View_Width = window_get_width() 
 View_Height = window_get_height() 
+
+// Play background music
+audio_play_sound(mMusic, 1, true)
