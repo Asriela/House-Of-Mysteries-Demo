@@ -19,7 +19,7 @@ if Buildable_Grid[# xx,yy]=1
 }
 
 }
-*/
+
 	var current_tile=0;
 
 
@@ -130,7 +130,7 @@ text="n"
 
 
 
-	}
+	}*/
 	}
 	
 	
